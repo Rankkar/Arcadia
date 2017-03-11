@@ -1,0 +1,72 @@
+//===============================================================
+//       ____                     _ 
+//      /    |                   | |_
+//     /     |_ __ ____  __ _  __| |_  __ _
+//    /  /|  | '__/  __|/ _` |/ _  | |/ _` |
+//   /  __   | | |  |__| (_| | (_| | | (_| |
+//  /  /  |  |_|  \____|\__,_|\__,_|_|\__,_|
+// /__/   |__|  [ Ragnarok Emulator ]
+//
+//===============================================================
+// = Database para habilidades dos elementais
+//===============================================================
+
+// EL_AGNI_S
+2114,8413,1,1  //EL_PYROTECHNIC
+2114,8401,1,2  //EL_CIRCLE_OF_FIRE
+2114,8425,1,4  //EL_FIRE_ARROW
+
+// EL_AGNI_M
+2115,8414,1,1  //EL_HEATER
+2115,8402,1,2  //EL_FIRE_CLOAK
+2115,8426,1,4  //EL_FIRE_BOMB
+
+// EL_AGNI_L
+2116,8415,1,1  //EL_TROPIC
+2116,8403,1,2  //EL_FIRE_MANTLE
+2116,8428,1,4  //EL_FIRE_WAVE
+
+// EL_AQUA_S
+2117,8416,1,1  //EL_AQUAPLAY
+2117,8404,1,2  //EL_WATER_SCREEN
+2117,8430,1,4  //EL_ICE_NEEDLE
+
+// EL_AQUA_M
+2118,8417,1,1  //EL_COOLER
+2118,8405,1,2  //EL_WATER_DROP
+2118,8431,1,4  //EL_WATER_SCREW
+
+// EL_AQUA_L
+2119,8418,1,1  //EL_CHILLY_AIR
+2119,8406,1,2  //EL_WATER_BARRIER
+2119,8433,1,4  //EL_TIDAL_WEAPON
+
+// EL_VENTUS_S
+2120,8419,1,1  //EL_GUST
+2120,8407,1,2  //EL_WIND_STEP
+2120,8434,1,4  //EL_WIND_SLASH
+
+// EL_VENTUS_M
+2121,8420,1,1  //EL_BLAST
+2121,8408,1,2  //EL_WIND_CURTAIN
+2121,8435,1,4  //EL_HURRICANE
+
+// EL_VENTUS_L
+2122,8421,1,1  //EL_WILD_STORM
+2122,8409,1,2  //EL_ZEPHYR
+2122,8437,1,4  //EL_TYPOON_MIS
+
+// EL_TERA_S
+2123,8422,1,1  //EL_PETROLOGY
+2123,8410,1,2  //EL_SOLID_SKIN
+2123,8439,1,4  //EL_STONE_HAMMER
+
+// EL_TERA_M
+2124,8423,1,1  //EL_CURSED_SOIL
+2124,8411,1,2  //EL_STONE_SHIELD
+2124,8440,1,4  //EL_ROCK_CRUSHER
+
+// EL_TERA_L
+2125,8424,1,1  //EL_UPHEAVAL
+2125,8412,1,2  //EL_POWER_OF_GAIA
+2125,8442,1,4  //EL_STONE_RAIN
