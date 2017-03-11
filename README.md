@@ -9,6 +9,8 @@ Status de funcionamento:
 Informação de Código:
 
 ![Language](https://img.shields.io/badge/language-C-yellow.svg)
+![Language](https://img.shields.io/badge/Sub-Language-C#-orange.svg)
+![Language](https://img.shields.io/badge/Passive-Docs-txt/Conf-blue.svg)
 [![License](https://img.shields.io/badge/license-GPLv3-663399.svg)](https://github.com/Spell-Master/Arcadia/blob/master/LICENSE)
 
 #### Observação:
