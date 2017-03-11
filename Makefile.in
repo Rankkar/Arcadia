@@ -1,0 +1,186 @@
+# @configure_input@
+
+@SET_MAKE@
+
+HAVE_MYSQL=@HAVE_MYSQL@
+ifeq ($(HAVE_MYSQL),yes)
+	ALL_DEPENDS=common_sql login_sql char_sql map_sql sysinfo | import
+	SQL_DEPENDS=common_sql login_sql char_sql map_sql sysinfo | import
+	COMMON_SQL_DEPENDS=mt19937ar libconfig sysinfo
+	LOGIN_SQL_DEPENDS=mt19937ar libconfig common_sql sysinfo
+	CHAR_SQL_DEPENDS=mt19937ar libconfig common_sql sysinfo
+	MAP_SQL_DEPENDS=mt19937ar libconfig common_sql sysinfo
+else
+	ALL_DEPENDS=needs_mysql
+	SQL_DEPENDS=needs_mysql
+	COMMON_SQL_DEPENDS=needs_mysql
+	LOGIN_SQL_DEPENDS=needs_mysql
+	CHAR_SQL_DEPENDS=needs_mysql
+	MAP_SQL_DEPENDS=needs_mysql
+endif
+
+WITH_PLUGINS=@WITH_PLUGINS@
+ifeq ($(WITH_PLUGINS),yes)
+	ALL_DEPENDS+=plugins
+	PLUGIN_DEPENDS=common_sql
+else
+	PLUGIN_DEPENDS=no_plugins
+endif
+
+HAVE_PERL=@HAVE_PERL@
+HAVE_DOXYGEN=@HAVE_DOXYGEN@
+
+MF_TARGETS = Makefile $(addsuffix /Makefile, Source/src/common Source/3rdparty/mt19937ar \
+             Source/3rdparty/libconfig Source/src/char Source/src/login Source/src/map Source/src/plugins \
+             Source/src/tool Source/src/test)
+
+CC = @CC@
+export CC
+
+#####################################################################
+.PHONY: sql  \
+	common_sql \
+	mt19937ar \
+	login_sql \
+	char_sql \
+	map_sql \
+	plugins \
+	import \
+	test \
+	clean \
+	buildclean \
+	distclean \
+	sysinfo \
+	hooks \
+	help
+
+all: $(ALL_DEPENDS)
+
+sql: $(SQL_DEPENDS)
+
+$(MF_TARGETS): %: %.in config.status
+	@echo "	CONFIGURE"
+	@if [ -x config.status ]; then \
+		echo "Reconfiguring with options: $$(./config.status --config)"; \
+		./config.status; \
+	else \
+		echo "Unable to find a previous config.status.  ./configure will be re-run with the default options."; \
+		echo "If you want to use custom options, please press CTRL-C and run ./configure yourself"; \
+		for i in 1 2 3 4 5 6 7 8 9 10; do \
+			printf "\a. "; \
+			sleep 1; \
+		done; \
+		echo ""; \
+		./configure; \
+	fi;
+
+common_sql: $(COMMON_SQL_DEPENDS) Source/src/common/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/common sql
+
+mt19937ar: Source/3rdparty/mt19937ar/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/3rdparty/mt19937ar
+
+libconfig: Source/3rdparty/libconfig/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/3rdparty/libconfig
+
+login_sql: $(LOGIN_SQL_DEPENDS) Source/src/login/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/login sql
+
+char_sql: $(CHAR_SQL_DEPENDS) Source/src/char/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/char
+
+map_sql: $(MAP_SQL_DEPENDS) Source/src/map/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/map sql
+
+test: Source/src/test/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/test
+
+plugins: $(PLUGIN_DEPENDS) Source/src/plugins/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/plugins
+
+plugin.%: $(PLUGIN_DEPENDS) Source/src/plugins/Makefile
+	@echo "	MAKE	$@"
+	@$(MAKE) -C Source/src/plugins $(patsubst plugin.%,%,$@)
+
+import: Makefile
+	@# 1) create conf/import folder
+	@# 2) add missing files
+	@echo "building conf/import folder..."
+#	@if test ! -d conf/import ; then mkdir conf/import ; fi
+#	@for f in $$(ls conf/import-tmpl) ; do if test ! -e conf/import/$$f ; then cp conf/import-tmpl/$$f conf/import ; fi ; done
+
+clean buildclean: $(MF_TARGETS)
+	@$(MAKE) -C Source/src/common $@
+	@$(MAKE) -C Source/3rdparty/mt19937ar $@
+	@$(MAKE) -C Source/3rdparty/libconfig $@
+	@$(MAKE) -C Source/src/login $@
+	@$(MAKE) -C Source/src/char $@
+	@$(MAKE) -C Source/src/map $@
+	@$(MAKE) -C Source/src/plugins $@
+	@$(MAKE) -C Source/src/tool $@
+	@$(MAKE) -C Source/src/test $@
+
+distclean: clean
+	@-rm -f $(MF_TARGETS) config.status config.log
+
+sysinfo:
+	@chmod 777 sysinfogen.sh
+	@chmod 777 auto.sh
+	@chmod 777 servidor
+	@./sysinfogen.sh Source/src/common/sysinfo_new.inc @CFLAGS@ @CPPFLAGS@
+	@if cmp -s Source/src/common/sysinfo.inc Source/src/common/sysinfo_new.inc; then \
+		rm Source/src/common/sysinfo_new.inc ; \
+	else \
+		mv Source/src/common/sysinfo_new.inc Source/src/common/sysinfo.inc ; \
+	fi
+
+config.status: configure
+	@echo "	RECONFIGURE"
+	@./config.status --recheck && ./config.status
+
+help: Makefile
+	@echo "most common targets are 'all' 'sql' 'clean' 'plugins' 'help'"
+	@echo "possible targets are:"
+	@echo "'common_sql'  - builds object files used in SQL servers"
+	@echo "'mt19937ar'   - builds object file of Mersenne Twister MT19937"
+	@echo "'libconfig'   - builds object files of libconfig"
+	@echo "'login_sql'   - builds login server"
+	@echo "'char_sql'    - builds char server"
+	@echo "'map_sql'     - builds map server"
+	@echo "'import'      - builds conf/import folder from the template conf/import-tmpl"
+	@echo "'all'         - builds all the above targets"
+	@echo "'sql'         - builds sql servers (targets 'common_sql' 'login_sql' 'char_sql'"
+	@echo "                'map_sql' and 'import')"
+	@echo "'plugins'     - builds all available plugins"
+	@echo "'plugin.Name' - builds plugin named 'Name'"
+	@echo "'test'        - builds tests"
+	@echo "'clean'       - cleans executables and objects"
+	@echo "'buildclean'  - cleans build temporary (object) files, without deleting the"
+	@echo "                executables"
+	@echo "'distclean'   - cleans files generated by ./configure"
+	@echo "'sysinfo'     - re-generates the System Info include"
+ifeq ($(HAVE_DOXYGEN),yes)
+	@echo "'docs'        - Generate the Doxygen source code documentation"
+ifeq ($(HAVE_PERL),yes)
+	@echo "'hooks'       - re-generates the definitions for the HPM"
+endif
+endif
+	@echo "'help'        - outputs this message"
+
+#####################################################################
+
+needs_mysql:
+	@echo "MySQL not found or disabled by the configure script"
+	@exit 1
+
+no_plugins:
+	@echo "Plugins disabled by the configure script"
+	@exit 1

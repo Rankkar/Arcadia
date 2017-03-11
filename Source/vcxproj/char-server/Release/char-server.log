@@ -1,0 +1,104 @@
+﻿Build started 17/02/2017 20:48:07.
+     1>Project "C:\Users\Spell Master\Desktop\Ragnarok\MyServe\Emulador\Source\vcxproj\char-server.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I..\src /I..\3rdparty /I..\3rdparty\mysql\include /I..\3rdparty\zlib\include /I..\3rdparty\msinttypes\include /Zi /nologo /W3 /WX- /MP /O2 /Ob2 /Oi /Ot /Oy /GT /GL /D WIN32 /D _WIN32 /D __WIN32 /D NDEBUG /D _CRT_SECURE_NO_DEPRECATE /D _CRT_NONSTDC_NO_DEPRECATE /D FD_SETSIZE=4096 /D LIBCONFIG_STATIC /D YY_USE_CONST /D _VC80_UPGRADE=0x0710 /D _MBCS /GF /Gm- /EHsc /MT /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"char-server\Release\\" /Fd"char-server\Release\vc110.pdb" /Gd /TC /wd4800 /analyze- /errorReport:prompt ..\3rdparty\libconfig\grammar.c ..\3rdparty\libconfig\libconfig.c ..\3rdparty\libconfig\scanctx.c ..\3rdparty\libconfig\scanner.c ..\3rdparty\libconfig\strbuf.c ..\3rdparty\mt19937ar\mt19937ar.c ..\src\common\conf.c ..\src\common\core.c ..\src\common\console.c ..\src\common\db.c ..\src\common\des.c ..\src\common\ers.c ..\src\common\grfio.c ..\src\common\HPM.c ..\src\common\memmgr.c ..\src\common\mapindex.c ..\src\common\md5calc.c ..\src\common\mutex.c ..\src\common\nullpo.c ..\src\common\random.c ..\src\common\showmsg.c ..\src\common\socket.c ..\src\common\sql.c ..\src\common\strlib.c ..\src\common\sysinfo.c ..\src\common\thread.c ..\src\common\timer.c ..\src\common\utils.c ..\src\char\HPMchar.c ..\src\char\char.c ..\src\char\geoip.c ..\src\char\int_auction.c ..\src\char\int_elemental.c ..\src\char\int_guild.c ..\src\char\int_homun.c ..\src\char\int_mail.c ..\src\char\int_mercenary.c ..\src\char\int_party.c ..\src\char\int_pet.c ..\src\char\int_quest.c ..\src\char\int_storage.c ..\src\char\inter.c ..\src\char\loginif.c ..\src\char\mapif.c ..\src\char\pincode.c
+         grammar.c
+         libconfig.c
+         scanctx.c
+         scanner.c
+         strbuf.c
+         mt19937ar.c
+         conf.c
+         core.c
+         console.c
+         db.c
+         des.c
+         ers.c
+         grfio.c
+         HPM.c
+         memmgr.c
+         mapindex.c
+         md5calc.c
+         mutex.c
+         nullpo.c
+         random.c
+         showmsg.c
+         socket.c
+         sql.c
+         strlib.c
+         sysinfo.c
+         thread.c
+         timer.c
+         utils.c
+         HPMchar.c
+         char.c
+         geoip.c
+         int_auction.c
+         int_elemental.c
+         int_guild.c
+         int_homun.c
+         int_mail.c
+         int_mercenary.c
+         int_party.c
+         int_pet.c
+         int_quest.c
+         int_storage.c
+         inter.c
+         loginif.c
+         mapif.c
+         pincode.c
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\char-server.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:..\3rdparty\mysql\lib /LIBPATH:..\3rdparty\zlib\lib libcmt.lib oldnames.lib ws2_32.lib libmysql.lib zdll.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\char-server.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\char-server.lib" /MACHINE:X86 /SAFESEH:NO "char-server\Release\grammar.obj"
+         "char-server\Release\libconfig.obj"
+         "char-server\Release\scanctx.obj"
+         "char-server\Release\scanner.obj"
+         "char-server\Release\strbuf.obj"
+         "char-server\Release\mt19937ar.obj"
+         "char-server\Release\conf.obj"
+         "char-server\Release\core.obj"
+         "char-server\Release\console.obj"
+         "char-server\Release\db.obj"
+         "char-server\Release\des.obj"
+         "char-server\Release\ers.obj"
+         "char-server\Release\grfio.obj"
+         "char-server\Release\HPM.obj"
+         "char-server\Release\memmgr.obj"
+         "char-server\Release\mapindex.obj"
+         "char-server\Release\md5calc.obj"
+         "char-server\Release\mutex.obj"
+         "char-server\Release\nullpo.obj"
+         "char-server\Release\random.obj"
+         "char-server\Release\showmsg.obj"
+         "char-server\Release\socket.obj"
+         "char-server\Release\sql.obj"
+         "char-server\Release\strlib.obj"
+         "char-server\Release\sysinfo.obj"
+         "char-server\Release\thread.obj"
+         "char-server\Release\timer.obj"
+         "char-server\Release\utils.obj"
+         "char-server\Release\HPMchar.obj"
+         "char-server\Release\char.obj"
+         "char-server\Release\geoip.obj"
+         "char-server\Release\int_auction.obj"
+         "char-server\Release\int_elemental.obj"
+         "char-server\Release\int_guild.obj"
+         "char-server\Release\int_homun.obj"
+         "char-server\Release\int_mail.obj"
+         "char-server\Release\int_mercenary.obj"
+         "char-server\Release\int_party.obj"
+         "char-server\Release\int_pet.obj"
+         "char-server\Release\int_quest.obj"
+         "char-server\Release\int_storage.obj"
+         "char-server\Release\inter.obj"
+         "char-server\Release\loginif.obj"
+         "char-server\Release\mapif.obj"
+         "char-server\Release\pincode.obj"
+            Creating library ..\char-server.lib and object ..\char-server.exp
+         Generating code
+         Finished generating code
+         char-server.vcxproj -> C:\Users\Spell Master\Desktop\Ragnarok\MyServe\Emulador\Source\vcxproj\..\char-server.exe
+     1>Done Building Project "C:\Users\Spell Master\Desktop\Ragnarok\MyServe\Emulador\Source\vcxproj\char-server.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:45.26
