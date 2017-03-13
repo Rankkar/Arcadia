@@ -199,6 +199,90 @@ amatsu,194,79,5	script	Capitão#Walter2	4_M_SEAMAN,{
 }
 
 // ------------------------------------------------------------------
+// - [Alberta ~ Ayothaya ] - 
+// ------------------------------------------------------------------
+alberta,246,29,3	script	Aibakthing#ayo	4_M_THAIONGBAK,{
+	mes "[Aibakthing]";
+	mes "Hmm! Hahh! Hmm! Hahh!";
+	mes "Deixe-me apresentar a você minha cidade, Ayothaya onde vive tudo o que é sagrado e misterioso!";
+	next;
+	switch(select("Fale-me sobre Ayothaya.","Ir para Ayothaya.","Cancelar.")) {
+		case 1:
+		mes "[Aibakthing]";
+		mes "Nós, os Ayothayanos somos religiosos e amamos a paz e a sinceridade.";
+		mes "Nós procuramos uma vida nobre e esplêndida.";
+		mes "Somos de natureza gentil, mas capazes de nos proteger quando é preciso.";
+		next;
+		mes "[Aibakthing]";
+		mes "A comida é especialmente boa.";
+		mes "Nosso prato mais tradicional é a Sopa Tailandesa feita com limão, camarões e pimenta que possui um sabor incrível com aroma único.";
+		mes "E sugiro que você prove-a em Ayothaya.";
+		next;
+		mes "[Aibakthing]";
+		mes "Na história de Ayothaya existe um fato terrível que fala sobre uma criatura maligna chamada 'Tigre Sa-mhing' que, contam, devorava pessoas.";
+		next;
+		mes "[Aibakthing]";
+		mes "Hmm! Hah! Hmm! Hah!";
+		mes "Ninguém resiste a um convite tão tentador a visitar uma área tão bela.";
+		mes "Você será Bem-vindo a qualquer hora!";
+		close;
+		case 2:
+		mes "[Aibakthing]";
+		mes "Se você desejar visitar Ayothaya.";
+		mes "Pedirei uma humilde taxa de 10.000 zenys!";
+		mes "Hmm! Hah! Hmm! Hah!";
+		next;
+		mes "[Aibakthing]";
+		mes "Agora, você gostaria de visitar Ayothaya!?";
+		next;
+		if (select("Estou pronto, Vamos Lá!","Não, obrigado.") == 1) {
+			if (Zeny > 9999) {
+				mes "[Aibakthing]";
+				mes "Hmm! Hah! Hmm! Hah!";
+				mes "Ah, minha cidade natal, Ayothaya...";
+				mes "Eu estou chegando!";
+				close2;
+				Zeny -= 10000;
+				warp "ayothaya",149,71;
+				end;
+			}
+			mes "[Aibakthing]";
+			mes "Como falei para você, sem a taxa de 10.000 zenys você não poderá apreciar a beleza de Ayothaya.";
+			close;
+		}
+		mes "[Aibakthing]";
+		mes "Se todos sonham em viver em um lugar pacífico e belo, este lugar é Ayothaya, minha cidade!";
+		close;
+		case 3:
+		mes "[Aibakthing]";
+		mes "Se todos sonham em viver em um lugar pacífico e belo, este lugar é Ayothaya, minha cidade!";
+		close;
+	}
+}
+
+ayothaya,152,68,1	script	Barqueiro Aibakthing#ayo2	4_M_THAIONGBAK,{
+	mes "[Aibakthing]";
+	mes "Hmm! Hah! Hmm! Hah!";
+	mes "Então, você gostou de conhecer Ayothaya?";
+	mes "Gostou da Sopa Tailandesa?";
+	mes "Já é hora de voltar para seu país!";
+	next;
+	if (select("Voltar para Alberta.","Cancelar.") == 1) {
+		mes "[Aibakthing]";
+		mes "Estaremos aqui sempre para dar as boas-vindas.";
+		mes "Espero que possamos nos rever em breve!";
+		mes "Faça uma boa viagem!";
+		close2;
+		warp "alberta",238,22;
+		end;
+	}
+	mes "[Aibakthing]";
+	mes "Ah, eu entendo porque você não quer deixar um lugar tão belo como Ayothaya.";
+	mes "Não se preocupe, fique o tempo que precisar.";
+	close;
+}
+
+// ------------------------------------------------------------------
 // - [] - 
 // ------------------------------------------------------------------
 
