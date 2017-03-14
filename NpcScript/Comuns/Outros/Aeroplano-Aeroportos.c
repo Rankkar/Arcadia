@@ -306,3 +306,39 @@ airplane_01,240,64,5	script	Saída#air_011a::ExitAirplane01	4_BOARD3,{
 airplane_01,247,64,5	duplicate(ExitAirplane01)	Saída#air_011b	4_BOARD3
 airplane_01,240,40,1	duplicate(ExitAirplane01)	Saída#air_012a	4_BOARD3
 airplane_01,247,40,1	duplicate(ExitAirplane01)	Saída#air_012b	4_BOARD3
+
+//-------------------------------------------------------------------
+// - [airport] -
+//-------------------------------------------------------------------
+airport,174,41,6	script	Jovem#air	4W_M_03,{
+	mes "[Runnan]";
+	mes "...E esse é o porque de eu viajar ao redor do mundo.";
+	mes "Meus chefes tem um olho bom para as melhores e exoticas mercadorias, então eu compro elas e faço as entregas.";
+	next;
+	mes "[Runnan]";
+	mes "Não teve uma vez que eles me fizeram coletar Jellopy, embora seja comum coletar essas coisas hoje em dia.";
+	mes "Agora que eu pensei sobre, porque eles precisam de tantas coisas?";
+	close;
+}
+
+//-------------------------------------------------------------------
+airport,176,41,4	script	Velho#air	4_M_ORIENT01,{
+	mes "[Zhen Lan]";
+	mes "Agora, fiquei sabendo que os monstrons que vivem aqui por perto carregam metais que brilham com uma sublime e linda luz.";
+	mes "Elegante, huh?";
+	next;
+	mes "[Zhen Lan]";
+	mes "Estes metais são muito bons para se fabricar vasos de flores.";
+	mes "Meu amigo, que é um bom fazedor de bonecos, me disse isso.";
+	mes "Ele faz bonecos utilizando todo tipo de materiais.";
+	next;
+	mes "[Zhen Lan]";
+	mes "Ele os faz fashion com couro bem curtido, e coisas como pena de aves, e usa Cyfar e Zargon para fazer os olhos.";
+	mes "Ele até usa Jellopy nos pés para balancear a boneca.";
+	next;
+	mes "[Zhen Lan]";
+	mes "Eu acho que isto mostra que estas coisas que parecem inuteis possa a ser util para alguém.";
+	mes "Então não se preocupe em carregar muitas coisas.";
+	mes "Cedo ou tarde, elas podem servir para alguém.";
+	close;
+}

@@ -283,6 +283,46 @@ ayothaya,152,68,1	script	Barqueiro Aibakthing#ayo2	4_M_THAIONGBAK,{
 }
 
 // ------------------------------------------------------------------
+// - [Cmd_Fild > Alberta * Cmd_Fild > Izlude ] - 
+// ------------------------------------------------------------------
+-	script	cmdboard	FAKE_NPC,{
+	mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
+	mes "Chamando os passageiros da escuna 'Lutifus'...";
+	mes "Com destino a Izlude e Alberta...";
+	mes "O embarque está liberado!";
+	mes "Agradecemos a preferência!";
+	mes "Você vai embarcar na 'Lutifus'?";
+	next;
+	switch(select("Porto de Alberta - 600 Zenys","Porto de Izlude - 800 Zenys","Sair")) {
+		case 1:
+		if (Zeny < 600) {
+			mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
+			mes "Você não tem dinheiro suficiente para pagar a passagem.";
+			close;
+		}
+		Zeny -= 600;
+		warp "alberta",192,169;
+		end;
+		case 2:
+		if (Zeny < 800) {
+			mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
+			mes "Você não tem dinheiro suficiente para pagar a passagem.";
+			close;
+		}
+		Zeny -= 800;
+		warp "izlude",195,212;
+		end;
+		case 3:
+		mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
+		mes "Muito obrigado por escolher a";
+		mes "'Lutifus'!";
+		close;
+	}
+}
+cmd_fild07,299,83,4	duplicate(cmdboard)	Zain#cmd	4W_SAILOR
+cmd_fild07,94,134,4	duplicate(cmdboard)	Sarumane#cmd	4W_SAILOR
+
+// ------------------------------------------------------------------
 // - [] - 
 // ------------------------------------------------------------------
 
