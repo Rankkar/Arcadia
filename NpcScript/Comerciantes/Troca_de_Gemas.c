@@ -1,0 +1,96 @@
+/*-----------------------------------------------------------------*\
+|             ______ ____ _____ ___   __                            |
+|            / ____ / _  / ____/  /  /  /                           |
+|            \___  /  __/ __/ /  /__/  /___                         |
+|           /_____/_ / /____//_____/______/                         |
+|                /\  /|   __    __________ _________                |
+|               /  \/ |  /  |  /  ___  __/ ___/ _  /                |
+|              /      | / ' | _\  \ / / / __//  __/                 |
+|             /  /\/| |/_/|_|/____//_/ /____/_/\ \                  |
+|            /__/   |_|      npc Script         \/                  |
+|                                                                   |
++-------------------------------------------------------------------+
+|                     Projeto Ragnarok Online                       |
++-------------------------------------------------------------------+
+| - Por: eAthena/rAthena/Hercules                                   |
+| - Versão: Spell Master                                            |
+| - Nota: Troca de Gemas, 2 de uma cor por outra                    |
+\*-----------------------------------------------------------------*/
+
+payon,173,238,5	script	Jade#GenStone	4_M_SAGE_A,{
+	mes "[Jade]";
+	mes "Traga para mim 2 Gemas da mesma cor, e eu vou trocá-las por Gemas de cores diferentes.";
+	next;
+	switch(select("Gemas Azuis para Vermelhas!","Gemas Vermelhas para Amarelas!","Gemas Amarelas para Azuis!")) {
+		case 1: callsub S_TradeGems,717,716;
+		case 2: callsub S_TradeGems,716,715;
+		case 3: callsub S_TradeGems,715,717;
+	}
+
+	S_TradeGems:
+	if (countitem(getarg(0)) < 2) {
+		mes "[Jade]";
+		mes "Haha...!";
+		mes "Você está de brincadeira comigo, certo?";
+		mes "Eu não poderei fazer este serviço se você não me trouxer as 2 "+getitemname(getarg(0))+"s!";
+		close;
+	}
+	else {
+		.@gems = countitem(getarg(0))/2;
+		mes "[Jade]";
+		mes "Acredito que posso criar um total de "+.@gems+" "+ getitemname(getarg(1))+"s usando as "+getitemname(getarg(0))+"s que você tem no momento.";
+		mes "O que gostaria de fazer?";
+		next;
+		switch(select("Me dê quantas puder.","Quero digitar quantas preciso.","Deixa pra lá.")) {
+			case 1:
+			delitem getarg(0),.@gems * 2;
+			getitem getarg(1),.@gems;
+			break;
+			case 2:
+			mes "[Jade]";
+			mes "Então aqui está!";
+			mes "Sinta-se livre para voltar quando quiser.";
+			mes "Hm, o que você está olhando?";
+			mes "Tem algo no meu rosto!?!?";
+			next;
+			while(1) {
+				input .@input,0,101;
+				if (.@input == 0) {
+					mes "[Jade]";
+					mes "Então quantas gemas vai querer?";
+					mes "O máximo que você poderá escolher é 100.";
+					close;
+				}
+				else if (.@input > 100) {
+					mes "[Jade]";
+					mes "Hunn...";
+					mes "Eu só posso realizar a troca de até 100 gemas.";
+					next;
+				}
+				else if (.@gems < .@input) {
+					mes "[Jade]";
+					mes "Nenhuma!?";
+					mes "Acho que você precisa mudar de ideia...";
+					next;
+				}
+				else {
+					break;
+				}
+			}
+			delitem getarg(0),.@input * 2;
+			getitem getarg(1),.@input;
+			break;
+			case 3:
+			mes "[Jade]";
+			mes "Claro, sem problema.";
+			mes "Volte quando quiser.";
+			close;
+		}
+		mes "[Jade]";
+		mes "Então aqui está!";
+		mes "Sinta-se livre para voltar quando quiser.";
+		mes "Hm, o que você está olhando?";
+		mes "Tem algo no meu rosto!?!?";
+		close;
+	}
+}
