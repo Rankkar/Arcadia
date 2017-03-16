@@ -33,7 +33,7 @@ map_configuration: {
 	// Informações relacionadas ao comportamento entre servidores
 	database: {
 		// Onde devem ser lidos todos os dados do banco de dados?
-		db_path: "db"
+		db_path: "Database"
 
 		// Tempo de salvamento automático da base de dados
 		// Todos os caracteres são salvos neste tempo em segundos (exemplo:

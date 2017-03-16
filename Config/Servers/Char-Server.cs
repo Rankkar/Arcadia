@@ -127,7 +127,7 @@ char_configuration: {
 		// (em segundos)
 		autosave_time: 60
 		// Em que pasta estão os arquivos DB (abra_db.txt, etc.)
-		db_path: "db"
+		db_path: "Database"
 		// Salvar log para o servidor de personagens?
 		log_char: false
 	}

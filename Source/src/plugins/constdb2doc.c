@@ -89,7 +89,7 @@ void constdb2doc_constdb(void)
 	script->constdb_comment = constdb2doc_constdb_comment;
 
 	/* Run */
-	fprintf(out_fp, "## Constants (db/Etc_DB/Constants.conf)\n\n");
+	fprintf(out_fp, "## Constants (Database/Etc_DB/Constants.conf)\n\n");
 	script->read_constdb();
 	fprintf(out_fp, "\n");
 

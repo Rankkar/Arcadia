@@ -143,7 +143,7 @@ void geoip_init(void)
 
 	geoip->data->active = true;
 
-	db = fopen("./db/Etc_DB/GeoIP.dat","rb");
+	db = fopen("./Database/Etc_DB/GeoIP.dat","rb");
 	if (db == NULL) {
 		ShowError("geoip_readdb: Error reading GeoIP.dat!\n");
 		geoip->final(false);

@@ -5409,7 +5409,7 @@ enum bl_type map_zone_bl_type(const char *entry, enum map_zone_skill_subtype *su
 void read_map_zone_db(void) {
 	struct config_t map_zone_db;
 	struct config_setting_t *zones = NULL;
-	const char *config_filename = "db/Map_DB/MapZone.conf"; // FIXME hardcoded name
+	const char *config_filename = "Database/Map_DB/MapZone.conf"; // FIXME hardcoded name
 	if (!libconfig->load_file(&map_zone_db, config_filename))
 		return;
 
@@ -6579,7 +6579,7 @@ void map_defaults(void) {
 	map->extra_scripts = NULL;
 	map->extra_scripts_count = 0;
 
-	sprintf(map->db_path ,"db");
+	sprintf(map->db_path ,"Database");
 	sprintf(map->help_txt ,"conf/help.txt");
 	sprintf(map->charhelp_txt ,"conf/charhelp.txt");
 

@@ -13064,7 +13064,7 @@ void status_read_job_db(void) /* [malufett] */
 	int i = 0;
 	struct config_t job_db_conf;
 	struct config_setting_t *jdb = NULL;
-	const char *config_filename = "db/Job_DB/JobStatus.conf";
+	const char *config_filename = "Database/Job_DB/JobStatus.conf";
 	if (!libconfig->load_file(&job_db_conf, config_filename))
 		return;
 

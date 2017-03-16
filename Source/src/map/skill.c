@@ -19407,8 +19407,8 @@ bool skill_parse_row_changematerialdb(char* split[], int columns, int current)
 	return true;
 }
 
-#define skilldb_duplicate_warning(name, setting, skill) (ShowError("skill_read_skilldb: Duplicate entry '%s' in setting '%s' for Skill Id %d in '%s', skipping...\n", name, setting, skill, "db/Skill_DB/SkillList.conf"))
-#define skilldb_invalid_error(name, setting, skill) (ShowError("skill_read_skilldb: Invalid entry '%s' in setting '%s' for Skill Id %d in '%s', skipping...\n", name, setting, skill, "db/Skill_DB/SkillList.conf"))
+#define skilldb_duplicate_warning(name, setting, skill) (ShowError("skill_read_skilldb: Duplicate entry '%s' in setting '%s' for Skill Id %d in '%s', skipping...\n", name, setting, skill, "Database/Skill_DB/SkillList.conf"))
+#define skilldb_invalid_error(name, setting, skill) (ShowError("skill_read_skilldb: Invalid entry '%s' in setting '%s' for Skill Id %d in '%s', skipping...\n", name, setting, skill, "Database/Skill_DB/SkillList.conf"))
 
 /**
  * Sets Level based configuration for skill groups from skill_db.conf [ Smokexyz ]
@@ -20476,7 +20476,7 @@ bool skill_read_skilldb(const char *filename)
 	
 	nullpo_retr(false, filename);
 
-	sprintf(filepath,"db/%s",filename);
+	sprintf(filepath,"Database/%s",filename);
 	
 	if (!libconfig->load_file(&skilldb, filepath)) {
 		return false; // Libconfig error report.
