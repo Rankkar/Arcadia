@@ -8,7 +8,7 @@
 |        /__/   |__|  [ Ragnarok Emulator ]                       |
 |                                                                 |
 |-----------------------------------------------------------------|
-| - Importa√ß√£o dos arquivos de configura√ß√£o que iniciam Npcs      |
+| - ImportaÁ„o dos arquivos de configuraÁ„o que iniciam Npcs      |
 \*---------------------------------------------------------------*/
 
 npc_global_list: (
@@ -24,10 +24,10 @@ npc_global_list: (
 	// Habitantes e npcs comuns
 	@include "NpcScript/Npc_Config/Comuns.conf"
 
-	// Guerra do Imp√©rio
+	// Guerra do ImpÈrio
 	@include "NpcScript/Npc_Config/Guerra_do_Imperio.conf"
 
-	// Inst√¢nncias
+	// Inst‚nncias
 	@include "NpcScript/Npc_Config/Instancias.conf"
 
 	// Quests

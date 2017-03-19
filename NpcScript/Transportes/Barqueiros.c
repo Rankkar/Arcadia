@@ -283,6 +283,92 @@ ayothaya,152,68,1	script	Barqueiro Aibakthing#ayo2	4_M_THAIONGBAK,{
 }
 
 // ------------------------------------------------------------------
+// - [Alberta ~ Kunlun(Gon_Fild) ] - 
+// ------------------------------------------------------------------
+alberta,246,62,3	script	Wabakho#gon	4_M_TWMIDMAN,{
+	mes "[Wabakho]";
+	mes "Saudações.";
+	mes "Eu gostaria de convidar todos vocês a Kunlun.";
+	mes "Eu tenho a honra de ser o encarregado de transportar os cidadãos de Rune Midgard a um país completamente novo.";
+	mes "Kunlun!";
+	next;
+	switch(select("Saber mais sobre Kunlun...","Ir para Kunlun.","Cancelar.")) {
+		case 1:
+		mes "[Wabakho]";
+		mes "Kunlun é o melhor lugar para realizar as fantasias de pessoas de toda Midgard.";
+		mes "Você irá passar pela casa em miniatura na Vila dos Pigmeus e entrar em Kunlun através de um pilar feito de uma luz encantadora.";
+		next;
+		mes "[Wabakho]";
+		mes "Eu ouvi dizer que os sábios daqui construíram uma cidade voadora...";
+		mes "É um feito impressionante, porém Kunlun sempre flutuou no céu naturalmente!";
+		mes "Kunlun possui a mais bela vista do mundo!";
+		next;
+		mes "[Wabakho]";
+		mes "Nossas especialidades locais são pão doce de passas e pêssego, são suculentos e deliciosos.";
+		mes "Como era de se esperar, um novo calabouço repleto de novos perigos o espera em Kunlun.";
+		mes "Então esteja bem preparado quando resolver ir lá!";
+		next;
+		mes "[Wabakho]";
+		mes "Quando você desejar partir, por favor me informe.";
+		mes "É um grande prazer servir pessoas, como você, do continente de Midgard.";
+		close;
+		case 2:
+		mes "[Wabakho]";
+		mes "Bem, tudo pronto para a viagem?";
+		mes "Nós cobramos ^0000FF10,000^000000z por uma passagem para Kunlun.";
+		mes "A passagem é apenas válida para uma ida.";
+		mes "Mas você pode voltar quando desejar sem custo algum.";
+		next;
+		mes "[Wabakho]";
+		mes "Você quer embarcar agora?";
+		next;
+		if (select("Sim por favor!","Hmm, talvez outra hora.") == 1) {
+			if (Zeny > 9999) {
+				mes "[Wabakho]";
+				mes "Tripulação, preparem-se para a partida.";
+				close2;
+				Zeny -= 10000;
+				warp "gon_fild01",258,82;
+				end;
+			}
+			mes "[Wabakho]";
+			mes "Eu sinto muito, mas você precisa trazer ^0000FF10,000^000000z para comprar sua passagem.";
+			mes "Por favor, tenha certeza de que você tem dinheiro suficiente.";
+			mes "Obrigado.";
+			close;
+		}
+		mes "[Wabakho]";
+		mes "Por favor, me avise se desejar visitar Kunlun.";
+		mes "É um grande prazer servir pessoas, como você, do continente de Midgard.";
+		close;
+		case 3:
+		mes "[Wabakho]";
+		mes "Por favor, me avise se desejar visitar Kunlun.";
+		mes "É um grande prazer servir pessoas, como você, do continente de Midgard.";
+		close;
+	}
+}
+
+gon_fild01,255,79,7	script	Wabakho#gon2	4_M_TWMIDMAN,{
+	mes "[Wabakho]";
+	mes "E então ilustre visitante, o que achou de Kunlun?";
+	mes "Podemos partir para o continente quando quiser, basta dar as ordens.";
+	next;
+	if (select("Quero voltar para Alberta.","Cancelar") == 1) {
+		mes "[Wabakho]";
+		mes "Espero que tenha gostado de Kunlun e que volte a nos visitar no futuro.";
+		mes "Tripulação, prepare-se para a partida!";
+		close2;
+		warp "alberta",243,67;
+		end;
+	}
+	mes "[Wabakho]";
+	mes "Demore o tempo que quiser aqui, amigo.";
+	mes "Existem muitos lugares misteriosos em Kunlun pra você visitar.";
+	close;
+}
+
+// ------------------------------------------------------------------
 // - [Cmd_Fild > Alberta * Cmd_Fild > Izlude ] - 
 // ------------------------------------------------------------------
 -	script	cmdboard	FAKE_NPC,{
@@ -321,6 +407,150 @@ ayothaya,152,68,1	script	Barqueiro Aibakthing#ayo2	4_M_THAIONGBAK,{
 }
 cmd_fild07,299,83,4	duplicate(cmdboard)	Zain#cmd	4W_SAILOR
 cmd_fild07,94,134,4	duplicate(cmdboard)	Sarumane#cmd	4W_SAILOR
+
+// ------------------------------------------------------------------
+// - [ Izlude > Izlu2Dun / Izlude > Alberta ] - 
+// ------------------------------------------------------------------
+izlude,197,205,1	script	Marinheiro#izlude	4W_SAILOR,{
+	mes "[Marinheiro]";
+	mes "Olá, todo mundo!";
+	mes "Atenção, atenção!";
+	mes "Venham passear ao vento em um barco fascinante!";
+	mes "Rápido, rápido!";
+	next;
+	switch(select("Ilha Byalan -> 150 Zeny.","Marinha de Alberta  -> 500 Zeny.","Cancelar.")) {
+		case 1:
+		if (Zeny < 150) {
+			mes "[Marinheiro]";
+			mes "150 Zeny!";
+			mes "Somente 150 Zeny para partir!";
+			close;
+		}
+		Zeny -= 150; warp "izlu2dun",107,50; end;
+		case 2:
+		if (Zeny < 500) {
+			mes "[Marinheiro]";
+			mes "500 Zeny!";
+			mes "Somente 500 Zeny para partir!";
+			close;
+		}
+		Zeny -= 500; warp "alberta",188,169; end;
+		case 3:
+		close;
+	}
+}
+
+izlu2dun,108,27,0	script	Marinheiro#2izlude	4W_SAILOR,{
+	mes "[Marinheiro]";
+	mes "Quer voltar para Izlude?";
+	next;
+	if (select("Sim.","Não, quero ficar mais tempo!") == 1) {
+		warp "izlude",197,210;
+		end;
+	}
+	close;
+}
+
+// ------------------------------------------------------------------
+// - [Izlude ~ Jawaii] - 
+// ------------------------------------------------------------------
+izlude,171,185,3	script	Auxiliar Lua de Mel#Izl	1_F_LIBRARYGIRL,{
+	mes "[Auxiliar]";
+	mes "Recém casados e casais antigos...";
+	mes "Nós os convidamos para passar sua lua de mel aqui!";
+	next;
+	switch(select("Jawaii?","Ir para Jawaii!","Cancelar.")) {
+		case 1:
+		mes "[Auxiliar]";
+		mes "Existe uma ilha distante, em um continente longe de Rune-Midgard.";
+		mes "É uma ilha muito bonita e tranquila que abre as suas portas para os casais.";
+		next;
+		mes "[Auxiliar]";
+		mes "Essa é uma oferta exclusiva de viagem para refúgio da lua de mel especial para os cidações de Rune-Midgard.";
+		mes "Sendo que o preço é de 100.000 zeny.";
+		mes "Pode ser caro, mas você vai aproveitar cada centavo.";
+		next;
+		mes "[Auxiliar]";
+		mes "Eu garanto a você que esse serão os momentos mais felizes que você pode expereimentar em seu casamento estando na ilha.";
+		mes "Você realmente vai colocar algum preço nisso?";
+		close;
+		case 2:
+		mes "[Auxiliar]";
+		if (!getpartnerid()) {
+			mes "Hummm....";
+			mes "Infelizmente, solteiros não são permitidos na ilha.";
+			mes "Porque você não vai esquecer sua solidão no barzinho de Prontera?";
+			close;
+		}
+		else if (Zeny > 99999) {
+			Zeny -= 100000;
+			mes "Bon Voyage...!!";
+			mes "Deixe-me guiar você para Jawaii";
+			close2;
+			warp "jawaii",245,125;
+			end;
+		}
+		mes "Como eu expliquei antes, você precisa ter 100.000 zeny para poder visitar Jawaii.";
+		mes "Porque você não pede para pessoa amada uma ajuda em zeny para essa viagem?";
+		close;
+		case 3:
+		mes "[Auxiliar]";
+		mes "Não há melhor forma de aproveitar momentos especiais com sua pessoa amada através de uma viagem secreta para um lugar remoto e exótico.";
+		next;
+		mes "[Auxiliar]";
+		mes "Umas férias em Jawaii poderia ser um incrível presente para quem você ama~";
+		close;
+	}
+}
+
+jawaii,239,112,7	script	Marinheiro#jaw	4W_SAILOR,{
+	mes "[Marinheiro]";
+	mes "Este navio está indo para ^666699Izlude^000000.";
+	mes "Você aproveitou seu tempo em Jawaii?";
+	mes "Você deve verficar se não esqueceu alguma coisa antes de partirmos.";
+	next;
+	mes "[Marinheiro]";
+	mes "Bem, então você gostaria de voltar para Izlude?";
+	next;
+	if (select("Voltar.","Cancelar.") == 1) {
+		mes "[Marinheiro]";
+		mes "Agora, deixe-me guiar você para Izlude.";
+		close2;
+		warp "izlude",195,212;
+		end;
+	}
+	mes "[Marinheiro]";
+	mes "Aproveite o seu tempo e olhe tudo que gostar ao seu redor.";
+	mes "De qualquer forma, esse não é um lugar que você pode visitar com frequência.";
+	mes "Entende?";
+	close;
+}
+
+// ------------------------------------------------------------------
+// - [ Jawaii > Alberta ] - 
+// ------------------------------------------------------------------
+jawaii,122,263,5	script	Marinheiro#jaw2	4W_SAILOR,{
+	mes "[Marinheiro]";
+	mes "Esse navio está voltando para ^003399Alberta^000000.";
+	mes "Você aproveitou seu tempo em Jawaii?";
+	mes "Você deve verificar se não esqueceu alguma coisa antes de partirmos.";
+	next;
+	mes "[Marinheiro]";
+	mes "Agora, você está pront"+(Sex?"o":"a")+" para ir a Alberta?";
+	next;
+	if (select("Ir para Alberta.","Cancelar.") == 1) {
+		mes "[Marinheiro]";
+		mes "Agora, deixe-me levar você para Alberta.";
+		close2;
+		warp "alberta",192,157;
+		end;
+	}
+	mes "[Marinheiro]";
+	mes "Isso...";
+	mes "Tente aproveitar suas férias o máximo que você puder.";
+	mes "Nós vamos estar prontos para sair quando você quiser.";
+	close;
+}
 
 // ------------------------------------------------------------------
 // - [] - 

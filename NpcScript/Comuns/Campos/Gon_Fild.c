@@ -14,21 +14,12 @@
 +-------------------------------------------------------------------+
 | - Por: eAthena/rAthena/Hercules                                   |
 | - Versão: Spell Master                                            |
-| - Nota: Npcs comuns no Labirinto da Floresta                      |
+| - Nota: Npcs comuns nos Campos de Kunlun                          |
 \*-----------------------------------------------------------------*/
 
-prt_maze02,100,69,0	script	Soldado#pront	8W_SOLDIER,{
-	mes "[Soldado]";
-	mes "Se eu fosse você, não entraria nessa floresta...";
-	mes "Olhe para o chão...";
-	mes "Só dá pra ver pegadas entrando, nenhuma saindo!";
-	close;
-}
-
-//-------------------------------------------------------------------
-prt_maze02,110,69,0	script	Soldado#2pront	8W_SOLDIER,{
-	mes "[Soldado]";
-	mes "Eu já vi jovens demais entrarem nesta floresta e não sairem nunca mais...";
-	mes "Eu nunca arriscaria minha vida desse jeito, mas cada um leva a vida que quer.";
+gon_fild01,187,239,7	script	Anunciante de Kunlun#gonf	4_M_TWMIDMAN,{
+	mes "[Jangchungryong]";
+	mes "Por favor, vá para o andar de cima.";
+	mes "Eu espero que você tenha várias memórias boas de Kunlun quando voltar para a sua terra natal.";
 	close;
 }

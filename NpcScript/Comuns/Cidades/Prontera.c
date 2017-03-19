@@ -129,7 +129,7 @@ prontera,78,150,3	script	Dairenne#pront	4_F_01,{
 	mes "Olhe para toda essa poeira, nem tudo sobre morar na capital é bom.";
 	mes "De qualquer forma, eu posso ajudá-lo?";
 	next;
-	if (select("Conversar:Ir Andando") == 1) {
+	if (select("Conversar","Ir Andando") == 1) {
 		mes "[Menina da Cidade]";
 		mes "Gostaria de saber se você também é interessado em moda ou em vestidos.";
 		mes "*Risos*.";
@@ -245,8 +245,8 @@ prt_in,180,20,2	script	Garçom#pront	1_M_PUBMASTER,{
 	next;
 	.@drink = 1;
 	while(.@drink) {
-		switch(select("'Carapaça de formiga ao molho'?:'Perna de Gafanhoto frita'?:Eu... acho que vou indo.")) {
-		case 1:
+		switch(select("'Carapaça de formiga ao molho'?","'Perna de Gafanhoto frita'?","Eu... acho que vou indo.")) {
+			case 1:
 			mes "[Garçom]";
 			mes "É uma deleciosa iguaria e um clássico local!";
 			mes "É feito à partir das cascas das formigas do deserto sograt, ao sul daqui.";
@@ -258,7 +258,7 @@ prt_in,180,20,2	script	Garçom#pront	1_M_PUBMASTER,{
 			mes "E adoram reclamar se acaba meu estoque.";
 			next;
 			break;
-		case 2:
+			case 2:
 			mes "[Garçom]";
 			mes "Sim, as pernas de gafanhoto ficam especialmente boas fritas com azeite de olive...";
 			mes "Uma delícia.";
@@ -270,7 +270,7 @@ prt_in,180,20,2	script	Garçom#pront	1_M_PUBMASTER,{
 			mes "É, mas do jeito que vão as coisas logo, logo, vou ter que voltar a feazer pratos comuns de novo...";
 			next;
 			break;
-		case 3:
+			case 3:
 			mes "[Garçom]";
 			mes "Bem, tenha cuidado lá fora, e coma uma pouco da próxima vez!";
 			close2;
@@ -290,7 +290,7 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 	mes "Sabe, eu já andei por todos os arredores de Prontera!";
 	mes "Lugares cheios de monstros, lugares cheios de itens. ótimos para treinar!";
 	next;
-	if (select("E como você foi pra tantos lugares?:É? E daí?") == 1) {
+	if (select("E como você foi pra tantos lugares?","É? E daí?") == 1) {
 		mes "[Shevild]";
 		mes "Ora, eu sou um cara muito talentoso!";
 		mes "Eu já fiz de tudo!";
@@ -312,8 +312,8 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 		mes "Por exemplo, uma certa caverna que eu conheço...";
 		mes "E também aquela floresta perigosíssima...";
 		next;
-		switch(select("Que caverna?:Floresta perigosa?:Bem, eu preciso ir...")) {
-		case 1:
+		switch(select("Que caverna?","Floresta perigosa?","Bem, eu preciso ir...")) {
+			case 1:
 			mes "[Shevild]";
 			mes "Hmm... A caverna...";
 			mes "Ela fica ao Norte daqui.";
@@ -331,7 +331,7 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 			mes "Mas...";
 			mes "Quem sabe eu volto lá algum dia.";
 			next;
-			if (select("Como eu faço pra chegar lá?:Bom, a gente se vê por ai.") == 1) {
+			if (select("Como eu faço pra chegar lá?","Bom, a gente se vê por ai.") == 1) {
 				mes "[Shevild]";
 				mes "O quê?";
 				mes "Mas é aqui do lado!";
@@ -343,7 +343,7 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 			mes "[Shevild]";
 			mes "Tudo bem... Tome cuidado por aí.";
 			close;
-		case 2:
+			case 2:
 			mes "[Shevild]";
 			mes "Essa floresta fica à nordeste daqui.";
 			mes "Existem algumas ruínas bem bonitas ali perto...";
@@ -356,7 +356,7 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 			mes "Se você deixar cair algum item no chão, os Yoyos saem correndo pra pegá-lo.";
 			mes "E o pior é que se você atacar um deles, eles vão se juntar contra você.";
 			next;
-			if (select("Como se chega lá?:Ah, cansei dessa conversa...") == 1) {
+			if (select("Como se chega lá?","Ah, cansei dessa conversa...") == 1) {
 				mes "[Shevild]";
 				mes "O caminho é um pouquinho complicado, mas se você seguir para o Norte e depois Leste, não tem como errar.";
 				mes "Só cuidado com algumas plantas que tem pelo caminho...";
@@ -367,7 +367,7 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 			mes "Tudo bem, então!...";
 			mes "Lembre sempre de tomar cuidado quando viajar por aí.";
 			close;
-		case 3:
+			case 3:
 			mes "[Shevild]";
 			mes "Tudo bem... Tome cuidado por aí.";
 			close;
@@ -381,7 +381,7 @@ prt_in,173,24,2	script	Shevild#pront	4_M_03,{
 //-------------------------------------------------------------------
 prt_in,177,20,2	script	TenSue#pront	4W_M_01,{
 	switch(rand(3)) {
-	case 1:
+		case 1:
 		mes "[TenSue]";
 		mes "O que...?";
 		mes "Então, você está cansado de só matar monstros?";
@@ -400,7 +400,7 @@ prt_in,177,20,2	script	TenSue#pront	4W_M_01,{
 		mes "[TenSue]";
 		mes "Eu não sei mesmo se você não gosta de receber ordens, mas se esse é o caso, por que não fazer o seu próprio clã?";
 		close;
-	case 2:
+		case 2:
 		mes "[TenSue]";
 		mes "Uma vez que eu andei todo o caminho até Al de Baran.";
 		mes "Era muito perigoso com todos aqueles monstros!";
@@ -421,7 +421,7 @@ prt_in,177,20,2	script	TenSue#pront	4W_M_01,{
 		mes "A sede da Corporação Kafra também está localizada em Al de Baran.";
 		mes "Você realmente deveria ir lá e verificar por si mesmo.";
 		close;
-	default:
+		default:
 		mes "[TenSue]";
 		mes "O reino de Rune-Midgard é governado pelo benevolente Rei Tristan III.";
 		next;
@@ -450,14 +450,13 @@ prt_in,177,18,2	script	Marvin#pront	1_F_PUBGIRL,{
 	mes "Quando se trata de paquerar o sexo oposto, eu tenho que dizer é tudo questão de ^333399habilidade^000000.";
 	next;
 	mes "[Marvin]";
-	if (Sex) {
+	if (Sex == SEX_MALE) {
 		mes "Eu não posso ajudá-lo muito quando o assunto é falar com mulheres atraentes, como eu.";
-		mes "Mas eu posso te dizer um pouco mais sobre as habilidades que ajudam na batalha.";
 	}
 	else {
 		mes "Eu realmente não tenho algum conselho de habilidades quando se trata de falar com um cara bonito.";
-		mes "Mas eu posso te ensinar o que eu sei sobre as habilidades que ajudam na batalha.";
 	}
+	mes "Mas eu posso te ensinar o que eu sei sobre as habilidades que ajudam na batalha.";
 	next;
 	mes "[Marvin]";
 	mes "A maioria das habilidades é maximizada no nível 10, e isso são muitos pontos...";
@@ -485,12 +484,13 @@ prt_in,284,168,3	script	Ginedin Rephere#pront	1_M_JOBTESTER,{
 	mes "Espero que caiba todos os meus convidados aqui...";
 	mes "Oh! Perdão, eu mal percebi que você estava aqui!";
 	next;
-	switch(select("Conversar:Tingir Roupas:Cancelar")) {
-	case 1:
+	switch(select("Conversar","Tingir Roupas","Cancelar")) {
+		case 1:
 		mes "[Ginedin Rephere]";
 		mes "As pessoas ficam cada vez mais ricas, e podem gastar dinheiro com mais coisas.";
 		mes "Eu acho isso maravilhoso, por que assim as pessoas podem deixar de usar farrapos e investirem em lindas roupas!";
-		mes "Eu não acho que roupas bonitas sejam algo superfluo, como muitos acham, mas é claro que antes você deve se preocupar em por comida na mesa!";
+		mes "Eu não acho que roupas bonitas sejam algo superfluo, como muitos acham.";
+		mes "Mas é claro que antes você deve se preocupar em por comida na mesa!";
 		next;
 		mes "[Ginedin Rephere]";
 		mes "Uma roupa bem escolhida faz com que você se sinta melhor consigo mesmo, e seja mais feliz.";
@@ -498,17 +498,97 @@ prt_in,284,168,3	script	Ginedin Rephere#pront	1_M_JOBTESTER,{
 		mes "Fazer roupas que deixem as pessoas mais felizes, que expressem as suas personalidades..";
 		mes "Pode ser um trabalho muito difícil, mas é imensamente recompensador.";
 		close;
-	case 2:
+		case 2:
 		mes "[Ginedin Rephere]";
 		mes "Ah...";
 		mes "Você veio aqui tingir suas roupas?";
 		mes "Eu sinto muito, eu estou ocupadíssimo no momento, não posso mais tingir roupas.";
 		mes "Volte mais tarde, e quem sabe eu tenho um tempinho pra você.";
 		close;
-	case 3:
+		case 3:
 		mes "[Ginedin Rephere]";
 		mes "Por favor, sinta-se em casa.";
 		mes "Perdoe-me por não poder lhe dar atenção, tenho que organizar a minha festa.";
 		close;
 	}
+}
+
+//-------------------------------------------------------------------
+prt_in,173,13,4	script	Cliente#SoloHan	4_M_04,{
+	mes "[SoloHan]";
+	if (getpartnerid()) {
+		mes "Nossa...";
+		mes "Acho que estou bêbado.";
+		mes "*Hiccup!*";
+		next;
+		mes "[SoloHan]";
+		mes "...O quê!?";
+		mes "Ah rapaz!";
+		mes "Saia da minha frente!";
+		if (Sex == SEX_MALE) {
+			mes "Você parece um daqueles maridos que só obedece a mulher!";
+		}
+		else {
+			next;
+			mes "[SoloHan]";
+			mes "Acho que sei reconhecer uma esposa mandona quando vejo uma!";
+			mes "Vá irritar seu marido com alguma besteira!";
+		}
+		next;
+		mes "[SoloHan]";
+		mes "Me deixe em paz!";
+		mes "Não quero saber da sua felicidade conjugal!";
+		mes "Vamos lá, Bachewcca!";
+		mes "Fale pra eles que o tipo deles não é bem vindo aqui!";
+		next;
+		mes "[Bachewcca]";
+		mes "^666666*Grrr...!*^000000";
+		specialeffect EF_THROWITEM,AREA,"Cliente#Bachewcca";
+		close;
+	}
+	else {
+		mes "Nossa...";
+		mes "Acho que estou bêbado~";
+		mes "^666666*Hiccup...!*^000000";
+		next;
+		mes "[SoloHan]";
+		mes "Ei, você...!";
+		mes "Você compreende, não?!";
+		mes "Não fica chateado por ver todos esses recém-casados felizes?!";
+		mes "Fica~? Eu também!";
+		next;
+		mes "[SoloHan]";
+		mes "Como eles se atrevem a ficar felizes na nossa frente--!! ^666666*Snif*^000000 Só porque eles encontraram o amor verdadeiro, acham que são melhores que nós?!";
+		next;
+		mes "[SoloHan]";
+		mes "Lembro quando os casais eram educados e só demonstravam seu amor com portas fechadas. Agora andam de mãos dadas e se agarram em público. Qual é! Arrumem um quarto!";
+		next;
+		mes "[SoloHan]";
+		mes "Quero dizer, ^666666*Sniff*^000000, não é como se eu fosse solitário nem nada. Não preciiiso de uma mulher~!";
+		mes "Certo, Bachewcca!";
+		next;
+		mes "[Bachewcca]";
+		mes "...!";
+		emotion e_no1,0,"Cliente#Bachewcca";
+		next;
+		mes "[SoloHan]";
+		mes "Não faz muita diferença se você é casado ou não, certo? Certo?!";
+		mes "Vamos lá! Beba comigo!!";
+		next;
+		mes "^3355FFDo nada ele passou a me tratar como um amigo íntimo.";
+		mes "É meio constrangedor, mas uma bebida grátis não é má idéia...^000000";
+		next;
+		mes "^3355FF* Gulp Gulp Gulp *^000000";
+		close;
+	}
+}
+
+//-------------------------------------------------------------------
+prt_in,170,14,0	script	Cliente#Bachewcca	4_M_ORIENT02,{
+	mes "[Bachewcca]";
+	mes "..............";
+	mes "^666666*Gulp....gulp...*^000000";
+	mes "Grrrrr!! Essa foi boa!";
+	emotion e_sob;
+	close;
 }

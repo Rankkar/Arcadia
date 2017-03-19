@@ -57,7 +57,7 @@
 				close;
 			}
 			else if (checkweight(Oridecon_Anvil,1) == 0) {
-				mes "[Paul Spanner]";
+				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Você está levando muito peso e não vai poder carrega-la.";
 				close;
 			}
@@ -78,7 +78,7 @@
 				close;
 			}
 			else if (checkweight(Golden_Anvil,1) == 0) {
-				mes "[Paul Spanner]";
+				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Você está levando muito peso e não vai poder carrega-la.";
 				close;
 			}
