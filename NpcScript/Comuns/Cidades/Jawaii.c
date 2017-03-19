@@ -13,152 +13,152 @@
 |                     Projeto Ragnarok Online                       |
 +-------------------------------------------------------------------+
 | - Por: eAthena/rAthena/Hercules                                   |
-| - VersÃ£o: Spell Master                                            |
+| - Versão: Spell Master                                            |
 | - Nota: Npcs comuns na cidade Jawaii                              |
 \*-----------------------------------------------------------------*/
 
 // ------------------------------------------------------------------
 // - [ Ruas ] -
 // ------------------------------------------------------------------
-jawaii,188,218,7	script	Senhorita da Taberna#Jawaii	1_F_PUBGIRL,{
+jawaii,188,218,7	script	Senhorita da Taberna#jaw	1_F_PUBGIRL,{
 	mes "[Senhorita]";
 	mes "Oh, querida pessoa!";
-	mes "VocÃª nÃ£o estÃ¡ indo para taberna, certo?";
+	mes "Você não está indo para taberna, certo?";
 	next;
-	if (select("NÃ£o, eu nÃ£o estou.","Oh sim.") == 1) {
+	if (select("Não, eu não estou.","Oh sim.") == 1) {
 		mes "[Senhorita]";
 		mes "Ufa!";
-		mes "GraÃ§as a deus!";
-		mes "Ã‰ exatamente isso...";
-		mes "A taberna provavelmente nÃ£o Ã© o melhor lugar para vocÃª se divertir.";
+		mes "Graças a deus!";
+		mes "É exatamente isso...";
+		mes "A taberna provavelmente não é o melhor lugar para você se divertir.";
 		next;
 	}
 	mes "[Senhorita]";
-	mes "Mesmo que eu trabalhe lÃ¡, ainda nÃ£o consigo acreditar que existe esse tipo de lugar.";
+	mes "Mesmo que eu trabalhe lá, ainda não consigo acreditar que existe esse tipo de lugar.";
 	mes "Pensei que o alcool fosse proibido no Reino de Rune-Midgard.";
 	next;
 	mes "[Senhorita]";
-	mes "Eu nÃ£o faÃ§o idÃ©ia do que os solteiros serÃ£o capazes de encontrar nesse lugar.";
-	mes "Mas ouvi dizer que muitas pessoas diferentes vem aqui por razÃµes diferentes.";
+	mes "Eu não faço idéia do que os solteiros serão capazes de encontrar nesse lugar.";
+	mes "Mas ouvi dizer que muitas pessoas diferentes vem aqui por razões diferentes.";
 	next;
 	mes "[Senhorita]";
-	mes "Eu mesma vi pessoas que nÃ£o sÃ£o casadas vindo aqui somente para ficar bÃªbadas.";
+	mes "Eu mesma vi pessoas que não são casadas vindo aqui somente para ficar bêbadas.";
 	mes "Ah, e por algum motivo essas pessoas desaparecem da Taberna!";
 	next;
 	mes "[Senhorita]";
-	mes "EntÃ£o eu me pergunto, o que estÃ¡ acontecendo?";
-	mes "Eu sou uma garÃ§onete que trabalha lÃ¡, mas eu te digo para nÃ£o ir lÃ¡...";
+	mes "Então eu me pergunto, o que está acontecendo?";
+	mes "Eu sou uma garçonete que trabalha lá, mas eu te digo para não ir lá...";
 	close;
 }
 
 // ------------------------------------------------------------------
-jawaii,220,235,3	script	Moradora de Jawaii#heart	4_F_07,{
+jawaii,220,235,3	script	Moradora de Jawaii#jaw	4_F_07,{
 	mes "[Jawa Jawa]";
-	mes "VocÃª sabe qual Ã© o lugar mais bonito de Jawaii?";
+	mes "Você sabe qual é o lugar mais bonito de Jawaii?";
 	next;
 	mes "[Jawa Jawa]";
-	mes "Ã‰ a 'Ilha de CoraÃ§Ã£o' onde a localizaÃ§Ã£o Ã© ao norte da Ilha.";
-	mes "A Ã¡gua ao redor do coraÃ§Ã£o da ilha nÃ£o Ã© profunda, entÃ£o vocÃª pode atravessar.";
+	mes "É a 'Ilha de Coração' onde a localização é ao norte da Ilha.";
+	mes "A água ao redor do coração da ilha não é profunda, então você pode atravessar.";
 	next;
 	mes "[Jawa Jawa]";
-	mes "Esse Ã© o melhor lugar para compartilhar o momento mais Ã­ntimo com a pessoa que ama.";
-	mes "Ã‰ um lugar isolado cercado por uma linda Ã¡rea.";
+	mes "Esse é o melhor lugar para compartilhar o momento mais íntimo com a pessoa que ama.";
+	mes "É um lugar isolado cercado por uma linda área.";
 	next;
 	mes "[Jawa Jawa]";
-	mes "Ã‰ claro, provavelmente nÃ£o Ã© uma boa idÃ©ia ir lÃ¡ se vocÃª estiver sÃ³.";
-	mes "VocÃª ficaria com cara de um perdedor patÃ©tico!";
+	mes "É claro, provavelmente não é uma boa idéia ir lá se você estiver só.";
+	mes "Você ficaria com cara de um perdedor patético!";
 	close;
 }
 
 // ------------------------------------------------------------------
-jawaii,240,146,5	script	Moradora de Jawaii#desc1	4_F_07,{
+jawaii,240,146,5	script	Moradora de Jawaii#jaw2	4_F_07,{
 	mes "[Waii Waii]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Jawaii!";
 	next;
 	mes "[Waii Waii]";
-	mes "Aqui, vocÃª pode aproveitar sua lua de mel sem se preocupar com interrupÃ§Ãµes.";
-	mes "VocÃª nÃ£o precisa se preocupar com as rotinas de um exÃ©rcito.";
+	mes "Aqui, você pode aproveitar sua lua de mel sem se preocupar com interrupções.";
+	mes "Você não precisa se preocupar com as rotinas de um exército.";
 	next;
 	mes "[Waii Waii]";
-	mes "Bem, ao redor existem alguns monstros, mas vocÃª ficarÃ¡ bem se nÃ£o atacÃ¡-ls.";
-	mes "Pense neles como habitantes originais da ilha, sendo uma visÃ£o a ser aprecidada.";
+	mes "Bem, ao redor existem alguns monstros, mas você ficará bem se não atacá-ls.";
+	mes "Pense neles como habitantes originais da ilha, sendo uma visão a ser aprecidada.";
 	close;
 }
 
 // ------------------------------------------------------------------
-jawaii,168,247,5	script	Moradora de Jawaii#desc2	4_F_07,{
+jawaii,168,247,5	script	Moradora de Jawaii#jaw3	4_F_07,{
 	mes "[Waja Waja]";
-	mes "Ah, vocÃª deve ser um turista.";
-	mes "Se vocÃª estÃ¡ perdido, dirija-se ao Oeste, onde estÃ£o as acomodaÃ§Ãµes dos recÃ©m casados.";
-	mes "Que estÃ£o localizadas na parte ocidental de Jawaii.";
-	mes "As acomodaÃ§Ãµes sÃ£o incrÃ­veis.";
+	mes "Ah, você deve ser um turista.";
+	mes "Se você está perdido, dirija-se ao Oeste, onde estão as acomodações dos recém casados.";
+	mes "Que estão localizadas na parte ocidental de Jawaii.";
+	mes "As acomodações são incríveis.";
 	next;
 	mes "[Waja Waja]";
-	mes "Existem quatro diferentes salas temÃ¡ticas, assim vocÃª pode escolher uma de seu gosto.";
-	mes "TambÃ©m existe um guia se precisar pedir informaÃ§Ãµes.";
+	mes "Existem quatro diferentes salas temáticas, assim você pode escolher uma de seu gosto.";
+	mes "Também existe um guia se precisar pedir informações.";
 	next;
 	mes "[Waja Waja]";
-	mes "Quando vocÃª quiser sair, por favor, dirija-se ao navio do noroeste para ir em Alberta.";
-	mes "Se vocÃª deseja retornar a Izlude, existe um navio aguardando ao Sudeste.";
+	mes "Quando você quiser sair, por favor, dirija-se ao navio do noroeste para ir em Alberta.";
+	mes "Se você deseja retornar a Izlude, existe um navio aguardando ao Sudeste.";
 	close;
 }
 
 // ------------------------------------------------------------------
-jawaii,165,121,1	script	Moradora de Jawaii#desc3	4_F_07,{
+jawaii,165,121,1	script	Moradora de Jawaii#jaw5	4_F_07,{
 	mes "[Iwa Iwa]";
 	mes "Jawaii...";
 	mes "Jawaii....";
-	mes "Ã‰ onde vocÃª pode encontrar a felicidade!";
+	mes "É onde você pode encontrar a felicidade!";
 	next;
 	mes "[Iwa Iwa]";
-	mes "Ahh, nÃ£o Ã© linda?";
-	mes "VocÃª nÃ£o precisa fazer mais nada alÃ©m de relaxar e respirar nessa atmosfera pacÃ­fica.";
-	mes "Essa Ã© uma das melhores coisas em Jawaii.";
+	mes "Ahh, não é linda?";
+	mes "Você não precisa fazer mais nada além de relaxar e respirar nessa atmosfera pacífica.";
+	mes "Essa é uma das melhores coisas em Jawaii.";
 	next;
 	mes "[Iwa Iwa]";
 	mes "Ahh!";
 	mes "As vezes a gente espera algum concerto nesse palco.";
-	mes "Se vocÃª Ã© um bom cantor porque nÃ£o sobe ao palco e canta para nÃ³s?";
+	mes "Se você é um bom cantor porque não sobe ao palco e canta para nós?";
 	next;
 	mes "[Iwa Iwa]";
 	mes "Jawaii...";
 	mes "Jawaii....";
-	mes "Ã‰ onde vocÃª pode encontrar a felicidade...";
+	mes "É onde você pode encontrar a felicidade...";
 	close;
 }
 
 // ------------------------------------------------------------------
-jawaii,141,200,3	script	FuncionÃ¡rio#sroom	4_M_NFMAN,{
+jawaii,141,200,3	script	Funcionário#jaw	4_M_NFMAN,{
 	mes "[Alowa]";
-	mes "Essa Ã© n-no-nossa sa-sala de doces.";
-	mes "NÃ³s, estamos li-limpando esta sa-sala para vocÃª Ã© cla-claro.";
+	mes "Essa é n-no-nossa sa-sala de doces.";
+	mes "Nós, estamos li-limpando esta sa-sala para você é cla-claro.";
 	next;
 	mes "[Alowa]";
-	mes "Para fi-ficar aqui Ã© 1000 zeny po-por pessoa.";
-	mes "Po-por favor, me pague a taxa e eu vou deixar vocÃª entrar... eu juro!";
+	mes "Para fi-ficar aqui é 1000 zeny po-por pessoa.";
+	mes "Po-por favor, me pague a taxa e eu vou deixar você entrar... eu juro!";
 	next;
 	mes "[Alowa]";
-	mes "E-eu tambÃ©m vou le-levar sua bagagem, ma-mas me pague primeiro.";
-	mes "Ou meu pa-patrÃ£o vai ficar insatisfeito comigo...";
+	mes "E-eu também vou le-levar sua bagagem, ma-mas me pague primeiro.";
+	mes "Ou meu pa-patrão vai ficar insatisfeito comigo...";
 	next;
 	if (select("Pagar.","Cancelar.") == 1) {
 		mes "[Alowa]";
 		if (Zeny > 999) {
 			mes "Mu-muito o-obrigado!";
-			mes "De-deixe-me abrir os aposentos para vocÃª.";
+			mes "De-deixe-me abrir os aposentos para você.";
 			mes "Obriga-gado.";
-			mes "Te-tenha um Ã³timo dia.";
+			mes "Te-tenha um ótimo dia.";
 			close2;
 			Zeny -= 1000;
 			warp "jawaii_in",116,64;
 			end;
 		}
-		mes "Ah nÃ£o! Ah nÃ£o nÃ£o nÃ£o nÃ£o.";
-		mes "Se-seu dinheiro nÃ£o Ã© suficiente?";
+		mes "Ah não! Ah não não não não.";
+		mes "Se-seu dinheiro não é suficiente?";
 		close;
 	}
 	mes "[Alowa]";
-	mes "Ma-mas, eu prometo, es-se quarto Ã© o mais bonito e li-limpo!";
+	mes "Ma-mas, eu prometo, es-se quarto é o mais bonito e li-limpo!";
 	mes "Po-porfavor!";
 	mes "Volte quando quiser!";
 	emotion e_sob;
@@ -166,56 +166,56 @@ jawaii,141,200,3	script	FuncionÃ¡rio#sroom	4_M_NFMAN,{
 }
 
 // ------------------------------------------------------------------
-jawaii,108,199,5	script	FuncionÃ¡ria#antroom	1_F_MERCHANT_02,{
+jawaii,108,199,5	script	Funcionária#jaw	1_F_MERCHANT_02,{
 	mes "[Oran Pinheiro]";
 	mes "Bem vindo ao aposento antigo.";
 	next;
 	mes "[Oran Pinheiro]";
-	mes "Esse aposento proporcionarÃ¡ aos amantes uma atmosfera de elegÃ¢ncia com pelÃºcia.";
-	mes "Todo conforto serÃ¡ providenciado para o jovem casal nesse aposento.";
+	mes "Esse aposento proporcionará aos amantes uma atmosfera de elegância com pelúcia.";
+	mes "Todo conforto será providenciado para o jovem casal nesse aposento.";
 	next;
 	mes "[Oran Pinheiro]";
 	mes "Todos os quartos basicamente tem a mesma estrutura.";
-	mes "Mas cada um tem um interior Ãºnico para antender a gostos diferentes.";
+	mes "Mas cada um tem um interior único para antender a gostos diferentes.";
 	next;
 	mes "[Oran Pinheiro]";
-	mes "Se vocÃª gostar daqui, serÃ¡ cobrada uma taxa de 1.000 zeny por pessoa para entrar.";
-	mes "Aqui vocÃª vai construir Ã³timas lembranÃ§as em sua lua de mel.";
-	mes "VocÃª deve ficar nesse belo quarto.";
+	mes "Se você gostar daqui, será cobrada uma taxa de 1.000 zeny por pessoa para entrar.";
+	mes "Aqui você vai construir ótimas lembranças em sua lua de mel.";
+	mes "Você deve ficar nesse belo quarto.";
 	next;
 	mes "[Oran Pinheiro]";
-	mes "NÃ£o hesite em me deixar saber quando tiver escolhido esse Aposento Antigo.";
-	mes "Uma vez que tenha feito a escolha eu leverei vocÃª nele.";
+	mes "Não hesite em me deixar saber quando tiver escolhido esse Aposento Antigo.";
+	mes "Uma vez que tenha feito a escolha eu leverei você nele.";
 	next;
 	if (select("Pagar.","Cancelar.") == 1) {
 		mes "[Oran Pinheiro]";
 		if (Zeny > 999) {
-			mes "Muito obrigado por usar nossos serviÃ§os.";
+			mes "Muito obrigado por usar nossos serviços.";
 			mes "Por favor...";
-			mes "Sinta-se confortÃ¡vel.";
+			mes "Sinta-se confortável.";
 			close2;
 			Zeny -= 1000;
 			warp "jawaii_in",129,110;
 			end;
 		}
-		mes "Eu sinto muito, mas vocÃª nÃ£o possui dinheiro.";
+		mes "Eu sinto muito, mas você não possui dinheiro.";
 		close;
 	}
 	mes "[Oran Pinheiro]";
 	mes "Por favor...";
 	mes "Aproveite seu tempo.";
-	mes "VocÃª nÃ£o deve ter pressa quando se trata de lazer.";
+	mes "Você não deve ter pressa quando se trata de lazer.";
 	close;
 }
 
 // ------------------------------------------------------------------
-jawaii,107,189,5	script	FuncionÃ¡ria#horoom	4_F_04,{
+jawaii,107,189,5	script	Funcionária#jaw2	4_F_04,{
 	mes "[Sharkie Rania]";
-	mes "Eu vou levar vocÃª para o Quarto de Mel.";
+	mes "Eu vou levar você para o Quarto de Mel.";
 	mes "E vai custar ^0000FF1.000^000000 zenys.";
 	next;
 	mes "[Sharkie Rania]";
-	mes "EntÃ£o, vocÃª vai querer ir?";
+	mes "Então, você vai querer ir?";
 	next;
 	if (select("Pagar.","Cancelar.") == 1) {
 		mes "[Sharkie Rania]";
@@ -227,8 +227,8 @@ jawaii,107,189,5	script	FuncionÃ¡ria#horoom	4_F_04,{
 			warp "jawaii_in",86,117;
 			end;
 		}
-		mes "VocÃª...";
-		mes "NÃ£o tem dinheiro suficiente.";
+		mes "Você...";
+		mes "Não tem dinheiro suficiente.";
 		close;
 	}
 	mes "[Sharkie Rania]";
@@ -237,18 +237,18 @@ jawaii,107,189,5	script	FuncionÃ¡ria#horoom	4_F_04,{
 }
 
 // ------------------------------------------------------------------
-jawaii,112,173,7	script	FuncionÃ¡ria#villroom	4_F_04,{
+jawaii,112,173,7	script	Funcionária#jaw3	4_F_04,{
 	mes "[Larks Rania]";
-	mes "OlÃ¡ querido como vocÃª estÃ¡? VocÃª estÃ¡ procurando por um quarto para ficar?";
+	mes "Olá querido como você está? Você está procurando por um quarto para ficar?";
 	next;
 	mes "[Larks Rania]";
-	mes "Esse Ã© chamado de Quarto Villa.";
-	mes "Eu recomendo esse quarto para pessoas que preferem ficarm eum um lugar com um ambiente confortÃ¡vel e muito caseiro.";
+	mes "Esse é chamado de Quarto Villa.";
+	mes "Eu recomendo esse quarto para pessoas que preferem ficarm eum um lugar com um ambiente confortável e muito caseiro.";
 	next;
 	mes "[Larks Rania]";
 	mes "Assim como todas as outras salas a estadia aqui vai custar 1.000 zeny.";
-	mes "Eu posso guiar vocÃª atÃ© o Quarto Villa nesse momento, se vocÃª quiser.";
-	mes "SerÃ¡ que vocÃª gostaria de ficar?";
+	mes "Eu posso guiar você até o Quarto Villa nesse momento, se você quiser.";
+	mes "Será que você gostaria de ficar?";
 	next;
 	if (select("Pagar.","Cancelar.") == 1) {
 		mes "[Larks Rania]";
@@ -261,74 +261,74 @@ jawaii,112,173,7	script	FuncionÃ¡ria#villroom	4_F_04,{
 			end;
 		}
 		mes "Ah, que vergonha!";
-		mes "VocÃª parece nÃ£o ter dinheiro suficiente...?";
+		mes "Você parece não ter dinheiro suficiente...?";
 		close;
 	}
 	mes "[Larks Rania]";
 	mes "Sem problema.";
-	mes "Se vocÃª quiser, vai poder ver o Quarto de Mel.";
+	mes "Se você quiser, vai poder ver o Quarto de Mel.";
 	close;
 }
 
 // ------------------------------------------------------------------
 // - [ Casas ] -
 // ------------------------------------------------------------------
-jawaii_in,25,94,0	script	Funcionaria#jaw1	4_F_07,{
-	mes "[FuncionÃ¡ria Tryteh]";
+jawaii_in,25,94,0	script	Funcionaria#jaw5	4_F_07,{
+	mes "[Funcionária Tryteh]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
-		mes "Estou tÃ£o feliz com o casamento de vocÃªs.";
+		mes "Estou tão feliz com o casamento de vocês.";
 		mes "Espero que vivam felizes para sempre~";
 		next;
-		mes "[FuncionÃ¡ria Tryteh]";
+		mes "[Funcionária Tryteh]";
 		mes "Tome cuidado com clientes rudes.";
-		mes "Eles podem estar bÃªbados e comportarem-se mal.";
-		mes "Sabe como Ã©...";
+		mes "Eles podem estar bêbados e comportarem-se mal.";
+		mes "Sabe como é...";
 		close;
 	}
 	else {
 		mes "Espero que aproveite sua estadia aqui.";
-		mes "Mas tente nÃ£o beber muito.";
+		mes "Mas tente não beber muito.";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,25,96,0	script	Funcionaria#jaw2	4_F_07,{
-	mes "[FuncionÃ¡ria Fey]";
+jawaii_in,25,96,0	script	Funcionaria#jaw6	4_F_07,{
+	mes "[Funcionária Fey]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
 		next;
-		mes "[FuncionÃ¡ria Fey]";
+		mes "[Funcionária Fey]";
 		mes "Esperamos que aprecie sua estadia com a sua amada.";
-		mes "Esse lugar nÃ£o Ã© aconchegante e com uma atmosfera romÃ¢ntica?";
+		mes "Esse lugar não é aconchegante e com uma atmosfera romântica?";
 		next;
-		mes "[FuncionÃ¡ria Fey]";
-		mes "Seria absolutamente perfeito se nÃ£o fossem esses estranhos da 'Armada dos Solteiros InvencÃ­veis'.";
+		mes "[Funcionária Fey]";
+		mes "Seria absolutamente perfeito se não fossem esses estranhos da 'Armada dos Solteiros Invencíveis'.";
 		mes "Eles apareceram aqui por algum motivo.";
-		mes "Que vÃ£o para o inferno!";
+		mes "Que vão para o inferno!";
 		close;
 	}
 	else {
 		mes "Divirta-se!";
-		mes "Mas por favor tente nÃ£o atrapalhar os recÃ©m-casados daqui!";
+		mes "Mas por favor tente não atrapalhar os recém-casados daqui!";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,25,98,0	script	Funcionaria#jaw3	4_F_07,{
-	mes "[FuncionÃ¡ria Buffy]";
+jawaii_in,25,98,0	script	Funcionaria#jaw7	4_F_07,{
+	mes "[Funcionária Buffy]";
 	if (getpartnerid()) {
 		next;
-		mes "[FuncionÃ¡ria Buffy]";
+		mes "[Funcionária Buffy]";
 		mes "Oh!";
-		mes "Olhe sÃ³...";
+		mes "Olhe só...";
 		if (Sex == SEX_MALE) {
-			mes "VocÃª Ã© o par ideal para sua esposa.";
+			mes "Você é o par ideal para sua esposa.";
 		}
 		else {
-			mes "VocÃª Ã© o par ideal para o seu marido.";
+			mes "Você é o par ideal para o seu marido.";
 		}
 		mes "Awwww, gostaria de me casar em breve!";
 		close;
@@ -337,24 +337,24 @@ jawaii_in,25,98,0	script	Funcionaria#jaw3	4_F_07,{
 		mes "Hmm...?";
 		if (Sex == SEX_MALE) {
 			next;
-			mes "[FuncionÃ¡ria Buffy]";
+			mes "[Funcionária Buffy]";
 			mes "Sou muito competente para cozinhar e limpar.";
 			mes "Tenho um ^FF0000belo corpo^000000.";
-			mes "O que vocÃª acha...?";
+			mes "O que você acha...?";
 		}
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,25,100,0	script	Funcionaria#jaw4	4_F_07,{
-	mes "[FuncionÃ¡ria Itere]";
+jawaii_in,25,100,0	script	Funcionaria#jaw8	4_F_07,{
+	mes "[Funcionária Itere]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
 		next;
-		mes "[FuncionÃ¡ria Itere]";
+		mes "[Funcionária Itere]";
 		mes "Oh!";
-		mes "VocÃª parece tÃ£o feliz por estar aqui com a sua amada!";
+		mes "Você parece tão feliz por estar aqui com a sua amada!";
 		mes "Que beleza!";
 		close;
 	}
@@ -362,33 +362,33 @@ jawaii_in,25,100,0	script	Funcionaria#jaw4	4_F_07,{
 		mes "Espero que aproveite a sua est--";
 		mes "Espere um pouco...!";
 		next;
-		mes "[FuncionÃ¡ria Itere]";
-		mes "VocÃª...";
-		mes "Ã‰ melhor que vocÃª nÃ£o seja membro da Armada dos Solteiros InvencÃ­veis!";
+		mes "[Funcionária Itere]";
+		mes "Você...";
+		mes "É melhor que você não seja membro da Armada dos Solteiros Invencíveis!";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,30,94,4	script	Funcionaria#jaw5	4_F_07,{
-	mes "[FuncionÃ¡ria Tonia]";
+jawaii_in,30,94,4	script	Funcionaria#jaw9	4_F_07,{
+	mes "[Funcionária Tonia]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
 		next;
-		mes "[FuncionÃ¡ria Tonia]";
-		mes "ParabÃ©ns Ã  vocÃªs dois!";
+		mes "[Funcionária Tonia]";
+		mes "Parabéns à vocês dois!";
 		next;
-		mes "[FuncionÃ¡ria Tonia]";
+		mes "[Funcionária Tonia]";
 		mes "^666666*Suspiro...*^000000";
-		mes "^333333Espero que esses caras da Armada dos Solteiros nÃ£o fiquem bÃªbados e faÃ§am besteiras de novo...";
+		mes "^333333Espero que esses caras da Armada dos Solteiros não fiquem bêbados e façam besteiras de novo...";
 		close;
 	}
 	else {
-		mes "Espere. VocÃª...!";
+		mes "Espere. Você...!";
 		next;
-		mes "[FuncionÃ¡ria Tonia]";
+		mes "[Funcionária Tonia]";
 		mes "Ei--!";
-		mes "VocÃª nÃ£o Ã© bem vindo aqui!";
+		mes "Você não é bem vindo aqui!";
 		mes "P-pare de beber!";
 		mes "Agora mesmo!";
 		close;
@@ -396,71 +396,71 @@ jawaii_in,30,94,4	script	Funcionaria#jaw5	4_F_07,{
 }
 
 // ------------------------------------------------------------------
-jawaii_in,30,96,4	script	Funcionaria#jaw6	4_F_07,{
-	mes "[FuncionÃ¡ria Kay]";
+jawaii_in,30,96,4	script	Funcionaria#jaw10	4_F_07,{
+	mes "[Funcionária Kay]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
 		next;
-		mes "[FuncionÃ¡ria Kay]";
+		mes "[Funcionária Kay]";
 		mes "Ah Deus...!";
-		mes "Ultimamente estou tendo que lidar com bÃªbados demais aqui!";
-		mes "Ã‰ difÃ­cil tomar conta de tudo...";
+		mes "Ultimamente estou tendo que lidar com bêbados demais aqui!";
+		mes "É difícil tomar conta de tudo...";
 		close;
 	}
 	else {
-		mes "Entendo que vocÃª queira relaxar, mas tome cuidado e nÃ£o beba demais.";
+		mes "Entendo que você queira relaxar, mas tome cuidado e não beba demais.";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,30,98,4	script	Funcionaria#jaw7	4_F_07,{
-	mes "[FuncionÃ¡ria Amy]";
+jawaii_in,30,98,4	script	Funcionaria#jaw11	4_F_07,{
+	mes "[Funcionária Amy]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
-		mes "Oh! VocÃªs sÃ£o perfeitos juntos!";
+		mes "Oh! Vocês são perfeitos juntos!";
 		mes "Parecem, hum, uma arma e uma bala!";
-		mes "NÃ£o...?";
+		mes "Não...?";
 		next;
-		mes "[FuncionÃ¡ria Amy]";
+		mes "[Funcionária Amy]";
 		mes "Que tal...";
 		mes "Leite e biscoitos?";
-		mes "Gim e Ã¡gua tÃ´nica?";
+		mes "Gim e água tônica?";
 		mes "Jackie Tucker e Chris Chan...?";
 		mes "Hummmm....";
 		close;
 	}
 	else {
 		next;
-		mes "[FuncionÃ¡ria Amy]";
-		mes "Hmm, nÃ£o acho que esse seja o lugar certo para vocÃª.";
-		mes "Mas posso deixÃ¡-lo beber e se divertir, desde que nÃ£o exagere.";
+		mes "[Funcionária Amy]";
+		mes "Hmm, não acho que esse seja o lugar certo para você.";
+		mes "Mas posso deixá-lo beber e se divertir, desde que não exagere.";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,30,100,4	script	Funcionaria#jaw8	4_F_07,{
-	mes "[FuncionÃ¡ria Yasmine]";
+jawaii_in,30,100,4	script	Funcionaria#jaw12	4_F_07,{
+	mes "[Funcionária Yasmine]";
 	mes "Bem vind"+(Sex?"o":"a")+" a Taberna de Jawaii.";
 	if (getpartnerid()) {
-		mes "Assim como a lua e as estrelas, vocÃªs sÃ£o perfeitos juntos.";
-		mes "Estou muito feliz por vocÃªs!";
+		mes "Assim como a lua e as estrelas, vocês são perfeitos juntos.";
+		mes "Estou muito feliz por vocês!";
 		close;
 	}
 	else {
 		next;
-		mes "[FuncionÃ¡ria Yasmine]";
-		mes "Acho que aqui nÃ£o Ã© o lugar certo para vocÃª.";
-		mes "Mas espero que encontre a sua alma gÃªmea algum dia. Divirta-se!";
+		mes "[Funcionária Yasmine]";
+		mes "Acho que aqui não é o lugar certo para você.";
+		mes "Mas espero que encontre a sua alma gêmea algum dia. Divirta-se!";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-jawaii_in,43,115,0	script	Cliente#jaw_1	4W_M_01,{
+jawaii_in,43,115,0	script	Cliente#jaw	4W_M_01,{
 	mes "[Buchi]";
-	mes "VocÃª parece feliz...";
+	mes "Você parece feliz...";
 	mes "Espero que consiga se sentir assim pra sempre...";
 	mes " ";
 	mes "^666666*Hiccup...!*^000000";
@@ -468,7 +468,7 @@ jawaii_in,43,115,0	script	Cliente#jaw_1	4W_M_01,{
 }
 
 // ------------------------------------------------------------------
-jawaii_in,41,106,3	script	Cliente#Cage	4W_M_02,{
+jawaii_in,41,106,3	script	Cliente#jaw2	4W_M_02,{
 	mes "[Cage]";
 	mes "Somos livres...!";
 	mes "Somos livres do inferno do casamento...!";
