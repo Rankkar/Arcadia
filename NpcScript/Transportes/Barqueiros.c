@@ -369,6 +369,104 @@ gon_fild01,255,79,7	script	Wabakho#gon2	4_M_TWMIDMAN,{
 }
 
 // ------------------------------------------------------------------
+// - [Alberta ~ Louyang(Lou_Fild01) ] - 
+// ------------------------------------------------------------------
+alberta,246,40,3	script	Garota de Louyang#lou	4_F_CHNDRESS1,{
+	mes "[Garota]";
+	mes "La la la la.";
+	mes "Hoje eu me sinto tão bem.";
+	mes "Estou com vontade de fazer um piquenique em algum lugar."; 
+	mes "La la la la.";
+	next;
+	switch(select("Sobre Louyang.","Ir para Louyang.","Cancelar.")) {
+		case 1:
+		mes "[Garota]";
+		mes "Você está interessad"+(Sex?"o":"a")+" em Louyang?";
+		mes "É um bom lugar para os aventureiros visitarem.";
+		next;
+		mes "[Garota]";
+		mes "Louyang tem uma longa história com contos sobre artes marcias e guerreiros ancestrais.";
+		mes "Também é conhecida pelos monstros que rondam a área de Louyang.";
+		next;
+		mes "[Garota]";
+		mes "Lá você encontrará medicamentos que curam tudo.";
+		mes "Ocorrências misteriosas, e artistas marciais tudo em um só lugar!"; 
+		next;
+		mes "[Garota]";
+		mes "Eu costumava treinar artes marciais todas as manhãs quando eu estava em Louyang.";
+		mes "Pode não parecer, mas eu sou muito forte!";
+		next;
+		mes "[Garota]"; 
+		mes "Se você quiser visitar Louyang, sinta se à vontade para me dizer.";
+		mes "É só me dar algum zeny que iremos.";
+		close; 
+		case 2:
+		mes "[Garota]";
+		mes "Eu te guiarei até Louyang imediatamente.";
+		mes "Pelos meus serviços, eu estou aceitando 10,000 zeny."; 
+		next;
+		mes "[Garota]";
+		mes "E então, você está pronto?";
+		next;
+		if (select("Sim!","Não.") == 1) {
+			if (Zeny > 9999) {
+				mes "[Garota]";
+				mes "Okay";
+				mes "Pronto!";
+				mes "Divirta-se!";
+				close2;
+				Zeny -= 10000;
+				warp "lou_fild01",190,101;
+				end;
+			}
+			mes "[Garota]";
+			mes "...";
+			mes "Me parece que você não tem 10,000 zeny...";
+			mes "Vá arrumar algum dinheiro antes!"; 
+			close;
+		}
+		mes "[Garota]";
+		mes "Oh..."; 
+		mes "É tão desapontador te ouvir dizer isto.";
+		mes "Bem, tenha um bom dia!";
+		close;
+		case 3:
+		mes "[Garota]";
+		mes "Oh...";
+		mes "Tenha um bom dia!";
+		close;
+	}
+}
+
+lou_fild01,190,100,7	script	Garota de Louyang#lou2	4_F_CHNDRESS1,{
+	mes "[Garota]"; 
+	mes "Você gostaria de voltar para Alberta?";
+	next;
+	if (select("Voltar para Alberta.","Cancelar.") == 1) {
+		mes "[Garota]";
+		mes "Eu espero te ver novamente!";
+		mes "Tchau Tchau!";
+		close2;
+		warp "alberta",235,45;
+		end;
+	}
+	mes "[Garota]";
+	mes "Se você gostar desta área, porque não experimentar a comida e apreciar a paisagem!"; 
+	next;
+	if (Sex == SEX_MALE) {
+		mes "[Garota]";
+		mes "E por paisagem....";
+		mes "Eu quero dizer as garotas!";
+		mes "Tee hee...";
+	}
+	else {
+		mes "[Garota]";
+		mes "E os garotos aqui não são tão ruins...";
+	}
+	close;
+}
+
+// ------------------------------------------------------------------
 // - [Cmd_Fild > Alberta * Cmd_Fild > Izlude ] - 
 // ------------------------------------------------------------------
 -	script	cmdboard	FAKE_NPC,{

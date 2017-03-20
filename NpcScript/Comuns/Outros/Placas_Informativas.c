@@ -178,6 +178,33 @@ einbroch,104,202,5	script	Quadro de Avisos#EinBoard20	4_BULLETIN_BOARD2,{
 }
 
 // ------------------------------------------------------------------
+// - [ Prontera ] -
+// ------------------------------------------------------------------
+prontera,148,49,5	script	Quadro de Aviso#prt	2_BULLETIN_BOARD,{
+	mes "[Capital de Rune-Midgard]";
+	mes "Bem-vindo a Prontera, a capital de Rune-Midgard.";
+	next;
+	mes "[Capital de Rune-Midgard]";
+	mes "Prontera está localizada no centro do continente de Rune-Midgard e é muito conhecida por seu comércio intenso.";
+	next;
+	mes "[Capital de Rune-Midgard]";
+	mes "Nesta cidade, você pode ir até o Santuário, onde as pessoas podem mudar sua classe Noviço para Sacerdote.";
+	next;
+	mes "[Capital de Rune-Midgard]";
+	mes "Você também pode encontrar o Castelo, onde pessoas podem se tornar um Templário.";
+	next;
+	mes "[Capital de Rune-Midgard]";
+	mes "Por favor, sinta-se a vontade para explorar as ruas de Prontera, já que existem vários pontos turísticos dentro da cidade.";
+	next;
+	mes "[Capital de Rune-Midgard]";
+	mes "Quando você precisar aprimorar suas armas e armaduras, visite o edifício na direção de 5 horas em relação a fonte no centro de Prontera.";
+	next;
+	mes "[Capital de Rune-Midgard]";
+	mes "De Prontera, ^5E5C69Izlude^000000 está localizada a Sudeste, ^1F3A11Payon^000000 no extremo Sul, ^683C1FGeffen^000000 ao extremo Oeste e ^2D3832Al De Baran^000000 ao extremo Norte.";
+	close;
+}
+
+// ------------------------------------------------------------------
 // - [] -
 // ------------------------------------------------------------------
 
