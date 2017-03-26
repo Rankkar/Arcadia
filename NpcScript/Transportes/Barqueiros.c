@@ -467,6 +467,88 @@ lou_fild01,190,100,7	script	Garota de Louyang#lou2	4_F_CHNDRESS1,{
 }
 
 // ------------------------------------------------------------------
+// - [Alberta ~ Moscovia] - 
+// ------------------------------------------------------------------
+alberta,246,51,4	script	Representante de Moscovia#mosknav	4_F_RUSWOMAN2,{
+	mes "[Relações Públicas]";
+	mes "Moscóvia! Você conhece Moscóvia?";
+	mes "O paraíso em meio ao mar sem fim!";
+	mes "Moscóvia é um lugar místico e de aventuras.";
+	next;
+	switch(select("Sobre Moscóvia...","Ir para Moscóvia.","Cancelar")) {
+		case 1:
+		mes "[Relações Públicas]";
+		mes "Moscóvia é um lindo reino que fica em uma ilha localizada ao norte de Rune-Midgard.";
+		next;
+		mes "[Relações Públicas]";
+		mes "Estou certa de que você vai se encantar com as maravilhosas paisagens de Moscóvia, a esplêndida capela e o palácio.";
+		next;
+		mes "[Relações Públicas]";
+		mes "Estou feliz que posso mostrar a você nossa linda terra-natal depois que o longo inverno de Moscóvia passou.";
+		mes "Nosso inverno é muito frio!";
+		next;
+		mes "[Relações Públicas]";
+		mes "Se estiver com vontade de visitar Moscóvia, aproveite esta chance!";
+		mes "Eu garanto que vai ter uma ótima viagem para Moscóvia!";
+		close;
+		case 2:
+		mes "[Relações Públicas]";
+		mes "Certo então, vamos começar.";
+		mes "O preço total é 10.000 zenys para ir até Moscóvia.";
+		mes "Mas quando quiser voltar, você não vai precisar pagar...";
+		next;
+		mes "[Relações Públicas]";
+		mes "Podemos ir agora?";
+		next;
+		if (select("Vamos!","Cancelar") == 2) {
+			mes "[Relações Públicas]";
+			mes "Se você estiver ocupado agora, por favor, fale comigo de novo quando quiser.";
+			mes "Estou sempre pronta para ser sua guia pela Moscóvia.";
+			close;
+		}
+		if (Zeny < 10000) {
+			mes "[Relações Públicas]";
+			mes "Desculpe, mas você não tem zenys suficientes.";
+			mes "É preciso 10000 zenys para ir até Moscóvia.";
+			mes "Muito obrigado.";
+			close;
+		}
+		else {
+			mes "[Relações Públicas]";
+			mes "Certo, então, estamos partindo.";
+			close2;
+			Zeny -= 10000;
+			warp "moscovia",163,55;
+			end;
+		}
+		case 3:
+		mes "[Relações Públicas]";
+		mes "Se você estiver ocupado agora, por favor, fale comigo de novo quando quiser.";
+		mes "Estou sempre pronta para ser sua guia pela Moscóvia.";
+		close;
+	}
+}
+
+moscovia,166,53,4	script	Representante de Moscovia#mosknav2	4_F_RUSWOMAN2,{
+	mes "[Relações Públicas]";
+	mes "E então, como foi a sua viagem?";
+	mes "Leva boas lembranças de Moscóvia?";
+	mes "Um navio está saindo agora para Rune-Midgard.";
+	next;
+	if (select("Retornar para Alberta","Cancelar") == 2) {
+		mes "[Relações Públicas]";
+		mes "Se você quiser ver mais, leve o tempo que quiser.";
+		close;
+	}
+	mes "[Relações Públicas]";
+	mes "Você pode vir quando quiser.";
+	mes "Certo então, vamos lá.";
+	close2;
+	warp "alberta",243,67;
+	end;
+}
+
+// ------------------------------------------------------------------
 // - [Cmd_Fild > Alberta * Cmd_Fild > Izlude ] - 
 // ------------------------------------------------------------------
 -	script	cmdboard	FAKE_NPC,{

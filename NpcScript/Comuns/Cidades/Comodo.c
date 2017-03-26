@@ -17,6 +17,181 @@
 | - Nota: Npcs comuns na cidade Comodo                              |
 \*-----------------------------------------------------------------*/
 
+// ------------------------------------------------------------------
+// - [ Ruas ] -
+// ------------------------------------------------------------------
+comodo,171,137,1	script	Haith#com::cmdla	4_F_03,{
+	mes "[La Ed]";
+	mes "Deve haver um tesouro escondido naquele lugar!";
+	next;
+	mes "[Haith]";
+	mes "Se nós acharmos ele, as pessoas não pensaram mais que somos perdedores~!!";
+	next;
+	mes "[La Ed]";
+	mes "Finalmente!";
+	next;
+	mes "[Haith]";
+	mes "Vamos encontrar o tesouro!";
+	next;
+	mes "[La Ed]";
+	mes "Vamos fazer isso~!!";
+	emotion e_gg;
+	next;
+	mes "[Haith]";
+	mes "................";
+	next;
+	mes "[La Ed]";
+	mes "A propósito... você acha que ele iria nos falar facilmente sobre";
+	mes "o grande tesouro?";
+	emotion e_hmm;
+	emotion e_hmm,0,"La Ed#com";
+	next;
+	select("Hm? Que tesouro?");
+	mes "[La Ed]";
+	mes "Quê--?!";
+	mes "Quando você começou a nos escutar?!";
+	next;
+	mes "[Haith]";
+	mes "Hã... parece que você que saber mais sobre o tesouro.";
+	mes "Bem, essa informação não sairá barata...";
+	emotion e_gg;
+	next;
+	mes "[La Ed]";
+	mes "Além disso, precisamos de um pouco, uma coisa no caso de...";
+	mes "*tosse!*";
+	mes "^555555Nós não acharmos absolutamente nada.^000000";
+	next;
+	mes "[La Ed, Haith]";
+	mes "Se você nos pagar 1,000 Zenys, nós falamos para você!";
+	emotion e_gg;
+	emotion e_gg,0,"La Ed#um";
+	next;
+	if (select("Ouvir Mais","Sair") == 1) {
+		mes "[Haith]";
+		mes "Hahahaha! Você é o cara!";
+		next;
+		mes "[La Ed]";
+		mes "Ok, não muito tempo atrás, um famoso aventureiro chamado Niels voltou de uma de suas viagens.";
+		next;
+		mes "[Haith]";
+		mes "*Sussurros*";
+		mes "^555555Ele trouxe consigo uma caixa enorme.^000000";
+		next;
+		mes "[La Ed]";
+		mes "Além disso, ele voltou no meio da noite sem ter falado nada a ninguém.";
+		mes "Então, evidentemente que ele tem algum segredo, não acha?";
+		next;
+		mes "[Haith]";
+		mes "O que poderia estar dentro da caixa.?";
+		mes "Só pode ser um tesouro!!";
+		next;
+		mes "[La Ed]";
+		mes "Então! Nós decidimos ir em uma jornada atrás do nosso próprio tesouro-!!";
+		next;
+		mes "[Haith]";
+		mes "O problema é que nós não temos certeza de que o Niels vá nos dizer onde ele encontrou o tesouro...";
+		emotion e_hmm;
+		next;
+		mes "[La Ed]";
+		mes "Porque o Niels sempre nos trata como se nós fomossemos estúpidos!!";
+		mes "Bah!!";
+		next;
+		select("Onde está o Niels?");
+		mes "[La Ed]";
+		mes "Ele está hospedado na parte norte desta vila.";
+		next;
+		mes "[Haith]";
+		mes "Nós vamos lhe dar boas informações, desde que nos pague!";
+		next;
+		mes "[La Ed, Haith]";
+		mes "Boa sorte!";
+		close;
+	}
+	mes "[Haith]";
+	emotion e_hmm;
+	close;
+}
+comodo,170,137,7	duplicate(cmdla)	La Ed#com	4_M_02
+
+// ------------------------------------------------------------------
+// - [ Casas ] -
+// ------------------------------------------------------------------
+cmd_in01,175,120,3	script	Iriya#um	1_F_04,{
+	mes "[Iriya]";
+	mes "O Sr. Niels está na mesa na esquina.";
+	mes "Ele tem muitas notícias sobre o mundo.";
+	next;
+	mes "[Iriya]";
+	mes "Não tenho certeza onde ele esteve desta vez.";
+	mes "Ele só da risadas e diz:";
+	mes "'Eu não acho que estou apto para este trabalho docente.'";
+	next;
+	mes "[Iriya]";
+	mes "Entretanto, manter as pessoas visitando o Sr. Niels...";
+	mes "Eu não poder ajudar, mas pergunto...";
+	mes "Onde ele tem ido?";
+	close;
+}
+
+// ------------------------------------------------------------------
+cmd_in01,164,115,1	script	Niels#um	4_M_JOB_BLACKSMITH,{
+	mes "[Niels]";
+	mes "Hmm? O que você está procurando?";
+	mes "Ah! Você deve ter ouvido os rumores de que eu achei algum tipo de tesouro.";
+	mes "Sim, isto é compreensível...";
+	next;
+	mes "[Niels]";
+	mes "Bem, estes rumores de que eu tropeço em algum tesouro maravilhoso é apenas o resultado de imaginações férteis.";
+	mes "Tudo o que tenho encontrado são coisas para acrescentar na minha coleção.";
+	next;
+	mes "[Niels]";
+	mes "Mas... desde que eu tenha provado que 'isto' realmente existe por ver com meus prãpios olhos";
+	mes "Para mim, o que eu obtive foi um valioso tesouro.";
+	next;
+	mes "[Niels]";
+	mes "Esta aldeia de Comodo!";
+	mes "Você não acha que as cavernas são muito pequenas e estreista por alguma razão?";
+	next;
+	mes "[Niels]";
+	mes "Então, eu estava pensando nisso...";
+	mes "E eu cheguei a conclusão de que deve haver alguma coisa escondida dentro da caverna...";
+	next;
+	mes "[Niels]";
+	mes "E então!";
+	mes "Eu finalmente encontrei.";
+	mes "A passagem para 'o lugar' que ninguém jamais encontrou!";
+	next;
+	mes "[Niels]";
+	mes "................";
+	next;
+	mes "[Niels]";
+	mes ".......Hm?";
+	next;
+	mes "[Niels]";
+	mes "Eu estava esperando um espetacular e dramático efeito sonoro para a minha declaração!";
+	mes "Eh, oh bem...";
+	emotion e_hmm;
+	next;
+	mes "[Niels]";
+	mes "Bem, no espírito da descobrta, nunca pense em me perguntar sobre direções para 'o lugar' ou sobre o que tem 'no lugar'.";
+	mes "Eu não quero estragar a surpresa.";
+	next;
+	mes "[Niels]";
+	mes "Se você é um verdadeiro aventureiro.";
+	mes "Eu espero que você grite com toda a força de seus pulmões...";
+	next;
+	mes "[Niels]";
+	mes "'Ahhhh! Eu preciso saber o que é isto!!'";
+	mes "Chute a porta aberta e corra como se estivesse fugindo do inferno para encontrar o lugar por conta própria!!";
+	next;
+	mes "[Niels]";
+	mes "Agora! Rápido saia e busque por esse lugar!";
+	mes "Será este lugar um mundo totalmente novo ou uma armadilha para o inferno?!";
+	mes "Vá adiante, satisfaça seu destino, aventureiro!";
+	close;
+}
+
+// ------------------------------------------------------------------
 cmd_in02,73,81,4	script	Martine#com	1_M_02,{
 	mes "[Martine]";
 	mes "Jogatina?!";

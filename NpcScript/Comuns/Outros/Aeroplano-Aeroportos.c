@@ -171,6 +171,14 @@ airplane,221,158,2	script	Piloto#air	4_M_EIN_SOLDIER,{
 }
 
 //-------------------------------------------------------------------
+airplane,238,54,7	script	Aventureiro#air	1_M_ORIENT01,{
+	mes "[Aventureiro]";
+	mes "Você sabe, uma das sacerdotisas do templo em Rachel parecia estar encrencada por alguma razão.";
+	mes "Eu deveria perguntar o que estava incomodando ela, e oferecer a minha ajuda.";
+	close;
+}
+
+//-------------------------------------------------------------------
 // Placa de saída
 airplane,240,64,5	script	Saída#air1a::ExitAirplane	4_BOARD3,{
 	end;
