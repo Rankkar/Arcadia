@@ -12,8 +12,7 @@
 \*---------------------------------------------------------------*/
 
 npc_global_list: (
-	// Testar script
-	//@include "NpcScript/testes.conf"
+	//"NpcScript/?.c",
 
 	// Batalha Campal
 	@include "NpcScript/Npc_Config/Campal.conf"
