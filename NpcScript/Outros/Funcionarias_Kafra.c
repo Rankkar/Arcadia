@@ -26,7 +26,6 @@
 		mes "Me desculpe mas você deve pelo menos ter suas ^777777Habilidades Básicas^000000.";
 		mes "Ampliadas até o Nível 6 para usar o serviços da Corporação Kafra.";
 		close2; cutin "",255; end;
-		close;
 	}
 	// "Salvar","Usar Armazém","Serviço de Teletransporte","Alugar Carrinho","Outros Serviços"
 	if (strnpcinfo(NPC_MAP) == "prontera")          { .@kaframenu = 1; }
