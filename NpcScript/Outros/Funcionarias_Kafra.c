@@ -556,7 +556,7 @@ prontera,151,29,0	duplicate(KafraCorp)	Funcionária Kafra#kafra_03::prtkaf3	4_F_K
 prontera,282,200,2	duplicate(KafraCorp)	Funcionária Kafra#kafra_04::prtkaf4	4_F_KAFRA4
 prontera,29,207,6	duplicate(KafraCorp)	Funcionária Kafra#kafra_05::prtkaf5	4_F_KAFRA5
 prontera,152,326,3	duplicate(KafraCorp)	Funcionária Kafra#kafra_06::prtkaf6	4_F_KAFRA6
-prt_fild05,290,224,3	duplicate(KafraCorp)	Funcionária Kafra#kafra_04::#kafra_07	4_F_KAFRA4
+prt_fild05,290,224,3	duplicate(KafraCorp)	Funcionária Kafra#kafra_04::kafra_07	4_F_KAFRA4
 
 // ------------------------------------------------------------------
 morocc,160,258,4	duplicate(KafraCorp)	Kafra#kafra_04::mockaf1	4_F_KAFRA4

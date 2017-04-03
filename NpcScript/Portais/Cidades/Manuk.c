@@ -28,6 +28,7 @@ manuk,311,234,0	warp	manuk9-1	1,1,man_in01,380,267
 manuk,253,195,0	warp	manuk10-1	1,1,man_in01,24,284
 manuk,235,124,0	warp	manuk11-1	1,1,man_in01,70,171
 manuk,279,115,0	warp	manuk12-1	1,1,man_in01,123,224
+manuk,114,357,0	warp	man_fild02-3	1,1,man_fild02,138,43
 
 // ------------------------------------------------------------------
 man_in01,275,41,0	warp	manuk1-2	1,1,manuk,309,142

@@ -19,6 +19,8 @@
 bif_fild01,318,48,0	warp	bifrost_field0002	1,1,splendide,271,382
 
 // ------------------------------------------------------------------
+bif_fild02,292,351,0	warp	biffild_fild01-1	1,1,ecl_fild01,205,76
+
 -	script	bifrost_field0000	FAKE_NPC,{
 	mes "Você ver um pequeno buraco um jardim de luminoso.";
 	next;

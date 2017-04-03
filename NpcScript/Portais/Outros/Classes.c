@@ -114,3 +114,91 @@ que_ng,10,183,0	warp	ninja03	1,1,que_ng,33,64
 que_ng,37,64,0	warp	ninja04	1,1,que_ng,15,182
 que_ng,30,37,0	warp	ninja05	1,1,que_ng,67,28
 que_ng,63,30,0	warp	ninja06	1,1,que_ng,25,37
+
+// ------------------------------------------------------------------
+// - [ Aprendiz (Academia de Izlude) ] -
+// ------------------------------------------------------------------
+iz_ac01,100,24,0	warp	#to_ac01-1	2,2,izlude,127,253
+iz_ac01,78,25,0	warp	#to_ac2f01	2,2,iz_ac02,104,27
+iz_ac01,122,25,0	warp	#to_ac2f02	2,2,iz_ac02,104,27
+iz_ac02,94,27,0	warp	#to_ac1f01	2,2,iz_ac01,78,28
+iz_ac02,113,27,0	warp	#to_ac1f02	2,2,iz_ac01,122,28
+
+// ------------------------------------------------------------------
+// - Não usados no projeto os mapas clones de Izlude 
+// ------------------------------------------------------------------
+/*
+new_1-3,96,176,0	warp	#to_ac01-2	1,1,iz_ac01,49,73
+
+iz_int,96,73,0	script	iz_int_iz	WARPNPC,2,2,{
+	end;
+
+	OnTouch:
+		savepoint "izlude", 128, 98;
+		warp "izlude"+strnpcinfo(2)+"", 195, 209;
+		end;
+}
+
+iz_int01,96,73,0	duplicate(iz_int_iz)	iz_int_iz#_a	WARPNPC,2,2
+iz_int02,96,73,0	duplicate(iz_int_iz)	iz_int_iz#_b	WARPNPC,2,2
+iz_int03,96,73,0	duplicate(iz_int_iz)	iz_int_iz#_c	WARPNPC,2,2
+iz_int04,96,73,0	duplicate(iz_int_iz)	iz_int_iz#_d	WARPNPC,2,2
+
+izlude_a,125,257,0	warp	#to_ac01_a	2,2,iz_ac01_a,99,29
+izlude_b,125,257,0	warp	#to_bc01_b	2,2,iz_ac01_b,99,29
+izlude_c,125,257,0	warp	#to_cc01_c	2,2,iz_ac01_c,99,29
+izlude_d,125,257,0	warp	#to_dc01_d	2,2,iz_ac01_d,99,29
+izlude_a,130,257,0	warp	#to_ac02_a	2,2,iz_ac01_a,99,29
+izlude_b,130,257,0	warp	#to_bc02_b	2,2,iz_ac01_b,99,29
+izlude_c,130,257,0	warp	#to_cc02_c	2,2,iz_ac01_c,99,29
+izlude_d,130,257,0	warp	#to_dc02_d	2,2,iz_ac01_d,99,29
+
+iz_ac01_a,100,24,0	warp	#to_ac01-1_a	2,2,izlude_a,127,253
+iz_ac01_b,100,24,0	warp	#to_bc01-1_b	2,2,izlude_b,127,253
+iz_ac01_c,100,24,0	warp	#to_cc01-1_c	2,2,izlude_c,127,253
+iz_ac01_d,100,24,0	warp	#to_dc01-1_d	2,2,izlude_d,127,253
+iz_ac01_a,78,25,0	warp	#to_ac2f01_a	2,2,iz_ac02_a,104,27
+iz_ac01_b,78,25,0	warp	#to_bc2f01_b	2,2,iz_ac02_b,104,27
+iz_ac01_c,78,25,0	warp	#to_cc2f01_c	2,2,iz_ac02_c,104,27
+iz_ac01_d,78,25,0	warp	#to_dc2f01_d	2,2,iz_ac02_d,104,27
+iz_ac01_a,122,25,0	warp	#to_ac2f02_a	2,2,iz_ac02_a,104,27
+iz_ac01_b,122,25,0	warp	#to_bc2f02_b	2,2,iz_ac02_b,104,27
+iz_ac01_c,122,25,0	warp	#to_cc2f02_c	2,2,iz_ac02_c,104,27
+iz_ac01_d,122,25,0	warp	#to_dc2f02_d	2,2,iz_ac02_d,104,27
+iz_ac02_a,94,27,0	warp	#to_ac1f01_a	2,2,iz_ac01_a,78,28
+iz_ac02_b,94,27,0	warp	#to_bc1f01_b	2,2,iz_ac01_b,78,28
+iz_ac02_c,94,27,0	warp	#to_cc1f01_c	2,2,iz_ac01_c,78,28
+iz_ac02_d,94,27,0	warp	#to_dc1f01_d	2,2,iz_ac01_d,78,28
+iz_ac02_a,113,27,0	warp	#to_ac1f02_a	2,2,iz_ac01_a,122,28
+iz_ac02_b,113,27,0	warp	#to_bc1f02_b	2,2,iz_ac01_b,122,28
+iz_ac02_c,113,27,0	warp	#to_cc1f02_c	2,2,iz_ac01_c,122,28
+iz_ac02_d,113,27,0	warp	#to_dc1f02_d	2,2,iz_ac01_d,122,28
+*/
+
+// ------------------------------------------------------------------
+// - [ Arcebispo ] -
+// ------------------------------------------------------------------
+job3_arch01,29,24,0	warp	#archout	1,1,odin_tem02,282,263
+
+// ------------------------------------------------------------------
+// - [ Cicario ] -
+// ------------------------------------------------------------------
+job3_guil01,6,93,0	warp	#gate_to_guil02	1,1,veins,254,255
+job3_guil01,18,48,0	warp	#gate_to_guil03	1,1,job3_guil01,68,91
+job3_guil01,67,95,0	warp	#gate_to_guil04	1,1,job3_guil01,18,53
+job3_guil01,65,50,0	warp	#gate_to_guil06	1,1,job3_guil01,83,77
+job3_guil01,11,4,0	warp	#gate_to_guil08	1,1,job3_guil01,51,50
+job3_guil01,79,27,0	warp	#gate_to_guil10	1,1,job3_guil01,51,50
+job3_guil01,143,61,0	warp	#gate_to_guil11	1,1,job3_guil01,51,50
+
+// ------------------------------------------------------------------
+// - [ Bioquimico ] -
+// ------------------------------------------------------------------
+job3_gen01,49,49,0	warp	#gentolight	1,1,lighthalzen,54,132
+job3_gen01,7,59,0	warp	#from1to2gen	1,1,job3_gen01,72,52
+job3_gen01,71,56,0	warp	#from2to1gen	1,1,job3_gen01,11,60
+
+// ------------------------------------------------------------------
+// - [ Renegado ] -
+// ------------------------------------------------------------------
+job3_sha01,71,19,0	warp	shadowc1	1,1,tha_t01,149,224

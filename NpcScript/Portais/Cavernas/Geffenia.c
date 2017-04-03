@@ -13,32 +13,26 @@
 |                     Projeto Ragnarok Online                       |
 +-------------------------------------------------------------------+
 | - Versão: Spell Master                                            |
-| - Nota: Potais em Umbala                                          |
+| - Nota: Potais em Gefenia                                         |
 \*-----------------------------------------------------------------*/
 
-umbala,130,79,0	warp	um_fild4-3	1,1,um_fild04,215,336
-umbala,106,285,0	warp	um_dun1-1	1,1,um_dun01,42,30
-//umbala,106,285,1	warp	ygGate_yg1	1,1,yggdrasil01,39,63
-umbala,68,253,0	warp	um_chief1-1	1,1,um_in,38,113
-umbala,138,129,0	warp	um_tool1-1	1,1,um_in,99,114
-umbala,125,157,0	warp	um_weapon1-1	1,1,um_in,155,114
-umbala,94,186,0	warp	um_houseA1-1	1,1,um_in,141,42
-umbala,100,203,0	warp	um_houseA2-1	1,1,um_in,163,69
-umbala,107,130,0	warp	um_houseB1-1	1,1,um_in,99,66
-
-umbala,220,189,0	script	um_shaman1-1	WARPNPC,1,1,{
-	OnTouch:
-	if (event_umbala == 7) {
-		warp "um_in",32,71;
-	}
-	end;
-}
+gefenia01,37,103,0	warp	gefeniawarp014	1,1,gefenia04,283,95
+gefenia01,199,269,0	warp	gefeniawarp001	1,1,gefenia02,203,34
+gefenia01,220,256,0	warp	gefeniawarp003	1,1,gefenia02,240,23
 
 // ------------------------------------------------------------------
-um_in,38,110,0	warp	um_chief1-2	1,1,umbala,66,250
-um_in,99,111,0	warp	um_tool1-2	1,1,umbala,136,127
-um_in,155,111,0	warp	um_weapon1-2	1,1,umbala,126,154
-um_in,141,39,0	warp	um_houseA1-2	1,1,umbala,94,183
-um_in,166,69,0	warp	um_houseA2-2	1,1,umbala,102,205
-um_in,99,63,0	warp	um_houseB1-2	1,1,umbala,108,127
-um_in,29,71,0	warp	um_shaman2-1	1,1,umbala,217,186
+gefenia02,17,175,0	warp	gefeniawarp005	1,1,gefenia03,266,168
+gefenia02,19,237,0	warp	gefeniawarp007	1,1,gefenia03,264,236
+gefenia02,203,31,0	warp	gefeniawarp002	1,1,gefenia01,199,266
+gefenia02,240,20,0	warp	gefeniawarp004	1,1,gefenia01,223,256
+
+// ------------------------------------------------------------------
+gefenia03,58,26,0	warp	gefeniawarp011	1,1,gefenia04,33,270
+gefenia03,145,27,0	warp	gefeniawarp009	1,1,gefenia04,130,272
+gefenia03,267,236,0	warp	gefeniawarp008	1,1,gefenia02,22,237
+gefenia03,269,168,0	warp	gefeniawarp006	1,1,gefenia02,20,175
+
+// ------------------------------------------------------------------
+gefenia04,130,275,0	warp	gefeniawarp010	1,1,gefenia03,145,30
+gefenia04,33,273,0	warp	gefeniawarp012	1,1,gefenia03,58,29
+gefenia04,287,95,0	warp	gefeniawarp013	1,1,gefenia01,40,103

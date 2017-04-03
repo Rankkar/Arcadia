@@ -24,6 +24,7 @@ ve_fild01,350,92,0	warp	ve_fild1-5	1,1,ve_fild02,78,133
 ve_fild02,195,382,0	warp	ve_fild2-3	1,1,rachel,130,25
 ve_fild02,31,263,0	warp	ve_fild2-4	1,1,ve_fild01,361,267
 ve_fild02,73,133,0	warp	ve_fild2-5	1,1,ve_fild01,345,92
+ve_fild02,191,21,0	warp	arug001	1,1,aru_gld,195,360
 
 // ------------------------------------------------------------------
 ve_fild03,168,240,0	warp	thor_v1-1	1,1,thor_v01,21,229

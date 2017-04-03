@@ -24,6 +24,8 @@ amatsu,94,117,0	warp	ama_tools1-1	1,1,ama_in01,30,24
 amatsu,132,117,0	warp	ama_weapon1-1	1,1,ama_in01,89,23
 amatsu,217,116,0	warp	ama_tavern1-1	1,1,ama_in01,162,25
 amatsu,85,235,0	warp	ama_castle1-1	1,1,ama_in02,223,45
+amatsu,248,292,0	warp	ama_fild1-1	1,1,ama_fild01,75,33
+amatsu,149,140,0	warp	ninja01	1,1,que_ng,20,142
 
 // ------------------------------------------------------------------
 ama_in01,31,176,0	warp	ama_house1-2	1,1,amatsu,180,138
@@ -35,6 +37,8 @@ ama_in01,86,23,0	warp	ama_weapon1-2	1,1,amatsu,129,117
 ama_in01,157,25,0	warp	ama_tavern1-2	1,1,amatsu,214,116
 ama_in01,166,73,0	warp	ama_inn1-1	1,1,ama_in01,162,31
 ama_in01,162,34,0	warp	ama_inn1-2	1,1,ama_in01,166,77
+ama_in01,175,171,0	warp	ama_shrine1.2	1,1,ama_fild01,174,328
+ama_in01,174,121,0	warp	ama_craftsman1.2	1,1,ama_fild01,330,138
 
 // ------------------------------------------------------------------
 ama_in02,226,45,0	warp	ama_castle1-2	1,1,amatsu,88,235

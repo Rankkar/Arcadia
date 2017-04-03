@@ -26,6 +26,10 @@ aldebaran,89,234,0	warp	ald08	1,1,aldeba_in,242,237
 aldebaran,225,54	warp	aldeb_sign1-1	1,1,aldeba_in,149,120
 aldebaran,139,34,0	warp	ald001	3,2,mjolnir_12,199,375
 aldebaran,139,135,0	warp	ald002	1,1,c_tower1,199,159
+aldebaran,140,244,0	warp	alde-yunfild	1,1,yuno_fild01,208,19
+aldebaran,65,53,0	warp	alche#1	1,1,alde_alche,20,175
+aldebaran,53,65,0	warp	alche#2	1,1,alde_alche,42,175
+aldebaran,35,140,0	warp	alde-a_aldeg01	1,1,alde_gld,280,160
 
 // ------------------------------------------------------------------
 aldeba_in,103,157,0	warp	ald09	2,2,aldeba_in,137,237

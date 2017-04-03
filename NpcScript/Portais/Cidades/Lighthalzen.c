@@ -31,6 +31,7 @@ lighthalzen,347,261,0	warp	lhz_house1_1-1	1,1,lhz_in03,14,218
 lighthalzen,345,231,0	warp	lhz_pub1-1	1,1,lhz_in03,188,15
 lighthalzen,50,86,0	warp	lhz_house2_1-1	1,1,lhz_in03,45,31
 lighthalzen,251,299,0	warp	lhz_house3_1-1	1,1,lhz_in03,97,21
+lighthalzen,214,329,0	warp	lhz043a-1	1,1,lhz_fild01,210,23
 
 lighthalzen,313,301,0	script	Sewer Pipe#lt	HIDDEN_NPC,{
 	if (MISC_QUEST&512) {
@@ -47,6 +48,13 @@ lighthalzen,313,301,0	script	Sewer Pipe#lt	HIDDEN_NPC,{
 	mes "Naturalmente, o fedor que emana de dentro do tubo é um pouco desgradável.^000000";
 	close;
 }
+
+lighthalzen,267,76,0	warp	lairp3	1,1,lhz_airport,143,15
+lighthalzen,294,76,0	warp	lairp4a	1,1,lhz_airport,143,53
+lighthalzen,308,76,0	warp	lairp5	1,1,airplane,224,58
+lighthalzen,188,204,0	warp	kh_mansion_01a	1,1,kh_mansion,84,49
+lighthalzen,52,132,0	warp	#lighttogen	1,1,job3_gen01,45,50
+lighthalzen,41,52,0	warp	s_atelier0010	1,1,s_atelier,18,72
 
 // ------------------------------------------------------------------
 lhz_in01,111,121,0	warp	lhz_rekenber1-2	1,1,lighthalzen,101,243

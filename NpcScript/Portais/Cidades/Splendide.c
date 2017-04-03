@@ -32,6 +32,8 @@ splendide,259,112,0	warp	splendide7-1	1,1,spl_in02,189,41
 splendide,286,229,0	warp	splendide8-1	1,1,spl_in02,137,66
 splendide,299,251,0	warp	splendide9-1	1,1,spl_in02,140,93
 splendide,132,68,0	warp	splendide10-1	1,1,spl_in02,45,52
+splendide,275,390,0	warp	bifrost_field0001	1,1,bif_fild01,316,50
+splendide,388,252,0	warp	spl_fild02-8	1,1,spl_fild02,8,241
 
 // ------------------------------------------------------------------
 spl_in01,110,17,0	warp	splendide11-2	1,1,splendide,197,191

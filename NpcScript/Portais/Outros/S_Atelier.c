@@ -13,32 +13,18 @@
 |                     Projeto Ragnarok Online                       |
 +-------------------------------------------------------------------+
 | - Versão: Spell Master                                            |
-| - Nota: Potais em Umbala                                          |
+| - Nota: Potais no WorkShop                                        |
 \*-----------------------------------------------------------------*/
 
-umbala,130,79,0	warp	um_fild4-3	1,1,um_fild04,215,336
-umbala,106,285,0	warp	um_dun1-1	1,1,um_dun01,42,30
-//umbala,106,285,1	warp	ygGate_yg1	1,1,yggdrasil01,39,63
-umbala,68,253,0	warp	um_chief1-1	1,1,um_in,38,113
-umbala,138,129,0	warp	um_tool1-1	1,1,um_in,99,114
-umbala,125,157,0	warp	um_weapon1-1	1,1,um_in,155,114
-umbala,94,186,0	warp	um_houseA1-1	1,1,um_in,141,42
-umbala,100,203,0	warp	um_houseA2-1	1,1,um_in,163,69
-umbala,107,130,0	warp	um_houseB1-1	1,1,um_in,99,66
-
-umbala,220,189,0	script	um_shaman1-1	WARPNPC,1,1,{
-	OnTouch:
-	if (event_umbala == 7) {
-		warp "um_in",32,71;
-	}
-	end;
-}
-
-// ------------------------------------------------------------------
-um_in,38,110,0	warp	um_chief1-2	1,1,umbala,66,250
-um_in,99,111,0	warp	um_tool1-2	1,1,umbala,136,127
-um_in,155,111,0	warp	um_weapon1-2	1,1,umbala,126,154
-um_in,141,39,0	warp	um_houseA1-2	1,1,umbala,94,183
-um_in,166,69,0	warp	um_houseA2-2	1,1,umbala,102,205
-um_in,99,63,0	warp	um_houseB1-2	1,1,umbala,108,127
-um_in,29,71,0	warp	um_shaman2-1	1,1,umbala,217,186
+s_atelier,131,75,0	warp	s_atelier0002	1,1,rachel,180,118
+s_atelier,117,71,0	warp	s_atelier0003	1,1,s_atelier,169,72
+s_atelier,166,72,0	warp	s_atelier0004	1,1,s_atelier,117,68
+s_atelier,9,119,0	warp	s_atelier0006	1,1,prontera,269,108
+s_atelier,31,128,0	warp	s_atelier0007	1,1,s_atelier,76,125
+s_atelier,76,128,0	warp	s_atelier0008	1,1,s_atelier,28,128
+s_atelier,19,79,0	warp	s_atelier0009	1,1,lighthalzen,41,58
+s_atelier,32,65,0	warp	s_atelier0011	1,1,s_atelier,80,59
+s_atelier,80,66,0	warp	s_atelier0012	1,1,s_atelier,32,56
+s_atelier,109,129,0	warp	s_atelier0013	1,1,s_atelier,159,125
+s_atelier,160,130,0	warp	s_atelier0014	1,1,s_atelier,114,129
+s_atelier,107,122,0	warp	s_atelier0016	1,1,yuno,274,66

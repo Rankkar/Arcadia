@@ -88,3 +88,13 @@ gef_fild11,111,364,0	warp	geff12-1	6,3,gef_fild10,104,24
 // ------------------------------------------------------------------
 gef_fild13,380,56,0	warp	geff18	1,1,gef_fild09,27,56
 gef_fild13,41,373,0	warp	geff13-1	1,1,gef_fild07,40,23
+gef_fild13,150,54,0	warp	gef-g1-0_gefg-1-07	1,1,gefg_cas01,34,140
+gef_fild13,210,75,0	warp	gef-g1-1_gefg-1-04	1,1,gefg_cas01,95,178
+gef_fild13,308,244,0	warp	gef-g2_gefg-2-07	1,1,gefg_cas02,70,143
+gef_fild13,77,284,0	warp	gef-g3-0_g-cas3-12	1,1,gefg_cas03,60,286
+gef_fild13,112,269,0	warp	gef-g3-1_g-cas3-13	1,1,gefg_cas03,100,280
+gef_fild13,139,240,0	warp	gef-g3-2_g-cas3-14	1,1,gefg_cas03,125,250
+gef_fild13,83,185,0	warp	gef-g3-3_g-cas3-15	1,1,gefg_cas03,89,159
+gef_fild13,196,281,0	warp	gef-g4_gefg-4-05	1,1,gefg_cas04,24,149
+gef_fild13,256,57,0	warp	gef-5-0_gefg-5-04	1,1,gefg_cas05,11,134
+gef_fild13,305,83,0	warp	gef-5-1_gefg-5-01	1,1,gefg_cas05,99,200

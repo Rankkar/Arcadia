@@ -733,6 +733,22 @@ jawaii,122,263,5	script	Marinheiro#jaw2	4W_SAILOR,{
 }
 
 // ------------------------------------------------------------------
+// - [ Mosc_Fild > Moscovia ] - 
+// ------------------------------------------------------------------
+mosk_fild02,198,53,3	script	Barco#mos_dun	HIDDEN_NPC,{
+	mes "- Você acha um barco ancorado. -";
+	next;
+	if(select("Voltar para Cidade.:Ficar mais.") == 1) {
+		mes "- Você sobe a bordo do barco e puxa os remos. -";
+		close2;
+		warp "moscovia",140,54;
+		end;
+	}
+	mes "- O desconhecido desperta seu interesse. -";
+	close;
+}
+
+// ------------------------------------------------------------------
 // - [] - 
 // ------------------------------------------------------------------
 

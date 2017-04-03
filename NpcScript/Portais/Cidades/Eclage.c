@@ -13,29 +13,45 @@
 |                     Projeto Ragnarok Online                       |
 +-------------------------------------------------------------------+
 | - Versão: Spell Master                                            |
-| - Nota: Potais no Túneo Submarino                                 |
+| - Nota: Potais em Eclage                                          |
 \*-----------------------------------------------------------------*/
 
-iz_dun00,168,173,0	warp	izd01-1	3,3,izlu2dun,108,88
-iz_dun00,352,342,0	warp	izd02	5,2,iz_dun01,253,252
-iz_dun00,39,41,0	warp	izd03	5,2,iz_dun01,41,37
+eclage,98,26,0	warp	eclageS_EclEnter	1,1,ecl_fild01,99,317
+eclage,299,309,0	warp	eclageN_in01s	1,1,ecl_in01,47,11
 
 // ------------------------------------------------------------------
-iz_dun01,118,170,0	warp	izd04	5,2,iz_dun02,236,204
-iz_dun01,253,258,0	warp	izd02-1	2,2,iz_dun00,352,337
-iz_dun01,41,32,0	warp	izd03-1	2,2,iz_dun00,39,46
+ecl_in01,47,8,0	warp	in01s_eclageN	1,1,eclage,297,307
+ecl_in01,8,67,0	warp	in01w_hub1-1	1,1,ecl_hub01,38,94
+
+ecl_in01,84,68,0	script	in01e_hub2-1	WARPNPC,1,1,{
+	end;
+	OnTouch:
+	if (ep14_2_mylord == 29) { warp "ecl_hub01",106,31; }
+	else { warp "ecl_hub01",107,107; }
+	end;
+}
 
 // ------------------------------------------------------------------
-iz_dun02,236,198,0	warp	izd04-1	5,3,iz_dun01,118,165
-iz_dun02,339,331,0	warp	izd05	2,2,iz_dun03,32,63
+ecl_in02,98,4,0	warp	in02-1_hub1-2	1,1,ecl_hub01,23,107
+ecl_in02,80,18,0	warp	in02-2_in02-3	1,1,ecl_in02,157,66
+ecl_in02,157,68,0	warp	in02-3_in02-2	1,1,ecl_in02,83,18
 
 // ------------------------------------------------------------------
-iz_dun03,264,245,0	warp	izd06	1,2,iz_dun04,26,27
-iz_dun03,29,63,0	warp	izd05-1	2,2,iz_dun02,339,328
+ecl_in03,144,14,0	warp	in03_hub3-2	1,1,ecl_hub01,40,11
 
 // ------------------------------------------------------------------
-iz_dun04,26,24,0	warp	izd06-1	2,2,iz_dun03,261,245
-iz_dun04,130,234,0	warp	tokraken	2,2,iz_dun05,141,187
+ecl_hub01,40,95,0	warp	hub1-1_in01w	1,1,ecl_in01,11,67
+ecl_hub01,22,109,0	warp	hub1-2_in02-1	1,1,ecl_in02,99,7
+ecl_hub01,107,110,0	warp	hub2-1_in01e	1,1,ecl_in01,82,68
+ecl_hub01,127,95,0	warp	hub2-2_hub3-1	1,1,ecl_hub01,18,32
 
-// ------------------------------------------------------------------
-iz_dun05,142,190,0	warp	exitkraken	2,2,iz_dun04,129,232
+ecl_hub01,18,34,0	script	hub3-1_hub2-2	WARPNPC,1,1,{
+	end;
+	OnTouch:
+	if (ep14_2_mylord == 29) { warp "ecl_hub01",135,14; }
+	else { warp "ecl_hub01",125,94; }
+	end;
+}
+ecl_hub01,40,14,0	warp	hub3-2_in03	1,1,ecl_in03,144,17
+ecl_hub01,105,36,0	warp	hub4-1_in01e	1,1,ecl_in01,82,68
+ecl_hub01,138,17,0	warp	hub4-2_hub3-1	1,1,ecl_hub01,18,32F

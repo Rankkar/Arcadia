@@ -31,6 +31,7 @@ payon,155,328,0	warp	payonwarp069	2,2,payon_in03,165,143
 payon,107,326,0	warp	payonwarp073	2,2,payon_in03,20,63
 payon,267,89,0	warp	payonwarp005	1,1,pay_fild08,20,74
 payon,228,329,0	warp	payonwarp007	4,2,pay_arche,81,22
+payon,16,143,0	warp	payon-a_payg01	1,1,pay_gld,370,149
 
 // ------------------------------------------------------------------
 payon_in01,86,9,0	warp	payonwarp087	2,2,payon,266,152

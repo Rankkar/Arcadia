@@ -30,6 +30,13 @@ yuno,284,366,0	warp	yun47	1,1,yuno_in03,224,23
 yuno,341,203,0	warp	yun15	1,1,yuno_in04,32,58
 yuno,157,322,0	warp	yungvn11	1,1,yuno_pre,69,13
 yuno,158,15,0	warp	yun-yunfild	1,1,yuno_fild04,231,284
+yuno,53,214,0	warp	jairp3	1,1,y_airport,143,23
+yuno,47,240,0	warp	jairp4a	1,1,y_airport,143,54
+yuno,59,240,0	warp	jairp5a	1,1,y_airport,143,54
+yuno,6,261,0	warp	jairp6	1,1,airplane_01,244,58
+yuno,96,261,0	warp	jairp7	1,1,airplane,244,58
+yuno,13,126,0	warp	schg001	1,1,sch_gld,351,89
+yuno,278,66,0	warp	s_atelier0015	1,1,s_atelier,111,122
 
 // ------------------------------------------------------------------
 yuno_in01,116,40,0	warp	yun02	1,1,yuno,120,138

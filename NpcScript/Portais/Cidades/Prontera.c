@@ -36,6 +36,7 @@ prontera,156,360,0	warp	prt005	4,2,prt_castle,102,20
 prontera,22,203,0	warp	prt002	2,3,prt_fild05,367,205
 prontera,289,203,0	warp	prt003	2,3,prt_fild06,27,193
 prontera,156,22,0	warp	prt001	3,2,prt_fild08,170,375
+prontera,272,108,0	warp	s_atelier0005	1,1,s_atelier,13,119
 
 // ------------------------------------------------------------------
 prt_in,135,71,0	warp	prt04-1	1,2,prontera,136,219

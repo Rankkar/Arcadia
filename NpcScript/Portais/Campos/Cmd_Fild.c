@@ -49,6 +49,8 @@ cmd_fild06,372,359,0	warp	cmd_fild06-8	1,1,cmd_fild08,31,359
 // ------------------------------------------------------------------
 cmd_fild07,149,379,0	warp	cmd_fild07-1	10,1,cmd_fild06,147,36
 cmd_fild07,389,186,0	warp	cmd_fild07-2	1,3,cmd_fild09,18,170
+cmd_fild07,193,117,0	warp	fild07-rogue00	1,1,in_rogue,379,46
+cmd_fild07,355,286,0	warp	fild07-rogue03	1,1,in_rogue,247,126
 
 // ------------------------------------------------------------------
 cmd_fild08,25,355,0	warp	cmd_fild08-1	1,1,cmd_fild06,366,359

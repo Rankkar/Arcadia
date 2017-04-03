@@ -33,3 +33,4 @@ um_dun02,32,249,0	warp	um_dun7-1	1,1,um_dun02,117,208
 um_dun02,113,208,0	warp	um_dun7-2	1,1,um_dun02,35,252
 um_dun02,215,85,0	warp	um_dun8-1	1,1,um_dun02,166,38
 um_dun02,169,38,0	warp	um_dun8-2	1,1,um_dun02,215,88
+um_dun02,125,163,0	warp	nwarp1	1,1,yggdrasil01,40,63

@@ -30,6 +30,10 @@ einbroch,157,331,0	warp	ein_fd01	1,1,ein_fild04,184,31
 einbroch,150,25,0	warp	ein_fd02	1,1,ein_fild08,164,377
 einbroch,179,73,0	warp	ein_fa02a	1,1,ein_in01,81,203
 einbroch,132,79,0	warp	ein_fa01	1,1,ein_in01,17,213
+einbroch,92,281,0	warp	ein_ap01	1,1,airplane,224,64
+einbroch,64,234,0	warp	ein_ap02	1,1,airport,138,51
+einbroch,64,207,0	warp	ein_ap05a	1,1,airport,143,17
+einbroch,136,199,0	warp	gswarp1	1,1,que_ng,138,167
 
 // ------------------------------------------------------------------
 ein_in01,13,213,0	warp	ein_fa01a	1,1,einbroch,129,79
