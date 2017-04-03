@@ -52,12 +52,11 @@ desenvolvimento é mostrado abertamente.
 * 12: Remover arquivo obsoletos dos databases. (A fazer)
 * 13: Remover todos módulos pré renovação. (A fazer)
 * 14: Remover todos pacotes módulos não usados. (A fazer)
-* 15: Remover todos pacotes módulos não usados. (A fazer)
-* 16: Limpesa do código fonte. (A fazer)
-* 17: Iniciar testes maciços em busca de erros e solucionar. (A fazer)
-* 18: Remover compatibilidade com windows e fixar no Linux. (A fazer)
-* 19: Buscar e corrigir todos problemas com Linux. (A fazer)
-* 20: Concluir o emulador. (A fazer)
+* 15: Limpesa do código fonte. (A fazer)
+* 16: Iniciar testes maciços em busca de erros e solucionar. (A fazer)
+* 17: Remover compatibilidade com windows e fixar no Linux. (A fazer)
+* 18: Buscar e corrigir todos problemas com Linux. (A fazer)
+* 19: Concluir o emulador. (A fazer)
 
 ***
 
