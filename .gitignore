@@ -21,12 +21,8 @@ Thumbs.db
 /*.suo
 /*.exp
 /*.lib
-/*.v10
 /*.v11
 /*.v12
-/*.v13
-/*.v14
-/*.v15
 /autom4te.cache/
 /start-log.txt
 /char-server
@@ -40,78 +36,30 @@ Thumbs.db
 /map-server
 /mapcache
 
-# /plugins -- everything
-/plugins/
+# libconfig
+/Source/3rdparty/libconfig/*.o
 
-#OSX Xcode project user-sensitive-stuff
-/DerivedData
-/Hercules
-/build
-/Hercules.xcodeproj/xcuserdata
-/Hercules.xcodeproj/project.xcworkspace/xcuserdata/
-/Hercules.xcodeproj/project.xcworkspace/xcshareddata/Hercules.xccheckout
+# mt19937ar
+/Source/3rdparty/mt19937ar/*.o
 
-# /3rdparty/libconfig/
-/3rdparty/libconfig/Makefile
-/3rdparty/libconfig/*.o
+/Source/src/char/obj_sql
 
-# /3rdparty/mt19937ar/
-/3rdparty/mt19937ar/Makefile
-/3rdparty/mt19937ar/*.o
+# common
+/Source/src/common/obj_all
+/Source/src/common/obj_sql
+/Source/src/common/sysinfo.inc
 
-# /cache/
-/cache/
+# login/
+/Source/src/login/Makefile
+/Source/src/login/obj_sql
 
-# /conf/
-/conf/import
-
-# /log/
-/log/*.log
-/log/*.leaks
-
-# /src/char/
-/src/char/Makefile
-/src/char/obj_sql
-
-# /src/common/
-/src/common/Makefile
-/src/common/obj_all
-/src/common/obj_sql
-/src/common/sysinfo.inc
-
-# /src/login/
-/src/login/Makefile
-/src/login/obj_sql
-
-# /src/map/
-/src/map/Makefile
-/src/map/obj_sql
-/src/map/pcre.h
-
-# /src/test/
-/src/test/Makefile
-/src/test/obj
-
-# /src/tool/
-/src/tool/Makefile
-/src/tool/obj_all
-
-# /src/plugins/
-/src/plugins/Makefile
-
-# /tools/
-/tools/convert
-/tools/adduser
-/tools/*.exe
-/tools/*.ilk
-/tools/*.pdb
-/tools/HPMHookGen/Makefile
-/tools/HPMHookGen/doxyoutput
+# map/
+/Source/src/map/obj_sql
 
 # /vcproj-*
-/vcproj-*/*.user
-/vcproj-*/char-server
-/vcproj-*/login-server
-/vcproj-*/map-server
-/vcproj-*/mapcache
-/vcproj-*/plugin-*/
+/Source/vcproj-*/*.user
+/Source/vcproj-*/char-server
+/Source/vcproj-*/login-server
+/Source/vcproj-*/map-server
+/Source/vcproj-*/mapcache
+/Source/vcproj-*/plugin-*/
