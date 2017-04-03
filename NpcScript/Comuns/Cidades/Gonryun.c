@@ -1,18 +1,14 @@
 /*-----------------------------------------------------------------*\
-|             ______ ____ _____ ___   __                            |
-|            / ____ / _  / ____/  /  /  /                           |
-|            \___  /  __/ __/ /  /__/  /___                         |
-|           /_____/_ / /____//_____/______/                         |
-|                /\  /|   __    __________ _________                |
-|               /  \/ |  /  |  /  ___  __/ ___/ _  /                |
-|              /      | / ' | _\  \ / / / __//  __/                 |
-|             /  /\/| |/_/|_|/____//_/ /____/_/\ \                  |
-|            /__/   |_|      npc Script         \/                  |
+|              ____                     _                           |
+|             /    |                   | |_                         |
+|            /     |_ __ ____  __ _  __| |_  __ _                   |
+|           /  /|  | '__/  __|/ _` |/ _  | |/ _` |                  |
+|          /  __   | | |  |__| (_| | (_| | | (_| |                  |
+|         /  /  |  |_|  \____|\__,_|\__,_|_|\__,_|                  |
+|        /__/   |__|  [ Ragnarok Emulator ]                         |
 |                                                                   |
 +-------------------------------------------------------------------+
-|                     Projeto Ragnarok Online                       |
-+-------------------------------------------------------------------+
-| - Por: eAthena/rAthena/Hercules                                   |
+| - Script: eAthena/ rAthena/ Hercules (Emuladores)                 |
 | - Versão: Spell Master                                            |
 | - Nota: Npcs comuns na cidade Kunlun                              |
 \*-----------------------------------------------------------------*/
@@ -128,6 +124,26 @@ gonryun,169,71,3	script	Guia#gon	4_F_TWGIRL,{
 	next;
 	mes "[LeeHee Min]";
 	mes "Se você souber apreciar, você verá muitas paisagens bonitas pela cidade.";
+	close;
+}
+
+// ------------------------------------------------------------------
+gonryun,153,64,7	script	Anunciante de Kunlun#gon4	4_M_TWMIDMAN,{
+	mes "[Jangchungryong]";
+	mes "Quando desejar terminar sua visita a Kunlun.";
+	mes "Eu irei leva-lo para o porto.";
+	next;
+	if (select("Retornar ao porto.","Cancelar.") == 1) {
+		mes "[Jangchungryong]";
+		mes "Eu espero que você tenha se divertido conosco.";
+		mes "Vamos indo então?";
+		close2;
+		warp "gon_fild01",258,82;
+		end;
+	}
+	mes "[Jangchungryong]";
+	mes "Demore o tempo que quiser aqui.";
+	mes "Existem muitos lugares misteriosos em Kunlun pra você visitar.";
 	close;
 }
 
