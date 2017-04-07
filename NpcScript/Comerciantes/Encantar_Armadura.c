@@ -34,16 +34,16 @@ prontera,165,60,2	script	Aprendiz de Artesão	1_F_MERCHANT_01,{
 		next;
 		switch(select("Armadura sem Slot.","Armadura com Slot.","Armadura de Alto Nível.","Talvez na próxima.")) {
 			case 1:
-			setarray .@items[0],2307,2309,2314,2316,2321,2325,2327,2328,2330,2332,2334,2335,2341,2344,2346,2348,2350,2337,2386,2394,2395,2396;
+			setarray (.@items[0],2307,2309,2314,2316,2321,2325,2327,2328,2330,2332,2334,2335,2341,2344,2346,2348,2350,2337,2386,2394,2395,2396);
 			.@j = 50;
 			break;
 			case 2:
-			setarray .@items[0],2311,2318,2319,2320,2308,2310,2315,2317,2322,2324,2326,2331,2333,2336,2342,2345,2347,2349,2351;
+			setarray (.@items[0],2311,2318,2319,2320,2308,2310,2315,2317,2322,2324,2326,2331,2333,2336,2342,2345,2347,2349,2351);
 			.@j = 55;
 			.@k = 1;
 			break;
 			case 3:
-			setarray .@items[0],2364,2365,2391,2374,2375,2376,2377,2378,2379,2380,2381,2382,2387,2388,2389,2390;
+			setarray (.@items[0],2364,2365,2391,2374,2375,2376,2377,2378,2379,2380,2381,2382,2387,2388,2389,2390);
 			.@j = 60;
 			break;
 			case 4:
@@ -55,7 +55,7 @@ prontera,165,60,2	script	Aprendiz de Artesão	1_F_MERCHANT_01,{
 		for(.@i = 0; .@i<getarraysize(.@items); ++.@i) {
 			.@menu$ += getitemname(.@items[.@i])+((.@k)?" [1]":"")+":";
 		}
-		callsub S_EnchantArmor, .@items[select(.@menu$)-1], .@j;
+		callsub (S_EnchantArmor,.@items[select(.@menu$)-1],.@j);
 		end;
 	}
 	mes "Estou encarregado de encantar armaduras.";
@@ -88,15 +88,15 @@ prontera,165,60,2	script	Aprendiz de Artesão	1_F_MERCHANT_01,{
 		mes "[Aprendiz de Artesão]";
 		mes "Então, um aventureiro hein? Bom, vamos.";
 		close2;
-		specialeffect2 EF_MAPPILLAR;
+		specialeffect2(EF_MAPPILLAR);
 		if (Zeny < 400000) {
 			mes "[Aprendiz de Artesão]";
 			mes "Desculpe, mas você não tem zeny suficiente.";
 			close;
 		}
-		progressbar "ffff00",7;
+		progressbar ("ffff00",7);
 		Zeny -= 400000;
-		delitem .@itemid,1;
+		delitem (.@itemid,1);
 		switch (rand(1,.@failrate)) {
 			case 1: .@addpart = 4702;break;
 			case 2: .@addpart = 4712;break;
@@ -135,13 +135,13 @@ prontera,165,60,2	script	Aprendiz de Artesão	1_F_MERCHANT_01,{
 			case 35:
 			case 36: .@addpart = 4750;break;
 			default:
-			specialeffect2 EF_PHARMACY_FAIL;
+			specialeffect2 (EF_PHARMACY_FAIL);
 			mes "[Aprendiz de Artesão]";
 			mes "Bem, isso é muito ruim.";
 			mes "Não consegui encantar seu equipamento.";
 			close;
 		}
-		getitem2 .@itemid, 1, 1, 0, 0, 0, 0, 0, .@addpart;
+		getitem2 (.@itemid, 1, 1, 0, 0, 0, 0, 0, .@addpart);
 	}
 	else {
 		mes "Hmm? Não há nada para se encantar!";

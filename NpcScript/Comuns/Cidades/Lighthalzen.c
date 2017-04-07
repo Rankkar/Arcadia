@@ -28,7 +28,7 @@ lighthalzen,182,102,3	script	Lucius#lhz	4_M_LGTGRAND,{
 			mes "Que serão usados para auxiliar os pobres e alimentar crianças famintas.";
 			mes "Se você quer cancelar, digite '0'.";
 			next;
-			input .@input;
+			input (.@input);
 			if (.@input > 30000) {
 				mes "[Lucius]";
 				mes "Por favor, insira um valor de 1 a 30000 para fazer uma doação aos necessitados, jovem.";
@@ -64,8 +64,22 @@ lighthalzen,182,102,3	script	Lucius#lhz	4_M_LGTGRAND,{
 				mes "Por favor, aceite esse pequeno presente como um símbolo da minha gratidão.";
 				mes "Que Deus o abençoe, aventureiro.";
 				$donatedzeny = 0;
-				getitem Old_Blue_Box,1;
-				getitem Speed_Up_Potion,1;
+				.@weight1 = getiteminfo(.@Old_Blue_Box,ITEM_WEIGHT);
+				.@weight2 = getiteminfo(.@Speed_Up_Potion,ITEM_WEIGHT);
+				.@weightmax = .@weight1 + .@weight2;
+				if ((MaxWeight - Weight) < .@weightmax) {
+					next;
+					mes "[Lucius]";
+					mes "Oh...";
+					mes "Infelismente você está carregando muito peso.";
+					mes "Lhe daria algo mas, você não vai conseguir carregar.";
+					mes "Sinto muito, quem sabe uma próxima vez...";
+					close;
+				}
+				else {
+					getitem (Old_Blue_Box,1);
+					getitem (Speed_Up_Potion,1);
+				}
 			}
 			close;
 		}
@@ -230,8 +244,8 @@ lighthalzen,66,94,3	script	Elmer Keays#lhz	4_M_LGTGRAND,{
 	mes "[Elmer Keays]";
 	mes "Você ainda é a mais bela visão para os meus velhos olhos, querida.";
 	mes "Eu tenho muita sorte por estar com você.";
-	emotion e_kis,0,"Margie Keays#lhz";
-	emotion e_kis2;
+	emotion (e_kis,0,"Margie Keays#lhz");
+	emotion (e_kis2);
 	close;
 }
 
@@ -484,7 +498,7 @@ lighthalzen,296,239,3	script	Berru#lhz	4_M_KID1,{
 		mes "[Berru]";
 		mes "Papai...! Aaaaaah.!";
 		mes "Eu quero meu papai!";
-		emotion e_sob;
+		emotion (e_sob);
 		next;
 		mes "[Pilia]";
 		mes "Berru, acho que o papai não vai voltar para casa hoje.";
@@ -494,20 +508,20 @@ lighthalzen,296,239,3	script	Berru#lhz	4_M_KID1,{
 		mes "Não, não vou dormir até o papai voltar!";
 		mes "Ele disse que iria trazer doces hoje a noite!";
 		mes "Vá dormir você, Pilia!";
-		emotion e_ag;
+		emotion (e_ag);
 		next;
 		mes "[Pilia]";
 		mes "^333333*Suspiro...*^000000";
 		mes "Cadê nosso pai?";
 		mes "Ele disse que arrumou um emprego bom, mas não apareceu nunca mais...";
-		emotion e_dots,0,"Pilia#lhz";
+		emotion (e_dots,0,"Pilia#lhz");
 		close;
 		case 2:
 		mes "[Pilia]";
 		mes "Por que ele está demorando tanto?";
 		mes "Espero que o papai volte logo.";
 		mes "Vamos Berru, pare de chorar.";
-		emotion e_dots,0,"Pilia#lhz";
+		emotion (e_dots,0,"Pilia#lhz");
 		next;
 		mes "[Berru]";
 		mes "^333333*Choro...*^000000";
@@ -521,7 +535,7 @@ lighthalzen,296,239,3	script	Berru#lhz	4_M_KID1,{
 		mes "Humm?";
 		mes "Ah, sinto muito, mas meu irmãozinho não para de corar.";
 		mes "Desculpe se está muito alto.";
-		emotion e_what,0,"Pilia#lhz";
+		emotion (e_what,0,"Pilia#lhz");
 		next;
 		mes "[Pilia]";
 		mes "Nosso pai vai trabalhar em algum lugar longe.";
@@ -531,7 +545,7 @@ lighthalzen,296,239,3	script	Berru#lhz	4_M_KID1,{
 		mes "[Pilia]";
 		mes "Meu irmão Berru sente muita falta dele.";
 		mes "Não sei o que fazer para que ele pare de chorar. O que faço?";
-		emotion e_swt2,0,"Pilia#lhz";
+		emotion (e_swt2,0,"Pilia#lhz");
 		close;
 	}
 }
@@ -551,7 +565,7 @@ lighthalzen,312,233,3	script	Beggar#lhz	4_M_TWOLDMAN,3,1,{
 			mes "[Beggar]";
 			mes "Agradeço sua bondade, mas parece que você também precisa de alguns zenys.";
 			mes "Gostaria de se juntar a mim?";
-			emotion e_heh;
+			emotion (e_heh);
 			close;
 		}
 		mes "["+strcharinfo(PC_NAME)+"]";
@@ -562,7 +576,7 @@ lighthalzen,312,233,3	script	Beggar#lhz	4_M_TWOLDMAN,3,1,{
 		mes "Muito obrigado.";
 		mes "Não posso oferecer nada em troca.";
 		mes "Mas posso te contar uma história e transmitir um pouco da sabedoria que adquiri com o passar dos anos.";
-		emotion e_thx;
+		emotion (e_thx);
 		next;
 		switch(rand(1,3)) {
 			case 1:
@@ -581,22 +595,22 @@ lighthalzen,312,233,3	script	Beggar#lhz	4_M_TWOLDMAN,3,1,{
 			mes "Devemos ter esperança, mesmo se não tivermos motivo aparente.";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "[Beggar]";
-			emotion e_what;
+			emotion (e_what);
 			mes "Hmm...?";
 			mes "Você parece surpreso.";
 			close;
@@ -619,22 +633,22 @@ lighthalzen,312,233,3	script	Beggar#lhz	4_M_TWOLDMAN,3,1,{
 			mes "Isso não é lindo?";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "[Beggar]";
-			emotion e_what;
+			emotion (e_what);
 			mes "Não acredita?";
 			mes "Você verá por si mesmo, jovem.";
 			mes "Existem muitas coisas boas em você.";
@@ -670,22 +684,22 @@ lighthalzen,312,233,3	script	Beggar#lhz	4_M_TWOLDMAN,3,1,{
 			mes "Saiba a diferença.";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "["+strcharinfo(PC_NAME)+"]";
-			emotion e_dots,1;
+			emotion (e_dots,1);
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			mes ". . . . . . . . . . . .";
 			next;
 			mes "[Beggar]";
-			emotion e_what;
+			emotion (e_what);
 			mes "Qual o problema?";
 			mes "Pode ser muita coisa para absorver, sabe.";
 			close;
@@ -703,13 +717,13 @@ lighthalzen,311,194,3	script	Reuben#lhz	4_M_LGTPOOR,{
 	mes "Algum dia...";
 	mes "Algum dia eu virarei um condutor de trem e darei o fora daqui!";
 	mes "Eu odeio esse lugar!";
-	emotion e_ag;
+	emotion (e_ag);
 	next;
 	mes "[Reuben]]";
 	mes "O-ops...!";
 	mes "Você me ouviu falando sozinho?";
 	mes "Preciso ser mais silencioso!";
-	emotion e_an;
+	emotion (e_an);
 	close;
 }
 
@@ -753,7 +767,7 @@ lighthalzen,337,296,3	script	Funcionário#lhz	4_M_LGTGUARD2,{
 	mes "[Funcionário Rekenber]";
 	mes "Eles podem escolher entre trabalhar em casa ou fazer um treinamento que permitirá melhores opções profissionais.";
 	mes "Essa é uma ótima chance de fazer diferença... e também algum dinheiro.";
-	emotion e_no1;
+	emotion (e_no1);
 	close;
 }
 
@@ -795,13 +809,13 @@ lighthalzen,162,304,7	script	Guarda Rekenber#lhz	4_M_LGTGUARD,{
 	mes "Cara, olha isso.";
 	mes "Fotos oficiais das meninas da Corporação Kafra. Olha...";
 	mes "E elas estão até usando cintos!";
-	emotion e_ho;
+	emotion (e_ho);
 	next;
 	mes "[Guarda Tan]";
 	mes "Então todas elas estão usando cintos nessas fotos?";
 	mes "Isso quer dizer que tem também a foto da menina que usa óculos?";
 	mes "Essa é a melhor notícia do dia!";
-	emotion e_omg,0,"Guarda Rekenber Tan#li";
+	emotion (e_omg,0,"Guarda Rekenber#lhz2");
 	next;
 	mes "[Guarda Drew]";
 	mes "Ok cara, você sabe que essas fotos são edição limitada especial de colecionador.";
@@ -822,7 +836,7 @@ lighthalzen,163,306,3	script	Guarda Rekenber#lhz2	4_M_LGTGUARD2,{
 	mes "Uau. Isso aqui...";
 	mes "Isso aqui é arte. A luz, o ângulo, o... o...";
 	mes "Nossa.";
-	emotion e_swt2;
+	emotion (e_swt2);
 	next;
 	mes "[Guarda Drew]";
 	mes "Cara, essas fotos são oficiais e licenciadas...";
@@ -1338,7 +1352,7 @@ lhz_in01,157,47,1	script	Mareth#lhz	4_M_NFLOSTMAN,{
 	mes "[Mareth]";
 	mes "Yoo hoo hoo.";
 	mes "Ah, como eu amo amo amo chocolate!";
-	emotion e_lv;
+	emotion (e_lv);
 	next;
 	mes "[Mareth]";
 	mes "Comê-lo...";
@@ -1429,7 +1443,7 @@ lhz_in01,139,48,7	script	Leimi#lhz	1_F_MERCHANT_01,{
 	mes "Oh...!";
 	mes "Meu Deus!";
 	mes "Posso ajudá-lo?";
-	emotion e_omg;
+	emotion (e_omg);
 	if (BaseJob == Job_Assassin) {
 		next;
 		mes "[Leimi]";
@@ -1879,7 +1893,7 @@ lhz_in02,267,25,4	script	Diana#lhz	4_F_ROGUE,{
 	mes "Você certamente provou que as pessoas de Morroc têm um bom gosto.";
 	mes "Agora, esse Stiletto custa 39 800 zenys...";
 	next;
-	emotion e_omg;
+	emotion (e_omg);
 	mes "[Diana]";
 	mes "Hein...?!";
 	mes "Isso é ridículo!";

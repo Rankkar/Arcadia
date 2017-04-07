@@ -146,7 +146,7 @@ jawaii,141,200,3	script	Funcionário#jaw	4_M_NFMAN,{
 			mes "Te-tenha um ótimo dia.";
 			close2;
 			Zeny -= 1000;
-			warp "jawaii_in",116,64;
+			warp ("jawaii_in",116,64);
 			end;
 		}
 		mes "Ah não! Ah não não não não.";
@@ -191,7 +191,7 @@ jawaii,108,199,5	script	Funcionária#jaw	1_F_MERCHANT_02,{
 			mes "Sinta-se confortável.";
 			close2;
 			Zeny -= 1000;
-			warp "jawaii_in",129,110;
+			warp ("jawaii_in",129,110);
 			end;
 		}
 		mes "Eu sinto muito, mas você não possui dinheiro.";
@@ -220,7 +220,7 @@ jawaii,107,189,5	script	Funcionária#jaw2	4_F_04,{
 			mes "Vamos indo.";
 			close2;
 			Zeny -= 1000;
-			warp "jawaii_in",86,117;
+			warp ("jawaii_in",86,117);
 			end;
 		}
 		mes "Você...";
@@ -253,7 +253,7 @@ jawaii,112,173,7	script	Funcionária#jaw3	4_F_04,{
 			mes "Aproveite sua estadia.";
 			close2;
 			Zeny -= 1000;
-			warp "jawaii_in",87,75;
+			warp ("jawaii_in",87,75);
 			end;
 		}
 		mes "Ah, que vergonha!";

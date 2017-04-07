@@ -39,7 +39,7 @@
 				close;
 			}
 			else {
-				getitem Anvil,1;
+				getitem (Anvil,1);
 				Zeny -= 30000;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Este é um dos mais baratos, mas suficiente para forjar vários itens.";
@@ -59,7 +59,7 @@
 				close;
 			}
 			else {
-				getitem Oridecon_Anvil,1;
+				getitem (Oridecon_Anvil,1);
 				Zeny -= 120000;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Humm, muitos compram essa bigorna.";
@@ -80,7 +80,7 @@
 				close;
 			}
 			else {
-				getitem Golden_Anvil,1;
+				getitem (Golden_Anvil,1);
 				Zeny -= 300000;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Essa é a melhor bigorna que eu vendo na minha oficina!";
@@ -118,7 +118,7 @@
 			mes "Se você quiser desistir, basta colocar o número 0.";
 			next;
 			while(1) {
-				input .@input;
+				input (.@input);
 				if (.@input == 0) {
 					mes "["+strnpcinfo(NPC_NAME)+"]";
 					mes "Bem, a negociação foi cancelada.";
@@ -147,7 +147,7 @@
 				close;
 			}
 			else {
-				getitem Portable_Furnace,.@input;
+				getitem (Portable_Furnace,.@input);
 				Zeny -= .@sell;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Obrigado por comprar na minha oficina.";
@@ -166,7 +166,7 @@
 				close;
 			}
 			else {
-				getitem Iron_Hammer,1;
+				getitem (Iron_Hammer,1);
 				Zeny -= 1000;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Obrigado por comprar na minha oficina.";
@@ -185,7 +185,7 @@
 				close;
 			}
 			else {
-				getitem Golden_Hammer,1;
+				getitem (Golden_Hammer,1);
 				Zeny -= 3000;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Obrigado por comprar na minha oficina.";
@@ -204,7 +204,7 @@
 				close;
 			}
 			else {
-				getitem Oridecon_Hammer,1;
+				getitem (Oridecon_Hammer,1);
 				Zeny -= 5000;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Obrigado por comprar na minha oficina.";
@@ -229,7 +229,7 @@
 			mes "Se você quiser cancelar a negociação, basta colocar o número 0.";
 			next;
 			while(1) {
-				input .@input;
+				input (.@input);
 				if (.@input == 0) {
 					mes "["+strnpcinfo(NPC_NAME)+"]";
 					mes "A negociação foi cancelada.";
@@ -260,7 +260,7 @@
 				close;
 			}
 			else {
-				getitem Phracon,.@input;
+				getitem (Phracon,.@input);
 				Zeny -= .@sell;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Obrigado por comprar na minha oficina.";
@@ -273,7 +273,7 @@
 			mes "Se você quiser cancelar a negociação, basta colocar o número 0.";
 			next;
 			while(1) {
-				input .@input;
+				input (.@input);
 				if (.@input == 0) {
 					mes "["+strnpcinfo(NPC_NAME)+"]";
 					mes "A negociação foi cancelada.";
@@ -305,7 +305,7 @@
 				close;
 			}
 			else {
-				getitem Emveretarcon,.@input;
+				getitem (Emveretarcon,.@input);
 				Zeny -= .@sell;
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Obrigado por comprar na minha oficina.";
@@ -332,8 +332,8 @@
 				close;
 			}
 			else {
-				delitem Oridecon_Stone,5;
-				getitem Oridecon,1; 
+				delitem (Oridecon_Stone,5);
+				getitem (Oridecon,1); 
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Ótimo, aqui está o seu Oridecon.";
 				mes "Volte sempre que precisar, espero sua visita.";
@@ -346,8 +346,8 @@
 				close;
 			}
 			else {
-				delitem Elunium_Stone,5;
-				getitem Elunium,1;
+				delitem (Elunium_Stone,5);
+				getitem (Elunium,1);
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Ótimo, aqui está o seu Elunium.";
 				mes "Volte sempre que precisar, espero sua visita.";

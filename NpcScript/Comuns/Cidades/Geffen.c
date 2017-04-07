@@ -115,7 +115,7 @@ geffen,147,26,0	script	Ralphie#gef	4W_M_01,{
 	mes "Hahahahahah.";
 	mes "Tenho que ter isso!";
 	next;
-	emotion e_gasp;
+	emotion (e_gasp);
 	mes "[Ralphie]";
 	mes "...Céus!";
 	mes "Desde quando você estava ouvindo?";
@@ -168,7 +168,7 @@ geffen,111,48,0	script	Stacey#gef	4W_F_01,{
 			mes "É como se você estivesse cercado por uma aurea masculina!";
 			mes "Oooh! Você deve ser irresistível para todas as garotas!";
 			next;
-			emotion e_lv;
+			emotion (e_lv);
 			mes "[Stacey]";
 			mes "E eu não sou exceção.";
 		}
@@ -276,7 +276,7 @@ geffen_in,27,134,5	script	Garçonete#gef	4_F_02,{
 		mes "[Elenore]";
 		mes "Parece que a Corporação Kafra finalmente tem concorrência!";
 		mes "Mas não acho que existam muitas garotas atraentes como as garotas Kafra...";
-		break;
+		close;
 		case 2:
 		mes "[Elenore]";
 		mes "Você não ouviu?";
@@ -293,7 +293,7 @@ geffen_in,27,134,5	script	Garçonete#gef	4_F_02,{
 		next;
 		mes "[Elenore]";
 		mes "Acho que chapéus como esses são artísticos demais para o meu gosto.";
-		break;
+		close;
 		case 3:
 		mes "[Elenore]";
 		mes "Novidades?";
@@ -310,7 +310,7 @@ geffen_in,27,134,5	script	Garçonete#gef	4_F_02,{
 		else {
 			mes "Dizem que ela é uma das meninas mais bonitas de Rune-Midgard!";
 		}
-		break;
+		close;
 		case 4:
 		switch(rand(1,2)) {
 			case 1:
@@ -337,7 +337,7 @@ geffen_in,27,134,5	script	Garçonete#gef	4_F_02,{
 			next;
 			mes "^3355FFEstranho...";
 			mes "A voz dela tava realmente grossa por um minuto, ali...";
-			break;
+			close;
 			case 2:
 			mes "[Espírito de William]";
 			mes "^990000Ei, seu maníaco sexual!!!";
@@ -362,7 +362,7 @@ geffen_in,27,134,5	script	Garçonete#gef	4_F_02,{
 				mes "[Elenore]";
 				mes "É...";
 				mes "Me fala disso.";
-				break;
+				close;
 			}
 			else {
 				mes "E-espeeeeeera~";
@@ -374,11 +374,10 @@ geffen_in,27,134,5	script	Garçonete#gef	4_F_02,{
 				next;
 				mes "^3355FFAaaah!";
 				mes "Como ela ficou tão assustadora?!^000000";
-				break;
+				close;
 			}
 		}
 	}
-	close;
 }
 
 // ------------------------------------------------------------------

@@ -39,8 +39,8 @@ comodo,171,137,1	script	Haith#com::cmdla	4_F_03,{
 	mes "[La Ed]";
 	mes "A propósito... você acha que ele iria nos falar facilmente sobre";
 	mes "o grande tesouro?";
-	emotion e_hmm;
-	emotion e_hmm,0,"La Ed#com";
+	emotion (e_hmm);
+	emotion (e_hmm,0,"La Ed#com");
 	next;
 	select("Hm? Que tesouro?");
 	mes "[La Ed]";
@@ -50,7 +50,7 @@ comodo,171,137,1	script	Haith#com::cmdla	4_F_03,{
 	mes "[Haith]";
 	mes "Hã... parece que você que saber mais sobre o tesouro.";
 	mes "Bem, essa informação não sairá barata...";
-	emotion e_gg;
+	emotion (e_gg);
 	next;
 	mes "[La Ed]";
 	mes "Além disso, precisamos de um pouco, uma coisa no caso de...";
@@ -59,8 +59,8 @@ comodo,171,137,1	script	Haith#com::cmdla	4_F_03,{
 	next;
 	mes "[La Ed, Haith]";
 	mes "Se você nos pagar 1,000 Zenys, nós falamos para você!";
-	emotion e_gg;
-	emotion e_gg,0,"La Ed#um";
+	emotion (e_gg);
+	emotion (e_gg,0,"La Ed#um");
 	next;
 	if (select("Ouvir Mais","Sair") == 1) {
 		mes "[Haith]";
@@ -86,7 +86,7 @@ comodo,171,137,1	script	Haith#com::cmdla	4_F_03,{
 		next;
 		mes "[Haith]";
 		mes "O problema é que nós não temos certeza de que o Niels vá nos dizer onde ele encontrou o tesouro...";
-		emotion e_hmm;
+		emotion (e_hmm);
 		next;
 		mes "[La Ed]";
 		mes "Porque o Niels sempre nos trata como se nós fomossemos estúpidos!!";
@@ -104,7 +104,7 @@ comodo,171,137,1	script	Haith#com::cmdla	4_F_03,{
 		close;
 	}
 	mes "[Haith]";
-	emotion e_hmm;
+	emotion (e_hmm);
 	close;
 }
 comodo,170,137,7	duplicate(cmdla)	La Ed#com	4_M_02
@@ -166,7 +166,7 @@ cmd_in01,164,115,1	script	Niels#um	4_M_JOB_BLACKSMITH,{
 	mes "[Niels]";
 	mes "Eu estava esperando um espetacular e dramático efeito sonoro para a minha declaração!";
 	mes "Eh, oh bem...";
-	emotion e_hmm;
+	emotion (e_hmm);
 	next;
 	mes "[Niels]";
 	mes "Bem, no espírito da descobrta, nunca pense em me perguntar sobre direções para 'o lugar' ou sobre o que tem 'no lugar'.";
@@ -415,8 +415,9 @@ cmd_in02,57,62,4	script	Moo#com	4_M_MANAGER,{
 }
 
 // ------------------------------------------------------------------
+/*
 cmd_in02,146,180,4	script	Funcionária Kafra::kaf_comodo2	4_F_KAFRA7,{
-	cutin "kafra_07",2;
+	cutin ("kafra_07",2);
 	mes "[Kafra Misty]";
 	mes "Seja bem vindo a Corporação Kafra.";
 	mes "Você sabe que nossos serviços estão sempre com você.";
@@ -427,6 +428,7 @@ cmd_in02,146,180,4	script	Funcionária Kafra::kaf_comodo2	4_F_KAFRA7,{
 	mes "Que enfatiza a confiabilidade e satisfação total do consumidor.";
 	mes "Agradecemos por seu patrocínio.";
 	close2;
-	cutin "", 255;
+	cutin ("", 255);
 	end;
 }
+*/

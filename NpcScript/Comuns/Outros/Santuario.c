@@ -138,7 +138,7 @@ ra_temin,138,64,5	script	Discípulo#temin4	4_M_CHILD1,{
 	mes "Mingming é um pássaro doente.";
 	mes "Eu o encontrei na rua, e eu realmente queria somente que ele descançasse e ficasse saudável de novo mas ele morreu!";
 	mes "Waaaaah!";
-	emotion e_sob;
+	emotion (e_sob);
 	next;
 	mes "[Pequeno Discípulo]";
 	mes "Eu.. Eu vou tentar pedir à papisa!";

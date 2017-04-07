@@ -194,7 +194,7 @@ amatsu,269,221,1	script	Casamenteira#ama	4_F_JPN,{
 	mes "E tambem, depois do pedido no sabado a noite.";
 	mes "Você deve receber a resposta dela ate a noite de domingo.";
 	next;
-	emotion e_lv2;
+	emotion (e_lv2);
 	mes "[Hutari Shioko]";
 	mes "Se voce gosta de alguem...";
 	mes "Por que nao fazer o pedido de casamento sob aquela árvore?";
@@ -218,7 +218,7 @@ amatsu,243,202,3	script	Professora de Teatro#ama	4_F_JPNOBA2,{
 		mes "E muito dificil encontrar uma garota que consiga interpretar 'A Driade Branca'...";
 		close;
 	}
-	emotion e_gasp;
+	emotion (e_gasp);
 	mes "[Garakame sensei]";
 	mes "Voce esta interessada em teatro?";
 	mes "Eu preciso de alguem que seja mais que isso.";
@@ -235,22 +235,22 @@ amatsu,243,202,3	script	Professora de Teatro#ama	4_F_JPNOBA2,{
 
 // ------------------------------------------------------------------
 amatsu,283,203,1	script	Bonubonu#ama2	HIDDEN_NPC,{
-	emotion e_swt2;
+	emotion (e_swt2);
 	mes "[Bonubonu]";
 	mes "Aquela árvore na colina e uma árvore muito antiga.";
 	mes "E uma grande cerejeira de flores eternas.";
 	next;
-	emotion e_swt2;
+	emotion (e_swt2);
 	mes "[Bonubonu]";
 	mes "Alem disso, ela tem grandes poderes.";
 	mes "Sempre que estou triste ou angustiado, eu costumo me sentar sob aquela árvore, ";
 	mes "E toda a tristeza e angustia se vao...";
 	next;
-	emotion e_swt2;
+	emotion (e_swt2);
 	mes "[Bonubonu]";
 	mes "Aquela e uma árvore milagrosa que faz as pessoas esquecerem toda a tristeza.";
 	next;
-	emotion e_swt2;
+	emotion (e_swt2);
 	mes "[Bonubonu]";
 	mes "Quando estiver triste ou angustiado, experimente sentar sob aquela árvore. ";
 	mes "Os poderes dela sao milagrosos...";
@@ -280,7 +280,7 @@ amatsu,274,178,7	script	Veterinario#ama	4_M_JOB_WIZARD,{
 		mes "Hehehe... Poderia ser...";
 		mes "Por sinal, voce gostaria de fazer uma aposta...?";
 		next;
-		emotion e_dots;
+		emotion (e_dots);
 		mes "[Sakura Seiichi]";
 		mes "Se eu..........";
 		mes "............";
@@ -296,7 +296,7 @@ amatsu,274,178,7	script	Veterinario#ama	4_M_JOB_WIZARD,{
 	mes "Tenha cuidado.";
 	mes "Um dia, podera acontecer com voce...";
 	next;
-	emotion e_dots;
+	emotion (e_dots);
 	mes "[Sakura Seiichi]";
 	mes "Haha... Hahaha.....";
 	mes "...............";

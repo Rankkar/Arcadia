@@ -539,7 +539,7 @@ prt_in,173,13,4	script	Cliente#SoloHan	4_M_04,{
 		next;
 		mes "[Bachewcca]";
 		mes "^666666*Grrr...!*^000000";
-		specialeffect EF_THROWITEM,AREA,"Cliente#Bachewcca";
+		specialeffect (EF_THROWITEM,AREA,"Cliente#Bachewcca");
 		close;
 	}
 	else {
@@ -565,7 +565,7 @@ prt_in,173,13,4	script	Cliente#SoloHan	4_M_04,{
 		next;
 		mes "[Bachewcca]";
 		mes "...!";
-		emotion e_no1,0,"Cliente#Bachewcca";
+		emotion (e_no1,0,"Cliente#Bachewcca");
 		next;
 		mes "[SoloHan]";
 		mes "Não faz muita diferença se você é casado ou não, certo? Certo?!";
@@ -585,6 +585,6 @@ prt_in,170,14,0	script	Cliente#Bachewcca	4_M_ORIENT02,{
 	mes "..............";
 	mes "^666666*Gulp....gulp...*^000000";
 	mes "Grrrrr!! Essa foi boa!";
-	emotion e_sob;
+	emotion (e_sob);
 	close;
 }

@@ -28,12 +28,13 @@ prt_church,103,76,0	script	Garnet#pront	1_F_02,{
 	next;
 	.@SkillChat = 1;
 	while(.@SkillChat) {
-		switch(select("Sobre 'Curar'.:Sobre 'Medicar'.:Sobre 'Aumentar Agilidade'.:Sobre 'Angelus'.:Sobre 'Benção'.:Sobre 'Portal'.:Não me interesso muito por sacerdotes...")) {
-		case 1:
+		switch(select("Sobre 'Curar'","Sobre 'Medicar'","Sobre 'Aumentar Agilidade'","Sobre 'Angelus'","Sobre 'Benção'","Sobre 'Portal'","Não me interesso muito por sacerdotes...")) {
+			case 1:
 			mes "[Garnet]";
 			mes "'Curar' é uma habilidade que restaura o HP do alvo.";
 			mes "É uma das habilidades mais valiosas de um sacerdote, e vital para proteger e ajudar ao próximo.";
-			mes "Os Sacerdotes têm uma evolução desta habilidade de nome 'Santuário', que possibilita curar mais de uma pessoa ao mesmo tempo.";
+			mes "Os Sacerdotes têm uma evolução desta habilidade de nome 'Santuário'.";
+			mes "Que possibilita curar mais de uma pessoa ao mesmo tempo.";
 			next;
 			mes "[Garnet]";
 			mes "Mas deixe eu te contar um segredo...";
@@ -42,49 +43,60 @@ prt_church,103,76,0	script	Garnet#pront	1_F_02,{
 			mes "Só não se esqueça de apertar a tecla 'shift' ao 'curá-los'.";
 			next;
 			break;
-		case 2:
+			case 2:
 			mes "[Garnet]";
-			mes "'Medicar'é uma habilidade que pode retirar de um jogador algum estado especial, como Tontura ou Maldição.";
+			mes "'Medicar'é uma habilidade que pode retirar de um jogador algum estado especial.";
+			mes "Como Tontura ou Maldição.";
 			mes "Para aprendê-la é necessário obter primeiro 'Curar' nível 2.";
 			next;
 			break;
-		case 3:
+			case 3:
 			mes "[Garnet]";
-			mes "Esta habilidade aumenta o número de pontos de Agilidade do jogador alvo beneficiando a velocidade dos ataques e a esquiva, além de fazer com que ele ande mais rápido.";
-			mes "Ela favorece especialmente os Gatunos e Arqueiros, que costumam depender bastante da Agilidade nas batalhas.";
+			mes "Esta habilidade aumenta o número de pontos de Agilidade do jogador alvo.";
+			mes "Beneficiando a velocidade dos ataques e a esquiva, além de fazer com que ele ande mais rápido.";
+			mes "Ela favorece especialmente os Gatunos e Arqueiros.";
+			mes "Que costumam depender bastante da Agilidade nas batalhas.";
 			mes "Para aprendê-la, é necessário primeiro ter 'Curar' em nível 3.";
 			next;
 			break;
-		case 4:
+			case 4:
 			mes "[Garnet]";
-			mes "Angelus é uma habilidade que aumenta a Defesa de um Grupo todo ao mesmo tempo, fazendo com que todos resistam melhor à ataques inimigos.";
-			mes "Mas, lembre-se que ela aumentará a defesa proporcionalmente à Vitalidade de cada jogador, então os efeitos serão diferentes pra cada um.";
+			mes "Angelus é uma habilidade que aumenta a Defesa de um Grupo todo ao mesmo tempo.";
+			mes "Fazendo com que todos resistam melhor à ataques inimigos.";
+			mes "Mas, lembre-se que ela aumentará a defesa proporcionalmente à Vitalidade de cada jogador";
+			mes "Então os efeitos serão diferentes pra cada um.";
 			next;
 			mes "[Garnet]";
-			mes "Para obter esta habilidade, o nível de Proteção Divina, uma habilidade que aumenta a Defesa do Sacerdote contra monstros Malditos, deve ser pelo menos 3.";
+			mes "Para obter esta habilidade, o nível de Proteção Divina.";
+			mes "Uma habilidade que aumenta a Defesa do Sacerdote contra monstros Malditos, deve ser pelo menos 3.";
 			mes "Tendo aprendido Angelus, você poderá obter uma habilidade muito valiosa quando se tornar um Sacerdote...";
-			mes "Esta habilidade chama-se Kyrie Eleison, e protege o jogador alvo de qualquer dano por um determinado número de ataques.";
+			mes "Esta habilidade chama-se Kyrie Eleison";
+			mes "Que protege o jogador alvo de qualquer dano por um determinado número de ataques.";
 			next;
 			break;
-		case 5:
+			case 5:
 			mes "[Garnet]";
 			mes "'Benção' aumenta temporariamente os pontos do jogador alvo em Força, Destreza e Inteligência.";
 			mes "É uma das habilidades mais valiosas tanto para você quanto para seus companheiros!";
 			next;
 			mes "[Garnet]";
-			mes "Assim como 'Angelus', para aprender 'Benção' é necessário ter algum nível em Proteção Divina (só que nível 5 e não 3).";
-			mes "Não se esqueça, 'Benção' pode ser muito útil para o próprio Sacerdote, já que com mais Inteligência, habilidades como 'Curar' serão mais poderosos...";
+			mes "Assim como 'Angelus', para aprender 'Benção'";
+			mes "É necessário ter algum nível em Proteção Divina em nível 5.";
+			mes "Não se esqueça, 'Benção' pode ser muito útil para o próprio Sacerdote.";
+			mes "Já que com mais Inteligência, habilidades como 'Curar' serão mais poderosos...";
 			next;
 			break;
-		case 6:
+			case 6:
 			mes "[Garnet]";
 			mes "Para aprender a abrir um 'Portal', você precisa primeiro aprender 'Teleporte'.";
-			mes "Para aprender 'Teleporte' é necessário obter antes 'Revelação', que permite detectar monstros escondidos e tem apenas um nível de habilidade.";
+			mes "Para aprender 'Teleporte' é necessário obter antes 'Revelação'";
+			mes "Que permite detectar monstros escondidos e tem apenas um nível de habilidade.";
 			mes "'Portal' é uma habilidade muito útil.";
 			mes "Vou te explicar melhor como funciona.";
 			next;
 			mes "[Garnet]";
-			mes "Abrir um 'Portal' faz com que você possa se transportar entre locais muito, muito distantes num piscar de olhos.";
+			mes "Abrir um 'Portal' faz com que você possa se transportar entre locais.";
+			mes "muitos distantes num piscar de olhos.";
 			mes "Você pode escolher até 4 lugares (no nível 4 da habilidade) para onde abrir um portal.";
 			mes "Um destes lugares será obrigatoriamente onde você salvou seu Ponto de Início.";
 			next;
@@ -92,7 +104,8 @@ prt_church,103,76,0	script	Garnet#pront	1_F_02,{
 			mes "Como se faz para 'marcar' um lugar como destino de um portal?";
 			mes "É só digitar /memo no local que você desejar e ele será marcado.";
 			mes "Lembre-se que não é possível marcar um portal dentro de um calabouço.";
-			mes "E cuidado, pois esta habilidade gasta muito SP e dependendo da situação, isso pode te deixar em maus lençóis!";
+			mes "E cuidado, pois esta habilidade gasta muito SP e dependendo da situação.";
+			mes "Isso pode te deixar em maus lençóis!";
 			next;
 			mes "[Garnet]";
 			mes "Ah! E o mais importante!";
@@ -100,7 +113,7 @@ prt_church,103,76,0	script	Garnet#pront	1_F_02,{
 			mes "Se você não tiver uma Gema Azul para 'gastar', o portal simplesmente não abre!";
 			next;
 			break;
-		case 7:
+			case 7:
 			mes "["+strcharinfo(0)+"]";
 			mes "Independente do seu interesse, sempre estaremos aqui para ajuda-lo";
 			close2;
@@ -123,34 +136,38 @@ prt_church,103,71,0	script	Henson#pront	2_M_PHARMACIST,{
 	next;
 	.@SkillChat = 1;
 	while(.@SkillChat) {
-		switch(select("Sobre 'Proteção Divina'.:Sobre 'Flagelo do Mal'.:Sobre 'Diminuir Agilidade'.:Sobre 'Signum Crusis'.:Sobre 'Escudo Sagrado'.:Sobre 'Revelação'.:Sobre 'Teleporte'.:Na verdade, não.")) {
-		case 1:
+		switch(select("Sobre 'Proteção Divina'","Sobre 'Flagelo do Mal'","Sobre 'Diminuir Agilidade'","Sobre 'Signum Crusis'","Sobre 'Escudo Sagrado'","Sobre 'Revelação'","Sobre 'Teleporte'","Na verdade, não.")) {
+			case 1:
 			mes "[Henson]";
 			mes "Para aumentar sua resistência aos ataques Malditos e de Dêmonios você precisa desta habilidade.";
 			mes "Esta é uma habilidade passiva, e portanto sem limite de tempo ou gasto de SP.";
 			next;
 			mes "[Henson]";
-			mes "Subindo o nível da habilidade até 3, você pode aprender 'Flagelo do Mal', que aumenta o ataque contra os monstros Malditos e Dêmonios.";
-			mes "'Angelus' também pode ser usada para aumentar a defesa e 'Benção' para aumentar sua Força, Destreza e Inteligência temporariamente.";
+			mes "Subindo o nível da habilidade até 3, você pode aprender 'Flagelo do Mal'";
+			mes "Que aumenta o ataque contra os monstros Malditos e Dêmonios.";
+			mes "'Angelus' também pode ser usada para aumentar a defesa e 'Benção'";
+			mes "Para aumentar sua Força, Destreza e Inteligência temporariamente.";
 			mes "Como você pode ver, temos muitas armas contra o mal...Hehehe.";
 			next;
 			break;
-		case 2:
+			case 2:
 			mes "[Henson]";
 			mes "'Flagelo do Mal' aumenta o dano de ataques contra os monstros Malditos e Dêmonios.";
 			mes "Ele requer 'Proteção Divina' nível 3, e assim como esta, é uma habilidade passiva e sem gasto de SP.";
 			next;
 			mes "[Henson]";
-			mes "Com nível 3 em 'Flagelo do Mal' você pode aprender 'Signum Crusis', que diminui a defesa destes monstros.";
+			mes "Com nível 3 em 'Flagelo do Mal' você pode aprender 'Signum Crusis'";
+			mes "Que diminui a defesa destes monstros.";
 			next;
 			break;
-		case 3:
+			case 3:
 			mes "[Henson]";
-			mes "Esta habilidade diminui a Agilidade dos inimigos, e com isso, diminui também a velocidade de ataque e esquiva deles.";
+			mes "Esta habilidade diminui a Agilidade dos inimigos.";
+			mes "Com isso, diminui também a velocidade de ataque e esquiva deles.";
 			mes "Para aprendê-la é necessário pelo menos um ponto de habilidade em 'Aumentar Agilidade'.";
 			next;
 			break;
-		case 4:
+			case 4:
 			mes "[Henson]";
 			mes "Esta habilidade diminui a Defesa de monstros de propriedade Maldita ou de Escuridão...";
 			mes "Ela funciona numa área de alcance bem grande, quase todo o espaço da tela!";
@@ -160,13 +177,13 @@ prt_church,103,71,0	script	Henson#pront	2_M_PHARMACIST,{
 			mes "Para usar esta habilidade, é necessário ter 'Flagelo do Mal' em nível 3.";
 			next;
 			break;
-		case 5:
+			case 5:
 			mes "[Henson]";
 			mes "Tendo maximizado 'Portal', você poderá aprender esa habilidade.";
 			mes "Ela permite que você crie um escudo protetor contra ataques de projéteis como flechas, pedras ou balas.";
 			next;
 			break;
-		case 6:
+			case 6:
 			mes "[Henson]";
 			mes "Esta habilidade permite detectar monstros (e jogadores) escondidos.";
 			mes "Quando revelados, eles sofrerão um ataque de propriedade Sagrada.";
@@ -174,18 +191,20 @@ prt_church,103,71,0	script	Henson#pront	2_M_PHARMACIST,{
 			mes "É um pré-requisito para aprender 'Teleporte' e 'Portal'.";
 			next;
 			break;
-		case 7:
+			case 7:
 			mes "[Henson]";
 			mes "'Teleporte' é aprendida após obter-se 1 nível em 'Revelação'.";
-			mes "Em nível 1 ela permite que você se teleporte para um lugar qualquer dentro do mapa em que você se encontra.";
+			mes "Em nível 1 ela permite que você se teleporte para um lugar qualquer dentro do mapa";
+			mes "Em que você se encontra.";
 			mes "Cuidado para não cair em algum lugar perigoso!";
 			mes "No nível 2, 'Teleporte' permite mandar o personagem de volta ao Ponto de Início, onde ele salvou.";
 			next;
 			mes "[Henson]";
-			mes "Depois de 'Teleporte', você pode aprender 'Portal' que permite teleportar outros personagens também, para áreas à sua escolha.";
+			mes "Depois de 'Teleporte', você pode aprender 'Portal'";
+			mes "Que permite teleportar outros personagens também, para áreas à sua escolha.";
 			next;
 			break;
-		case 8:
+			case 8:
 			mes "[Henson]";
 			mes "Eu sempre estarei disposto a ajuda-lo.";
 			close2;

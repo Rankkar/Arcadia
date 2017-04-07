@@ -35,7 +35,7 @@ alberta,53,39,0	script	Steiner#alb	4W_SAILOR,{
 	mes "[Steiner]";
 	mes "Oh, você parece ser de fora da cidade.";
 	mes "Seja bem vind"+(Sex? "o":"a")+" à Alberta.";
-	emotion e_gasp;
+	emotion (e_gasp);
 	next;
 	mes "[Steiner]";
 	mes "Eu estava apenas pensando em algumas idéias que eu tenho para o meu negócio.";
@@ -43,7 +43,7 @@ alberta,53,39,0	script	Steiner#alb	4W_SAILOR,{
 	mes "[Steiner]"; 
 	mes "Olha só, eu ouvi falar que tem uma loja em Geffen que vende armaduras raras, resistentes a ataques mágicos."; 
 	mes "Se eu de alguma forma pudesse comprá-las por um preço baixo e vendê-las pro pessoal em outras cidades...";
-	emotion e_cash;
+	emotion (e_cash);
 	close;
 }
 
@@ -105,7 +105,7 @@ alberta,131,139,2	script	Velho Bêbado#alb	1_M_JOBGUIDER,{
 			mes "(sigh!) (sob, sob)... Desu, como eu sinto falta de todos...";
 			mes "Agora me deprimi.";
 			mes "Vá embora e me deixe sozinho....."; 
-			emotion e_sob; 
+			emotion (e_sob); 
 			close; 
 			case 2:
 			mes "[Velho Bêbado]";
@@ -116,7 +116,7 @@ alberta,131,139,2	script	Velho Bêbado#alb	1_M_JOBGUIDER,{
 		mes "[Velho Bêbado]";
 		mes "É isso mesmo!";
 		mes "Vá EMBORA!"; 
-		emotion e_awsm; 
+		emotion (e_awsm); 
 		close;
 	}
 }

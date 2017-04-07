@@ -86,14 +86,14 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Então que cor você quer?";
 		next;
 		switch(select("Tintura Vermelha","Tintura Amarela","Tintura Azul","Tintura Verde","Tintura Laranja","Tintura Violeta","Tintura Branca","Tintura Preta","Cancelar")) {
-			case 1: callsub S_MakeDye,1,1; break;
-			case 2: callsub S_MakeDye,2,1; break;
-			case 3: callsub S_MakeDye,3,2; break;
-			case 4: callsub S_MakeDye,4,3; break;
-			case 5: callsub S_MakeDye,5,4; break;
-			case 6: callsub S_MakeDye,6,4; break;
-			case 7: callsub S_MakeDye,7,4; break;
-			case 8: callsub S_MakeDye,8,4; break;
+			case 1: callsub (S_MakeDye,1,1); break;
+			case 2: callsub (S_MakeDye,2,1); break;
+			case 3: callsub (S_MakeDye,3,2); break;
+			case 4: callsub (S_MakeDye,4,3); break;
+			case 5: callsub (S_MakeDye,5,4); break;
+			case 6: callsub (S_MakeDye,6,4); break;
+			case 7: callsub (S_MakeDye,7,4); break;
+			case 8: callsub (S_MakeDye,8,4); break;
 			case 9:
 			mes "[Java Dullihan]";
 			mes "Aaaahhhh!!";
@@ -115,8 +115,8 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Hmm...";
 		mes "Para fazer uma Tintura Vermelha, eu preciso de ^0000ff30 Ervas Vermelhas, 1 Antígeno e 1 Garrafa Vazia^000000.";
 		mes "O custo de minha mão-de-obra será de 3000 Zeny.";
-		setarray .@item[0], 507, 973, 713;
-		setarray .@count[0], 30,   1,   1;
+		setarray (.@item[0], 507, 973, 713);
+		setarray (.@count[0], 30,   1,   1);
 		.@cost = 3000;
 		.@dyestuff = 975;
 		break;
@@ -124,8 +124,8 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Hmm...";
 		mes "Para fazer uma Tintura Amarela, eu preciso de ^0000ff30 Ervas Amarelas, 1 Antígeno, e 1 Garrafa Vazia^000000.";
 		mes "O custo de minha mão de obra será de 3000 Zeny.";
-		setarray .@item[0], 508, 973, 713;
-		setarray .@count[0], 30,   1,   1;
+		setarray (.@item[0], 508, 973, 713);
+		setarray (.@count[0], 30,   1,   1);
 		.@cost = 3000;
 		.@dyestuff = 976;
 		break;
@@ -133,8 +133,8 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Hmm...";
 		mes "Para fazer uma Tintura Azul, eu preciso de ^0000ff20 Ervas Azuis, 1 Antígeno, e 1 Garrafa Vazia^000000.";
 		mes "Trabalhar com ervas azuis é mais difícil, então o custo de minha mão-de-obra será de 3500 Zeny";
-		setarray .@item[0], 510, 973, 713;
-		setarray .@count[0], 20,   1,   1;
+		setarray (.@item[0], 510, 973, 713);
+		setarray (.@count[0], 20,   1,   1);
 		.@cost = 3500;
 		.@dyestuff = 978;
 		break;
@@ -142,8 +142,8 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Hmm...";
 		mes "Para fazer uma Tintura Verde, eu preciso de ^0000ff5 Ervas Azuis, 20 Ervas Verdes, 20 Ervas Amarelas, 1 Antígeno, 1 Mistura, e 1 Garrafa Vazia^000000.";
 		mes "O custo de minha mão-de-obra será de 5000 Zeny.";
-		setarray .@item[0], 510, 511, 508, 974, 973, 713;
-		setarray .@count[0],  5,  20,  20,   1,   1,   1;
+		setarray (.@item[0], 510, 511, 508, 974, 973, 713);
+		setarray (.@count[0],  5,  20,  20,   1,   1,   1);
 		.@cost = 5000;
 		.@dyestuff = 979;
 		break;
@@ -151,16 +151,16 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Hmm...";
 		mes "Para fazer uma Tintura Laranja, eu preciso de ^0000ff20 Ervas Vermelha, 20 Ervas Amarelas, 1 Antígeno, 1 Mistura, e 1 Garrafa Vazia^000000.";
 		mes "O custo de minha mão-de-obra será de 5000 Zeny.";
-		setarray .@item[0], 507, 508, 974, 973, 713;
-		setarray .@count[0], 20,  20,   1,   1,   1;
+		setarray (.@item[0], 507, 508, 974, 973, 713);
+		setarray (.@count[0], 20,  20,   1,   1,   1);
 		.@cost = 5000;
 		.@dyestuff = 980;
 		break;
 		case 6:
 		mes "Hmm... Para fazer uma Tintura Violeta , eu preciso de ^0000ff10 Ervas Azuis, 30 Ervas Vermelhas, 1 Antígeno, 1 Mistura, e 1 Garrafa Vazia^000000.";
 		mes "O custo de minha mão-de-obra será de 5000 Zeny.";
-		setarray .@item[0], 510, 507, 974, 973, 713;
-		setarray .@count[0], 10,  30,   1,   1,   1;
+		setarray (.@item[0], 510, 507, 974, 973, 713);
+		setarray (.@count[0], 10,  30,   1,   1,   1);
 		.@cost = 5000;
 		.@dyestuff = 981;
 		break;
@@ -168,8 +168,8 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Hmm...";
 		mes "Para fazer uma Tintura Branca , eu preciso de ^0000ff30 Ervas Brancas, 1 Antígeno, e 1 Garrafa Vazia^000000.";
 		mes "O custo de minha mão-de-obra será de 3000 Zeny.";
-		setarray .@item[0], 509, 973, 713;
-		setarray .@count[0], 30,   1,   1;
+		setarray (.@item[0], 509, 973, 713);
+		setarray (.@count[0], 30,   1,   1);
 		.@cost = 3000;
 		.@dyestuff = 982;
 		break;
@@ -178,8 +178,8 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 		mes "Para fazer uma Tintura Preta , eu preciso de ^0000ff30 Ervas Vermelhas, Amarelas, e Verdes, 5 Ervas Azuis, 1 Antígeno, 1 Mistura, e 1 Garrafa Vazia^000000.";
 		mes "Esta é a que tintura consome mais tempo e a mais difícil de se fazer.";
 		mes "Terei que cobrar uma taxa-de-mão de obra de 7000 Zeny.";
-		setarray .@item[0], 507, 508, 511, 510, 974, 973, 713;
-		setarray .@count[0], 30,  30,  30,   5,   1,   1,   1;
+		setarray (.@item[0], 507, 508, 511, 510, 974, 973, 713);
+		setarray (.@count[0], 30,  30,  30,   5,   1,   1,   1);
 		.@cost = 7000;
 		.@dyestuff = 983;
 		break;
@@ -206,10 +206,10 @@ morocc_in,146,99,3	script	Dullihan#dyestuff	1_M_MERCHANT,{
 			close;
 		}
 		for (.@i = 0; .@i < .@size; ++.@i) {
-			delitem .@item[.@i], .@count[.@i];
+			delitem (.@item[.@i], .@count[.@i]);
 		}
 		Zeny -= .@cost;
-		getitem .@dyestuff,1;
+		getitem (.@dyestuff,1);
 		mes "[Java Dullihan]";
 		mes "Hmm... Me saí melhor do que esperava.";
 		mes "Uma cor muito rica.";

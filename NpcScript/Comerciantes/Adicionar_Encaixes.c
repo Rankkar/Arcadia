@@ -330,8 +330,8 @@
 			switch(select("Claro vá em frente","Acho melhor não")) {
 				case 1:
 				.@random = rand(1,100);
-				delitem .@item,1;
-				delitem .@itemRequire,.@itemAmount;
+				delitem(.@item,1);
+				delitem(.@itemRequire,.@itemAmount);
 				Zeny -= .@zenyRequire;
 				mes "[Artesão]";
 				mes "Então aguarde um momento...";
@@ -349,7 +349,7 @@
 				mes "...........";
 				next;
 				if ((.@random > 40) && (.@random < .@maxChoice)) {
-					specialeffect EF_REPAIRWEAPON;
+					specialeffect(EF_REPAIRWEAPON);
 					mes "[Artesão]";
 					mes "Nossa!....";
 					mes "Deu muito trabalho!";
@@ -359,14 +359,14 @@
 					mes "Me desculpe fazer você esperar.";
 					mes "Está aqui seu novo "+getitemname(.@itemSlot);
 					mes "Espero que gote.";
-					getitem .@itemSlot,1;
+					getitem(.@itemSlot,1);
 					next;
 					mes "[Artesão]";
 					mes "E fique a vontade em me procurar novamente, se quiser tentar adicionar algum encaixe nos seus itens.";
 					close;
 				}
 				else {
-					specialeffect EF_SUI_EXPLOSION;
+					specialeffect(EF_SUI_EXPLOSION);
 					mes "[Artesão]";
 					mes "^bb0000AH NÃO!!!!";
 					mes "Fiz o que pude mas seu "+getitemname(.@itemSlot)+" quebrou enquanto estava a adiconar um encaixe!^000000";

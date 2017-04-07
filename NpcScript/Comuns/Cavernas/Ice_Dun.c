@@ -14,7 +14,7 @@
 \*-----------------------------------------------------------------*/
 
 ice_dun04,33,166,3	script	Garoto congelado#ice	4_M_FROZEN,{
-	cutin "ra_sboy.bmp",2;
+	cutin ("ra_sboy.bmp",2);
 	mes "["+strcharinfo(PC_NAME)+"]";
 	mes "Este garoto deve ser o que Ktullanux tenta proteger.";
 	next;
@@ -31,6 +31,6 @@ ice_dun04,33,166,3	script	Garoto congelado#ice	4_M_FROZEN,{
 	mes "["+strcharinfo(PC_NAME)+"]";
 	mes "O que aconteceu a este garoto?";
 	close2;
-	cutin "",255;
+	cutin ("",255);
 	end;
 }

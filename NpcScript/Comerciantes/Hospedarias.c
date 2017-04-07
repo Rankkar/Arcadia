@@ -23,26 +23,26 @@
 		mes "Seu Ponto de Retorno foi salvo.";
 		mes "Curta sua estadia na cidade.";
 		// Prontera
-		if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn1") { savepoint "prt_in",238,130; }
-		if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn2") { savepoint "prt_in",64,136; }
+		if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn1") { savepoint ("prt_in",238,130); }
+		if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn2") { savepoint ("prt_in",64,136); }
 		// Aldebaran
-		if (strnpcinfo(NPC_MAP) == "aldeba_in") { savepoint "aldeba_in",92,50; }
+		if (strnpcinfo(NPC_MAP) == "aldeba_in") { savepoint ("aldeba_in",92,50); }
 		// Alberta
-		if (strnpcinfo(NPC_MAP) == "alberta_in") { savepoint "alberta_in",26,142; }
+		if (strnpcinfo(NPC_MAP) == "alberta_in") { savepoint ("alberta_in",26,142); }
 		// Einbroch
-		if (strnpcinfo(NPC_MAP) == "ein_in01") { savepoint "ein_in01",200,224; }
+		if (strnpcinfo(NPC_MAP) == "ein_in01") { savepoint ("ein_in01",200,224); }
 		// Geffen
-		if (strnpcinfo(NPC_MAP) == "geffen_in") { savepoint "geffen_in",70,59; }
+		if (strnpcinfo(NPC_MAP) == "geffen_in") { savepoint ("geffen_in",70,59); }
 		// Payon
-		if (strnpcinfo(NPC_MAP) == "payon_in01") { savepoint "payon_in01",136,61; }
+		if (strnpcinfo(NPC_MAP) == "payon_in01") { savepoint ("payon_in01",136,61); }
 		// Rachel
-		if (strnpcinfo(NPC_MAP) == "ra_in01") { savepoint "ra_in01",375,58; }
+		if (strnpcinfo(NPC_MAP) == "ra_in01") { savepoint ("ra_in01",375,58); }
 		// Hugel
-		if (strnpcinfo(NPC_MAP) == "hu_in01") { savepoint "hu_in01",263,95; }
+		if (strnpcinfo(NPC_MAP) == "hu_in01") { savepoint ("hu_in01",263,95); }
 		// Lighthalzen
-		if (strnpcinfo(NPC_MAP) == "lhz_in02") { savepoint "lhz_in02",209,275; }
+		if (strnpcinfo(NPC_MAP) == "lhz_in02") { savepoint ("lhz_in02",209,275); }
 		// Veins
-		if (strnpcinfo(NPC_MAP) == "ve_in") { savepoint "ve_in",157,209; }
+		if (strnpcinfo(NPC_MAP) == "ve_in") { savepoint ("ve_in",157,209); }
 		close;
 		case 2:
 		mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
@@ -55,28 +55,28 @@
 			mes "E aproveite seu descanso.";
 			close2;
 			Zeny -= 5000;
-			percentheal 100,100;
+			percentheal (100,100);
 			// Prontera
-			if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn1") { warp "prt_in",247,104; }
-			if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn2") { warp "prt_in",60,166; }
+			if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn1") { warp ("prt_in",247,104); }
+			if (strnpcinfo(NPC_NAME_HIDDEN) == "prtInn2") { warp ("prt_in",60,166); }
 			// Aldebaran
-			if (strnpcinfo(NPC_MAP) == "aldeba_in") { warp "aldeba_in",92,112; }
+			if (strnpcinfo(NPC_MAP) == "aldeba_in") { warp ("aldeba_in",92,112); }
 			// Alberta
-			if (strnpcinfo(NPC_MAP) == "alberta_in") { warp "alberta_in",18,188; }
+			if (strnpcinfo(NPC_MAP) == "alberta_in") { warp ("alberta_in",18,188); }
 			// Einbroch
-			if (strnpcinfo(NPC_MAP) == "ein_in01") { warp "ein_in01",272,167; }
+			if (strnpcinfo(NPC_MAP) == "ein_in01") { warp ("ein_in01",272,167); }
 			// Geffen
-			if (strnpcinfo(NPC_MAP) == "geffen_in") { warp "geffen_in",31,31; }
+			if (strnpcinfo(NPC_MAP) == "geffen_in") { warp ("geffen_in",31,31); }
 			// Payon
-			if (strnpcinfo(NPC_MAP) == "payon_in01") { warp "payon_in01",132,11; }
+			if (strnpcinfo(NPC_MAP) == "payon_in01") { warp ("payon_in01",132,11); }
 			// Rachel
-			if (strnpcinfo(NPC_MAP) == "ra_in01") { warp "ra_in01",384,128; }
+			if (strnpcinfo(NPC_MAP) == "ra_in01") { warp ("ra_in01",384,128); }
 			// Hugel
-			if (strnpcinfo(NPC_MAP) == "hu_in01") { warp "hu_in01",267,5; }
+			if (strnpcinfo(NPC_MAP) == "hu_in01") { warp ("hu_in01",267,5); }
 			// Lighthalzen
-			if (strnpcinfo(NPC_MAP) == "lhz_in02") { warp "lhz_in02",219,150; }
+			if (strnpcinfo(NPC_MAP) == "lhz_in02") { warp ("lhz_in02",219,150); }
 			// Veins
-			if (strnpcinfo(NPC_MAP) == "ve_in") { warp "ve_in",184,228; }
+			if (strnpcinfo(NPC_MAP) == "ve_in") { warp ("ve_in",184,228); }
 			end;
 		}
 		case 3:

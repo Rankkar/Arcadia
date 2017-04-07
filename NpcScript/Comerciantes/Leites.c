@@ -43,8 +43,8 @@
 			close;
 		}
 		Zeny -= .@total_cost;
-		delitem Empty_Bottle,.@bottles;
-		getitem Milk,.@bottles;
+		delitem (Empty_Bottle,.@bottles);
+		getitem (Milk,.@bottles);
 		close;
 	}
 	close;

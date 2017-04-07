@@ -34,7 +34,7 @@
 	if (!getequipisequiped(.@menuSelect)) {
 		mes "["+strnpcinfo(NPC_NAME)+"]";
 		mes "Mas você não está equipado com o equipamento para refinar.";
-		emotion e_an;
+		emotion (e_an);
 		close;
 	}
 	// Verifica se é posível refinar o item
@@ -42,7 +42,7 @@
 	else if (!getequipisenableref(.@menuSelect)) {
 		mes "["+strnpcinfo(NPC_NAME)+"]";
 		mes "Hunnn...? Esse equipamento não pode ser aprimorado.";
-		emotion e_what;
+		emotion (e_what);
 		close;
 	}
 	// Verifica se o item já não está refinado até +10
@@ -50,7 +50,7 @@
 		mes "["+strnpcinfo(NPC_NAME)+"]";
 		mes "Esse equipamento já está refinado em seu limite!";
 		mes "Sinto muito mas, não consigo mais trabalhar esse item.";
-		emotion e_gasp;
+		emotion (e_gasp);
 		close;
 	}
 	else {
@@ -92,7 +92,7 @@
 			else if (getequipisequiped(.@menuSelect) == 0) {
 				mes "["+strnpcinfo(NPC_NAME)+"]";
 				mes "Mas você removeu o item.";
-				emotion e_dots;
+				emotion (e_dots);
 				close;
 			}
 			else {
@@ -110,14 +110,14 @@
 					if (getequiprefinerycnt(.@menuSelect) != .@RackRefine || getequipid(.@menuSelect) != .@RackItem) {
 						mes "["+strnpcinfo(NPC_NAME)+"]";
 						mes "Mas você não estava equipado agora a pouco?";
-						emotion e_what;
+						emotion (e_what);
 						close;
 					}
 					else if (getequippercentrefinery(.@menuSelect) <= rand(100)) {
 						Zeny -= .@value;
-						delitem .@requirement,1;
-						failedrefitem .@menuSelect;
-						emotion e_omg;
+						delitem (.@requirement,1);
+						failedrefitem (.@menuSelect);
+						emotion (e_omg);
 						mes "["+strnpcinfo(NPC_NAME)+"]";
 						mes "AHHHHHHHHHH!!....";
 						mes "^bb0000Seu equipamento de despedaçou enquanto eu estava refinando^000000.";
@@ -129,9 +129,9 @@
 					}
 					else {
 						Zeny -= .@value;
-						delitem .@requirement,1;
-						successrefitem .@menuSelect;
-						emotion e_heh;
+						delitem (.@requirement,1);
+						successrefitem (.@menuSelect);
+						emotion (e_heh);
 						mes "["+strnpcinfo(NPC_NAME)+"]";
 						mes "^009900Que beleza!";
 						mes "Mais um aprimoramento bem suscedido!";

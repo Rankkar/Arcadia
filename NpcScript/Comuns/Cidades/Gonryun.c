@@ -138,7 +138,7 @@ gonryun,153,64,7	script	Anunciante de Kunlun#gon4	4_M_TWMIDMAN,{
 		mes "Eu espero que você tenha se divertido conosco.";
 		mes "Vamos indo então?";
 		close2;
-		warp "gon_fild01",258,82;
+		warp ("gon_fild01",258,82);
 		end;
 	}
 	mes "[Jangchungryong]";

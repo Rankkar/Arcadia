@@ -55,7 +55,6 @@ moc_ruins,132,144,0	script	Jovem#mocr2	4_M_03,{
 	close;
 }
 
-
 // ------------------------------------------------------------------
 moc_ruins,115,144,3	script	Jovem#mocr3	4_M_01,{
 	mes "[Jovem]";
@@ -117,41 +116,6 @@ moc_ruins,128,153,0	script	Grampa#mocr	1_M_PUBMASTER,{
 }
 
 // ------------------------------------------------------------------
-morocc,54,251,0	script	Bêbado#mocr	4_M_ORIENT02,{
-	mes "[Bêbado]";
-	mes "Espere um segundo...!";
-	mes "Você é talvez um aventureiro?";
-	mes "Como vai a sua viagem?";
-	mes "Heh heh...";
-	next;
-	mes "[Bêbado]";
-	mes "Deixe-me te contar uma história.";
-	mes "Você sabe que eu acabei de sair daquela taberna, alí, né?";
-	next;
-	mes "[Bêbado]";
-	mes "Eu ouvi que Satan Morroc chegou.";
-	mes "Simplesmente saiu da fissura do tempo e do espaço blá...";
-	mes "hic............";
-	next;
-	mes "[Bêbado]";
-	mes "Ah... Eu quero ver este Satan com meus próprios olhos!";
-	mes "Mas eu realmente não deveria.";
-	mes "Nem em sonho eu veria este Satan em pessoa.";
-	next;
-	mes "[Bêbado]";
-	mes "Mas eu acho que não teria nada a perder se você, uma pessoa de coragem.";
-	mes "Que veio através do deserto tentar seduzir para encontrá-lo, não acha?";
-	mes "Teehee........";
-	mes "Não se esqueça de me pagar uma bebida quando você encontrá-lo!";
-	mes "Hic!";
-	next;
-	mes "[Bêbado]";
-	mes "Enfim, você sabe onde estamos?";
-	mes "Eu só estava dando uma bebidinha na taverna.";
-	mes "mas repentinamente, todos os cidadões haviam desaparecido quando saí...";
-	mes "Ou, uns quinhentos anos se passaram???!";
-	close;
-}
 moc_ruins,94,117,0	script	Homem Pálido#mocr	1_M_02,{
 	mes "[Homem Pálido]";
 	mes "Neste dia... eu vi a lua sangrenta no céu. Era tão silencioso que pareceu assustador.";

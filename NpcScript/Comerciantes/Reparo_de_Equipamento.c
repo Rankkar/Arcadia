@@ -45,7 +45,7 @@
 		mes "De todos os seus itens, "+.@checkitem+" estão danificados.";
 		mes "Gostaria de repará-los?";
 		next;
-		.@totalcost = 5000*.@checkitem;
+		.@totalcost = 5000 * .@checkitem;
 		mes "[Reparador]";
 		mes "Cada reparo custa 5.000 Zenys.";
 		mes "Então para reparar todos os seus itens você irá pagar "+.@totalcost+" Zeny!";

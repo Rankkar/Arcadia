@@ -18,7 +18,7 @@ lhz_in01,35,226,5	script	Guarda Rekenber#lhzpass	4_M_LGTGUARD2,{
 		mes "[Guarda Rekenber]";
 		mes "^3355FF(Uau, é um membro da diretoria!)^000000 Bom-dia!";
 		close2;
-		warp "lhz_in01",37,225;
+		warp ("lhz_in01",37,225);
 		end;
 	}
 	mes "[Guarda Rekenber]";
@@ -52,7 +52,7 @@ lhz_in01,23,132,3	script	Guarda Rekenber#lhzpass2	4_M_LGTGUARD2,5,5,{
 		mes "Quem é você e como entrou?!";
 		mes "Saia daqui imediatamente!";
 		close2;
-		warp "lhz_in01",33,224;
+		warp ("lhz_in01",33,224);
 	}
 	end;
 }
@@ -67,7 +67,7 @@ lhz_in01,46,125,3	script	Guarda Rekenber#lhzpass3	4_M_LGTGUARD2,5,5,{
 		if (select("Belo dia, não?:Cancelar") == 1) {
 			mes "[Guarda Rekenber]";
 			mes "...";
-			emotion e_an;
+			emotion (e_an);
 			close;
 		}
 		mes "[Guarda Rekenber]";
@@ -76,9 +76,9 @@ lhz_in01,46,125,3	script	Guarda Rekenber#lhzpass3	4_M_LGTGUARD2,5,5,{
 	}
 	mes "[Guarda Rekenber]";
 	mes "...!";
-	emotion e_gasp;
+	emotion (e_gasp);
 	close2;
-	warp "lhz_in01",33,224;
+	warp ("lhz_in01",33,224);
 	end;
 }
 
@@ -100,9 +100,9 @@ lhz_in01,217,121,3	script	Mecânico#lhzpass	4_M_REPAIR,{
 		mes "Ei, você não trabalha...";
 		mes "G-guardas! Corram!";
 		mes "Tem alguém aqui!";
-		emotion e_gasp;
+		emotion (e_gasp);
 		close2;
-		warp "lhz_in01",33,224;
+		warp ("lhz_in01",33,224);
 		end;
 	}
 }
@@ -126,9 +126,9 @@ lhz_in01,203,123,3	script	Cientista#lhzpass	4_M_ALCHE_C,{
 	mes "Você não é o Ralphie.";
 	mes "Espera. Guardaaaaaas!";
 	mes "Socorro, tem um estranho aqui!";
-	emotion e_gasp;
+	emotion (e_gasp);
 	close2;
-	warp "lhz_in01",33,224;
+	warp ("lhz_in01",33,224);
 	end;
 }
 
@@ -144,9 +144,9 @@ lhz_in01,199,137,3	script	Cientista#lhzpass2	4_LGTSCIENCE,{
 	mes "Guardas!";
 	mes "Rápido, tem alguém aqui e acho que é um daqueles arruaceiros!";
 	mes "Por que, por que eu?!";
-	emotion e_gasp;
+	emotion (e_gasp);
 	close2;
-	warp "lhz_in01",33,224;
+	warp ("lhz_in01",33,224);
 	end;
 }
 
@@ -156,9 +156,9 @@ lhz_in01,25,141,4	script	Guarda Regenschirm#lhzpass	4_M_LGTGUARD,{
 	if(isequipped(Granpa_Beard) && isequipped(Spinning_Eyes)){
 		mes "Você quer ir ao subterrâneo?";
 		next;
-		if(select("Sim:Não")==1){
+		if(select("Sim","Não") == 1){
 			if(isequipped(Lab_Passport)){
-				warp "lhz_dun01",150,288;
+				warp ("lhz_dun01",150,288);
 				end;
 			}
 			mes "[Guarda Regenschirm]";
@@ -173,7 +173,6 @@ lhz_in01,25,141,4	script	Guarda Regenschirm#lhzpass	4_M_LGTGUARD,{
 	mes "Essa área é restrita ao público!";
 	mes "Quem é você e como entrou? Saia daqui imediatamente!";
 	close2;
-	warp "lhz_in01",34,224;
+	warp ("lhz_in01",34,224);
 	end;
-
 }

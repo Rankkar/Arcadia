@@ -11,6 +11,8 @@
 | - Script: eAthena/ rAthena/ Hercules (Emuladores)                 |
 | - Versão: Spell Master                                            |
 | - Nota: Mini jogos no aeroplano                                   |
+| - OBS.: Foi detectado alguns erros que podem comprometer o        |
+|         funcionamento dos npc (Revisar, corrigir ou refazer)      |
 \*-----------------------------------------------------------------*/
 
 //-------------------------------------------------------------------
@@ -21,75 +23,20 @@ airplane_01,32,61,4	script	Nils#ein	1_M_03,1,1,{
 	mes "Bem-vind"+(Sex?"o":"a")+" ao ^ff0000Desafio de Escrita^000000.";
 	mes "Você gostaria de jogar um rápido jogo de escrita?";
 	next;
-	switch (select("Jogar ^ff0000Desafio de Escrita^000000:Informações:Ver recordes:Cancelar")) {
+	switch (select("Jogar ^ff0000Desafio de Escrita^000000","Informações","Ver recordes","Cancelar")) {
 		case 1:
 		mes "[Nils]";
 		mes "Ok, nós temos um novo desafiante!";
 		mes "Digite o seguinte texto o mais rápido que puder sem cometer nenhum erro!";
 		mes "Vamos começar!";
-		setarray .@line1_1$[0],
-		"^3cbcbccallipygian salacius lascivious^000000",
-		"^3cbcbcBy the power of^000000",
-		"^0000ffthkelfkskeldmsiejdlslehfndkelsheidl^000000",
-		"^3cbcbcburrdingdingdingdilidingdingdingphoohudaamb^000000",
-		"^3cbcbcCoboman no chikara-yumei na^000000",
-		"^3cbcbcEu sou o rei dos esquisitos! Agora^000000",
-		"^3cbcbcVocê não me deu escolha. Eu aposto que^000000";
-		setarray .@line1_2$[0],"^3cbcbclicentious prurient concupiscent^000000",
-		"^3cbcbcp-po-poi-po-poi-poin-poing^000000",
-		"^3cbcbcskemd^000000",
-		"^3cbcbcandoorabambarambambambambamburanbamding^000000",
-		"^3cbcbcchikara-daiookii na chikara da ze!^000000",
-		"^3cbcbcvocê conhece meu verdadeiro poder. Obey~!^000000",
-		"^3cbcbchora de revelar meu segredo...^000000";
-		setarray .@line1_3$[0],
-		"",
-		"^3cbcbcDEUS-POING. EU NUNCA PERCO!^000000",
-		"",
-		"",
-		"^3cbcbcCOBO LIGADO^000000",
-		"",
-		"";
-		setarray .@word1$[0],
-		"callipygian salacius lascivious licentious prurient concupiscent",
-		"By the power of p-po-poi-po-poi-poin-poing GOD-POING. I NEVER LOSE!",
-		"thkelfkskeldmsiejdlslehfndkelsheidlskemd",
-		"burrdingdingdingdilidingdingdingphoohudaambandoorabambarambambambambamburanbamding",
-		"Coboman no chikara-yumei na chikara-daiookii na chikara da ze! COBO ON",
-		"Eu sou o rei dos esquisitos! Agora você conhece meu verdadeiro poder. Obey~!",
-		"Você não me deu escolha. Eu aposto que é hora de revelar meu poder...";
-		setarray .@line2_1$[0],
-		"^3cbcbciMpertuBáVEl AmÁVel SeCreTo E^000000",
-		"^ff1493VeLoCiDaDe Da LuZ ViRaR a EsQuErDa^000000",
-		"^ff1493hfjdkeldjsieldjshfjdjeiskdlefvbd^000000",
-		"^ff1493burapaphuralanderamduanbatuhiwooi^000000",
-		"^ff1493acreditar na sorte do amor suar careta correr^000000",
-		"^800080abriR, Abrir!abr1r.abrirAbrirAbr1rAbRir4brir^000000",
-		"^3cbcbclIberDadE êxtAse JoRnAlIsMo ArMplt^000000";
-		setarray .@line2_2$[0],
-		"^3cbcbcboLiChe cOnTrA O kArmA JoVem^000000",
-		"^ff1493CeRtO QuEiMe VeRdAdEiRo GaNgSteR bEijo^000000",
-		"",
-		"^ff1493kabamturubamdingding^000000",
-		"^ff1493folktale rodimus optimus bumblebee^000000",
-		"^800080`abrir'4Brir abrir? abrir!111ABRAMESMO^000000",
-		"^3cbcbcDesCobrir dOr de CaBeça RaiosLunArES jUsTiçA^000000";
-		setarray .@word2$[0],
-		"iMpertuBáVEl AmÁvEl SeGrEdOs E boLiCHE cONtra o kArmA dos JoVeMs",
-		"VeLoCiDaDe Da LuZ ViRaR a EsQuErDa QuEiMe VeRdAdEiRo GaNgSteR bEijo",
-		"hfjdkeldjsieldjshfjdjeiskdlefvbd",
-		"burapaphuralanderamduanbatuhiwooikabamturubamdingding",
-		"acreditar na sorte do amor suar careta correr conto-de-fadas rodimus optimus bumblebee",
-		"abriR, Abrir!abr1r.abrirAbrirAbr1rAbRir4brir`abrir'4Brir abrir? abrir!111ABRAMESMO",
-		"lIberDadE êxtAse JoRnAlIsMo AxIla DesCobrir dOr de CaBeça RaiosLunArES jUsTiçA";
-		setarray .@letters[0],
-		1300,
-		1250,
-		1180,
-		1380,
-		1740,
-		1440,
-		1450;
+		setarray (.@line1_1$[0],"^3cbcbccallipygian salacius lascivious^000000","^3cbcbcBy the power of^000000","^0000ffthkelfkskeldmsiejdlslehfndkelsheidl^000000","^3cbcbcburrdingdingdingdilidingdingdingphoohudaamb^000000","^3cbcbcCoboman no chikara-yumei na^000000","^3cbcbcEu sou o rei dos esquisitos! Agora^000000","^3cbcbcVocê não me deu escolha. Eu aposto que^000000");
+		setarray (.@line1_2$[0],"^3cbcbclicentious prurient concupiscent^000000","^3cbcbcp-po-poi-po-poi-poin-poing^000000","^3cbcbcskemd^000000","^3cbcbcandoorabambarambambambambamburanbamding^000000","^3cbcbcchikara-daiookii na chikara da ze!^000000","^3cbcbcvocê conhece meu verdadeiro poder. Obey!^000000","^3cbcbchora de revelar meu segredo...^000000");
+		setarray (.@line1_3$[0],"","^3cbcbcDEUS-POING. EU NUNCA PERCO!^000000","","","^3cbcbcCOBO LIGADO^000000","","");
+		setarray (.@word1$[0],"callipygian salacius lascivious licentious prurient concupiscent","By the power of p-po-poi-po-poi-poin-poing GOD-POING. I NEVER LOSE!","thkelfkskeldmsiejdlslehfndkelsheidlskemd","burrdingdingdingdilidingdingdingphoohudaambandoorabambarambambambambamburanbamding","Coboman no chikara-yumei na chikara-daiookii na chikara da ze! COBO ON","Eu sou o rei dos esquisitos! Agora você conhece meu verdadeiro poder. Obey~!","Você não me deu escolha. Eu aposto que é hora de revelar meu poder...");
+		setarray (.@line2_1$[0],"^3cbcbciMpertuBáVEl AmÁVel SeCreTo E^000000","^ff1493VeLoCiDaDe Da LuZ ViRaR a EsQuErDa^000000","^ff1493hfjdkeldjsieldjshfjdjeiskdlefvbd^000000","^ff1493burapaphuralanderamduanbatuhiwooi^000000","^ff1493acreditar na sorte do amor suar careta correr^000000","^800080abriR, Abrir!abr1r.abrirAbrirAbr1rAbRir4brir^000000","^3cbcbclIberDadE êxtAse JoRnAlIsMo ArMplt^000000");
+		setarray (.@line2_2$[0],"^3cbcbcboLiChe cOnTrA O kArmA JoVem^000000","^ff1493CeRtO QuEiMe VeRdAdEiRo GaNgSteR bEijo^000000","","^ff1493kabamturubamdingding^000000","^ff1493folktale rodimus optimus bumblebee^000000","^800080`abrir'4Brir abrir? abrir!111ABRAMESMO^000000","^3cbcbcDesCobrir dOr de CaBeça RaiosLunArES jUsTiçA^000000");
+		setarray (.@word2$[0],"iMpertuBáVEl AmÁvEl SeGrEdOs E boLiCHE cONtra o kArmA dos JoVeMs","VeLoCiDaDe Da LuZ ViRaR a EsQuErDa QuEiMe VeRdAdEiRo GaNgSteR bEijo","hfjdkeldjsieldjshfjdjeiskdlefvbd","burapaphuralanderamduanbatuhiwooikabamturubamdingding","acreditar na sorte do amor suar careta correr conto-de-fadas rodimus optimus bumblebee","abriR, Abrir!abr1r.abrirAbrirAbr1rAbRir4brir`abrir'4Brir abrir? abrir!111ABRAMESMO","lIberDadE êxtAse JoRnAlIsMo AxIla DesCobrir dOr de CaBeça RaiosLunArES jUsTiçA");
+		setarray (.@letters[0],1300,1250,1180,1380,1740,1440,1450);
 		.@wordtest = rand(7);
 		next;
 		mes "[Nils]";
@@ -98,7 +45,7 @@ airplane_01,32,61,4	script	Nils#ein	1_M_03,1,1,{
 		mes .@line1_3$[.@wordtest];
 		.@start_time = gettime(GETTIME_HOUR)*60*60+gettime(GETTIME_MINUTE)*60+gettime(GETTIME_SECOND);
 		next;
-		input .@save1$;
+		input (.@save1$);
 		.@end_time = gettime(GETTIME_HOUR)*60*60+gettime(GETTIME_MINUTE)*60+gettime(GETTIME_SECOND);
 		.@total_time = .@end_time - .@start_time;
 		mes "[Nils]";
@@ -106,7 +53,7 @@ airplane_01,32,61,4	script	Nils#ein	1_M_03,1,1,{
 		mes .@line2_2$[.@wordtest];
 		.@start_time = gettime(GETTIME_HOUR)*60*60+gettime(GETTIME_MINUTE)*60+gettime(GETTIME_SECOND);
 		next;
-		input .@save2$;
+		input (.@save2$);
 		.@end_time = gettime(GETTIME_HOUR)*60*60+gettime(GETTIME_MINUTE)*60+gettime(GETTIME_SECOND);
 		.@total_time = .@total_time+(.@start_time - .@end_time);
 		.@tasoo = (.@letters[.@wordtest] / .@total_time) * 6;
@@ -173,7 +120,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 	mes "Oi, eu sou Clarice.";
 	mes "Você gostaria de apostar algumas maçãs no amigável jogo dos Dados?";
 	next;
-	switch (select("Jogar:Regras do Jogo:Cancelar")) {
+	switch (select("Jogar","Regras do Jogo","Cancelar")) {
 		case 3:
 		mes "[Clarice]";
 		mes "Eu estou pronta para jogar o jogo dos dados quando você quiser.";
@@ -242,7 +189,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 		mes "Então você estará apostando ^FF0000"+.@amount+"^000000 Maçãs.";
 		mes "Certo?";
 		next;
-		if (select("Yes:No") == 2) {
+		if (select("Sim","Não") == 2) {
 			mes "[Clarice]";
 			mes "Hum, cometi um erro?";
 			mes "Certo, por favor digite o número de Maçãs que você deseja apostar.";
@@ -255,7 +202,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 			next;
 			continue;
 		}
-		delitem Apple,.@amount;
+		delitem (Apple,.@amount);
 		mes "[Clarice]";
 		mes "Bom!";
 		mes "Agora podemos começar este jogo!";
@@ -330,7 +277,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 				mes "Eu não quero correr nenhum risco, vamos acabar este jogo num empate.";
 				mes "Vamos jogar de novo outra hora.";
 				close2;
-				getitem 512,.@amount;
+				getitem (Apple,.@amount);
 				end;
 			}
 		}
@@ -351,7 +298,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 				mes "Nem eu, vamos acabar este jogo em um empate.";
 				mes "Vamos jogar novamente outra hora.";
 				close2;
-				getitem Apple,.@amount;
+				getitem (Apple,.@amount);
 				end;
 			}
 			mes "Certo.";
@@ -377,7 +324,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 		mes "Deixe-me dar-lhe minhas maçãs.";
 		mes "Parabéns, foi um grande jogo.";
 		close2;
-		getitem Apple,.@giveapple;
+		getitem (Apple,.@giveapple);
 		end;
 	}
 	else if (.@playertotal > .@tabletotal) {
@@ -386,7 +333,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 		mes "Deixe-me dar-lhe minhas maçãs.";
 		mes "Foi um grande jogo e espero que possamos jogar novamente em outro momento.";
 		close2;
-		getitem Apple,.@giveapple;
+		getitem (Apple,.@giveapple);
 		end;
 	}
 	else if (.@playertotal == .@tabletotal) {
@@ -395,7 +342,7 @@ airplane_01,33,68,4	script	Clarice	1_F_MERCHANT_02,{
 		mes "Deixe-me dar-lhe suas maçãs de volta.";
 		mes "Foi um grande jogo e espero que possamos jogar novamente em outro momento.";
 		close2;
-		getitem Apple,.@amount;
+		getitem (Apple,.@amount);
 		end;
 	}
 	else if (.@playertotal < .@tabletotal) {

@@ -18,7 +18,7 @@
 // - Uso da chave da torre do relógio
 // ------------------------------------------------------------------
 c_tower3,10,249,4	script	Porteiro#ct	4_M_02,{
-	callfunc "F_ClockTowerGate","4th",7026,"c_tower4",185,44;
+	callfunc ("F_ClockTowerGate","4th",7026,"c_tower4",185,44);
 }
 
 // ------------------------------------------------------------------
@@ -26,7 +26,7 @@ c_tower3,10,249,4	script	Porteiro#ct	4_M_02,{
 // - Uso da chave do subterrâneo
 // ------------------------------------------------------------------
 alde_dun03,264,16,4	script	Porteiro#ct1	4W_F_01,{
-	callfunc "F_ClockTowerGate","B4th",7027,"alde_dun04",79,267;
+	callfunc ("F_ClockTowerGate","B4th",7027,"alde_dun04",79,267);
 }
 
 // ------------------------------------------------------------------
@@ -91,8 +91,8 @@ function	script	F_ClockTowerGate	{
 			mes "Por favor, entre.";
 			mes "Que deus abençoe você..";
 			close2;
-			delitem getarg(1),1;
-			warp getarg(2),getarg(3),getarg(4);
+			delitem (getarg(1),1);
+			warp (getarg(2),getarg(3),getarg(4));
 			end;
 		}
 		else {

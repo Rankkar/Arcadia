@@ -25,13 +25,13 @@ umbala,70,106,3	script	Criança Utan#umb	4_F_UMGIRL,{
 		mes "[???]";
 		mes "Heh! Oi!";
 		mes "Meu nome é Haatan.";
-		emotion e_heh;
+		emotion (e_heh);
 		next;
 		mes "[Haatan]";
 		mes "...*Suspiro*";
 		mes "Me desculpe, mas eu não posso jogar com você agora.";
 		mes "A casa dos meus pais foi atingida por um raio ontem e ele queimou o nosso telhado...";
-		emotion e_sob;
+		emotion (e_sob);
 		next;
 		mes "[Haatan]";
 		mes " . . . !";
@@ -42,22 +42,22 @@ umbala,70,106,3	script	Criança Utan#umb	4_F_UMGIRL,{
 		mes "Você pode doar algum dinheiro para a reconstrução da casa dos meus pais?";
 		mes "Vocês de Rune-Midgard são todos mais ricos do que os Utans!";
 		mes "Eu imploro!";
-		emotion e_heh;
+		emotion (e_heh);
 		next;
 		if (select("Acenar com a cabeça","Negar com a cabeça") == 1) {
 			mes "[Haatan]";
 			mes "Whoaaaa!!";
 			mes "Muito obrigado, yay!";
-			emotion e_swt2;
+			emotion (e_swt2);
 			next;
 			mes "[Haatan]";
 			mes "Muito obrigado!";
-			emotion e_heh;
+			emotion (e_heh);
 			close;
 		}
 		mes "[Haatan]";
 		mes ".............*Sob*...";
-		emotion e_sob;
+		emotion (e_sob);
 		close;
 	}
 	else {
@@ -68,7 +68,7 @@ umbala,70,106,3	script	Criança Utan#umb	4_F_UMGIRL,{
 		mes "[???]";
 		mes "Umbah! Umbaumbah!";
 		mes "Umbahumbah Haatan babah.";
-		emotion e_sob;
+		emotion (e_sob);
 		next;
 		mes "[Haatan]";
 		mes "........umbah,";
@@ -76,7 +76,7 @@ umbala,70,106,3	script	Criança Utan#umb	4_F_UMGIRL,{
 		mes "Babaum babahum woombah umbah umbabah";
 		mes "Umbah umbah";
 		mes "..Umbah umbabah umbah...";
-		emotion e_heh;
+		emotion (e_heh);
 		next;
 		mes "[Haatan]";
 		mes " . . . !";
@@ -86,7 +86,7 @@ umbala,70,106,3	script	Criança Utan#umb	4_F_UMGIRL,{
 		mes "Umbah umbah? Umbah umbahbah";
 		mes "abaum babahum woombah!";
 		mes "Umbahumbah umbabahumbaumhumbah! Umbah!";
-		emotion e_heh;
+		emotion (e_heh);
 		close;
 	}
 }
@@ -99,31 +99,31 @@ umbala,59,243,5	script	Criança Utan#umb2	4_M_UMKID,{
 		mes ".........poop!";
 		mes ".....eu gosto de carne.";
 		mes "....me dê uma carne.";
-		emotion e_rock;
+		emotion (e_rock);
 		next;
 		if (select("Dar-lhe carne.","Recusar.") == 1) {
 			if (countitem(Meat) > 0) {
 				mes "[Kotan]";
 				mes "Whoa, você realmente está me dando";
 				mes "carne? Obrigado!";
-				delitem Meat,1;
-				emotion e_scissors;
+				delitem (Meat,1);
+				emotion (e_scissors);
 				close;
 			}
 			mes "[Kotan]";
 			mes "Hah! Você não tem carne,";
 			mes "mas vai fingir que tem?!";
 			mes "Eu odeio pessoas que mentem para mim!!";
-			percentheal -20,0;
-			emotion e_an;
+			percentheal (-20,0);
+			emotion (e_an);
 			close;
 		}
 		mes "[Kotan]";
 		mes ".........";
 		mes ".....hungwee.";
 		mes ".....Eu quero carne.";
-		percentheal -1,0;
-		emotion e_sob;
+		percentheal (-1,0);
+		emotion (e_sob);
 		close;
 	}
 	else {
@@ -132,7 +132,7 @@ umbala,59,243,5	script	Criança Utan#umb2	4_M_UMKID,{
 		mes "........umbah.";
 		mes ".......umbabah.";
 		mes "......humbah.";
-		emotion e_rock;
+		emotion (e_rock);
 		close;
 	}
 }
@@ -234,7 +234,7 @@ umbala,139,205,4	script	Criança Utan#umb5	4_M_UMDANCEKID2,{
 // ------------------------------------------------------------------
 umbala,177,153,3	script	Pasto#umb	4W_M_01,{
 	mes "[Pasto]";
-	emotion e_gasp;
+	emotion (e_gasp);
 	mes "Oh! Finalmente, outra pessoa de Rune-Midgard!";
 	mes "Eu nunca vi ninguém de casa neste lugar antes!";
 	mes "Prazer em conhecê-lo, meu nome é Pasto!";
@@ -263,7 +263,7 @@ umbala,177,153,3	script	Pasto#umb	4W_M_01,{
 	mes "...Ou conhecer aqui mais pessoas que falem meu idioma...";
 	mes "Eu... Eu estou...";
 	mes "Tão sozinho...*Sob*";
-	emotion e_sob;
+	emotion (e_sob);
 	close;
 }
 
@@ -521,7 +521,7 @@ umbala,92,159,4	script	Bertan#umb	4_M_UMDANCEKID2,{
 		next;
 		mes "[????]";
 		mes "Umbaumba Umbaumbah woo~";
-		emotion e_ho;
+		emotion (e_ho);
 		close;
 	}
 }

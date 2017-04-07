@@ -23,7 +23,7 @@ payon_in01,5,134,5	script	Inventor Jaax#Quiver	4_M_ORIENT02,{
 	mes "Atualmente, eu tenho criado algo verdadeiramente extraordinário.";
 	mes "Eu os chamo de... ^663300Aljaves Mágicos^000000!!";
 	mes "Isto será lembrado na história por uma Revolução das Flechas!";
-	emotion e_no1;
+	emotion(e_no1);
 	next;
 	mes "[Inventor Jaax]";
 	mes "Eu estudei magia e aljaves durante anos, trabalhando noite e dia até que finalmente descobri como condensar flechas com magia!";
@@ -78,8 +78,8 @@ payon_in01,5,134,5	script	Inventor Jaax#Quiver	4_M_ORIENT02,{
 					mes "Aqui estão!";
 					mes "Apenas relembrando, ^FF0000você não poderá utilizar os Aljaves caso seu peso seja maior que 90% do peso máximo^000000.";
 					Zeny -= .@arrow_zeny01;
-					delitem .@arrowItem,.@arrows_used;
-					getitem .@quiverItem,.@quiver;
+					delitem (.@arrowItem,.@arrows_used);
+					getitem (.@quiverItem,.@quiver);
 					next;
 					mes "[Inventor Jaax]";
 					mes "Então...";
@@ -103,8 +103,8 @@ payon_in01,5,134,5	script	Inventor Jaax#Quiver	4_M_ORIENT02,{
 				mes "Aqui está!";
 				mes "Apenas relembrando, ^FF0000você não poderá utilizar os Aljaves caso seu peso seja maior que 90% do peso máximo^000000.";
 				Zeny -= 500;
-				delitem .@arrowItem,500;
-				getitem .@quiverItem,1;
+				delitem (.@arrowItem,500);
+				getitem (.@quiverItem,1);
 				next;
 				mes "[Inventor Jaax]";
 				mes "Então...";

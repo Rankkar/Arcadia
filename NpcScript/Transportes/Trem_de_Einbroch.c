@@ -17,7 +17,7 @@
 // ------------------------------------------------------------------
 einbroch,232,272,3	script	Estação de Trem#EinTrain	4_M_EIN_SOLDIER,{
 	mes "[Funcionário]";
-	mes "Bem vind"+(Sex? "o":"a")+" a estação de trem.";
+	mes "Bem vind"+(Sex?"o":"a")+" a estação de trem.";
 	mes "Trens para Einbech estão sempre passando então se você perder um, não será um problema.";
 	next;
 	mes "[Funcionário]";
@@ -33,7 +33,7 @@ einbroch,232,272,3	script	Estação de Trem#EinTrain	4_M_EIN_SOLDIER,{
 			mes "Todos a bordo!";
 			close2;
 			Zeny -= 200;
-			warp "einbech",43,215;
+			warp ("einbech",43,215);
 			end;
 		}
 		else {
@@ -77,7 +77,7 @@ einbech,39,215,5	script	Equipe da Estação#EinTrain3	4_M_EIN_SOLDIER,{
 			mes "Todos a bordo!";
 			close2;
 			Zeny -= 200;
-			warp "einbroch",226,276;
+			warp ("einbroch",226,276);
 			end;
 		}
 		else {

@@ -88,7 +88,7 @@ rachel,127,117,4	script	Criança#rac2	4_F_CHILD,{
 	mes "Como humanos, é nossa responsabilidade fazer tudo que estiver a nosso alcance para conceber nossa própria felicidade.";
 	mes "Nós acreditamos que se é a vontade de Freya, então será realizada.";
 	next;
-	emotion e_what;
+	emotion (e_what);
 	mes "[Criança]";
 	mes "Eu sei que pode parecer um pouco confuso para um forasteiro.";
 	mes "A ideia de ser confiante em nossa Deusa em vez de ser em nós mesmos.";
@@ -150,7 +150,7 @@ rachel,206,30,3	script	Sacerdote#rac2	4_F_TRAINEE,{
 	next;
 	if (select("Aqui está uma história engraçada...","Eu vou fazer o que você quer que eu faça.") == 1) {
 		mes "^3355FFVocê contou a ela a primeira história engraçada que você pôde lembrar.^000000";
-		specialeffect2 EF_TALK_FROSTJOKE;
+		specialeffect2 (EF_TALK_FROSTJOKE);
 		next;
 		mes "[Sacerdote de Freya]";
 		mes "Isto é supostamente engraçado?";
@@ -205,6 +205,6 @@ rachel,197,137,3	script	Bardo#rac	1_M_BARD,{
 	mes ".........";
 	mes ".........";
 	mes ".........";
-	emotion e_sob;
+	emotion (e_sob);
 	close;
 }

@@ -23,11 +23,11 @@ bat_room,160,159,3	script	General Guillaume	4_M_KY_KIYOM,{
 		mes "Porque não mostra sua bravura ajudando seu povo?";
 		close;
 	}
-	cutin "bat_kiyom2",2;
+	cutin("bat_kiyom2",2);
 	mes "[General Guillaume]";
 	mes "Aventureir"+(Sex?"o":"a")+" de sangue quente, não precisamos de sua habilidade para ganhar esta batalha.";
 	next;
-	cutin "bat_kiyom1",2;
+	cutin("bat_kiyom1",2);
 	mes "[General Guillaume]";
 	mes "Nosso rei, Marcel Marollo VII, estão muito doente.";
 	mes "Vossa Majestade declarou que seria eu ou Príncipe Croix o próximo rei dentre seus 9 filhos.";
@@ -51,11 +51,11 @@ bat_room,160,159,3	script	General Guillaume	4_M_KY_KIYOM,{
 		mes "Agora, suba as escadas e se aliste para a batalha com seus camaradas.";
 		mes "Tenho certeza que eles o receberão de coração aberto!";
 		Bat_Team = 1;
-		close2; cutin "",255; end;
+		close2; cutin("",255); end;
 		case 2:
 		mes "[General Guillaume]";
 		mes "É uma pena seus taletos seriam realmente úteis!";
-		close2; cutin "",255; end;
+		close2; cutin("",255); end;
 	}
 }
 
@@ -81,11 +81,11 @@ bat_room,160,140,3	script	Príncipe Croix	4_M_CRU_CRUA,{
 		mes "Porque não mostra sua bravura ajudando seu povo?";
 		close;
 	}
-	cutin "bat_crua1",2;
+	cutin("bat_crua1",2);
 	mes "[Príncipe Croix]";
 	mes "Aventureir"+(Sex?"o":"a")+", por que não nos empresta seu poder para a vitória?";
 	next;
-	cutin "bat_crua2",2;
+	cutin("bat_crua2",2);
 	mes "[Príncipe Croix]";
 	mes "Eu não quero derramar sangue, mas eu não tenho escolha a não ser lutar pela possibilidade de paz para o amor do meu povo.";
 	next;
@@ -100,11 +100,11 @@ bat_room,160,140,3	script	Príncipe Croix	4_M_CRU_CRUA,{
 		mes "Eu sinto que poderei vencer com a ajuda de aventureir"+(Sex?"o":"a")+"s como você";
 		mes "Agora, por favor suba as escadas e se junte a seus camaradas que estão treinando suas habilidades para lutar com o inimigo!";
 		Bat_Team = 2;
-		close2; cutin "",255; end;
+		close2; cutin("",255); end;
 		case 2:
 		mes "[Príncipe Croix]";
 		mes "Mesmo assim fico-lhe grato por mostrar interesse.";
-		close2; cutin "",255; end;
+		close2; cutin("",255); end;
 	}
 }
 

@@ -142,3 +142,40 @@ morocc,223,102,0	script	Voluntário#moc6::MocVolunteer	2_M_BARD_ORIENT,{
 	close;
 }
 morocc,226,102,4	duplicate(MocVolunteer)	Voluntário#moc7	4_F_JOB_BLACKSMITH
+
+// ------------------------------------------------------------------
+morocc,54,251,0	script	Bêbado#mocr	4_M_ORIENT02,{
+	mes "[Bêbado]";
+	mes "Espere um segundo...!";
+	mes "Você é talvez um aventureiro?";
+	mes "Como vai a sua viagem?";
+	mes "Heh heh...";
+	next;
+	mes "[Bêbado]";
+	mes "Deixe-me te contar uma história.";
+	mes "Você sabe que eu acabei de sair daquela taberna, alí, né?";
+	next;
+	mes "[Bêbado]";
+	mes "Eu ouvi que Satan Morroc chegou.";
+	mes "Simplesmente saiu da fissura do tempo e do espaço blá...";
+	mes "hic............";
+	next;
+	mes "[Bêbado]";
+	mes "Ah... Eu quero ver este Satan com meus próprios olhos!";
+	mes "Mas eu realmente não deveria.";
+	mes "Nem em sonho eu veria este Satan em pessoa.";
+	next;
+	mes "[Bêbado]";
+	mes "Mas eu acho que não teria nada a perder se você, uma pessoa de coragem.";
+	mes "Que veio através do deserto tentar seduzir para encontrá-lo, não acha?";
+	mes "Teehee........";
+	mes "Não se esqueça de me pagar uma bebida quando você encontrá-lo!";
+	mes "Hic!";
+	next;
+	mes "[Bêbado]";
+	mes "Enfim, você sabe onde estamos?";
+	mes "Eu só estava dando uma bebidinha na taverna.";
+	mes "mas repentinamente, todos os cidadões haviam desaparecido quando saí...";
+	mes "Ou, uns quinhentos anos se passaram???!";
+	close;
+}

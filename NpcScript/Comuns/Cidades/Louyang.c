@@ -24,7 +24,7 @@ louyang,297,167,2	script	Mulher Musculosa#lou	4_F_CHNDRESS1,{
 		mes "[Zhi Ching Li]";
 		mes "Recentemente nós tivemos um treinamento pesado de novos membros.";
 		mes "Então eu estou aqui para checar se há alguma mulher querendo se alistar.";
-		emotion e_dots;
+		emotion (e_dots);
 		close;
 	}
 	mes "[Zhi Ching Li]";
@@ -132,9 +132,9 @@ louyang,274,131,0	script	Aprendiz#lou5	4_M_CHN8GUEK,{
 
 louyang,274,129,0	script	Aprendiz#lou6	4_M_CHN8GUEK,{
 	mes "[Aprendiz]";
-	mes "Yeeeyap~!";
+	mes "Yeeeyap!";
 	mes "Taaaaaah!!";
-	mes "Hooo~";
+	mes "Hooo";
 	close;
 }
 
@@ -149,9 +149,6 @@ louyang,272,129,0	duplicate(Aprendiz#lou6)	Aprendiz#12lou	4_M_CHN8GUEK
 // - [ Casas(Torre) ] -
 // ------------------------------------------------------------------
 lou_in01,25,23,5	script	Garota Amigável#lo	4_F_CHNDRESS3,{
-	mes "[Hong Miao]";
-	mes "Bem-Vindo.";
-	next;
 	mes "[Hong Miao]";
 	mes "Este é um elevador que leva a Torre de Observação.";
 	mes "Nós providenciamos um transporte seguro e rápido por um preço barato.";
@@ -179,7 +176,7 @@ lou_in01,25,23,5	script	Garota Amigável#lo	4_F_CHNDRESS3,{
 		mes "Volte sempre.";
 		next;
 		Zeny -= 500;
-		warp "lou_in01",17,19;
+		warp ("lou_in01",17,19);
 		end;
 		case 3:
 		mes "[Hong Miao]";
@@ -195,7 +192,7 @@ louyang,84,254,0	script	Saída#lou	HIDDEN_NPC,{
 	next;
 	if (select("Sim.","Não.") == 1) {
 		close2;
-		warp "lou_in01",10,18;
+		warp ("lou_in01",10,18);
 		end;
 	}
 	close;

@@ -37,7 +37,7 @@ alde_alche,24,188,3	script	Comerciante da Guilda	2_M_ALCHE,{
 			case 2:
 			if ((MaxWeight - Weight) < 10) {
 				mes "[Gever Al Sharp]";
-				mes "Parece que você está levando muito peso e não vao poder carregar um manual.";
+				mes "Parece que você está levando muito peso e não vai poder carregar um manual.";
 				mes "Diminua o peso de itens que carrega antes de processeguir com a negociação.";
 				close;
 			}
@@ -57,49 +57,49 @@ alde_alche,24,188,3	script	Comerciante da Guilda	2_M_ALCHE,{
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Poções Comuns.";
 					Zeny -= 100000;
-					getitem Normal_Potion_Book,1;
+					getitem (Normal_Potion_Book,1);
 					close;
 					case 2:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Álcool.";
 					Zeny -= 100000;
-					getitem Alcol_Create_Book,1;
+					getitem (Alcol_Create_Book,1);
 					close;
 					case 3:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Fogo Grego.";
 					Zeny -= 100000;
-					getitem FireBottle_Create_Book,1;
+					getitem (FireBottle_Create_Book,1);
 					close;
 					case 4:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Ácidos.";
 					Zeny -= 100000;
-					getitem Acid_Create_Book,1;
+					getitem (Acid_Create_Book,1);
 					close;
 					case 5:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Plantas.";
 					Zeny -= 100000;
-					getitem Plant_Create_Book,1;
+					getitem (Plant_Create_Book,1);
 					close;
 					case 6:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Esferas-Marinhas.";
 					Zeny -= 100000;
-					getitem Mine_Create_Book,1;
+					getitem (Mine_Create_Book,1);
 					close;
 					case 7:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Revestimentos.";
 					Zeny -= 100000;
-					getitem Coating_Create_Book,1;
+					getitem (Coating_Create_Book,1);
 					close;
 					case 8:
 					mes "[Gever Al Sharp]";
 					mes "Está aqui seu Manual de Criação de Poções Compactas.";
 					Zeny -= 100000;
-					getitem Slim_Potion_Create_Book,1;
+					getitem (Slim_Potion_Create_Book,1);
 					close;
 					case 9:
 					mes "[Gever Al Sharp]";
@@ -118,7 +118,7 @@ alde_alche,24,188,3	script	Comerciante da Guilda	2_M_ALCHE,{
 		mes "Se quiser cancelar digite '0'";
 		mes "E só posso vender até 1000 itens por vez.";
 		next;
-		input .@input;
+		input (.@input);
 		if (.@input == 0) {
 			mes "[Gever Al Sharp]";
 			mes "Você cancelou a negociação";
@@ -152,7 +152,7 @@ alde_alche,24,188,3	script	Comerciante da Guilda	2_M_ALCHE,{
 					mes "Foi um prazer fazer negócios com você.";
 					mes "Volte sempre.";
 					Zeny -= .@total_price;
-					getitem .@item,.@input;
+					getitem (.@item,.@input);
 					close;
 				}
 			}

@@ -715,190 +715,203 @@ aldeba_in,152,47,4	script	Homem Inquieto#alde	4W_M_01,{
 }
 
 // ------------------------------------------------------------------
-aldeba_in,156,179,4	script	Chefe#alde	1_M_PUBMASTER,{
-	mes "[Chefe]";
-	mes "A matriz da Corporação Kafra é localizada aqui em Al De Baran.";
-	mes "Você sabe o que isso significa?";
+aldeba_in,156,179,4	script	Gerente do Bar#alde	1_M_PUBMASTER,{
+	mes "[Gerente do Bar]";
+	mes "A Sede da Corporação Kafra está localizada aqui em Al De Baran.";
+	mes "Sabe o que isso significa?";
 	next;
-	mes "[Chefe]";
-	mes "Isso significa que aquelas Kafras vêm aqui na hora do almoço! Isso não é legal?!";
+	mes "[Gerente do Bar]";
+	mes "Isso significa que aquelas lindas funcionárias vêm aqui para almoçar, não é maravilhoso?!";
 	next;
-	mes "[Chefe]";
-	mes "Certo, então!";
-	mes "Hora do Quiz!";
-	mes "Quem é sua garota Kafra favorita?";
+	mes "[Gerente do Bar]";
+	mes "Muito bem!";
+	mes "Está na hora das perguntas!";
+	mes "Qual sua Kafra favorita?";
 	next;
-	if (Sex == SEX_FEMALE) {
-		mes "[Master]";
+	if (Sex == 0) {
+		mes "[Gerente do Bar]";
 		mes "Ah, não se preocupe.";
-		mes "Eu sei que garotas têm um tipo de opinião sobre como as outras garotas são bonitas.";
-		next;
+		mes "Eu sei que as meninas têm alguma opinião sobre as outras meninas.";
+		mes "Mas quero saber a opinião dos garotos.";
+		close;
 	}
-	if (select("Legal!:Não, não sou um pervetido.") == 1) {
-		mes "[Chefe]";
-		mes "Certo, aqui vai!";
-		mes "Escolha sua Kafra Favorita!";
+	if (select("Impressionante!","De jeito nenhum, eu não sou pevertido.") == 1) {
+		mes "[Gerente do Bar]";
+		mes "Muito bem, aqui vamos nós!";
+		mes "Escolha a sua Fafra favorita!";
 		next;
-		mes "[Chefe]";
-		mes "A mascote original Kafra, a kafra de cabelo azul, nossa Candidata número 1:";
-		mes "^3355FFPavianne^000000!";
+		mes "[Gerente do Bar]";
+		mes "A Kafra original, com seus lindos cabelos azuis!";
+		mes "Candidata número um: ^3355FFDenise^000000!";
+		mes "Ela é graciosa, usa o cabelo com rabo-de-cavalo, tira o fôlego dos homens.";
+		mes "E é a favorita entre os adolescentes!";
 		next;
-		mes "[Chefe]";
-		mes "Seu gracioso rabo de cavalo faz é de tirar o fôlego dos homens!";
-		mes "Cadidata Número 2: ^5533FFBlossom^000000!";
+		mes "[Gerente do Bar]";
+		mes "Candidata número dois: ^5533FFTatiana^000000!";
+		mes "Seus cabelos longos e lisos, é o ponto do seu charme.";
+		mes "Ela veio de Payon.";
 		next;
-		mes "[Chefe]";
-		mes "Seu longo e liso cabelo, como seda do Leste é seu charme.";
-		mes "Direto de Payon, Cadidata Número 3:";
-		mes "^555555Jasmine^000000!";
+		mes "[Gerente do Bar]";
+		mes "Candidata número três: ^555555Marianne^000000!";
+		mes "Ela tem um jeito sorridente, cabelo curto cor alaranjado.";
 		next;
-		mes "[Chefe]";
-		mes "Uma garota com cabelo curto e laranja brilhante.";
-		mes "Candidata Número 4: ^1133DDRoxie^000000!";
+		mes "[Gerente do Bar]";
+		mes "Candidata número quatro: ^1133DDBianca^000000!";
+		mes "Inteligente, sofisticada e nunca vista sem seus óculos luxuosos.";
 		next;
-		mes "[Chefe]";
-		mes "Inteligente, sofisticada e nunca é vista sem seus óculos luxuosos.";
-		mes "É a Candidata Número 5: ^33FF55Leilah^000000!";
+		mes "[Gerente do Bar]";
+		mes "Candidata número cinco: ^33FF55Sofia^000000!";
+		mes "Linda, fofa e novata.";
+		mes "Ela parece jovem e imatura, mas é a melhor da equipe!";
+		mes "Candidata número seis ^AAAA00Deborah^000000 !!";
 		next;
-		mes "[Chefe]";
-		mes "Bonita e graciosa. Apesar de parecer jovem e imatura, ela é a melhor funcionária.!";
-		mes "Candidata Número 6: ^AAAA00Curly Sue^000000 !!";
-		next;
-		switch(select("(1) Pavianne","(2) Blossom","(3) Jasmine","(4) Roxie","(5) Leilah","(6) Curly Sue")) {
+		switch(select("Denise","Tatiana","Marianne","Bianca","Sofia","Deborah")) {
 			case 1:
-			mes "[Chefe]";
-			mes "Oh";
-			mes "Então você é amante dos clássicos.";
+			mes "[Gerente do Bar]";
+			mes "Oh!";
+			mes "Então você gosta das clássicas né!";
 			mes "Eu respeito isso.";
 			next;
-			mes "[Chefe]";
-			mes "Acho que você tende a gostar de Filmes originais mais do que sequências, e odeia imitações ruins.";
-			mes "Estou certo?";
+			mes "[Gerente do Bar]";
+			mes "Eu suponho que você gosta de filmes originais.";
+			mes "Não gosta de se beneficiar com más imitações. Estou certo?";
 			close;
 			case 2:
-			mes "[Chefe]";
-			mes "Hmmm...";
-			mes "Blossom me parece o tipo vizinha.";
-			mes "Então eu acho que esse é o tipo de garota que atrai você, não é?";
+			mes "[Gerente do Bar]";
+			mes "Humm...";
+			mes "Tatiana, Parece-me que esta garota está atraindo muitos por aí, hein?";
 			close;
 			case 3:
-			mes "[Chefe]";
+			mes "[Gerente do Bar]";
 			mes "Então...";
-			mes "Cabelo longo e luxuoso é importante para você, hmm?";
-			mes "Eu acho que esse tipo de cabelo deixam uma mulher elegante.";
+			mes "Cabelos compridos e luxuosos é importante para você, hein?";
+			mes "Suponho que esse tipo de cabelo dá as mulheres um olhar elegante.";
 			close;
 			case 4:
-			mes "[Chefe]";
-			mes "Ah, então você gosta do tipo espontâneo e ativo.";
-			mes "Eu entendo isso...";
+			mes "[Gerente do Bar]";
+			mes "Ah, então você gosta das agitadas, e espontâneas.";
+			mes "Eu entendo perfeitamente...";
 			next;
-			mes "[Chefe]";
-			mes "Já que Roxie não é exatamente do tipo Dona de Casa, você provavelmente tem uma mente aberta quando se trata de definir feminilidade, certo?";
+			mes "[Gerente do Bar]";
+			mes "Bianca não é exatamente o tipo dona de casa.";
+			mes "Você provavelmente tem a mente aberta quando se trata de definir feminilidade, certo?";
 			close;
 			case 5:
-			mes "[Chefe]";
+			mes "[Gerente do Bar]";
 			mes "Ah, então você gosta do tipo intelectual.";
-			mes "Isso é bom.";
+			mes "Isso é bom, isso é bom.";
 			next;
-			mes "[Chefe]";
-			mes "Ainda sim, Leilah pode ser fria como pedra as vezes.";
-			mes "Eu ja vi ela ignorar muitos homens e despedaçar ainda mais corações!";
+			mes "[Gerente do Bar]";
+			mes "Bem, Sofia pode ser fria como uma pedra às vezes.";
+			mes "Mas eu já vi ela balançando o coração de muitos por ai!";
 			close;
 			case 6:
-			mes "[Chefe]";
-			mes "Como ééé?!";
-			mes "Ela é muito nova!";
+			mes "[Gerente do Bar]";
+			mes "Massss o que?!";
+			mes "Ela é jovem demais!";
 			close;
 		}
 	}
-	mes "[Chefe]";
-	mes "Mas eu trabalhei tanto nessa pesquisa!";
-	mes "Vamos, leve na esportiva! Admirar uma garota bonita é como apreciar uma peça de arte.";
+	mes "[Gerente do Bar]";
+	mes "Mas eu trabalhei duro nessas perguntas!";
+	mes "Leve na esportiva!";
+	mes "Admirar uma bela mulher é como apreciar uma arte.";
 	close;
 }
 
 // ------------------------------------------------------------------
-aldeba_in,83,245,4	script	Funcionária Kafra#alde	4_F_KAFRA2,{
-	cutin "kafra_02",2;
-	mes "[Kafra Blossom]";
+aldeba_in,84,166,4	script	Denise#alde	4_F_KAFRA1,{
+	cutin ("kafra_01",2);
+	mes "[Kafra Denise]";
+	mes "Oi eu sou a Denise,";
+	mes "Nós, Funcionárias Kafra, estamos trabalhando para a Corporação Kafra, tentando satisfazer 100% nossos clientes.";
+	close2;
+	cutin ("",255);
+	end;
+}
+
+// ------------------------------------------------------------------
+aldeba_in,83,245,4	script	Tatiana#alde	4_F_KAFRA2,{
+	cutin ("kafra_02",2);
+	mes "[Kafra Tatiana]";
 	mes "Bem-vindo a Corporação Kafra.";
 	mes "As Funcionárias Kafras estarão sempre aqui para servir você.";
 	next;
-	mes "[Kafra Blossom]";
+	mes "[Kafra Tatiana]";
 	mes "Nós apreciamos o seu contínuo uso do Serviço Kafra.";
 	mes "Por favor se sinta livre para perguntar se tiver alguma dúvida.";
 	next;
 	switch(select("Como o Armazém Kafra funciona?","Como você teletransporta as pessoas?")) {
 		case 1:
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Bom, Aventureiros como você pode colocar itens no Armazém Kafra, assim você não vai precisar ficar levando todas as suas coisas.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "A janela do Armazém Kafra é separada em 3 abas onde os itens são separados automaticamente.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "As ^3355FFItem^000000, ^3355FFEquip^000000, e ^3355FFEtc^000000 abas funcionam do mesmo jeito que as abas no inventário dos itens.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Múltiplos itens do mesmo tipo vão apenas ocupar um Slot em Item ou em Etc.";
 		mes "Por exemplo, 324 Jellopies vão apenas ocupar um Slot, e 22 Poções Vermelhas vão ocupar outro Slot.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Mas, na aba Equip, cada equipamento ocupa seu próprio Slot.";
 		mes "Eu acho que é porque cada equipamento pode ser aprimorado com cartas ou refinamento.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Exite um total de 300 Slots para todas as categorias de itens no Armazém Kafra, é bom se lembrar disso.";
 		close;
 		case 2:
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Oh, todos me fazem essa pergunta.";
-		mes "'^CC0066Oh Blossom, como você faz isso?^000000'";
+		mes "'^CC0066Oh Tatiana, como você faz isso?^000000'";
 		mes "Bem...";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Eu não posso entrar em muito detalhes, claro.";
 		mes "Isso é informação confidencial.";
 		mes "Mas eu posso dizer que nosso teletransporte funciona com uma mistura de mágica e tecnologia.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Também, as Funcionárias Kafras sozinhas não podem teletransportar os clientes.";
 		mes "Nós apenas recebemos e processamos seu pedido de Teletransporte.";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Atrás dos panos, profissionais habilidosos estão trabalhando 24 horas por dia para assegurar que você chegue rápido e seguro no seu destido.";
 		close;
 	}
-	mes "[Kafra Blossom]";
+	mes "[Kafra Tatiana]";
 	mes "Em todo caso, espero que você goste da visita à Sede da Corporação Kafra.";
 	if (rand(1,11) == 9) {
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "...";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "...";
 		mes "......";
 		next;
-		mes "[Kafra Blossom]";
+		mes "[Kafra Tatiana]";
 		mes "Oh Mansoo...";
 	}
 	close2;
-	cutin "",255;
+	cutin ("",255);
 	end;
 }
 
 // ------------------------------------------------------------------
-aldeba_in,24,245,4	script	Funcionária Kafra#2alde	4_F_KAFRA3,{
-	cutin "kafra_03",2;
-	mes "[Kafra Jasmine]";
+aldeba_in,24,245,4	script	Marianne#2alde	4_F_KAFRA3,{
+	cutin ("kafra_03",2);
+	mes "[Kafra Marianne]";
 	mes "Bem-vindo!";
 	mes "O Serviço Kafra está sempre ao seu lado.";
 	next;
-	mes "[Kafra Jasmine]";
+	mes "[Kafra Marianne]";
 	mes "Obrigada por vir nos visitar na Sede da Corporação Kafra aqui em Al De Baran!";
 	next;
-	mes "[Kafra Jasmine]";
+	mes "[Kafra Marianne]";
 	mes "O Serviço Kafra tem uma reputação com os clientes que foi formada por mais de cinco mil e oitocentos anos...";
 	next;
 	switch(select("O quê?! Não acredito!","Ahh Cale a boca!","Seus Serviços são ótimos!")) {
@@ -910,148 +923,148 @@ aldeba_in,24,245,4	script	Funcionária Kafra#2alde	4_F_KAFRA3,{
 		mes "["+ strcharinfo(0) +"]";
 		mes "CINCO MIL E OITOCENTOS ANOS?! VOCÊ ESTÁ LOUCA?!";
 		next;
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Eu levei uma semana para memorizar tudo isso!";
 		mes "Minha memória não é tão boa quanto a das outras Funcionárias Kafra...!";
 		next;
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Agora, err...";
 		mes "Como eu estava dizendo, a Corporação Kafra foi fundada há oito mil e quinhentos anos atrás por Emilio Alexander Kafra...";
 		mes "Criador da Palavra 'Kafra?'";
 		next;
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Ele...";
 		mes "Ele era um bom homem.";
 		mes "Ele...Grr!";
 		mes "Não consigo lembrar!";
 		next;
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Ah não...!";
 		mes "Essa não pode ser a história certa!";
 		mes "Cinco mil e oitocentos...?!";
 		mes "É impossivel!";
 		close;
 		case 2:
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Escuta...";
 		mes "Cara.";
 		next;
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Eu era uma membra das Tropas Kafra antes de entrar no Time do Serviço Kafra.";
 		mes "Minha especialidade era ^990000Impacto Explosivo^000000, então se você sabe o que é bom para você.";
 		mes "Não mexa comigo.";
 		next;
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Eu tento ao máximo viver tão feminina e quieta que eu puder.";
 		mes "Então não me faça quebrar seus ossos! Entendeu?!";
 		close;
 		case 3:
-		mes "[Kafra Jasmine]";
+		mes "[Kafra Marianne]";
 		mes "Oraa!";
 		mes "Boas notícias para ouvir.";
 		mes "Nós sempre estamos trabalhando duro para satisfazer nossos clientes com os serviços que nós oferecemos.";
 		close;
 	}
 	close2;
-	cutin "",255;
+	cutin ("",255);
 	end;
 }
 
 // ------------------------------------------------------------------
-aldeba_in,142,238,4	script	Funcionária Kafra#3alde	4_F_KAFRA4,{
-	cutin "kafra_04",2;
-	mes "[Kafra Roxie]";
+aldeba_in,142,238,4	script	Bianca#3alde	4_F_KAFRA4,{
+	cutin ("kafra_04",2);
+	mes "[Kafra Bianca]";
 	mes "Bem-vind"+(Sex? "o":"a")+"!";
 	mes "A Corporação Kafra sempre ajudará os aventureiros de Rune-Midgard com os nossos excelentes serviços.";
 	next;
-	mes "[Kafra Roxie]";
-	mes "Meu nome é Roxie!";
+	mes "[Kafra Bianca]";
+	mes "Meu nome é Bianca!";
 	mes "Eu espero que você goste da sua visita a Sede da Corporação Kafra.";
 	next;
-	mes "[Kafra Roxie]";
+	mes "[Kafra Bianca]";
 	mes "Estou aqui para responder qualquer uma das suas dúvidas em relação a Política da Corporação Kafra, assim como registrar qualquer opinião.";
 	next;
 	switch(select("Política Kafra","Eu amo a Kafra!")) {
 		case 1:
-		mes "[Kafra Roxie]";
+		mes "[Kafra Bianca]";
 		mes "Então, você gostaria de mais detalhes sobre nossa política e a elegibilidade dos nossos serviços?";
 		mes "O que você gostaria de saber mais sobre?";
 		next;
 		switch(select("Armazém Kafra","Aluguel de Carrinho","Na verdade, nem importa.")) {
 			case 1:
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Como você já sabe, nossos clientes devem ter pelo menos nível 6 em Habilidades Básicas para poder usar o Armazém Kafra.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "A razão para essa política é que nós tivemos problemas com jovens Aprendizes, que colocariam tudo o quê tem dentro do Armazém.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Lembre-se dos dias de Aprendiz.";
 			mes "Tudo era novo e excitante, mas o zeny era escasso.";
 			mes "Bem, muitos Aprendizes colocariam até mesmo suas armas e armaduras no Armazém.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Mas, nessa altura, eles já gastaram aquele pouco zeny que tinham para abrir o Armazém.";
 			mes "E então eles não vão ter dinheiro para acessar de novo!";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Então, esse Aprendiz sem arma e sem armadura vai lutar contra monstros até conseguir zeny suficiente para abrir o Armazém de novo!";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "É um pequeno erro, na verdade, nós aqui da Corporação Kafra valorizamos a vida humana.";
 			mes "Então decidimos que nível 6 em Habilidades Básicas é um requerimento para prevenir esse tipo de problema.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 			case 2:
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Como você sabe, a Corporação Kafra tem uma relação especial com a Guilda dos Mercadores.";
 			mes "Assim como a Guilda dos Ferreiros e dos Alquimistas.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "A Corporação Kafra apenas aluga Carrinhos para Mercadores, Ferreiros e Alquimistas.";
 			mes "Já que essas classes têm um contrato especial conosco.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Mas também, não teria sentido vender carrinhos para pessoas que não possam vender mercadorias.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Para os Super Aprendizes, bem, não devemos alugar carrinhos para eles já que a Sociedade dos Super Aprendizes não tem contrato conosco.";
 			next;
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Se uma Funcionária Kafra alugar um carro para um Super Aprendiz, ela provavelmente vai arrumar problemas com Leilah...";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 			case 3:
-			mes "[Kafra Roxie]";
+			mes "[Kafra Bianca]";
 			mes "Oh, Ok!";
 			mes "Se tiver qualquer pergunta, por favor me diga!";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		case 2:
-		mes "[Kafra Roxie]";
+		mes "[Kafra Bianca]";
 		mes "Obrigada!";
 		mes "É sempre bom saber que somos apreciadas por nossos clientes!";
 		mes "Todas nós trabalhamos duro para assegurar que o nosso serviço esteja ao seus padrões de excelência~";
-		close2; cutin "",255; end;
+		close2; cutin ("",255); end;
 	}
 }
 
 // ------------------------------------------------------------------
-aldeba_in,91,244,4	script	Funcionária Kafra#4alde	4_F_KAFRA6,{
-	cutin "kafra_06",2;
-	mes "[Kafra Curly Sue]";
+aldeba_in,91,244,4	script	Deborah#4alde	4_F_KAFRA6,{
+	cutin ("kafra_06",2);
+	mes "[Kafra Deborah]";
 	mes "Olá, Olá!!";
-	mes "Eu sou Curly Sue, a mais nova membra das Funcionárias Kafra!";
+	mes "Eu sou Deborah, a mais nova membra das Funcionárias Kafra!";
 	next;
-	mes "[Kafra Curly Sue]";
+	mes "[Kafra Deborah]";
 	mes "Eu posso ainda precisar aprender mais sobre como servir nossos clientes.";
 	mes "Mas eu estou sempre me esforçando!";
 	next;
 	if (select("Cadê sua mãe, criança?:Finalizar Conversa.") == 1) {
-		mes "[Kafra Curly Sue]";
+		mes "[Kafra Deborah]";
 		mes "Waaaaaaah!";
 		mes "Eu não sou uma criança!";
-		close2; cutin "",255; end;
+		close2; cutin ("",255); end;
 	}
-	mes "[Kafra Curly Sue]";
+	mes "[Kafra Deborah]";
 	mes "Aqui na Corporação Kafra, nós estamos sempre fazendo o melhor para oferecer o excelente serviço que você espera de nós.";
-	close2; cutin "",255; end;
+	close2; cutin ("",255); end;
 }

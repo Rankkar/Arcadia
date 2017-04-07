@@ -27,7 +27,7 @@ einbroch,175,196,5	script	Morei#einTower	4_M_EINMAN2,{
 		mes "Deixe-me levá-lo para o térreo.";
 		mes "Obrigado por usar nossos serviços.";
 		close2;
-		warp "einbroch",170,229;
+		warp ("einbroch",170,229);
 		end;
 		case 2:
 		mes "[Morei]";
@@ -40,7 +40,7 @@ einbroch,175,196,5	script	Morei#einTower	4_M_EINMAN2,{
 // ------------------------------------------------------------------
 -	script	EinTower	FAKE_NPC,{
 	mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
-	mes "Bom dia~";
+	mes "Bom dia!";
 	mes "Eu sou "+strnpcinfo(NPC_NAME_VISIBLE)+", seu guia de exploração da Torre de Einbroch.";
 	next;
 	mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
@@ -65,7 +65,7 @@ einbroch,175,196,5	script	Morei#einTower	4_M_EINMAN2,{
 			mes "Deixe-me guiá-lo para a Torre agora mesmo.";
 			Zeny -= 10;
 			close2;
-			warp "einbroch",181,196;
+			warp ("einbroch",181,196);
 			end;
 		}
 		case 2:
@@ -89,9 +89,9 @@ einbroch,175,196,5	script	Morei#einTower	4_M_EINMAN2,{
 				mes "Obrigado por utilizar nossos serviços.";
 				mes "Deixe-me guiá-lo para a Torre agora mesmo.";
 				Zeny -= 20;
-				getitem Apple,1;
+				getitem (Apple,1);
 				close2;
-				warp "einbroch",174,204;
+				warp ("einbroch",174,204);
 				end;
 			}
 		}

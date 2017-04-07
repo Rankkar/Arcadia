@@ -18,7 +18,7 @@ ra_fild12,45,230,3	script	Guia do Dirigível#rafild	4_M_RASWORD,{
 	mes "O serviço de Dirigível internacional da República de Schwaltzvalt para Arunafeltz só pode ser acessado em Rachel.";
 	mes "Por favor";
 	mes "siga a marca no seu Mini-Mapa para encontrar o Aeroporto.";
-	viewpoint 1,293,208,1,0xFF0000;
+	viewpoint (1,293,208,1,0xFF0000);
 	close;
 }
 

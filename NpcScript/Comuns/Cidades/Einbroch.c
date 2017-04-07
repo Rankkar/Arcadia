@@ -355,7 +355,7 @@ ein_in01,68,209,5	script	Khashurantze#ein	4_M_EIN_SOLDIER,{
 	mes "Me desculpe, mas você precisa de uma autorização especial para entrar.";
 	mes "Terei que pedir que saia agora.";
 	close2;
-	warp "einbroch",179,63;
+	warp ("einbroch",179,63);
 	end;
 }
 

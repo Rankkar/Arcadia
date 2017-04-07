@@ -113,12 +113,12 @@ ayothaya,241,264,5	script	Jovem Eik#ayo	4_M_THAIONGBAK,{
 		mes "[Eik]";
 		mes "Ei, ei, ei, estava brincando.";
 		mes "Não sou tão rude a ponto de começar uma briga com estranhos sem nenhum motivo.";
-		emotion e_wah;
+		emotion (e_wah);
 		close;
 	}
 	mes "[Eik]";
 	mes "O poder verdadeiro nasce de milhares de lutas.";
 	mes "Não tenha medo de lutar.";
-	emotion e_pif;
+	emotion (e_pif);
 	close;
 }

@@ -18,9 +18,9 @@
 // - [Loretia 1] -
 // ------------------------------------------------------------------
 aldeba_in,79,161,6	script	Kafra#Reserve1	4_F_KAFRA3,{
-	cutin "kafra_03",2;
+	cutin ("kafra_03",2);
 	mes "[Kafra]";
-	mes "Bem-vind"+(Sex? "o":"a")+" ^6666FF"+ strcharinfo(0)+"^000000.";
+	mes "Bem-vind"+(Sex? "o":"a")+" ^6666FF"+ strcharinfo(PC_NAME)+"^000000.";
 	mes "Aqui é onde você pode trocar seus Pontos de Reserva por itens úteis e prêmios legais.";
 	next;
 	mes "[Kafra]";
@@ -33,30 +33,12 @@ aldeba_in,79,161,6	script	Kafra#Reserve1	4_F_KAFRA3,{
 	.@page = 1;
 	while (true) {
 		if (.@page == 1) {
-			setarray .@choices,  100, Sweet_Potato,   7,
-			200, Sweet_Potato,  15,
-			300, Sweet_Potato,  25,
-			400, Sweet_Potato,  35,
-			500, Sweet_Potato,  50,
-			600, Sweet_Potato,  60,
-			700, Sweet_Potato,  75,
-			800, Sweet_Potato,  85,
-			900, Sweet_Potato, 100,
-			1000,        null,   0;
+			setarray (.@choices,100, Sweet_Potato,7,200,Sweet_Potato,15,300,Sweet_Potato,25,400,Sweet_Potato,35,500,Sweet_Potato,50,600,Sweet_Potato,60,700,Sweet_Potato,75,800,Sweet_Potato,85,900,Sweet_Potato,100,1000,null,0);
 			.@ordinal$ = "Primeira";
 			.@changepage$ = "Próximos itens";
 		}
 		else {
-			setarray .@choices, 1100, Sweet_Potato,   7,
-			1300, Sweet_Potato,  15,
-			1500, Sweet_Potato,  25,
-			1700, Sweet_Potato,  35,
-			1900, Sweet_Potato,  50,
-			2100, Sweet_Potato,  60,
-			2300, Sweet_Potato,  75,
-			2500, Sweet_Potato,  85,
-			2800, Sweet_Potato, 100,
-			3000,         null,   0;
+			setarray (.@choices,1100,Sweet_Potato,7,1300,Sweet_Potato,15,1500,Sweet_Potato,25,1700,Sweet_Potato,35,1900,Sweet_Potato,50,2100,Sweet_Potato,60,2300,Sweet_Potato,75,2500,Sweet_Potato,85,2800,Sweet_Potato,100,3000,null,0);
 			.@ordinal$ = "Segunda";
 			.@changepage$ = "Lista Anterior";
 		}
@@ -79,7 +61,7 @@ aldeba_in,79,161,6	script	Kafra#Reserve1	4_F_KAFRA3,{
 			if (.@chosen < .@numitemchoices) {
 				mes "[Kafra]";
 				mes "Aqui estão.";
-				getitem .@choices[.@chosen*3 + 1], .@choices[.@chosen*3 + 2];
+				getitem (.@choices[.@chosen*3 + 1], .@choices[.@chosen*3 + 2]);
 				close;
 			}
 			mes "^0000FF"+.@ordinal$+" Oportunidade de loteria!!^000000";
@@ -98,7 +80,7 @@ aldeba_in,79,161,6	script	Kafra#Reserve1	4_F_KAFRA3,{
 	}
 	mes "[Kafra]";
 	mes "Por favor volte quando tiver mais Pontos de Reserva.";
-	cutin "",255;
+	cutin ("",255);
 	close;
 }
 
@@ -106,9 +88,9 @@ aldeba_in,79,161,6	script	Kafra#Reserve1	4_F_KAFRA3,{
 // - [Loteria 2] -
 // ------------------------------------------------------------------
 aldeba_in,88,161,3	script	Kafra#Reserve2	4_F_KAFRA3,{
-	cutin "kafra_03",2;
+	cutin ("kafra_03",2);
 	mes "[Kafra]";
-	mes "Bem-vindo ^5577FF"+strcharinfo(0)+"^000000.";
+	mes "Bem-vindo ^5577FF"+strcharinfo(PC_NAME)+"^000000.";
 	mes "Atualmente estamos oferecendo um evento especial para nossos clientes.";
 	mes "Você pode ganhar prêmios usando seus ^FF5533Pontos de Reserva Especial^000000 no ^3355FFEvento Prêmio Especial Kafra^000000!!";
 	next;
@@ -152,7 +134,7 @@ aldeba_in,88,161,3	script	Kafra#Reserve2	4_F_KAFRA3,{
 	mes "Sem problemas.";
 	mes "Ganhe mais Pontos de Reserva Especial usando o Serviço Kafra encontrado por toda Rune-Midgard.";
 	mes "Obrigado por usar os Serviços da Corp. Kafra.";
-	cutin "",255;
+	cutin ("",255);
 	close;
 }
 
@@ -172,8 +154,8 @@ function	script	F_Lottery	{
 	mes "Você pode escolher até 5 vezes.";
 	next;
 	input @input;
-	if(@input < 1 || @input > 5) @input = rand(1,5); //Lupus's fix
-	callsub sF_Spin;
+	if(@input < 1 || @input > 5) @input = rand(1,5);
+	callsub (sF_Spin);
 	mes "[Kafra]";
 	mes "Deixe-me ver os resultados... adivinha só?";
 	next;
@@ -181,19 +163,19 @@ function	script	F_Lottery	{
 	mes "^FF0000Deixe-me ver....";
 	mes "Esse é...!!^000000";
 	next;
-	if(@temp <  1) goto sL_Prize1;
-	if(@temp <  2) goto sL_Prize2;
-	if(@temp <  3) goto sL_Prize3;
-	if(@temp <=  4) goto sL_Prize4;
-	goto sL_Prize5;
+	if(@temp <  1) goto (sL_Prize1);
+	if(@temp <  2) goto (sL_Prize2);
+	if(@temp <  3) goto (sL_Prize3);
+	if(@temp <=  4) goto (sL_Prize4);
+	goto (sL_Prize5);
 
 	sL_Prize1:
 	mes "[Kafra]";
 	mes "WOW!!!!..... Você venceu!!!";
 	mes "1º Prêmio! Parabéns.";
-	if(@Lotto == 1) getitem Wooden_Mail,1;
-	if(@Lotto == 2) getitem Mantle,1;
-	if(@Lotto == 3) getitem Berserk_Potion,10;
+	if(@Lotto == 1) getitem (Wooden_Mail,1);
+	if(@Lotto == 2) getitem (Mantle,1);
+	if(@Lotto == 3) getitem (Berserk_Potion,10);
 	if(@Lotto == 4) {
 		getitem Yggdrasilberry,2;
 		getitem Seed_Of_Yggdrasil,1;

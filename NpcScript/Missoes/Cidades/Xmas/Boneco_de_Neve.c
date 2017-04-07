@@ -79,7 +79,7 @@ xmas_in,167,173,4	script	Duffle	4_F_05,{
 
 // ------------------------------------------------------------------
 xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
-	cutin "rutie_snownow03.bmp",2;
+	cutin ("rutie_snownow03.bmp",2);
 	mes "[Boneco de Neve]";
 	mes "Eu...";
 	mes "Me sinto tão sozinho!";
@@ -92,7 +92,7 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 	switch(select("^3355FFBoneco de Neve?^000000","Informações sobre a dungeon natalina","Acabar a conversa")) {
 		case 1:
 		if (xmas_npc < 2) {
-			cutin "rutie_snownow01.bmp",2;
+			cutin ("rutie_snownow01.bmp",2);
 			mes "[Boneco de Neve]";
 			mes "Eu nasci no Norte, num lugar em que nevava o tempo todo.";
 			mes "Era muito mais frio do que aqui em Lutie, pode acreditar.";
@@ -105,7 +105,7 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 			mes "Pensei que pudesse passar o resto da vida daquele jeito.";
 			mes "Mas... não foi assim.";
 			next;
-			cutin "rutie_snownow01.bmp",2;
+			cutin ("rutie_snownow01.bmp",2);
 			mes "[Boneco de Neve]";
 			mes "Um dia, uma mulher feia e idosa chegou na cidade.";
 			mes "Chamavam-na de 'Merlophechum', e ela vinha de uma cidade estranha em que estava sempre calor.";
@@ -114,7 +114,7 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 			mes "Na terceira noite após sua chegada, ela colocou fogo na cidade com uma magia assustadora.";
 			mes "Todos correram em meio ao medo e ao caos. E eu desmaiei.";
 			next;
-			cutin "rutie_snownow02.bmp",2;
+			cutin ("rutie_snownow02.bmp",2);
 			mes "[Boneco de Neve]";
 			mes "Não sei quanto tempo se passou, mas quando acordei, estava aqui.";
 			mes "Bem, posso dizer que Lutie é como se fosse o céu.";
@@ -122,7 +122,7 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 			mes "[Boneco de Neve]";
 			mes "Ninguém nunca se preocupa, e estou sempre ouvindo canções natalinas e coisas assim.";
 			next;
-			cutin "rutie_snownow03.bmp",2;
+			cutin ("rutie_snownow03.bmp",2);
 			mes "[Boneco de Neve]";;
 			mes "Mas ainda assim...";
 			mes "As vezes nem a alegria do Natal consegue curar a escura solidão que existe dentro de mim.";
@@ -131,13 +131,13 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 			mes "Então, quer ser meu amigo?";
 			mes "Se você for, serei seu amigo também.!";
 			close2;
-			cutin "",255;
+			cutin ("",255);
 			end;
 		}
 		else {
 			switch(xmas_npc) {
 				case 2:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Oh...?";
 				mes "Você conheceu Duffle?";
@@ -169,20 +169,20 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "^3355FFcom os olhos fixos no cartão de Poze.^000000";
 				xmas_npc = 3;
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 3:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "...";
 				next;
 				mes "^3355FFBoneco de Neve se perde em pensamentos^000000";
 				mes "^3355FFcom os olhos fixos no cartão de Poze.^000000";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 4:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Ah que legal!";
 				mes "Você conheceu Poze!";
@@ -207,16 +207,16 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "Mas eu sei que ela faz isso porque gosta muito dele!";
 				mes "Hee hee hee!";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 5:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Oh...?";
 				mes "Você conheceu o";
 				mes "^3355FFCantata, o Tio Cabeludo^000000?";
 				next;
-				cutin "rutie_snownow02.bmp",2;
+				cutin ("rutie_snownow02.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Bem, ele fala muito alto, não toma banho e cheira que nem comida podre.";
 				mes "Mas ele é muito legal e bondoso.";
@@ -226,10 +226,10 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "E ele adora beber coisas estranhas.";
 				mes "É um milagre que não passe mal. Hee hee.! Ah, eu amo aquele cara!";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 6:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Oh...?";
 				mes "Você conheceu a ^3355FFTia Mima^000000?";
@@ -246,18 +246,18 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "Ela me traz suco de uva com flocos de neve.";
 				mes "Bem, por favor entregue para ela, amigo.!";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 7:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Snowysnow]";
 				mes "'^3355FFUm item para colher vegetais^000000...'";
 				mes "Uau. A Tia Mima adora vegetais, então ela gostaria disso!";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 8:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Hashokii, o palhaço sem-graça?";
 				mes "Ele não parece muito engraçado mesmo.";
@@ -266,10 +266,10 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "[Boneco de Neve]";
 				mes "Ele faz de tudo para que aqueles órfãos dêem risada e esqueçam os problemas...";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 9:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Ah...";
 				mes "Então você conheceu o Charu Charu?";
@@ -280,10 +280,10 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "Aliás, tenho certeza!";
 				mes "Hee hee hee.!";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 10:
-				cutin "rutie_snownow01.bmp",2;
+				cutin ("rutie_snownow01.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Muito obrigado por me ouvir por tanto tempo.";
 				mes "Gostei muito que você tentou me entender, mesmo sendo um estranho.";
@@ -302,58 +302,58 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				next;
 				switch(.@snownow) {
 					case 1:
-					getitem Candy,5;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Candy,5);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
 					mes "Wow.!";
 					mes "^3355FF5 Balas^000000!";
 					mes "Parabéns!";
 					break;
 					case 2:
-					getitem Candy,10;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Candy,10);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
 					mes "Ooh.!";
 					mes "^3355FF10 Balas^000000!";
 					break;
 					case 3:
-					getitem Candy_Striper,5;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Candy_Striper,5);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
 					mes "Hoooraaaay.!";
 					mes "^3355FF5 Bengalas Doce^000000!";
 					break;
 					case 4:
-					getitem Candy_Striper,10;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Candy_Striper,10);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
 					mes "Wow, Isso é perfeito!";
 					mes "^3355FF10 Bengalas Doce^000000!";
 					break;
 					case 5:
-					getitem Piece_Of_Cake,1;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Piece_Of_Cake,1);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
-					mes "Aren't you lucky!";
-					mes "^3355FF1 Piece Of Cake^000000!";
+					mes "Wow, Isso é perfeito!";
+					mes "^3355FF1 Pedaços de Bolo^000000!";
 					break;
 					case 6:
-					getitem Piece_Of_Cake,2;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Piece_Of_Cake,2);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
-					mes "Now, isn't that nice?";
+					mes "Wow, Isso é perfeito!";
 					mes "^3355FF2 Pedaços de Bolo^000000!";
 					break;
 					case 7:
-					getitem Well_Baked_Cookie,5;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Well_Baked_Cookie,5);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
 					mes "Oh woooooow.!";
 					mes "^3355FF5 Biscoitos^000000!";
 					break;
 					case 8:
-					getitem Well_Baked_Cookie,10;
-					cutin "rutie_snownow02.bmp",2;
+					getitem (Well_Baked_Cookie,10);
+					cutin ("rutie_snownow02.bmp",2);
 					mes "[Boneco de Neve]";
 					mes "*Gasp!* Ooh.";
 					mes "^3355FF10 Biscoitos^000000!";
@@ -366,10 +366,10 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "E Feliz Natal!";
 				xmas_npc = 11;
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 				case 11:
-				cutin "rutie_snownow02.bmp",2;
+				cutin ("rutie_snownow02.bmp",2);
 				mes "[Boneco de Neve]";
 				mes "Olá olá!";
 				next;
@@ -377,12 +377,12 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 				mes "Você é sempre bem-vindo em Lutie, especialmente por mim, Boneco de Neve!";
 				mes "Feliz Natal.!";
 				close2;
-				cutin "",255;
+				cutin ("",255);
 				end;
 			}
 		}
 		case 2:
-		cutin "rutie_snownow01.bmp",2;
+		cutin ("rutie_snownow01.bmp",2);
 		mes "[Boneco de Neve]";
 		mes "Em volta dessa cidade maravilhosa, abençoada pelo Natal, tem uma fábrica horrível, amaldiçoada pelo Natal.";
 		next;
@@ -390,24 +390,24 @@ xmas,134,112,4	script	Boneco de Neve	4_M_SNOWMAN,{
 		mes "Ouvi dizer que é bem decorada e parece uma fábrica de brinquedos, onde tudo é bonitinho.";
 		mes "Tem soldadinhos de brinquedos e caixas de presente por todos os lados.";
 		next;
-		cutin "rutie_snownow02.bmp",2;
+		cutin ("rutie_snownow02.bmp",2);
 		mes "[Boneco de Neve]";
 		mes "Isso não é muuito legal?!";
 		mes "*Suspiro*";
 		mes "Mesmo sabendo que é uma dungeon, gostaria de ir lá dar uma olhada.";
 		mes "Se eu fosse um menino de verdade, ou se ao menos tivesse pernas...";
 		close2;
-		cutin "",255;
+		cutin ("",255);
 		end;
 		case 3:
-		cutin "rutie_snownow03.bmp",2;
+		cutin ("rutie_snownow03.bmp",2);
 		mes "[Boneco de Neve]";
 		mes "Até mais, amigo.!";
 		mes "Obrigado por me ouvir.";
 		mes "Espero te ver novamente!";
 		mes "Você sempre estará no meu coração!";
 		close2;
-		cutin "",255;
+		cutin ("",255);
 		end;
 	}
 }
@@ -468,8 +468,8 @@ xmas,176,236,4	script	Uncle Hairy	4_M_05,{
 			mes "Oh? Vo-você trouxe os ingredientes? Óóóótimo.";
 			mes "Faz tanto tempo que não provo disso... Dê-dê para mim!";
 			next;
-			delitem Chinese_Ink,1;
-			delitem Sticky_Mucus,1;
+			delitem (Chinese_Ink,1);
+			delitem (Sticky_Mucus,1);
 			xmas_npc = 5;
 			mes "^3355FFVocê rapidamente dá a ele o Tinta de Polvo e o Muco Pegajoso,";
 			mes "E olha com um pouco de nojo enquanto ele saboreia o drinque.^000000";

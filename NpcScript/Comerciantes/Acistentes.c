@@ -96,13 +96,13 @@
 	.@mercLevel = .@minLevel + 5;
 	.@mercLoyalty = mercenary_get_faith(getd(.@mercenaryType$));
 	if (.@mercenaryType$ == "SPEAR_MERC_GUILD") {
-		setarray .@arrItem[1],12173,12174,12175,12176,12177,12178,12179,12180,12181,12182;
+		setarray (.@arrItem[1],12173,12174,12175,12176,12177,12178,12179,12180,12181,12182);
 	}
 	if (.@mercenaryType$ == "SWORD_MERC_GUILD") {
-		setarray .@arrItem[1],12163,12164,12165,12166,12167,12168,12169,12170,12171,12172;
+		setarray (.@arrItem[1],12163,12164,12165,12166,12167,12168,12169,12170,12171,12172);
 	}
 	if (.@mercenaryType$ == "ARCH_MERC_GUILD") {
-		setarray .@arrItem[1],12153,12154,12155,12156,12157,12158,12159,12160,12161,12162;
+		setarray (.@arrItem[1],12153,12154,12155,12156,12157,12158,12159,12160,12161,12162);
 	}
 	mes "[Gerente do Clã]";
 	mes "Para contratar um acistente de Nível "+.@level+".";
@@ -136,9 +136,9 @@
 		else {
 			mes "Está aqui seu pergaminho de invocação.";
 			Zeny -= .@zenyrequire;
-			getitem .@arrItem[.@level],1;
+			getitem (.@arrItem[.@level],1);
 			if (.@level == 10) {
-				mercenary_set_faith getd(.@mercenaryType$),-400;
+				mercenary_set_faith (getd(.@mercenaryType$),-400);
 				mes "Pelo contrato com o acistente de Nível 10.";
 				mes "Seus pontos de Lealdade também foram reduzidos em 400 pontos.";
 			}

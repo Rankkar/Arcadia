@@ -27,7 +27,7 @@ moc_fild12,35,303,4	script	Serutero#mocf	1_M_ORIENT01,{
 		mes "E tudo de bom para você!";
 		mes ". . . . .";
 		close2;
-		warp "cmd_fild08",331,319;
+		warp ("cmd_fild08",331,319);
 		end;
 		case 2:
 		mes "[Serutero]";

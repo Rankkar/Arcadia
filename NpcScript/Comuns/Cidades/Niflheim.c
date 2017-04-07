@@ -61,7 +61,7 @@ niflheim,350,258,1	script	Alma Amaldiçoada#nif	4_NFWISP,{
 	next;
 	mes "[Bruce Ashe]";
 	mes "Só porque eu sou um espírito amaldiçoado, você acha que pode aventurar-se a jogar sua maldição em mim?!";
-	emotion e_an;
+	emotion (e_an);
 	next;
 	mes "[Bruce Ashe]";
 	mes "Me recuso deixar";
@@ -79,7 +79,7 @@ niflheim,350,258,1	script	Alma Amaldiçoada#nif	4_NFWISP,{
 // - [ Casas ] -
 // ------------------------------------------------------------------
 nif_in,16,27,1	script	Galinha#nif	4_NFCOCK,{
-	percentheal -5,0;
+	percentheal (-5,0);
 	mes "[Galinha]";
 	mes "Eu vivia uma vida pacífica como uma galinha normal.";
 	mes "Mas veio o dia que eu fui tragicamente morta e comida por humanos.";
@@ -99,7 +99,7 @@ nif_in,16,27,1	script	Galinha#nif	4_NFCOCK,{
 
 // ------------------------------------------------------------------
 nif_in,16,30,4	script	Morcego#nif	4_NFBAT,{
-	percentheal -5,0;
+	percentheal (-5,0);
 	mes "[Morcego]";
 	mes "Oooh, que conveniente, um humano!";
 	mes "Sangue fresco é sempre saboroso...!";

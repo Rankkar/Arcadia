@@ -72,28 +72,28 @@ airplane,250,58,2	script	Funcionário#air	1_F_02,{
 	next;
 	switch (select("Usando o Aeroplano:Cabine do Capitão:Instalações:Cancelar")) {
 		case 1:
-			mes "[Assistente do Aeroplano]";
-			mes "Quando você ver uma mensagem anunciando que nós chegamos ao seu destino.";
-			mes "Por favor, use uma das saídas localizadas ao Norte e ao Sul do aeroplano.";
-			next;
-			mes "[Assistente do Aeroplano]";
-			mes "Se acontecer de você perder sua parada, não se preocupe.";
-			mes "O Aeroplano está constantemente na rota e você terá outra chance de descer em seu destino.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "Quando você ver uma mensagem anunciando que nós chegamos ao seu destino.";
+		mes "Por favor, use uma das saídas localizadas ao Norte e ao Sul do aeroplano.";
+		next;
+		mes "[Assistente do Aeroplano]";
+		mes "Se acontecer de você perder sua parada, não se preocupe.";
+		mes "O Aeroplano está constantemente na rota e você terá outra chance de descer em seu destino.";
+		close;
 		case 2:
-			mes "[Assistente do Aeroplano]";
-			mes "A Cabine do Capitão fica na parte frontal do Aeroplano.";
-			mes "Lá, você pode conhecer o capitão e o piloto do Aeroplano.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "A Cabine do Capitão fica na parte frontal do Aeroplano.";
+		mes "Lá, você pode conhecer o capitão e o piloto do Aeroplano.";
+		close;
 		case 3:
-			mes "[Assistente do Aeroplano]";
-			mes "O Aeroplano possui vários mini-jogos para o entretenimento de todos os passageiros.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "O Aeroplano possui vários mini-jogos para o entretenimento de todos os passageiros.";
+		close;
 		case 4:
-			mes "[Assistente do Aeroplano]";
-			mes "Bem, desejo-lhe uma boa estadia durante o vôo em nosso Aeroplano.";
-			mes "Obrigado e tenha um bom dia.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "Bem, desejo-lhe uma boa estadia durante o vôo em nosso Aeroplano.";
+		mes "Obrigado e tenha um bom dia.";
+		close;
 	}
 }
 
@@ -126,43 +126,43 @@ airplane,72,34,6	script	Aanos#01airplane	4_F_GON,{
 airplane,221,158,2	script	Piloto#air	4_M_EIN_SOLDIER,{
 	switch (rand(1,4)) {
 		case 1:
-			mes "[Piloto]";
-			mes "Faz bastante tempo desde que eu experimentei um bom e gelado álcool.";
-			mes "Mas a profissão requer que eu esteja sempre sóbrio!";
-			next;
-			mes "[Piloto]";
-			mes "Sempre beba com responsabilidade!";
-			mes "Ainda sim, não lembro a última vez que entrei de férias.";
-			mes "Sim, uma bebida, uma TV e tudo ficará ótimo.";
-			emotion e_sob;
-			close;
+		mes "[Piloto]";
+		mes "Faz bastante tempo desde que eu experimentei um bom e gelado álcool.";
+		mes "Mas a profissão requer que eu esteja sempre sóbrio!";
+		next;
+		mes "[Piloto]";
+		mes "Sempre beba com responsabilidade!";
+		mes "Ainda sim, não lembro a última vez que entrei de férias.";
+		mes "Sim, uma bebida, uma TV e tudo ficará ótimo.";
+		emotion (e_sob);
+		close;
 		case 2:
-			mes "[Piloto]";
-			mes "Cara, o clima está ótimo hoje.";
-			mes "Brilho, o céu está aberto com uma boa visibilidade e segurança, um vôo despreocupado.";
-			close;
+		mes "[Piloto]";
+		mes "Cara, o clima está ótimo hoje.";
+		mes "Brilho, o céu está aberto com uma boa visibilidade e segurança, um vôo despreocupado.";
+		close;
 		case 3:
-			mes "[Piloto]";
-			mes "Você sabe, seu capitão é um homem respeitado.";
-			mes "Ele e seu irmão são atualmente os mais conhecidos na indústria aérea.";
-			mes "Quem diría que nos tornariamos capitães de vôo tão bons?";
-			next;
-			mes "[Piloto]";
-			mes "Apenas entre nós...";
-			mes "Tenho que dizer a você o Papai Noel foi para algum lugar com renas e elfos que trabalham para ele.";
-			mes "Aquele cara é um gênio!";
-			close;
+		mes "[Piloto]";
+		mes "Você sabe, seu capitão é um homem respeitado.";
+		mes "Ele e seu irmão são atualmente os mais conhecidos na indústria aérea.";
+		mes "Quem diría que nos tornariamos capitães de vôo tão bons?";
+		next;
+		mes "[Piloto]";
+		mes "Apenas entre nós...";
+		mes "Tenho que dizer a você o Papai Noel foi para algum lugar com renas e elfos que trabalham para ele.";
+		mes "Aquele cara é um gênio!";
+		close;
 		case 4:
-			mes "[Piloto]";
-			mes "Você sabe, toda essa coisa de pilotar no ar, é algo bastante recente, você sabe não é?";
-			mes "Sim, temos um Aeroplano voando a uma incrível velocidade.";
-			next;
-			emotion e_omg;
-			mes "[Piloto]";
-			mes "Ainda assim, há sempre algo sério, realmente acontecendo.";
-			mes "Quer dizer, estávamos treinando enquanto o Aeroplano estava sendo inventado.";
-			mes "Não é uma loucura?!";
-			close;
+		mes "[Piloto]";
+		mes "Você sabe, toda essa coisa de pilotar no ar, é algo bastante recente, você sabe não é?";
+		mes "Sim, temos um Aeroplano voando a uma incrível velocidade.";
+		next;
+		emotion (e_omg);
+		mes "[Piloto]";
+		mes "Ainda assim, há sempre algo sério, realmente acontecendo.";
+		mes "Quer dizer, estávamos treinando enquanto o Aeroplano estava sendo inventado.";
+		mes "Não é uma loucura?!";
+		close;
 	}
 }
 
@@ -193,28 +193,28 @@ airplane_01,250,58,2	script	Funcionário#air01	1_F_02,{
 	next;
 	switch (select("Usando o Aeroplano:Cabine do Capitão:Instalações:Cancelar")) {
 		case 1:
-			mes "[Assistente do Aeroplano]";
-			mes "Quando você ver o aviso anunciando que chegamos no seu destino desejado.";
-			mes "Por favor, use uma das saídas localizadas nas partes norte e sul do Aeroplano.";
-			next;
-			mes "[Assistente do Aeroplano]";
-			mes "Se acontecer de você perder sua parada, não se preocupe.";
-			mes "O Aeroplano está constantemente na rota e você terá outra chance para chegar ao seu destino pretendido.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "Quando você ver o aviso anunciando que chegamos no seu destino desejado.";
+		mes "Por favor, use uma das saídas localizadas nas partes norte e sul do Aeroplano.";
+		next;
+		mes "[Assistente do Aeroplano]";
+		mes "Se acontecer de você perder sua parada, não se preocupe.";
+		mes "O Aeroplano está constantemente na rota e você terá outra chance para chegar ao seu destino pretendido.";
+		close;
 		case 2:
-			mes "[Assistente do Aeroplano]";
-			mes "A Cabine do Capitão fica na parte frontal do Aeroplano.";
-			mes "Lá, você pode conhecer o capitão e o piloto do Aeroplano.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "A Cabine do Capitão fica na parte frontal do Aeroplano.";
+		mes "Lá, você pode conhecer o capitão e o piloto do Aeroplano.";
+		close;
 		case 3:
-			mes "[Assistente do Aeroplano]";
-			mes "O Aeroplano possui vários mini-games para o entretenimento de todos os passageiros.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "O Aeroplano possui vários mini-games para o entretenimento de todos os passageiros.";
+		close;
 		case 4:
-			mes "[Assistente do Aeroplano]";
-			mes "Bem, desejo-lhe uma boa estadia durante o vôo em nosso Aeroplano.";
-			mes "Obrigado e tenha um bom dia.";
-			close;
+		mes "[Assistente do Aeroplano]";
+		mes "Bem, desejo-lhe uma boa estadia durante o vôo em nosso Aeroplano.";
+		mes "Obrigado e tenha um bom dia.";
+		close;
 	}
 }
 
@@ -222,47 +222,47 @@ airplane_01,250,58,2	script	Funcionário#air01	1_F_02,{
 airplane_01,221,158,2	script	Piloto#air_01	4_M_EIN_SOLDIER,{
 	switch (rand(1,4)) {
 		case 1:
-			mes "[Piloto]";
-			mes "Longitude, 131 graus leste.";
-			mes "Latitude, 37 graus norte.";
-			mes "Estamos no curso certo, capitão.";
-			close;
+		mes "[Piloto]";
+		mes "Longitude, 131 graus leste.";
+		mes "Latitude, 37 graus norte.";
+		mes "Estamos no curso certo, capitão.";
+		close;
 		case 2:
-			mes "[Piloto]";
-			mes "Parece ser realmente um dia nublado.";
-			mes "Sempre é difícil navegar quando os céus não estão limpos.";
-			mes "Acho que nós vamos precisar amplificar o radar.";
-			close;
+		mes "[Piloto]";
+		mes "Parece ser realmente um dia nublado.";
+		mes "Sempre é difícil navegar quando os céus não estão limpos.";
+		mes "Acho que nós vamos precisar amplificar o radar.";
+		close;
 		case 3:
-			mes "[Piloto]";
-			mes "O Capitão é um bom homem e eu não consigo pensar em uma pessoa mais fina para comandar este Aeroplano.";
-			mes "Ainda assim, ele é muito duro, um verdadeiro motorista servo.";
-			next;
-			mes "[^ff0000Tarlock^000000]";
-			mes "^ff0000Ei...!^000000";
-			mes "^ff0000Menos bate-papo^000000";
-			mes "^ff0000e mais pilotagem!^000000";
-			next;
-			mes "[Piloto]";
-			mes "C-certo, senhor!";
-			mes "(Viu o que eu quero dizer?)";
-			close;
+		mes "[Piloto]";
+		mes "O Capitão é um bom homem e eu não consigo pensar em uma pessoa mais fina para comandar este Aeroplano.";
+		mes "Ainda assim, ele é muito duro, um verdadeiro motorista servo.";
+		next;
+		mes "[^ff0000Tarlock^000000]";
+		mes "^ff0000Ei...!^000000";
+		mes "^ff0000Menos bate-papo^000000";
+		mes "^ff0000e mais pilotagem!^000000";
+		next;
+		mes "[Piloto]";
+		mes "C-certo, senhor!";
+		mes "(Viu o que eu quero dizer?)";
+		close;
 		default:
-			mes "[Piloto]";
-			mes "Este uniforme é bem elegante, mas é muito chamativo para usar pelo Aeroplano.";
-			next;
-			mes "[Piloto]";
-			mes "...";
-			mes "......";
-			mes "Realmente ninguém nunca entra neste quarto.";
-			mes "E o capitão é uma rena.";
-			mes "Eu podia tirar a minha cueca.";
-			next;
-			emotion e_omg;
-			mes "[Piloto]";
-			mes "Oh...! Olá!";
-			mes "E-e-está aproveitando o vôo?!";
-			close;
+		mes "[Piloto]";
+		mes "Este uniforme é bem elegante, mas é muito chamativo para usar pelo Aeroplano.";
+		next;
+		mes "[Piloto]";
+		mes "...";
+		mes "......";
+		mes "Realmente ninguém nunca entra neste quarto.";
+		mes "E o capitão é uma rena.";
+		mes "Eu podia tirar a minha cueca.";
+		next;
+		emotion (e_omg);
+		mes "[Piloto]";
+		mes "Oh...! Olá!";
+		mes "E-e-está aproveitando o vôo?!";
+		close;
 	}
 }
 
@@ -285,7 +285,7 @@ airplane_01,83,61,2	script	Dianne#01airplane_01	1_F_MARIA,2,2,{
 	close;
 
 	OnTouch:
-	emotion e_sob;
+	emotion (e_sob);
 	end;
 }
 

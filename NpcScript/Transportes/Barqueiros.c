@@ -26,10 +26,7 @@ alberta,189,151,5	script	Marinheiro Fisk#AlbIz	4W_SAILOR,{
 			mes "Eu disse que preciso de 500 Zeny, e parece que você não tem.";
 			close;
 		}
-		close2;
-		Zeny -= 500;
-		warp "izlude",195,212;
-		end;
+		close2; Zeny -= 500; warp ("izlude",195,212); end;
 	}
 	mes "[Marinheiro Fisk]";
 	mes "Bem...";
@@ -60,9 +57,7 @@ alberta,195,151,2	script	Paul#AlbTre	4_M_04,{
 			close;
 		}
 		else {
-			Zeny -= 200;
-			warp "alb2trea",62,69;
-			close;
+			close2; Zeny -= 200; warp ("alb2trea",62,69); end;
 		}
 		case 2:
 		mes "[Paul]";
@@ -76,7 +71,7 @@ alb2trea,39,50,6	script	Paul#2AlbTre	4W_SAILOR,{
 	mes "Deseja voltar para alberta Alberta?";
 	next;
 	if (select("Sim por favor.","Não, Mudei de idéia.") == 1 ) {
-		close2; warp "alberta",192,169; end;
+		close2; warp ("alberta",192,169); end;
 	}
 	close;
 }
@@ -150,10 +145,7 @@ alberta,246,74,3	script	Capitão#Walter	4_M_SEAMAN,{
 				mes "[Walter Moers]";
 				mes "Ok, eu vou içar as velas!";
 				mes "Todos preparem-se para zarpar!";
-				close2;
-				Zeny -= 10000;
-				warp "amatsu",197,83;
-				end;
+				close2; Zeny -= 10000; warp ("amatsu",197,83); end;
 			}
 			mes "[Walter Moers]";
 			mes "Por acaso você não fui claro o suficiente?";
@@ -184,9 +176,7 @@ amatsu,194,79,5	script	Capitão#Walter2	4_M_SEAMAN,{
 		mes "Vou preparar o navio para a partida!";
 		mes "Aposto que você tem muita coisa pra contar quando voltar!";
 		mes "Todos à bordo!";
-		close2;
-		warp "alberta",243,91;
-		end;
+		close2; warp ("alberta",243,91); end;
 	}
 	mes "[Walter Moers]";
 	mes "Tudo bem, fique o tempo que desejar.";
@@ -237,10 +227,7 @@ alberta,246,29,3	script	Aibakthing#ayo	4_M_THAIONGBAK,{
 				mes "Hmm! Hah! Hmm! Hah!";
 				mes "Ah, minha cidade natal, Ayothaya...";
 				mes "Eu estou chegando!";
-				close2;
-				Zeny -= 10000;
-				warp "ayothaya",149,71;
-				end;
+				close2; Zeny -= 10000; warp ("ayothaya",149,71); end;
 			}
 			mes "[Aibakthing]";
 			mes "Como falei para você, sem a taxa de 10.000 zenys você não poderá apreciar a beleza de Ayothaya.";
@@ -268,9 +255,7 @@ ayothaya,152,68,1	script	Barqueiro Aibakthing#ayo2	4_M_THAIONGBAK,{
 		mes "Estaremos aqui sempre para dar as boas-vindas.";
 		mes "Espero que possamos nos rever em breve!";
 		mes "Faça uma boa viagem!";
-		close2;
-		warp "alberta",238,22;
-		end;
+		close2; warp ("alberta",238,22); end;
 	}
 	mes "[Aibakthing]";
 	mes "Ah, eu entendo porque você não quer deixar um lugar tão belo como Ayothaya.";
@@ -322,10 +307,7 @@ alberta,246,62,3	script	Wabakho#gon	4_M_TWMIDMAN,{
 			if (Zeny > 9999) {
 				mes "[Wabakho]";
 				mes "Tripulação, preparem-se para a partida.";
-				close2;
-				Zeny -= 10000;
-				warp "gon_fild01",258,82;
-				end;
+				close2; Zeny -= 10000; warp ("gon_fild01",258,82); end;
 			}
 			mes "[Wabakho]";
 			mes "Eu sinto muito, mas você precisa trazer ^0000FF10,000^000000z para comprar sua passagem.";
@@ -354,9 +336,7 @@ gon_fild01,255,79,7	script	Wabakho#gon2	4_M_TWMIDMAN,{
 		mes "[Wabakho]";
 		mes "Espero que tenha gostado de Kunlun e que volte a nos visitar no futuro.";
 		mes "Tripulação, prepare-se para a partida!";
-		close2;
-		warp "alberta",243,67;
-		end;
+		close2; warp ("alberta",243,67); end;
 	}
 	mes "[Wabakho]";
 	mes "Demore o tempo que quiser aqui, amigo.";
@@ -411,9 +391,7 @@ alberta,246,40,3	script	Garota de Louyang#lou	4_F_CHNDRESS1,{
 				mes "Pronto!";
 				mes "Divirta-se!";
 				close2;
-				Zeny -= 10000;
-				warp "lou_fild01",190,101;
-				end;
+				Zeny -= 10000; warp ("lou_fild01",190,101); end;
 			}
 			mes "[Garota]";
 			mes "...";
@@ -442,9 +420,7 @@ lou_fild01,190,100,7	script	Garota de Louyang#lou2	4_F_CHNDRESS1,{
 		mes "[Garota]";
 		mes "Eu espero te ver novamente!";
 		mes "Tchau Tchau!";
-		close2;
-		warp "alberta",235,45;
-		end;
+		close2; warp ("alberta",235,45); end;
 	}
 	mes "[Garota]";
 	mes "Se você gostar desta área, porque não experimentar a comida e apreciar a paisagem!"; 
@@ -512,10 +488,7 @@ alberta,246,51,4	script	Representante de Moscovia#mosknav	4_F_RUSWOMAN2,{
 		else {
 			mes "[Relações Públicas]";
 			mes "Certo, então, estamos partindo.";
-			close2;
-			Zeny -= 10000;
-			warp "moscovia",163,55;
-			end;
+			close2; Zeny -= 10000; warp ("moscovia",163,55); end;
 		}
 		case 3:
 		mes "[Relações Públicas]";
@@ -539,9 +512,7 @@ moscovia,166,53,4	script	Representante de Moscovia#mosknav2	4_F_RUSWOMAN2,{
 	mes "[Relações Públicas]";
 	mes "Você pode vir quando quiser.";
 	mes "Certo então, vamos lá.";
-	close2;
-	warp "alberta",243,67;
-	end;
+	close2; warp ("alberta",243,67); end;
 }
 
 // ------------------------------------------------------------------
@@ -562,18 +533,15 @@ moscovia,166,53,4	script	Representante de Moscovia#mosknav2	4_F_RUSWOMAN2,{
 			mes "Você não tem dinheiro suficiente para pagar a passagem.";
 			close;
 		}
-		Zeny -= 600;
-		warp "alberta",192,169;
-		end;
+		close2; Zeny -= 600; warp ("alberta",192,169); end;
 		case 2:
 		if (Zeny < 800) {
 			mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 			mes "Você não tem dinheiro suficiente para pagar a passagem.";
 			close;
 		}
-		Zeny -= 800;
-		warp "izlude",195,212;
-		end;
+		close2;
+		Zeny -= 800; warp ("izlude",195,212); end;
 		case 3:
 		mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 		mes "Muito obrigado por escolher a";
@@ -602,7 +570,7 @@ izlude,197,205,1	script	Marinheiro#izlude	4W_SAILOR,{
 			mes "Somente 150 Zeny para partir!";
 			close;
 		}
-		Zeny -= 150; warp "izlu2dun",107,50; end;
+		Zeny -= 150; warp ("izlu2dun",107,50); end;
 		case 2:
 		if (Zeny < 500) {
 			mes "[Marinheiro]";
@@ -610,7 +578,7 @@ izlude,197,205,1	script	Marinheiro#izlude	4W_SAILOR,{
 			mes "Somente 500 Zeny para partir!";
 			close;
 		}
-		Zeny -= 500; warp "alberta",188,169; end;
+		Zeny -= 500; warp ("alberta",188,169); end;
 		case 3:
 		close;
 	}
@@ -621,8 +589,7 @@ izlu2dun,108,27,0	script	Marinheiro#2izlude	4W_SAILOR,{
 	mes "Quer voltar para Izlude?";
 	next;
 	if (select("Sim.","Não, quero ficar mais tempo!") == 1) {
-		warp "izlude",197,210;
-		end;
+		close2; warp ("izlude",197,210); end;
 	}
 	close;
 }
@@ -662,9 +629,7 @@ izlude,171,185,3	script	Auxiliar Lua de Mel#Izl	1_F_LIBRARYGIRL,{
 			Zeny -= 100000;
 			mes "Bon Voyage...!!";
 			mes "Deixe-me guiar você para Jawaii";
-			close2;
-			warp "jawaii",245,125;
-			end;
+			close2; warp ("jawaii",245,125); end;
 		}
 		mes "Como eu expliquei antes, você precisa ter 100.000 zeny para poder visitar Jawaii.";
 		mes "Porque você não pede para pessoa amada uma ajuda em zeny para essa viagem?";
@@ -691,9 +656,7 @@ jawaii,239,112,7	script	Marinheiro#jaw	4W_SAILOR,{
 	if (select("Voltar.","Cancelar.") == 1) {
 		mes "[Marinheiro]";
 		mes "Agora, deixe-me guiar você para Izlude.";
-		close2;
-		warp "izlude",195,212;
-		end;
+		close2; warp ("izlude",195,212); end;
 	}
 	mes "[Marinheiro]";
 	mes "Aproveite o seu tempo e olhe tudo que gostar ao seu redor.";
@@ -717,9 +680,7 @@ jawaii,122,263,5	script	Marinheiro#jaw2	4W_SAILOR,{
 	if (select("Ir para Alberta.","Cancelar.") == 1) {
 		mes "[Marinheiro]";
 		mes "Agora, deixe-me levar você para Alberta.";
-		close2;
-		warp "alberta",192,157;
-		end;
+		close2; warp ("alberta",192,157); end;
 	}
 	mes "[Marinheiro]";
 	mes "Isso...";
@@ -736,15 +697,8 @@ mosk_fild02,198,53,3	script	Barco#mos_dun	HIDDEN_NPC,{
 	next;
 	if(select("Voltar para Cidade.:Ficar mais.") == 1) {
 		mes "- Você sobe a bordo do barco e puxa os remos. -";
-		close2;
-		warp "moscovia",140,54;
-		end;
+		close2; warp ("moscovia",140,54); end;
 	}
 	mes "- O desconhecido desperta seu interesse. -";
 	close;
 }
-
-// ------------------------------------------------------------------
-// - [] - 
-// ------------------------------------------------------------------
-

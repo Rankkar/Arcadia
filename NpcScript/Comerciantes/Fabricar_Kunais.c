@@ -44,7 +44,7 @@ que_ng,72,29,3	script	Mercador de Kunais#KunaiTrade	4_M_01,{
 		mes "Se quiser cancelar a troca basta que digite 0.";
 		mes "Quantas Kunais você gostaria?";
 		next;
-		input .@kunaiAmmout;
+		input (.@kunaiAmmout);
 		if (.@kunaiAmmout == 0) {
 			mes "[Kashin]";
 			mes "Você cancelou a negociação.";
@@ -81,9 +81,9 @@ que_ng,72,29,3	script	Mercador de Kunais#KunaiTrade	4_M_01,{
 			next;
 			mes "[Kashin]";
 			mes "Espero que faça bom proveito com suas novas Kuanis.";
-			delitem .@Shuriken, .@shurAmmout*.@kunaiAmmout;
-			delitem .@itemRequire, .@itemAmmout*.@kunaiAmmout;
-			getitem .@KunaiItem, 10*.@kunaiAmmout;
+			delitem (.@Shuriken, .@shurAmmout*.@kunaiAmmout);
+			delitem (.@itemRequire, .@itemAmmout*.@kunaiAmmout);
+			getitem (.@KunaiItem, 10*.@kunaiAmmout);
 			close;
 		}
 	}

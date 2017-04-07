@@ -52,7 +52,7 @@ que_ng,187,156,3	script	Negociador de Munições#ammo	4_M_04,{
 			mes "[Tony]";
 			mes "Caso queira cancelar a nogociação digite '0'.";
 			next;
-			input .@amount;
+			input (.@amount);
 			if (.@amount == 0) {
 				mes "[Tony]";
 				mes "Você digitou zero a negociação foi cancelada.";
@@ -74,10 +74,10 @@ que_ng,187,156,3	script	Negociador de Munições#ammo	4_M_04,{
 						close;
 					}
 					else {
-						delitem Phracon,.@amount;
-						delitem Emveretarcon,.@amount;
-						delitem .@requirement,.@requireunit * .@amount;
-						getitem .@selectitem,.@amount * 30;
+						delitem (Phracon,.@amount);
+						delitem (Emveretarcon,.@amount);
+						delitem (.@requirement,.@requireunit * .@amount);
+						getitem (.@selectitem,.@amount * 30);
 						mes "[Tony]";
 						mes "Estão aí sua esferas de munições.";
 						mes "Volte caso precise de mais.";
@@ -151,8 +151,8 @@ que_ng,187,149,3	script	Caixas de Munição::mdk	4_M_01,{
 				}
 				else {
 					Zeny -= .@zenyRequire;
-					delitem .@bulletItem, .@bulletUse;
-					getitem .@bulletCase, .@ammoutCase;
+					delitem (.@bulletItem, .@bulletUse);
+					getitem (.@bulletCase, .@ammoutCase);
 					mes "Que tal agora?!";
 					mes "Se sente mais aliviado carregando menos peso?";
 					close;
@@ -171,8 +171,8 @@ que_ng,187,149,3	script	Caixas de Munição::mdk	4_M_01,{
 			else {
 				mes "Um "+getitemname(.@bulletCase)+" saindo rapidinho...";
 				Zeny -= 500;
-				delitem .@bulletItem, 500;
-				getitem .@bulletCase, 1;
+				delitem (.@bulletItem, 500);
+				getitem (.@bulletCase, 1);
 				next;
 				mes "[Kenny]";
 				mes "Fique a vontade em me procurar, sempre quando precisar guardar seus projetéis em carregadores.";

@@ -21,14 +21,14 @@
 	mes "A taxa do embarque é de 1,200 zeny.";
 	mes "Gostaria de utilizar nossos serviços?";
 	next;
-	if (select("Embarcar.:Cancelar.") == 1) {
+	if (select("Embarcar.","Cancelar.") == 1) {
 		if (Zeny >= 1200) {
 			Zeny -= 1200;
-			if (strnpcinfo(NPC_MAP)      == "airport")     { warp "airport",148,51; }
-			else if (strnpcinfo(NPC_MAP) == "lhz_airport") { warp "lhz_airport",148,51; }
-			else if (strnpcinfo(NPC_MAP) == "y_airport")   { warp "y_airport",148,51; }
-			else if (strnpcinfo(NPC_MAP) == "izlude")      { warp "airplane_01",244,58; }
-			else if (strnpcinfo(NPC_MAP) == "hugel")       { warp "airplane",244,58; }
+			if (strnpcinfo(NPC_MAP)      == "airport")     { warp ("airport",148,51); }
+			else if (strnpcinfo(NPC_MAP) == "lhz_airport") { warp ("lhz_airport",148,51); }
+			else if (strnpcinfo(NPC_MAP) == "y_airport")   { warp ("y_airport",148,51); }
+			else if (strnpcinfo(NPC_MAP) == "izlude")      { warp ("airplane_01",244,58); }
+			else if (strnpcinfo(NPC_MAP) == "hugel")       { warp ("airplane",244,58); }
 			end;
 		}
 		mes "[Embarque do Aeroporto]";
@@ -66,8 +66,8 @@ y_airport,145,63,5	script	Voos Domésticos	4_F_02,{
 	mes "Você gostaria de embarcar no dirigível que voa até Einbroch, Lighthalzen e Hugel?";
 	mes "Se sim, deixe que eu te guie até a área de embarque.";
 	next;
-	if (select("Sim:Não") == 1) {
-		warp "yuno",59,244;
+	if (select("Sim","Não") == 1) {
+		warp ("yuno",59,244);
 		end;
 	}
 	mes "[Equipe de Bordo]";
@@ -81,8 +81,8 @@ y_airport,140,63,5	script	Voos Internacionais	4_F_02,{
 	mes "Você deseja embarcar no dirigível que leva até Juno, Izlude e Rachel?";
 	mes "Se sim, deixe que eu te guie até a área de embarque.";
 	next;
-	if (select("Sim:Não") == 1) {
-		warp "yuno",47,244;
+	if (select("Sim","Não") == 1) {
+		warp ("yuno",47,244);
 		end;
 	}
 	mes "[Equipe de Bordo]";
@@ -103,9 +103,9 @@ y_airport,140,63,5	script	Voos Internacionais	4_F_02,{
 		mes "Se você sair agora do terminal, terá que pagar a taxa de embarque novamente.";
 		mes "Tem certeza que deseja sair?";
 		if (select("Sim:Não") == 1) {
-			if (strnpcinfo(NPC_MAP)      == "airport")     { warp "airport",142,40; }
-			else if (strnpcinfo(NPC_MAP) == "lhz_airport") { warp "lhz_airport",142,40; }
-			else if (strnpcinfo(NPC_MAP) == "y_airport")   { warp "y_airport",142,40; }
+			if (strnpcinfo(NPC_MAP)      == "airport")     { warp ("airport",142,40); }
+			else if (strnpcinfo(NPC_MAP) == "lhz_airport") { warp ("lhz_airport",142,40); }
+			else if (strnpcinfo(NPC_MAP) == "y_airport")   { warp ("y_airport",142,40); }
 		}
 		mes "[Desembarque do Aeroporto]";
 		mes "Tudo bem, fique o tempo que desejar.";

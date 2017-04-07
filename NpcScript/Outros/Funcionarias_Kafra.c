@@ -17,12 +17,12 @@
 // - [ Script Base ] -
 // ------------------------------------------------------------------
 -	script	KafraCorp	FAKE_NPC,{
-	cutin strnpcinfo(NPC_NAME_HIDDEN),2;
+	cutin (strnpcinfo(NPC_NAME_HIDDEN),2);
 	if (getskilllv(NV_BASIC) < 6) {
 		mes "[Funcionária Kafra]";
 		mes "Me desculpe mas você deve pelo menos ter suas ^777777Habilidades Básicas^000000.";
 		mes "Ampliadas até o Nível 6 para usar o serviços da Corporação Kafra.";
-		close2; cutin "",255; end;
+		close2; cutin ("",255); end;
 	}
 	// "Salvar","Usar Armazém","Serviço de Teletransporte","Alugar Carrinho","Outros Serviços"
 	if (strnpcinfo(NPC_MAP) == "prontera")          { .@kaframenu = 1; }
@@ -63,7 +63,7 @@
 		.@kaframenu = 5;
 	}
 	mes "[Funcionária Kafra]";
-	mes "Seja bem vind"+(SEX_MALE?"o":"a")+" aos serviços da Corporação kafra.";
+	mes "Seja bem vind"+(Sex?"o":"a")+" aos serviços da Corporação kafra.";
 	mes "Em que posso ajudar?";
 	next;
 	if (.@kaframenu == 1) {
@@ -112,58 +112,58 @@
 		mes "[Funcionária Kafra]";
 		mes "Seu ponto de retorno foi salvo.";
 		mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf1") {savepoint strnpcinfo(NPC_MAP),116,73;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf3") {savepoint strnpcinfo(NPC_MAP),150,33;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf4") {savepoint strnpcinfo(NPC_MAP),281,203;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf5") {savepoint strnpcinfo(NPC_MAP),150,33;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf6") {savepoint strnpcinfo(NPC_MAP),150,33;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "mockaf1") {savepoint strnpcinfo(NPC_MAP),157,272;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "mockaf2") {savepoint strnpcinfo(NPC_MAP),156,46;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "mockaf3") {savepoint strnpcinfo(NPC_MAP),41,141;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "gefkaf1") {savepoint strnpcinfo(NPC_MAP),119,40;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "gefkaf2") {savepoint strnpcinfo(NPC_MAP),200,124;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "paykaf1") {savepoint strnpcinfo(NPC_MAP),257,242;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "paykaf2") {savepoint strnpcinfo(NPC_MAP),160,58;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "paykaf3") {savepoint strnpcinfo(NPC_MAP),49,144;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "albkaf1") {savepoint strnpcinfo(NPC_MAP),31,231;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "albkaf2") {savepoint strnpcinfo(NPC_MAP),117,57;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "izlkaf1") {savepoint strnpcinfo(NPC_MAP),129,97;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "aldkaf1") {savepoint strnpcinfo(NPC_MAP),96,179;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "aldkaf2") {savepoint strnpcinfo(NPC_MAP),143,109;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "comkaf1") {savepoint strnpcinfo(NPC_MAP),204,143;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "yunkaf1") {savepoint strnpcinfo(NPC_MAP),158,125;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "yunkaf2") {savepoint strnpcinfo(NPC_MAP),328,101;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "yunkaf3") {savepoint strnpcinfo(NPC_MAP),274,229;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "amakaf")  {savepoint strnpcinfo(NPC_MAP),116,94;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "gonkaf")  {savepoint strnpcinfo(NPC_MAP),160,62;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "ayokaf")  {savepoint strnpcinfo(NPC_MAP),149,69;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "loukaf")  {savepoint strnpcinfo(NPC_MAP),217,92;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "lhzkaf1") {savepoint strnpcinfo(NPC_MAP),158,94;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "lhzkaf2") {savepoint strnpcinfo(NPC_MAP),194,313;}
-		if (strnpcinfo(NPC_NAME_UNIQUE) == "moskaf")  {savepoint strnpcinfo(NPC_MAP),221,194;}
-		close2; cutin "",255; end;
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf1") {savepoint (strnpcinfo(NPC_MAP),116,73);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf3") {savepoint (strnpcinfo(NPC_MAP),150,33);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf4") {savepoint (strnpcinfo(NPC_MAP),281,203);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf5") {savepoint (strnpcinfo(NPC_MAP),150,33);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "prtkaf6") {savepoint (strnpcinfo(NPC_MAP),150,33);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "mockaf1") {savepoint (strnpcinfo(NPC_MAP),157,272);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "mockaf2") {savepoint (strnpcinfo(NPC_MAP),156,46);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "mockaf3") {savepoint (strnpcinfo(NPC_MAP),41,141);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "gefkaf1") {savepoint (strnpcinfo(NPC_MAP),119,40);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "gefkaf2") {savepoint (strnpcinfo(NPC_MAP),200,124);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "paykaf1") {savepoint (strnpcinfo(NPC_MAP),257,242);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "paykaf2") {savepoint (strnpcinfo(NPC_MAP),160,58);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "paykaf3") {savepoint (strnpcinfo(NPC_MAP),49,144);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "albkaf1") {savepoint (strnpcinfo(NPC_MAP),31,231);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "albkaf2") {savepoint (strnpcinfo(NPC_MAP),117,57);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "izlkaf1") {savepoint (strnpcinfo(NPC_MAP),129,97);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "aldkaf1") {savepoint (strnpcinfo(NPC_MAP),96,179);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "aldkaf2") {savepoint (strnpcinfo(NPC_MAP),143,109);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "comkaf1") {savepoint (strnpcinfo(NPC_MAP),204,143);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "yunkaf1") {savepoint (strnpcinfo(NPC_MAP),158,125);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "yunkaf2") {savepoint (strnpcinfo(NPC_MAP),328,101);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "yunkaf3") {savepoint (strnpcinfo(NPC_MAP),274,229);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "amakaf")  {savepoint (strnpcinfo(NPC_MAP),116,94);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "gonkaf")  {savepoint (strnpcinfo(NPC_MAP),160,62);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "ayokaf")  {savepoint (strnpcinfo(NPC_MAP),149,69);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "loukaf")  {savepoint (strnpcinfo(NPC_MAP),217,92);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "lhzkaf1") {savepoint (strnpcinfo(NPC_MAP),158,94);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "lhzkaf2") {savepoint (strnpcinfo(NPC_MAP),194,313);}
+		if (strnpcinfo(NPC_NAME_UNIQUE) == "moskaf")  {savepoint (strnpcinfo(NPC_MAP),221,194);}
+		close2; cutin ("",255); end;
 		case 2: // Usar Armazém
 		if ((Zeny < 40) && (!countitem(Cargo_Free_Ticket))) {
 			mes "[Funcionária Kafra]";
 			mes "Me desculpe mas você deve possuir pelo menos 40 Zenys.";
 			mes "Para pagar a taxa de uso do Armazém.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else if (#kafra_code) {
 			mes "[Funcionária Kafra]";
 			mes "Digite a senha do seu armazém";
-			input .@storagecode;
+			input (.@storagecode);
 			next;
 			if (.@storagecode != #kafra_code) {
 				mes "[Funcionária Kafra]";
 				mes "Você não digitou a senha corretamente.";
-				close2; cutin "",255; end;
+				close2; cutin ("",255); end;
 			}
 			else {
 				mes "[Funcionária Kafra]";
 				mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
 				if (countitem(Cargo_Free_Ticket)) {
-					delitem Cargo_Free_Ticket,1;
+					delitem (Cargo_Free_Ticket,1);
 				}
 				else {
 					Zeny -= 40;
@@ -171,14 +171,14 @@
 				if (RESRVPTS < 100000) { RESRVPTS += 5; }
 				close2;
 				openstorage;
-				cutin "",255; end;
+				cutin ("",255); end;
 			}
 		}
 		else {
 			mes "[Funcionária Kafra]";
 			mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
 			if (countitem(Cargo_Free_Ticket)) {
-				delitem Cargo_Free_Ticket,1;
+				delitem (Cargo_Free_Ticket,1);
 			}
 			else {
 				Zeny -= 40;
@@ -186,11 +186,11 @@
 			if (RESRVPTS < 100000) { RESRVPTS += 5; }
 			close2;
 			openstorage;
-			cutin "",255; end;
+			cutin ("",255); end;
 		}
 		case 3: // Serviço de Teletransporte
 		mes "[Funcionária Kafra]";
-		mes "Por favor selecione a localidade para levar-l"+(SEX_MALE?"o":"a")+".";
+		mes "Por favor selecione a localidade para levar-l"+(Sex?"o":"a")+".";
 		next;
 		if (strnpcinfo(NPC_MAP) == "prontera") {
 			switch(select("Izlude 600 Zenys","Geffen 1.200 Zenys","Payon 1.200 Zenys","Morroc 1.200 Zenys","Calabouço dos Orcs 1.200 Zenys","Alberta 1.800 Zenys","Cancelar")) {
@@ -202,8 +202,8 @@
 				case 6: .@price = 1800; .@map$ = "alberta";    .@cordX = 117; .@cordY = 56;  break;
 				case 7:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "morocc") {
@@ -214,8 +214,8 @@
 				case 4: .@price = 1800; .@map$ = "comodo";   .@cordX = 209; .@cordY = 143; break;
 				case 5:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "geffen") {
@@ -226,8 +226,8 @@
 				case 4: .@price = 1700; .@map$ = "mjolnir_02"; .@cordX = 99;  .@cordY = 351; break;
 				case 5:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "payon") {
@@ -237,8 +237,8 @@
 				case 3: .@price = 1200; .@map$ = "morocc";   .@cordX = 156; .@cordY = 46; break;
 				case 4:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "alberta") {
@@ -248,8 +248,8 @@
 				case 3: .@price = 1200; .@map$ = "prontera"; .@cordX = 116; .@cordY = 72; break;
 				case 4:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "izlude") {
@@ -260,8 +260,8 @@
 				case 4: .@price = 1800; .@map$ = "aldebaran"; .@cordX = 168; .@cordY = 112; break;
 				case 5:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "aldebaran") {
@@ -272,8 +272,8 @@
 				case 4: .@price = 1700; .@map$ = "mjolnir_02"; .@cordX = 99;  .@cordY = 351; break;
 				case 5:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "comodo") {
@@ -282,8 +282,8 @@
 				case 2: .@price = 1800; .@map$ = "umbala"; .@cordX = 100; .@cordY = 154; break;
 				case 3:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "yuno") {
@@ -291,8 +291,8 @@
 				case 1: .@price = 1200; .@map$ = "aldebaran"; .@cordX = 168; .@cordY = 112; break;
 				case 2:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if (strnpcinfo(NPC_MAP) == "umbala") {
@@ -300,57 +300,57 @@
 				case 1: .@price = 1800; .@map$ = "comodo"; .@cordX = 209; .@cordY = 143; break;
 				case 2:
 				mes "[Funcionária Kafra]";
-				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		if ((Zeny < .@price) && (!countitem(Warp_Free_Ticket))) {
 			mes "[Funcionária Kafra]";
 			mes "Me desculpe mas você deve possuir pelo menos "+.@price+" Zenys.";
 			mes "Para pagar a taxa de uso do Teletransporte.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else {
 			mes "[Funcionária Kafra]";
 			mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
 			if (countitem(Warp_Free_Ticket)) {
-				delitem Warp_Free_Ticket,1;
+				delitem (Warp_Free_Ticket,1);
 			}
 			else {
 				Zeny -= .@price;
 			}
 			if (RESRVPTS < 100000) { RESRVPTS += 5; }
 			close2;
-			warp .@map$,.@cordX,.@cordY;
-			cutin "",255; end;
+			warp (.@map$,.@cordX,.@cordY);
+			cutin ("",255); end;
 		}
 		case 4: // Alugar Carrinho
 		if (BaseClass != Job_Merchant) {
 			mes "[Funcionária Kafra]";
 			mes "O serviço de Aluguel de Carrinhos só está disponível para mercadores e evoluções.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else if (getskilllv(MC_PUSHCART) == 0) {
 			mes "[Funcionária Kafra]";
 			mes "Desculpe, mas para alugar um carrinho, você primeiro deve aprender a habilidade ^777777Usar Carrinho^000000.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else if (checkcart() == 1) {
 			mes "[Funcionária Kafra]";
 			mes "Vejo que você já possui um carrinho.";
 			mes "Assim não pode ter outro, o serviço somente está disponível em um carrinho para cada cliente.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else {
 			if ((Zeny < 1200) && (!countitem(Cart_Free_Ticket))) {
 				mes "[Funcionária Kafra]";
 				mes "Me desculpe mas você deve possuir pelo menos 1.200 Zenys.";
 				mes "Para pagar alugar um carrinho.";
-				close2; cutin "",255; end;
+				close2; cutin ("",255); end;
 			}
 			else {
 				if (countitem(Cart_Free_Ticket)) {
-					delitem Cart_Free_Ticket,1;
+					delitem (Cart_Free_Ticket,1);
 				}
 				else {
 					Zeny -= 1200;
@@ -360,7 +360,7 @@
 				if (RESRVPTS < 100000) { RESRVPTS += 5; }
 				close2;
 				setcart;
-				cutin "",255; end;
+				cutin ("",255); end;
 			}
 		}
 		case 5: // Outros Serviços
@@ -382,7 +382,7 @@
 			mes "Indo a sede da Corporação localizada na cidade Al Debaran.";
 			mes "Você poderá participar do mini jogo e concorrer a itens.";
 			mes "Toda vez que usa os serviços Kafra você aumenta seu saldo de pontos.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 			case 2: // Senha do Armazém
 			mes "[Funcionária Kafra]";
 			if (#kafra_code) {
@@ -394,32 +394,32 @@
 					if (Zeny < 5000) {
 						mes "Me desculpe mas você deve possuir pelo menos 5.000 Zenys.";
 						mes "Para poder modificar sua senha do armazém.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					mes "Por favor digite sua senha atual para verificação.";
-					input .@storagecode;
+					input (.@storagecode);
 					next;
 					if (.@storagecode != #kafra_code) {
 						mes "[Funcionária Kafra]";
 						mes "Você não digitou a senha corretamente.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					else {
 						mes "[Funcionária Kafra]";
 						mes "Certo agora podemos prosseguir.";
 						mes "Por favor digite sua nova senha.";
 						mes "Sua senha deve ser maior que ^0000bb1000^000000 e menor que ^7777779999^000000.";
-						input .@newstoragecode;
+						input (.@newstoragecode);
 						next;
 						if (.@newstoragecode == #kafra_code) {
 							mes "[Funcionária Kafra]";
 							mes "Você deve digitar uma senha diferente.";
-							close2; cutin "",255; end;
+							close2; cutin ("",255); end;
 						}
 						else if ((.@newstoragecode < 1000) || (.@newstoragecode > 9999)) {
 							mes "[Funcionária Kafra]";
 							mes "A senha digitada é inválida!";
-							close2; cutin "",255; end;
+							close2; cutin ("",255); end;
 						}
 						else {
 							mes "[Funcionária Kafra]";
@@ -431,7 +431,7 @@
 							mes "[Funcionária Kafra]";
 							mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
 							if (RESRVPTS < 100000) { RESRVPTS += 5; }
-							close2; cutin "",255; end;
+							close2; cutin ("",255); end;
 						}
 					}
 					case 2: // Remover a senha
@@ -439,15 +439,15 @@
 					if (Zeny < 1000) {
 						mes "Me desculpe mas você deve possuir pelo menos 1.000 Zenys.";
 						mes "Para poder remover sua senha do armazém.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					mes "Por favor digite sua senha atual para verificação.";
-					input .@storagecode;
+					input (.@storagecode);
 					next;
 					if (.@storagecode != #kafra_code) {
 						mes "[Funcionária Kafra]";
 						mes "Você não digitou a senha corretamente.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					else {
 						mes "[Funcionária Kafra]";
@@ -463,11 +463,11 @@
 							mes "[Funcionária Kafra]";
 							mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
 							if (RESRVPTS < 100000) { RESRVPTS += 5; }
-							close2; cutin "",255; end;
+							close2; cutin ("",255); end;
 						}
 						mes "[Funcionária Kafra]";
-						mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-						close2; cutin "",255; end;
+						mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+						close2; cutin ("",255); end;
 					}
 				}
 			}
@@ -481,12 +481,12 @@
 						mes "[Funcionária Kafra]";
 						mes "Por favor digite a senha para seu armazém.";
 						mes "Ela deve ser maior que ^0000bb1000^000000 e menor que ^7777779999^000000.";
-						input .@storagecode;
+						input (.@storagecode);
 						next;
 						if ((.@storagecode < 1000) || (.@storagecode > 9999)) {
 							mes "[Funcionária Kafra]";
 							mes "A senha digitada é inválida!";
-							close2; cutin "",255; end;
+							close2; cutin ("",255); end;
 						}
 						else {
 							mes "[Funcionária Kafra]";
@@ -502,7 +502,7 @@
 								mes "[Funcionária Kafra]";
 								mes "A Corporação Kafra agradece por você utilizar nossos serviços.";
 								if (RESRVPTS < 100000) { RESRVPTS += 5; }
-								close2; cutin "",255; end;
+								close2; cutin ("",255); end;
 								case 2:
 								mes "^bb0000O serviço de proteção do armazém com senha visa impedir que invasores.";
 								mes "Tenham acesso aos itens em seu armazém.";
@@ -514,34 +514,34 @@
 								next;
 								if (select("Voltar a digitar a senha","Cancelar") == 2) {
 									mes "[Funcionária Kafra]";
-									mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-									close2; cutin "",255; end;
+									mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+									close2; cutin ("",255); end;
 								}
 								break;
 								case 3:
 								break;
 								case 4:
 								mes "[Funcionária Kafra]";
-								mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-								close2; cutin "",255; end;
+								mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+								close2; cutin ("",255); end;
 							}
 						}
 					}
 					case 2:
 					mes "[Funcionária Kafra]";
-					mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-					close2; cutin "",255; end;
+					mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+					close2; cutin ("",255); end;
 				}
 			}
 			case 3: // Cancelar
 			mes "[Funcionária Kafra]";
-			mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-			close2; cutin "",255; end;
+			mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+			close2; cutin ("",255); end;
 		}
 		case 6: // Cancelar
 		mes "[Funcionária Kafra]";
-		mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-		close2; cutin "",255; end;
+		mes "A Corporação Kafra estará sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+		close2; cutin ("",255); end;
 	}
 }
 

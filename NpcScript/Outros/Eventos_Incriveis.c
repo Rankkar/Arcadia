@@ -16,12 +16,12 @@
 // - [ Script Base ] -
 // ------------------------------------------------------------------
 -	script	ZondaStaff	FAKE_NPC,{
-	cutin "zonda_01",2;
+	cutin ("zonda_01",2);
 	if (getskilllv(NV_BASIC) < 6) {
 		mes "[Funcionária]";
 		mes "Me desculpe mas você deve pelo menos ter suas ^777777Habilidades Básicas^000000.";
 		mes "Ampliadas até o Nível 6 para usar nossos serviços.";
-		close2; cutin "",255; end;
+		close2; cutin ("",255); end;
 	}
 	mes "[Funcionária]";
 	mes "Bem-vind"+(SEX_MALE?"o":"a")+" à Corporação Eventos Incríveis.";
@@ -29,32 +29,32 @@
 	mes "Como posso ajudá-l"+(Sex?"o":"a")+" hoje?";
 	switch(select("Salvar","Usar Armazém","Alugar um Carrinho","Senha no Armazém","Cancelar")) {
 		case 1: // Salvar
-		if (strnpcinfo(NPC_MAP) == "lighthalzen") { savepoint strnpcinfo(NPC_MAP),94,240; }
-		if (strnpcinfo(NPC_MAP) == "hugel") { savepoint strnpcinfo(NPC_MAP),96,155; }
-		if (strnpcinfo(NPC_MAP) == "rachel") { savepoint strnpcinfo(NPC_MAP),113,137; }
-		if (strnpcinfo(NPC_MAP) == "veins") { savepoint strnpcinfo(NPC_MAP),204,103; }
+		if (strnpcinfo(NPC_MAP) == "lighthalzen") { savepoint (strnpcinfo(NPC_MAP),94,240); }
+		if (strnpcinfo(NPC_MAP) == "hugel") { savepoint (strnpcinfo(NPC_MAP),96,155); }
+		if (strnpcinfo(NPC_MAP) == "rachel") { savepoint (strnpcinfo(NPC_MAP),113,137); }
+		if (strnpcinfo(NPC_MAP) == "veins") { savepoint (strnpcinfo(NPC_MAP),204,103); }
 		mes "[Funcionária]";
 		mes "Seu ponto de retorno foi salvo.";
 		next;
 		mes "[Funcionária]";
 		mes "Agradecemos por você utilizar nossos serviços.";
-		close2; cutin "",255; end;
+		close2; cutin ("",255); end;
 		case 2: // Usar Armazém
 		if (Zeny < 40) {
 			mes "[Funcionária]";
 			mes "Me desculpe mas você deve possuir pelo menos 40 Zenys.";
 			mes "Para pagar a taxa de uso do Armazém.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else if (#kafra_code) {
 			mes "[Funcionária]";
 			mes "Digite a senha do seu armazém";
-			input .@storagecode;
+			input (.@storagecode);
 			next;
 			if (.@storagecode != #kafra_code) {
 				mes "[Funcionária]";
 				mes "Você não digitou a senha corretamente.";
-				close2; cutin "",255; end;
+				close2; cutin ("",255); end;
 			}
 			else {
 				mes "[Funcionária]";
@@ -62,7 +62,7 @@
 				Zeny -= 40;
 				close2;
 				openstorage;
-				cutin "",255; end;
+				cutin ("",255); end;
 			}
 		}
 		else {
@@ -71,31 +71,31 @@
 			Zeny -= 40;
 			close2;
 			openstorage;
-			cutin "",255; end;
+			cutin ("",255); end;
 		}
 		case 3: // Alugar um Carrinho
 		if (BaseClass != Job_Merchant) {
 			mes "[Funcionária]";
 			mes "O serviço de Aluguel de Carrinhos só está disponível para mercadores e evoluções.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else if (getskilllv(MC_PUSHCART) == 0) {
 			mes "[Funcionária]";
 			mes "Desculpe, mas para alugar um carrinho, você primeiro deve aprender a habilidade ^777777Usar Carrinho^000000.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else if (checkcart() == 1) {
 			mes "[Funcionária]";
 			mes "Vejo que você já possui um carrinho.";
 			mes "Assim não pode ter outro, o serviço somente está disponível em um carrinho para cada cliente.";
-			close2; cutin "",255; end;
+			close2; cutin ("",255); end;
 		}
 		else {
 			if (Zeny < 1200) {
 				mes "[Funcionária]";
 				mes "Me desculpe mas você deve possuir pelo menos 1.200 Zenys.";
 				mes "Para pagar o aluguel do carrinho.";
-				close2; cutin "",255; end;
+				close2; cutin ("",255); end;
 			}
 			else {
 				Zeny -= 1200;
@@ -103,7 +103,7 @@
 				mes "Agradecemos por você utilizar nossos serviços.";
 				close2;
 				setcart;
-				cutin "",255; end;
+				cutin ("",255); end;
 			}
 		}
 		case 4: // Senha no Armazém
@@ -117,32 +117,32 @@
 				if (Zeny < 5000) {
 					mes "Me desculpe mas você deve possuir pelo menos 5.000 Zenys.";
 					mes "Para poder modificar sua senha do armazém.";
-					close2; cutin "",255; end;
+					close2; cutin ("",255); end;
 				}
 				mes "Por favor digite sua senha atual para verificação.";
-				input .@storagecode;
+				input (.@storagecode);
 				next;
 				if (.@storagecode != #kafra_code) {
 					mes "[Funcionária]";
 					mes "Você não digitou a senha corretamente.";
-					close2; cutin "",255; end;
+					close2; cutin ("",255); end;
 				}
 				else {
 					mes "[Funcionária]";
 					mes "Certo agora podemos prosseguir.";
 					mes "Por favor digite sua nova senha.";
 					mes "Sua senha deve ser maior que ^0000bb1000^000000 e menor que ^7777779999^000000.";
-					input .@newstoragecode;
+					input (.@newstoragecode);
 					next;
 					if (.@newstoragecode == #kafra_code) {
 						mes "[Funcionária]";
 						mes "Você deve digitar uma senha diferente.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					else if ((.@newstoragecode < 1000) || (.@newstoragecode > 9999)) {
 						mes "[Funcionária]";
 						mes "A senha digitada é inválida!";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					else {
 						mes "[Funcionária]";
@@ -153,7 +153,7 @@
 						next;
 						mes "[Funcionária]";
 						mes "Agradecemos por você utilizar nossos serviços.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 				}
 				case 2: // Remover a senha
@@ -161,7 +161,7 @@
 				if (Zeny < 1000) {
 					mes "Me desculpe mas você deve possuir pelo menos 1.000 Zenys.";
 					mes "Para poder remover sua senha do armazém.";
-					close2; cutin "",255; end;
+					close2; cutin ("",255); end;
 				}
 				mes "Por favor digite sua senha atual para verificação.";
 				input .@storagecode;
@@ -169,7 +169,7 @@
 				if (.@storagecode != #kafra_code) {
 					mes "[Funcionária]";
 					mes "Você não digitou a senha corretamente.";
-					close2; cutin "",255; end;
+					close2; cutin ("",255); end;
 				}
 				else {
 					mes "[Funcionária]";
@@ -180,15 +180,15 @@
 						mes "[Funcionária]";
 						mes "Sua senha do armazém foi removida.";
 						Zeny -= 1000;
-							#kafra_code = 0;
+						#kafra_code = 0;
 						next;
 						mes "[Funcionária Kafra]";
 						mes "Agradecemos por você utilizar nossos serviços.";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					mes "[Funcionária]";
-					mes "Estaremos sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-					close2; cutin "",255; end;
+					mes "Estaremos sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+					close2; cutin ("",255); end;
 				}
 			}
 		}
@@ -202,12 +202,12 @@
 					mes "[Funcionária]";
 					mes "Por favor digite a senha para seu armazém.";
 					mes "Ela deve ser maior que ^0000bb1000^000000 e menor que ^7777779999^000000.";
-					input .@storagecode;
+					input (.@storagecode);
 					next;
 					if ((.@storagecode < 1000) || (.@storagecode > 9999)) {
 						mes "[Funcionária]";
 						mes "A senha digitada é inválida!";
-						close2; cutin "",255; end;
+						close2; cutin ("",255); end;
 					}
 					else {
 						mes "[Funcionária]";
@@ -222,7 +222,7 @@
 							next;
 							mes "[Funcionária]";
 							mes "Agradecemos por você utilizar nossos serviços.";
-							close2; cutin "",255; end;
+							close2; cutin ("",255); end;
 							case 2:
 							mes "^bb0000O serviço de proteção do armazém com senha visa impedir que invasores.";
 							mes "Tenham acesso aos itens em seu armazém.";
@@ -234,29 +234,29 @@
 							next;
 							if (select("Voltar a digitar a senha","Cancelar") == 2) {
 								mes "[Funcionária]";
-								mes "Estaremos sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-								close2; cutin "",255; end;
+								mes "Estaremos sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+								close2; cutin ("",255); end;
 							}
 							break;
 							case 3:
 							break;
 							case 4:
 							mes "[Funcionária]";
-							mes "Estaremos sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-							close2; cutin "",255; end;
+							mes "Estaremos sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+							close2; cutin ("",255); end;
 						}
 					}
 				}
 				case 2:
 				mes "[Funcionária]";
-				mes "Estaremos sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-				close2; cutin "",255; end;
+				mes "Estaremos sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+				close2; cutin ("",255); end;
 			}
 		}
 		case 5: // Cancelar
 		mes "[Funcionária]";
-		mes "Estaremos sempre ao seu dispor para servir-l"+(SEX_MALE?"o":"a")+".";
-		close2; cutin "",255; end;
+		mes "Estaremos sempre ao seu dispor para servir-l"+(Sex?"o":"a")+".";
+		close2; cutin ("",255); end;
 	}
 }
 
