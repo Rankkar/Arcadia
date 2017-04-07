@@ -49,18 +49,18 @@
 		if (strnpcinfo(NPC_NAME_HIDDEN) == "Croix") {
 			mes "Olá ^777777"+strcharinfo(PC_NAME)+"^000000, vamos mostrar o poder de nós Croixs para estes Guillaumes";
 		}
-		mes "Está pront"+(Sex == SEX_MALE ? "o":"a")+" para a batalha?";
+		mes "Está pront"+(Sex?"o":"a")+" para a batalha?";
 		next;
 		if (select("Sim:Não") == 1) {
 			mes "[Oficial de "+strnpcinfo(NPC_NAME_HIDDEN)+"]";
 			mes "Boa sorte!";
 			close2;
-			if (Bat_Team == 1) { warp "bat_room",57,223; }
-			if (Bat_Team == 2) { warp "bat_room",57,207; }
+			if (Bat_Team == 1) { warp ("bat_room",57,223); }
+			if (Bat_Team == 2) { warp ("bat_room",57,207); }
 			end;
 		}
 		mes "[Oficial de "+strnpcinfo(NPC_NAME_HIDDEN)+"]";
-		mes "Tudo bem, quando sentir que está preparado"+(Sex == SEX_MALE ? "o":"a")+", venha falar comigo novamente.";
+		mes "Tudo bem, quando sentir que está preparado"+(Sex?"o":"a")+", venha falar comigo novamente.";
 		close;
 	}
 }
@@ -76,7 +76,7 @@ bat_room,125,121,1	duplicate(TierraEnter)	Oficial de Tierra#Croix	4_M_CRU_KNT
 	mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 	mes "Olá guerreiro o que você deseja?";
 	next;
-	switch (select("Participar da batalha:Informações da batalha:Nada")) {
+	switch (select("Participar da batalha","Informações da batalha","Nada")) {
 		case 1:
 		mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 		mes "Para participar da batalha do Desfiladeiro de Tierra, primeiro você deve se alistar com o ^2c5ec0General Guillaume^000000 ou com o ^bb0000Príncepe Croix^000000.";

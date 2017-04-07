@@ -51,12 +51,12 @@
 		}
 		mes "Está pront"+(Sex?"o":"a")+" para a batalha?";
 		next;
-		if (select("Sim:Não") == 1) {
+		if (select("Sim","Não") == 1) {
 			mes "[Oficial de "+strnpcinfo(NPC_NAME_HIDDEN)+"]";
 			mes "Boa sorte!";
 			close2;
-			if (Bat_Team == 1) { warp strnpcinfo(NPC_MAP),169,223; }
-			if (Bat_Team == 2) { warp strnpcinfo(NPC_MAP),169,207; }
+			if (Bat_Team == 1) { warp (strnpcinfo(NPC_MAP),169,223); }
+			if (Bat_Team == 2) { warp (strnpcinfo(NPC_MAP),169,207); }
 			end;
 		}
 		mes "[Oficial de "+strnpcinfo(NPC_NAME_HIDDEN)+"]";
@@ -76,7 +76,7 @@ bat_room,140,121,1	duplicate(KvmEnter)	Oficial KVM#Croix	4_M_CRU_KNT
 	mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 	mes "Olá guerreiro o que você deseja?";
 	next;
-	switch (select("Participar da batalha:Informações da batalha:Nada")) {
+	switch (select("Participar da batalha","Informações da batalha","Nada")) {
 		case 1:
 		mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 		mes "Para participar da batalha do Kreiger Von Midgard, primeiro você deve se alistar com o ^2c5ec0General Guillaume^000000 ou com o ^bb0000Príncepe Croix^000000.";
