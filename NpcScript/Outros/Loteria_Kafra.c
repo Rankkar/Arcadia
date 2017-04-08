@@ -8,233 +8,160 @@
 |        /__/   |__|  [ Ragnarok Emulator ]                         |
 |                                                                   |
 +-------------------------------------------------------------------+
-| - Script: eAthena/ rAthena/ Hercules (Emuladores)                 |
-| - Versão: Spell Master                                            |
-| - Nota: Loteria que troca os pontos de uso dos serviçoes Kafra    |
-/         por itens.                                                |
+| - Desenvolvido por por: Spell Master 07/04/2017                   |
+| - Nota: Loteria que troca pontos de reserva por itens             |
 \*-----------------------------------------------------------------*/
 
-// ------------------------------------------------------------------
-// - [Loretia 1] -
-// ------------------------------------------------------------------
-aldeba_in,79,161,6	script	Kafra#Reserve1	4_F_KAFRA3,{
-	cutin ("kafra_03",2);
-	mes "[Kafra]";
-	mes "Bem-vind"+(Sex? "o":"a")+" ^6666FF"+ strcharinfo(PC_NAME)+"^000000.";
-	mes "Aqui é onde você pode trocar seus Pontos de Reserva por itens úteis e prêmios legais.";
+aldeba_in,84,166,4	script	Denise#alde	4_F_KAFRA1,{
+	cutin ("kafra_01",2);
+	mes "[Kafra Denise]";
+	mes "Estamos oferecendo uma promoção especial para nossos clientes.";
+	mes "Você pode ganhar prêmios usando seus ^ff5533Pontos de Reserva Especial^000000.";
 	next;
-	mes "[Kafra]";
-	mes "Cada Kafra permitirá que você troque os Pontos de Reserva em várias quantidades.";
-	mes "Eu posso trocar os Pontos de Reserva começando de ^2222FF100 pts até 3000 pts^000000.";
-	next;
-	mes "[Kafra]";
-	mes "A quantidade de Pontos de Reserva que você tem é: ^FF0000"+RESRVPTS+"^000000 pts.";
-	mes "Por favor faça a escolha baseada na quantidade de pontos que você tem.";
-	.@page = 1;
-	while (true) {
-		if (.@page == 1) {
-			setarray (.@choices,100, Sweet_Potato,7,200,Sweet_Potato,15,300,Sweet_Potato,25,400,Sweet_Potato,35,500,Sweet_Potato,50,600,Sweet_Potato,60,700,Sweet_Potato,75,800,Sweet_Potato,85,900,Sweet_Potato,100,1000,null,0);
-			.@ordinal$ = "Primeira";
-			.@changepage$ = "Próximos itens";
-		}
-		else {
-			setarray (.@choices,1100,Sweet_Potato,7,1300,Sweet_Potato,15,1500,Sweet_Potato,25,1700,Sweet_Potato,35,1900,Sweet_Potato,50,2100,Sweet_Potato,60,2300,Sweet_Potato,75,2500,Sweet_Potato,85,2800,Sweet_Potato,100,3000,null,0);
-			.@ordinal$ = "Segunda";
-			.@changepage$ = "Lista Anterior";
-		}
-		.@list$ = "";
-		.@numitemchoices = 0;
-		for (.@i = 0; .@i < getarraysize(.@choices) - 3; .@i += 3) {
-			.@list$ += .@choices[.@i]+" - "+getitemname(.@choices[.@i+1])+" "+.@choices[.@i+2]+" ea:";
-			++.@numitemchoices;
-		}
-		.@list$ += .@choices[.@i]+" - "+.@ordinal$+" Possibilidade de loteria!:"+.@changepage$+":Cancelar";
-		next;
-		.@chosen = select(.@list$) - 1;
-		if (.@chosen <= .@numitemchoices) {
-			if (RESRVPTS < .@choices[.@chosen*3]) {
-				mes "[Kafra]";
-				mes "Me desculpe, mas você não tem pontos suficientes para essa seleção de itens.";
-				continue;
-			}
-			RESRVPTS -= .@choices[.@chosen * 3];
-			if (.@chosen < .@numitemchoices) {
-				mes "[Kafra]";
-				mes "Aqui estão.";
-				getitem (.@choices[.@chosen*3 + 1], .@choices[.@chosen*3 + 2]);
-				close;
-			}
-			mes "^0000FF"+.@ordinal$+" Oportunidade de loteria!!^000000";
-			@Lotto = .@page;
+	if (RESRVPTS < 5000) {
+		mes "[Kafra Denise]";
+		mes "É necessário possuir pelo menos 5.000 pontos de reserva aculados para participar.";
+		mes "Você ganha pontos de reserva toda vez que usa os serviços da corporação kafra.";
+		if (RESRVPTS) {
 			next;
-			callfunc "F_Lottery";
-			break;
+			mes "Não deixe de participar dessa promoção.";
+			mes "Caso não saiba, seu saldo é: "+RESRVPTS+" pontos.";
 		}
-		else if (.@chosen == .@numitemchoices + 1) {
-			.@page = (.@page == 1 ? 2 : 1);
-			continue;
-		}
-		else {
-			break;
-		}
+		close2; cutin ("",255); end;
 	}
-	mes "[Kafra]";
-	mes "Por favor volte quando tiver mais Pontos de Reserva.";
-	cutin ("",255);
-	close;
-}
-
-// ------------------------------------------------------------------
-// - [Loteria 2] -
-// ------------------------------------------------------------------
-aldeba_in,88,161,3	script	Kafra#Reserve2	4_F_KAFRA3,{
-	cutin ("kafra_03",2);
-	mes "[Kafra]";
-	mes "Bem-vindo ^5577FF"+strcharinfo(PC_NAME)+"^000000.";
-	mes "Atualmente estamos oferecendo um evento especial para nossos clientes.";
-	mes "Você pode ganhar prêmios usando seus ^FF5533Pontos de Reserva Especial^000000 no ^3355FFEvento Prêmio Especial Kafra^000000!!";
-	next;
-	mes "[Kafra]";
+	mes "[Kafra Denise]";
 	mes "Você gostaria de usar seus pontos?";
 	next;
 	if (select("Sim por favor.","Talvez depois.") == 1) {
-		mes "[Kafra]";
+		mes "[Kafra Denise]";
 		mes "Você tem essa quantidade de pontos: ^5544FF"+RESRVPTS+"^000000.";
-		mes "Faça uma escolha e teste sua sorte!";
+		mes "Faça uma escolha de acordo com seus pontos.";
 		next;
-		switch (select("5000 Pontos","7000 Pontos","10000 Pontos","Cancelar")) {
-			case 1:
-			.@points = 5000;
-			@Lotto = 3;
-			break;
-			case 2:
-			.@points = 7000;
-			@Lotto = 4;
-			break;
-			case 3:
-			.@points = 10000;
-			@Lotto = 5;
-			break;
+		mes "[Kafra Denise]";
+		mes "Quanto maior a aposta maior serão as chances!";
+		mes "E melhor serão os itens que poderá ganhar.";
+		next;
+		switch (select("5.000 Pontos","7.000 Pontos","1.0000 Pontos","Cancelar")) {
+			case 1: .@points = 5000;  .@select = 1; break;
+			case 2: .@points = 7000;  .@select = 2; break;
+			case 3: .@points = 10000; .@select = 3; break;
 			case 4:
-			.@points = 0;
-			break;
+			mes "[Kafra Denise]";
+			mes "Tudo bem.";
+			mes "Ganhe mais Pontos de Reserva Especial usando os Serviços da Corporação Kafra encontrado por toda Rune-Midgard.";
+			close2; cutin ("",255); end;
 		}
-		if (.@points) {
-			if (RESRVPTS < .@points) {
-				mes "[Kafra]";
-				mes "Me desculpe, mas você não tem pontos suficientes para essa seleção de itens.";
-				cutin "",255;
-				close;
+		if (RESRVPTS < .@points) {
+			mes "[Kafra Denise]";
+			mes "Unn...?";
+			mes "Temos um problema, seus pontos de reserva não são o suficientes para essa aposta.";
+			mes "Você pode almentar seus pontos de reserva utilizado-se dos Serviços da Corporação Kafra.";
+			close2; cutin ("",255); end;
+		}
+		else if (checkweight(Yggdrasilberry,100) == 0) {
+			mes "[Kafra Denise]";
+			mes "Unn...?";
+			mes "Temos um problema, parece que você carrega muito peso no momento.";
+			mes "Então poderia ganhar itens e não poder carregar-los.";
+			next;
+			mes "[Kafra Denise]";
+			mes "Porque não procura uma das funcionárias da Corporação Kafra, e deixa um pouco de seus itens no armazém?";
+			next;
+			mes "[Kafra Denise]";
+			mes "Pense pelo lado positivo.";
+			mes "Assim você acumulará muito mais pontos de reserva!";
+			mes "Nessa mesma sala há uma funcionária encarregada para lhe atender.";
+			close2; cutin ("",255); end;
+		}
+		else {
+			mes "[Kafra Denise]";
+			mes "Então uma aposta de "+.@points+" pontos.";
+			mes "Vou girar uma roteta e veremos qual prêmio você ganhará.";
+			mes "Quantas vezes quer que eu gire a roleta?";
+			next;
+			switch (select("1 Vez","3 Veses","5 Vezes","Mudei de ideia")) {
+				case 1: .@turn = 1; break;
+				case 2: .@turn = 3; break;
+				case 3: .@turn = 5; break;
+				case 4:
+				mes "[Kafra Denise]";
+				mes "Tudo bem.";
+				mes "Ganhe mais Pontos de Reserva Especial usando os Serviços da Corporação Kafra encontrado por toda Rune-Midgard.";
+				close2; cutin ("",255); end;
 			}
+			mes "Girando a Roleta";
+			mes "Boa Sorte!!!";
 			RESRVPTS -= .@points;
-			callfunc "F_Lottery";
+			next;
+			while (true) {
+				if (.@turn) {
+					mes "[Kafra Denise]";
+					mes "Girando a Roleta....";
+					mes "Numero de Giros "+.@turn+".";
+					next;
+					.@rand = rand(10);
+					.@turn --;
+					continue;
+				}
+				break;
+			}
+			if (.@rand <= 7) {
+				.@rand += .@select;
+			}
+			mes "[Kafra Denise]";
+			mes "Já temos o resultado!";
+			mes "Vamos ver qual prêmio você ganhou!";
+			next;
+			switch (.@rand) {
+				case 10:
+				case 9:
+				mes "[Kafra Denise]";
+				mes "NOSSA!! Que incível você ganhou o primeiro prêmio!";
+				mes "Meus Parabéns!!!!";
+				if (.@select == 1) { getitem (Wooden_Mail,1); }
+				if (.@select == 2) { getitem (Wooden_Mail,1); getitem (Mantle,1); }
+				if (.@select == 3) { getitem (Wooden_Mail,1); getitem (Mantle,1); getitem (Berserk_Potion,10); getitem (Yggdrasilberry,3); getitem (Seed_Of_Yggdrasil,10); }
+				close2; cutin ("",255); end;
+				case 8:
+				case 7:
+				mes "[Kafra Denise]";
+				mes "NOSSA!! Que incível você ganhou o segundo prêmio!";
+				mes "Meus Parabéns!!!!";
+				if (.@select == 1) { getitem (Shoes,1); }
+				if (.@select == 2) { getitem (Shoes,1); getitem (Cap,1); }
+				if (.@select == 3) { getitem (Shoes,1); getitem (Cap,1); getitem (Sunglasses,1); getitem (Royal_Jelly,3); getitem (Seed_Of_Yggdrasil,1); getitem (Yggdrasilberry,3); getitem (Royal_Jelly,10); }
+				close2; cutin ("",255); end;
+				case 6:
+				case 5:
+				mes "[Kafra Denise]";
+				mes "Que maravilha! Você ganhou o terceiro prêmio!";
+				mes "Meus Parabéns!!!!";
+				if (.@select == 1) { getitem (Wing_Of_Butterfly,4); }
+				if (.@select == 2) { getitem (Wing_Of_Butterfly,4); getitem (Blue_Potion,3); getitem (White_Potion,15); }
+				if (.@select == 3) { getitem (Wing_Of_Butterfly,4); getitem (Blue_Potion,3); getitem (White_Potion,30); getitem (Glasses,1); }
+				close2; cutin ("",255); end;
+				case 4:
+				case 3:
+				mes "[Kafra Denise]";
+				mes "Que maravilha! Você ganhou o quarto prêmio!";
+				mes "Meus Parabéns!!!!";
+				if (.@select == 1) { getitem (Sweet_Potato,100); getitem (Red_Potion,150); }
+				if (.@select == 2) { getitem (Sweet_Potato,100); getitem (Red_Potion,150); getitem (Orange_Potion,150); }
+				if (.@select == 3) { getitem (Sweet_Potato,100); getitem (Red_Potion,150); getitem (Orange_Potion,150); getitem (Blue_Potion,15); }
+				close2; cutin ("",255); end;
+				default:
+				mes "[Kafra Denise]";
+				mes "Muito bem! Você ganhou o quinto prêmio!";
+				mes "Meus Parabéns!!!!";
+				if (.@select == 1) { getitem (Sweet_Potato,50); };
+				if (.@select == 2) { getitem (Red_Potion,100); };
+				if (.@select == 3) { getitem (Sweet_Potato,150); getitem (Red_Potion,300); };
+				close2; cutin ("",255); end;
+			}
 		}
 	}
-	mes "[Kafra]";
-	mes "Sem problemas.";
-	mes "Ganhe mais Pontos de Reserva Especial usando o Serviço Kafra encontrado por toda Rune-Midgard.";
-	mes "Obrigado por usar os Serviços da Corp. Kafra.";
-	cutin ("",255);
-	close;
-}
-
-// ------------------------------------------------------------------
-// - [Função] -
-// ------------------------------------------------------------------
-function	script	F_Lottery	{
-	mes "[Kafra]";
-	mes "Você tem uma rara oportunidade de ganhar um prêmio vindo dos céus!!";
-	next;
-	mes "[Kafra]";
-	mes "Não estrague essa única chance!";
-	mes "Você está pronto?";
-	next;
-	mes "[Kafra]";
-	mes "Quantas vezes você quer qua a máquina gire?";
-	mes "Você pode escolher até 5 vezes.";
-	next;
-	input @input;
-	if(@input < 1 || @input > 5) @input = rand(1,5);
-	callsub (sF_Spin);
-	mes "[Kafra]";
-	mes "Deixe-me ver os resultados... adivinha só?";
-	next;
-	mes "[Kafra]";
-	mes "^FF0000Deixe-me ver....";
-	mes "Esse é...!!^000000";
-	next;
-	if(@temp <  1) goto (sL_Prize1);
-	if(@temp <  2) goto (sL_Prize2);
-	if(@temp <  3) goto (sL_Prize3);
-	if(@temp <=  4) goto (sL_Prize4);
-	goto (sL_Prize5);
-
-	sL_Prize1:
-	mes "[Kafra]";
-	mes "WOW!!!!..... Você venceu!!!";
-	mes "1º Prêmio! Parabéns.";
-	if(@Lotto == 1) getitem (Wooden_Mail,1);
-	if(@Lotto == 2) getitem (Mantle,1);
-	if(@Lotto == 3) getitem (Berserk_Potion,10);
-	if(@Lotto == 4) {
-		getitem Yggdrasilberry,2;
-		getitem Seed_Of_Yggdrasil,1;
-	}
-	if(@Lotto == 5) getitem Yggdrasilberry,3;
-	return;
-
-	sL_Prize2:
-	mes "[Kafra]";
-	mes "Oh! WOW! Você ganhou o 2º prêmio! Parabéns!!";
-	if(@Lotto == 1) getitem Shoes,1;
-	if(@Lotto == 2) getitem Cap,1;
-	if(@Lotto == 3) getitem Sunglasses,1;
-	if(@Lotto == 4) getitem Royal_Jelly,3;
-	if(@Lotto == 5) {
-		getitem Seed_Of_Yggdrasil,1;
-		getitem Royal_Jelly,10;
-	}
-	return;
-
-	sL_Prize3:
-	mes "[Kafra]";
-	mes "Parabéns! Você ganhou o 3º Prêmio.";
-	if(@Lotto == 1) getitem Wing_Of_Butterfly,4;
-	if(@Lotto == 2) getitem Blue_Potion,3;
-	if(@Lotto == 3) getitem Glasses,1;
-	if(@Lotto == 4) getitem White_Potion,15;
-	if(@Lotto == 5) getitem White_Potion,30;
-	return;
-
-	sL_Prize4:
-	mes "[Kafra]";
-	mes "Você ganhou o 4º Prêmio.";
-	if(@Lotto == 1) getitem Sweet_Potato,100;
-	if(@Lotto == 2) getitem Red_Potion,150;
-	if(@Lotto == 3) getitem Orange_Potion,150;
-	if(@Lotto == 4) getitem Blue_Potion,5;
-	if(@Lotto == 5) getitem Blue_Potion,10;
-	return;
-
-	sL_Prize5:
-	mes "[Kafra]";
-	mes "Você ganhou o 5º prêmio.";
-	if(@Lotto == 1) getitem Sweet_Potato,50;
-	if(@Lotto == 2) getitem Red_Potion,100;
-	if(@Lotto == 3) getitem Red_Potion,200;
-	if(@Lotto == 4) getitem Red_Potion,250;
-	if(@Lotto == 5) getitem Red_Potion,300;
-	return;
-
-	sF_Spin:
-	mes "[Máquina]";
-	mes "Número de giros sobrando: "+@input;
-	next;
-	mes "[Máquina]";
-	mes "(rumble~rumble~rumble~)...";
-	next;
-	@temp = rand(10);
-	--@input;
-	if(@input <= 0) return;
-	goto sF_Spin;
+	mes "[Kafra Denise]";
+	mes "Tudo bem.aaa";
+	mes "Ganhe mais Pontos de Reserva Especial usando os Serviços da Corporação Kafra encontrado por toda Rune-Midgard.";
+	close2; cutin ("",255); end;
 }

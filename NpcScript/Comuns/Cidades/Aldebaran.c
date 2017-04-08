@@ -9,7 +9,7 @@
 |                                                                   |
 +-------------------------------------------------------------------+
 | - Script: eAthena/ rAthena/ Hercules (Emuladores)                 |
-| - Vers√£o: Spell Master                                            |
+| - Vers„o: Spell Master                                            |
 | - Nota: Npcs comuns na cidade Al de Baran                         |
 \*-----------------------------------------------------------------*/
 
@@ -18,9 +18,9 @@
 // ------------------------------------------------------------------
 aldebaran,113,70,4	script	Ferreiro Munster#alde	1_M_02,{
 	mes "[Munster]";
-	mes "Minha fam√≠lia morava em Geffen.";
-	mes "Ent√£o eu acho que era natural que estud√°ssemos forja, e eventualmente nos torn√°ssemos Ferreiros.";
-	mes "Ent√£o, finalmente nos mudamos para essa cidade,";
+	mes "Minha famÌlia morava em Geffen.";
+	mes "Ent„o eu acho que era natural que estud·ssemos forja, e eventualmente nos torn·ssemos Ferreiros.";
+	mes "Ent„o, finalmente nos mudamos para essa cidade,";
 	mes "Al De Baran.";
 	next;
 	if (select("Sobre ^3355FFRefinamento de Itens^000000","Sair") == 1) {
@@ -29,50 +29,50 @@ aldebaran,113,70,4	script	Ferreiro Munster#alde	1_M_02,{
 		mes "Ele me ensinou muito sobre forjar equipamentos.";
 		next;
 		mes "[Munster]";
-		mes "Uma das coisas fundamentais √© que a probabilidade de sucesso ao refinar um item depende do n√≠vel da arma.";
+		mes "Uma das coisas fundamentais È que a probabilidade de sucesso ao refinar um item depende do nÌvel da arma.";
 		next;
 		mes "[Munster]";
-		mes "Para armas de n√≠vel 1, voc√™ pode refinar at√© +7 sem correr o risco de quebr√°-la.";
-		mes "Armas de n√≠vel 2 podem ser refinadas at√© +6, enquanto as de n√≠vel 3 podem ser refinadas at√© +5 sem correr risco.";
+		mes "Para armas de nÌvel 1, vocÍ pode refinar atÈ +7 sem correr o risco de quebr·-la.";
+		mes "Armas de nÌvel 2 podem ser refinadas atÈ +6, enquanto as de nÌvel 3 podem ser refinadas atÈ +5 sem correr risco.";
 		next;
 		mes "[Munster]";
-		mes "Para armas de n√≠vel 4, voc√™ pode refinar at√© +4 sem muito risco.";
-		mes "Para armaduras, voc√™ pode refinar at√© +4.";
-		mes "Se o processo falhar, o equipamento ser√° destruido!";
+		mes "Para armas de nÌvel 4, vocÍ pode refinar atÈ +4 sem muito risco.";
+		mes "Para armaduras, vocÍ pode refinar atÈ +4.";
+		mes "Se o processo falhar, o equipamento ser· destruido!";
 		close;
 	}
 	mes "[Munster]";
 	mes "Hmm...";
 	mes "Se puder, tente visitar a oficina do meu pai aqui em Al de Baran.";
-	mes "Se me permite dizer, ele √© um Ferreiro muito talentoso.";
+	mes "Se me permite dizer, ele È um Ferreiro muito talentoso.";
 	close;
 }
 
 // ------------------------------------------------------------------
 aldebaran,64,104,4	script	Homem Forjando#alde	1_M_JOBTESTER,{
 	mes "[Quatro]";
-	mes "Voc√™ ouviu falar que aquele Ferreiro famoso se mudou de Geffen para c√°?";
+	mes "VocÍ ouviu falar que aquele Ferreiro famoso se mudou de Geffen para c·?";
 	next;
 	if (select("Ferreiro Famoso?","Encerrar conversa") == 1) {
 		mes "[Quatro]";
-		mes "Pelo o que eu ouvi, ele √© um daqueles Ferreiros que consegue refinar armas e armaduras.";
-		mes "Quando uma arma √© refinada o seu ataque √© aumentado.";
+		mes "Pelo o que eu ouvi, ele È um daqueles Ferreiros que consegue refinar armas e armaduras.";
+		mes "Quando uma arma È refinada o seu ataque È aumentado.";
 		next;
 		mes "[Quatro]";
-		mes "Para cada n√≠vel de refinamento, a for√ßa de ataque √© aumentada em 2 para armas de n√≠vel 1.";
-		mes "Para armas de n√≠vel 2, a for√ßa de ataque aumenta em 3.";
+		mes "Para cada nÌvel de refinamento, a forÁa de ataque È aumentada em 2 para armas de nÌvel 1.";
+		mes "Para armas de nÌvel 2, a forÁa de ataque aumenta em 3.";
 		next;
 		mes "[Quatro]";
-		mes "Para armas de n√≠vel 3, s√£o adicionados 5 na for√ßa de ataque para cada n√≠vel de refinamento.";
-		mes "Para armas n√≠vel 4, s√£o adicionados 7 na for√ßa de ataque.";
+		mes "Para armas de nÌvel 3, s„o adicionados 5 na forÁa de ataque para cada nÌvel de refinamento.";
+		mes "Para armas nÌvel 4, s„o adicionados 7 na forÁa de ataque.";
 		close;
 	}
 	mes "[Quatro]";
-	mes "Essa fam√≠lia de ferreiros vive aqui desde que a sua esposa ficou doente e fraca.";
-	mes "Por causa dessa doen√ßa, ela precisa de ervas medicinais que crescem perto de Al De Baran.";
+	mes "Essa famÌlia de ferreiros vive aqui desde que a sua esposa ficou doente e fraca.";
+	mes "Por causa dessa doenÁa, ela precisa de ervas medicinais que crescem perto de Al De Baran.";
 	next;
 	mes "[Quatro]";
-	mes "Eles tamb√©m t√™m um filho prestativo que est√° sempre ajudando nos n√©gocios da fam√≠lia.";
+	mes "Eles tambÈm tÍm um filho prestativo que est· sempre ajudando nos nÈgocios da famÌlia.";
 	mes "Tenho certeza que o menino vai se tornar um bom Ferreiro, assim como o Pai.";
 	close;
 }
@@ -80,13 +80,13 @@ aldebaran,64,104,4	script	Homem Forjando#alde	1_M_JOBTESTER,{
 // ------------------------------------------------------------------
 aldebaran,49,93,4	script	Jovem#alde	4_M_01,{
 	mes "[Miller]";
-	mes "As armas de n√≠vel 4 n√£o s√£o legais?!";
-	mes "Eu n√£o consigo acreditar como armas";
-	mes "t√£o poderosas existem!";
+	mes "As armas de nÌvel 4 n„o s„o legais?!";
+	mes "Eu n„o consigo acreditar como armas";
+	mes "t„o poderosas existem!";
 	next;
 	mes "[Miller]";
-	mes "Bem, elas raramente s√£o vistas no mercado.";
-	mes "Mas Monstros Chefes t√™m uma chance pequena de derrubar elas se voc√™ for capaz de matar um.";
+	mes "Bem, elas raramente s„o vistas no mercado.";
+	mes "Mas Monstros Chefes tÍm uma chance pequena de derrubar elas se vocÍ for capaz de matar um.";
 	close;
 }
 
@@ -94,51 +94,51 @@ aldebaran,49,93,4	script	Jovem#alde	4_M_01,{
 aldebaran,81,61,4	script	Catadora de Conchas#ald	4W_F_01,{
 	mes "[Joanne]";
 	mes "Eu gosto de colecionar conchas do mar.";
-	mes "√â muito relaxante e divertido.";
+	mes "… muito relaxante e divertido.";
 	next;
 	if (select("Catar Conchas?","Finalizar Conversa") == 1) {
 		mes "[Joanne]";
-		mes "Quando voc√™ ver bolhas saindo da areia, ou de po√ßas de lama, tente cavar um pouco.";
-		mes "Voc√™ provavelmente vai encontrar conchas enterradas!";
+		mes "Quando vocÍ ver bolhas saindo da areia, ou de poÁas de lama, tente cavar um pouco.";
+		mes "VocÍ provavelmente vai encontrar conchas enterradas!";
 		next;
 		mes "[Joanne]";
-		mes "Voc√™ j√° ouviu falar de Ambernite?";
-		mes "Aquela concha monstro √© bem dura~";
+		mes "VocÍ j· ouviu falar de Ambernite?";
+		mes "Aquela concha monstro È bem dura~";
 		next;
 		mes "[Joanne]";
-		mes "√â normalmente vista na praia perto da prov√≠ncia √† oeste de Prontera.";
-		mes "Se voc√™ atacar uma sem estar preparado, voc√™ poder√° estar em apuros.";
+		mes "… normalmente vista na praia perto da provÌncia ‡ oeste de Prontera.";
+		mes "Se vocÍ atacar uma sem estar preparado, vocÍ poder· estar em apuros.";
 		next;
 		mes "[Joanne]";
-		mes "Ambernite √© muito forte!";
-		mes "Ent√£o tome cuidado!";
+		mes "Ambernite È muito forte!";
+		mes "Ent„o tome cuidado!";
 		close;
 	}
 	mes "[Joanne]";
-	mes "Ambernite √© muito forte!";
-	mes "Ent√£o tome cuidado!";
+	mes "Ambernite È muito forte!";
+	mes "Ent„o tome cuidado!";
 	close;
 }
 
 // ------------------------------------------------------------------
 aldebaran,46,129,4	script	Cara dos Canais#alde	4W_M_01,{
 	mes "[Panama]";
-	mes "Al De Baran √© conhecida mundialmente como a Cidade dos Canais.";
-	mes "Os canais realmente d√£o um toque sofisticado e rom√¢ntico a nossa cidade.";
+	mes "Al De Baran È conhecida mundialmente como a Cidade dos Canais.";
+	mes "Os canais realmente d„o um toque sofisticado e rom‚ntico a nossa cidade.";
 	next;
 	switch(select("Sobre os Canais","Finalizar Conversa")) {
 		case 1:
 		mes "[Panama]";
-		mes "Bem, um canal √© um lugar criado para a √°gua passar normalmente usado para embarca√ß√µes, ou irriga√ß√µes.";
+		mes "Bem, um canal È um lugar criado para a ·gua passar normalmente usado para embarcaÁıes, ou irrigaÁıes.";
 		next;
 		mes "[Panama]";
-		mes "Mas, os canais daqui s√£o apenas para ver.";
-		mes "Se n√≥s precisamos transportar alguma coisa.";
-		mes "N√≥s apenas usar√≠amos o servi√ßo de teletransporte da Corpora√ß√£o Kafra!";
+		mes "Mas, os canais daqui s„o apenas para ver.";
+		mes "Se nÛs precisamos transportar alguma coisa.";
+		mes "NÛs apenas usarÌamos o serviÁo de teletransporte da CorporaÁ„o Kafra!";
 		close;
 		case 2:
 		mes "[Panama]";
-		mes "Eu espero que voc√™ aprecie sua estadia em Al De Baran.";
+		mes "Eu espero que vocÍ aprecie sua estadia em Al De Baran.";
 		close;
 	}
 }
@@ -147,37 +147,37 @@ aldebaran,46,129,4	script	Cara dos Canais#alde	4W_M_01,{
 aldebaran,67,154,4	script	Homem da Floresta#alde	4W_M_02,{
 	mes "[Isenberg]";
 	mes "Mt. Mjolnir e Floresta de Payon.";
-	mes "Ambos s√£o lugares dif√≠ceis de atravessar.";
+	mes "Ambos s„o lugares difÌceis de atravessar.";
 	next;
 	switch(select("Mt.Mjolnir?","Floresta Payon...?","Finalizar Conversa")) {
 		case 1:
 		mes "[Isenberg]";
-		mes "Para chegar aqui vindo de Prontera ou Geffen, voc√™ tem que atravessar as Montanhas Mjolnir.";
+		mes "Para chegar aqui vindo de Prontera ou Geffen, vocÍ tem que atravessar as Montanhas Mjolnir.";
 		next;
 		mes "[Isenberg]";
-		mes "Se voc√™ veio at√© aqui sem usar o servi√ßo de teletransporte da Corpora√ß√£o Kafra, bom trabalho!";
+		mes "Se vocÍ veio atÈ aqui sem usar o serviÁo de teletransporte da CorporaÁ„o Kafra, bom trabalho!";
 		next;
 		mes "[Isenberg]";
-		mes "As Montanhas Mjolnir s√£o realmente √≠ngremes, e ela √© cheia de monstros agressivos.";
-		mes "Ent√£o sempre √© um risco tentar andar por l√° sozinho.";
+		mes "As Montanhas Mjolnir s„o realmente Ìngremes, e ela È cheia de monstros agressivos.";
+		mes "Ent„o sempre È um risco tentar andar por l· sozinho.";
 		close;
 		case 2:
 		mes "[Isenberg]";
-		mes "Se voc√™ deseja visitar Alberta ou a cidade de Payon.";
-		mes "Voc√™ deve primeiro atravessar a Floresta de Payon.";
+		mes "Se vocÍ deseja visitar Alberta ou a cidade de Payon.";
+		mes "VocÍ deve primeiro atravessar a Floresta de Payon.";
 		next;
 		mes "[Isenberg]";
-		mes "A Floresta de Payon √© um labirinto tortuoso e complexo onde √© facil se perder.";
-		mes "Ao menos que se concentre no seu caminho, voc√™ poder√° ficar preso naquele lugar perigoso.";
+		mes "A Floresta de Payon È um labirinto tortuoso e complexo onde È facil se perder.";
+		mes "Ao menos que se concentre no seu caminho, vocÍ poder· ficar preso naquele lugar perigoso.";
 		next;
 		mes "[Isenberg]";
 		mes "Payon, a vila dos aqueiros, foi construida dentro dessa floresta para se proteger de invasores.";
-		mes "Eu achei uma boa id√©ia da parte deles.";
+		mes "Eu achei uma boa idÈia da parte deles.";
 		close;
 		case 3:
 		mes "[Isenberg]";
 		mes "As enormes montanhas cercando essa cidade impede que pessoas de fora venham para essa cidade.";
-		mes "Talvez seja esse o motivo de termos sido capazes de manter esse canal bonito e limpo sem nenhuma influ√™ncia de fora.";
+		mes "Talvez seja esse o motivo de termos sido capazes de manter esse canal bonito e limpo sem nenhuma influÍncia de fora.";
 		close;
 	}
 }
@@ -185,34 +185,34 @@ aldebaran,67,154,4	script	Homem da Floresta#alde	4W_M_02,{
 // ------------------------------------------------------------------
 aldebaran,90,170,4	script	Epthiel#alde	1_M_01,{
 	mes "[Epthiel]";
-	mes "Algumas armas ou amaduras t√™m slots onde voc√™ pode inserir cartas obtidas de monstros.";
+	mes "Algumas armas ou amaduras tÍm slots onde vocÍ pode inserir cartas obtidas de monstros.";
 	next;
-	switch(select("Sobre o n√∫mero de slots","Rela√ß√£o entre cartas e slots","Finalizar a Conversa")) {
+	switch(select("Sobre o n˙mero de slots","RelaÁ„o entre cartas e slots","Finalizar a Conversa")) {
 		case 1:
 		mes "[Epthiel]";
 		mes "Itens soltos por monstros possuem mais slots que armas ou armaduras comuns vendidas em Lojas de NPCs.";
 		next;
 		mes "[Epthiel]";
-		mes "Eu acho que voc√™ pode deduzir que um item com mais Slots tem mais valor do que um mesmo item com menos slots.";
+		mes "Eu acho que vocÍ pode deduzir que um item com mais Slots tem mais valor do que um mesmo item com menos slots.";
 		close;
 		case 2:
 		mes "[Epthiel]";
-		mes "Uma vez que uma carta √© inserida num slot, √© impossivel remov√™-la.";
-		mes "Ent√£o tenha cuidado quando for inserir cartas em armas ou armaduras.";
+		mes "Uma vez que uma carta È inserida num slot, È impossivel removÍ-la.";
+		mes "Ent„o tenha cuidado quando for inserir cartas em armas ou armaduras.";
 		next;
 		mes "[Epthiel]";
-		mes "Al√©m disso, quando voc√™ passar o mouse em cima de um equipamento na janela de itens, ou na janela de vendas.";
-		mes "O nome do item ser√° seguido do n√∫mero de slots que ele possui em colchetes.";
+		mes "AlÈm disso, quando vocÍ passar o mouse em cima de um equipamento na janela de itens, ou na janela de vendas.";
+		mes "O nome do item ser· seguido do n˙mero de slots que ele possui em colchetes.";
 		next;
 		mes "[Epthiel]";
 		mes "Por exemplo, um escudo com 1 slot, quando o cursor passar por cima, vai aparecer o nome 'Escudo [1].'";
 		next;
 		mes "[Epthiel]";
-		mes "Voc√™ tamb√©m pode clicar com o bot√£o direito no item, e checar a janela de slots embaixo da descri√ß√£o.";
+		mes "VocÍ tambÈm pode clicar com o bot„o direito no item, e checar a janela de slots embaixo da descriÁ„o.";
 		close;
 		case 3:
 		mes "[Epithiel]";
-		mes "Voc√™ alguma vez j√° conseguiu uma carta de um monstro?";
+		mes "VocÍ alguma vez j· conseguiu uma carta de um monstro?";
 		close;
 	}
 }
@@ -220,29 +220,29 @@ aldebaran,90,170,4	script	Epthiel#alde	1_M_01,{
 // ------------------------------------------------------------------
 aldebaran,117,181,4	script	Joy#alde	1_M_02,{
 	mes "[Joy]";
-	mes "Armas de n√≠vel 1, que s√£os as mais fracas, precisa de um metal chamado ^3355FFFracon^000000 para serem refinadas.";
+	mes "Armas de nÌvel 1, que s„os as mais fracas, precisa de um metal chamado ^3355FFFracon^000000 para serem refinadas.";
 	next;
 	switch(select("Sobre Fracon:Conselho sobre Fracon:Finalizar Conversa")) {
 		case 1:
 		mes "[Joy]";
-		mes "Fracon √© um metal muito comum, e pode ser encontrado por todo o continente de Rune-Midgard.";
+		mes "Fracon È um metal muito comum, e pode ser encontrado por todo o continente de Rune-Midgard.";
 		next;
 		mes "[Joy]";
-		mes "Apesar de n√£o ter a for√ßa dos outros metais, √© facil de obter.";
-		mes "Voc√™ pode conseguir matando monstros ou comprando em Lojas na cidade.";
+		mes "Apesar de n„o ter a forÁa dos outros metais, È facil de obter.";
+		mes "VocÍ pode conseguir matando monstros ou comprando em Lojas na cidade.";
 		next;
 		mes "[Joy]";
-		mes "Quando voc√™ estiver usando armas de alto n√≠vel, e n√£o precisar mais deles, voc√™ pode vender por alguns zeny!";
+		mes "Quando vocÍ estiver usando armas de alto nÌvel, e n„o precisar mais deles, vocÍ pode vender por alguns zeny!";
 		close;
 		case 2:
 		mes "[Joy]";
 		mes "Bem, eu ouvi falar que muitos monstros carregam Fracons e derrubam eles quando mortos.";
-		mes "Por que voc√™ n√£o vai ca√ßa-los?";
+		mes "Por que vocÍ n„o vai caÁa-los?";
 		next;
 		mes "[Joy]";
-		mes "N√£o deve ser muito dif√≠cil.";
-		mes "Uma vez eu peguei um fracon depois de ter matado um Beb√™ Selvagem!";
-		mes "Mas se voc√™ estiver desesperado, voc√™ sempre pode comprar na Loja de Forja.";
+		mes "N„o deve ser muito difÌcil.";
+		mes "Uma vez eu peguei um fracon depois de ter matado um BebÍ Selvagem!";
+		mes "Mas se vocÍ estiver desesperado, vocÍ sempre pode comprar na Loja de Forja.";
 		close;
 		case 3:
 		mes "[Joy]";
@@ -254,12 +254,12 @@ aldebaran,117,181,4	script	Joy#alde	1_M_02,{
 // ------------------------------------------------------------------
 aldebaran,121,231,4	script	Alquimista#alde	1_M_03,{
 	mes "[Chemirre]";
-	mes "Alquimistas, uma das 2¬™ classes, s√£o capazes de criar itens de diversos materiais utilizando o conhecimento da antiga era de Al De Baran.";
+	mes "Alquimistas, uma das 2™ classes, s„o capazes de criar itens de diversos materiais utilizando o conhecimento da antiga era de Al De Baran.";
 	next;
-	switch(select("Sobre Alquimia em Payon","Defini√ß√£o de Alquimia",". . . . .","Finalizar Conversa")) {
+	switch(select("Sobre Alquimia em Payon","DefiniÁ„o de Alquimia",". . . . .","Finalizar Conversa")) {
 		case 1:
 		mes "[Chemirre]";
-		mes "A Maioria das pessoas n√£o sabe que existia uma forma oriental de alquimia desenvolvida em Payon.";
+		mes "A Maioria das pessoas n„o sabe que existia uma forma oriental de alquimia desenvolvida em Payon.";
 		next;
 		mes "[Chemirre]";
 		mes "Os Alquimistas de Payon eram capazes de criar Ouro de diferentes tipos de materiais.";
@@ -267,190 +267,190 @@ aldebaran,121,231,4	script	Alquimista#alde	1_M_03,{
 		next;
 		mes "[Chemirre]";
 		mes "Os materiais para a Alquimia de payon eram escassos.";
-		mes "Ent√£o o interesse nesse campo eventualmente diminuiu.";
-		mes "Agora, voc√™ apenas pode estudar Aqluimia aqui.";
+		mes "Ent„o o interesse nesse campo eventualmente diminuiu.";
+		mes "Agora, vocÍ apenas pode estudar Aqluimia aqui.";
 		next;
 		mes "[Chemirre]";
 		mes "Ainda sim, Eu penso que aqueles segredos foram perdidos depois que a Alquimia de Payon desapareceu da face da terra...";
 		close;
 		case 2:
 		mes "[Chemirre]";
-		mes "Alquimistas se especializam em pesquisas qu√≠micas para criar itens √∫teis de v√°rias outras coisas.";
+		mes "Alquimistas se especializam em pesquisas quÌmicas para criar itens ˙teis de v·rias outras coisas.";
 		next;
 		mes "[Chemirre]";
-		mes "Eu tamb√©m ouvi falar que eles podem criar v√°rios tipos de Po√ß√µes, e at√© podem sumonar alguns Monstros!";
-		mes "Me parece que os estudos deles t√™m v√°rios tipos de aplica√ß√µes.";
+		mes "Eu tambÈm ouvi falar que eles podem criar v·rios tipos de PoÁıes, e atÈ podem sumonar alguns Monstros!";
+		mes "Me parece que os estudos deles tÍm v·rios tipos de aplicaÁıes.";
 		close;
 		case 3:
 		mes "[Chemirre]";
-		mes "Voc√™ est√° entediado, n√£o √©??";
-		mes "Ok ent√£o, Eu vou contar uma hist√≥ria sobre cartas de monstro e slots de itens.";
-		mes "Como voc√™ j√° deve saber, se j√° conseguiu alguma uma carta antes,";
+		mes "VocÍ est· entediado, n„o È??";
+		mes "Ok ent„o, Eu vou contar uma histÛria sobre cartas de monstro e slots de itens.";
+		mes "Como vocÍ j· deve saber, se j· conseguiu alguma uma carta antes,";
 		next;
 		mes "[Chemirre]";
-		mes "voc√™ apenas pode inserir cartas em um item que satisfa√ßa o local requerido pela carta.";
-		mes "Por exemplo, vamos dizer que voc√™ obteve uma Carta Poring.";
+		mes "vocÍ apenas pode inserir cartas em um item que satisfaÁa o local requerido pela carta.";
+		mes "Por exemplo, vamos dizer que vocÍ obteve uma Carta Poring.";
 		next;
 		mes "[Chemirre]";
-		mes "Quando voc√™ clicar com o bot√£o direito na carta, voc√™ vai ver o b√¥nus como SOR+2 e Esquiva Perfeita+1 e o tipo como 'Armadura'. ";
+		mes "Quando vocÍ clicar com o bot„o direito na carta, vocÍ vai ver o bÙnus como SOR+2 e Esquiva Perfeita+1 e o tipo como 'Armadura'. ";
 		next;
 		mes "[Chemirre]";
-		mes "Se voc√™ tentar inserir essa carta em uma adaga com v√°rios slots, n√£o vai funcionar porque a carta s√≥ pode ser inserida em armaduras.";
+		mes "Se vocÍ tentar inserir essa carta em uma adaga com v·rios slots, n„o vai funcionar porque a carta sÛ pode ser inserida em armaduras.";
 		next;
 		mes "[Chemirre]";
-		mes "A maioria das armaduras vendidas em lojas na cidade n√£o possuem slots.";
-		mes "Isso quer dizer, que voc√™ s√≥ pode obter Armaduras Slotadas ca√ßando monstros.";
+		mes "A maioria das armaduras vendidas em lojas na cidade n„o possuem slots.";
+		mes "Isso quer dizer, que vocÍ sÛ pode obter Armaduras Slotadas caÁando monstros.";
 		next;
 		mes "[Chemirre]";
 		mes "Ah, deixe-me dizer como colocar uma carta em um equipamento.";
-		mes "Se quiser inserir uma carta na sua armadura equipadar, voc√™ primeiro deve desequip√°-la.";
-		mes "E ent√£o, clicar duas vezes na carda que deseja usar.";
-		mes "Ent√£o uma lista de armaduras, que voc√™ pode inserir cartas, vai aparecer.";
+		mes "Se quiser inserir uma carta na sua armadura equipadar, vocÍ primeiro deve desequip·-la.";
+		mes "E ent„o, clicar duas vezes na carda que deseja usar.";
+		mes "Ent„o uma lista de armaduras, que vocÍ pode inserir cartas, vai aparecer.";
 		next;
 		mes "[Chemirre]";
-		mes "N√£o √© t√£o complicado, √©?";
+		mes "N„o È t„o complicado, È?";
 		close;
 		case 4:
 		mes "[Chemirre]";
-		mes "Voc√™ n√£o pode falar sobre Alquimia de Rune-Midgard sem falar sobre a Guilda dos Alquimistas de Al De Baran!";
+		mes "VocÍ n„o pode falar sobre Alquimia de Rune-Midgard sem falar sobre a Guilda dos Alquimistas de Al De Baran!";
 		mes "Vida Longa aos Alquimistas!";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-aldebaran,86,228,4	script	Crian√ßa#alde	1_M_SIZ,{
+aldebaran,86,228,4	script	CrianÁa#alde	1_M_SIZ,{
 	mes "[Bebe]";
-	mes "Um tempo atr√°s quando eu sai para uma caminhada em dire√ß√£o ao Mt. Mjolnir com meu Beb√™ Selvagem chamado NukNuk,";
-	mes "n√≥s fomos atacados, felizmente n√£o fomos feridos.";
+	mes "Um tempo atr·s quando eu sai para uma caminhada em direÁ„o ao Mt. Mjolnir com meu BebÍ Selvagem chamado NukNuk,";
+	mes "nÛs fomos atacados, felizmente n„o fomos feridos.";
 	next;
 	switch(select("Atacados?","Sobre Mt.Mjolnir","Finalizar Conversa")) {
 		case 1:
 		mes "[Bebe]";
-		mes "Eu estava andando por um caminho estreiro e de repente, uma planta grande e feia come√ßou a nos atacar!";
+		mes "Eu estava andando por um caminho estreiro e de repente, uma planta grande e feia comeÁou a nos atacar!";
 		next;
 		mes "[Bebe]";
-		mes "Fiquei t√£o assustado, come√ßamos a correr.";
-		mes "Eu joguei pedras nela, mas acho que n√£o a machuquei.";
+		mes "Fiquei t„o assustado, comeÁamos a correr.";
+		mes "Eu joguei pedras nela, mas acho que n„o a machuquei.";
 		next;
 		mes "[Bebe]";
 		mes "O que realmente me surpreendeu foi que a planta que me atacou era uma planta gigante com o rosto de uma pessoa!";
-		mes "Ent√£o tome cuidado com essas, elas s√£o perigosas!";
+		mes "Ent„o tome cuidado com essas, elas s„o perigosas!";
 		close;
 		case 2:
 		mes "[Bebe]";
-		mes "Apesar de que as pessoas s√£o fascinadas pela beleza do Mt. Mjolnir, l√° est√° cheio de monstros perigosos!";
+		mes "Apesar de que as pessoas s„o fascinadas pela beleza do Mt. Mjolnir, l· est· cheio de monstros perigosos!";
 		next;
 		mes "[Bebe]";
-		mes "Existem flores, insetos, abelhas, borboletas e mariposas que s√£o grandes o suficiente para matar voc√™ se voc√™ n√£o for cuidadoso!";
+		mes "Existem flores, insetos, abelhas, borboletas e mariposas que s„o grandes o suficiente para matar vocÍ se vocÍ n„o for cuidadoso!";
 		next;
 		mes "[Bebe]";
-		mes "Ent√£o de novo, a maioria desses monstros n√£o vai machucar voc√™ se voc√™ n√£o atac√°-los primeiro.";
-		mes "Mas alguns deles v√£o atacar voc√™ uma vez que eles verem voc√™!";
+		mes "Ent„o de novo, a maioria desses monstros n„o vai machucar vocÍ se vocÍ n„o atac·-los primeiro.";
+		mes "Mas alguns deles v„o atacar vocÍ uma vez que eles verem vocÍ!";
 		close;
 		case 3:
 		mes "[Bebe]";
-		mes "A prop√≥sito, onde est√° NukNuk...?";
+		mes "A propÛsito, onde est· NukNuk...?";
 		mes "NukNuk! Venha aqui!";
 		close;
 	}
 }
 
 // ------------------------------------------------------------------
-aldebaran,159,242,4	script	Entom√≥logo#alde	2_M_SWORDMASTER,{
+aldebaran,159,242,4	script	EntomÛlogo#alde	2_M_SWORDMASTER,{
 	mes "[Stromme]";
-	mes "At√© para um forte Espadachim, os insetos no Mt. Mjolnir podem ser considerados amea√ßas.";
-	mes "Voc√™ deve conhecer seu inimigo antes de come√ßar uma batalha!";
+	mes "AtÈ para um forte Espadachim, os insetos no Mt. Mjolnir podem ser considerados ameaÁas.";
+	mes "VocÍ deve conhecer seu inimigo antes de comeÁar uma batalha!";
 	next;
 	if (select("Sobre Insetos","Finalizar Conversa") == 1) {
 		mes "[Stromme]";
 		mes "Abelhas, Borboletas e Mariposas parecem criaturas simples.";
-		mes "Mas isso n√£o significa que voc√™ pode subestim√°-las.";
+		mes "Mas isso n„o significa que vocÍ pode subestim·-las.";
 		next;
 		mes "[Stromme]";
-		mes "Esses insetos evoluiram atrav√©s dos tempos, e podem contra-atacar amea√ßas como voc√™s Aventureiros!";
+		mes "Esses insetos evoluiram atravÈs dos tempos, e podem contra-atacar ameaÁas como vocÍs Aventureiros!";
 		next;
 		mes "[Stromme]";
-		mes "Tamb√©m existem Insetos carn√≠voros, como Aranhas, Louva-a-Deus, e Argiopes.";
+		mes "TambÈm existem Insetos carnÌvoros, como Aranhas, Louva-a-Deus, e Argiopes.";
 		next;
 		mes "[Stromme]";
-		mes "Esses monstros sofreram muta√ß√µes e s√£o muito fortes para pessoas em certos n√≠veis.";
-		mes "Voc√™ deve tomar cuidado com Argiopes principalmente.";
+		mes "Esses monstros sofreram mutaÁıes e s„o muito fortes para pessoas em certos nÌveis.";
+		mes "VocÍ deve tomar cuidado com Argiopes principalmente.";
 		next;
 		mes "[Stromme]";
-		mes "Felizmente, a vis√£o deles √© muito ruim, ent√£o eles n√£o v√£o notar voc√™ se voc√™ andar a uma dist√¢ncia segura deles.";
+		mes "Felizmente, a vis„o deles È muito ruim, ent„o eles n„o v„o notar vocÍ se vocÍ andar a uma dist‚ncia segura deles.";
 		close;
 	}
 	mes "[Stromme]";
-	mes "N√£o importa quanto inofensivo e bonito os insetos s√£o, tenha cautela ao tocar neles.";
-	mes "Eles s√£o extremamente fortes ao contr√°rio da sua apar√™ncia inocente.";
-	mes "N√£o desmere√ßa os seres do Mt. Mjolnit.";
+	mes "N„o importa quanto inofensivo e bonito os insetos s„o, tenha cautela ao tocar neles.";
+	mes "Eles s„o extremamente fortes ao contr·rio da sua aparÍncia inocente.";
+	mes "N„o desmereÁa os seres do Mt. Mjolnit.";
 	close;
 }
 
 // ------------------------------------------------------------------
 aldebaran,60,70,4	script	Sylvia#alde	1_F_04,{
 	mes "[Sylvia]";
-	mes "Eu vim aqui de Prontera poque eu ouvi falar que o Escrit√≥rio Principal Kafra √© em algum lugar aqui em Al De Baran.";
+	mes "Eu vim aqui de Prontera poque eu ouvi falar que o EscritÛrio Principal Kafra È em algum lugar aqui em Al De Baran.";
 	next;
 	mes "[Sylvia]";
-	mes "N√£o deve ser dif√≠cil achar, mas eu sou horr√≠vel com dire√ß√µes.";
-	mes "Eu sempre me perco, n√£o importa como!";
+	mes "N„o deve ser difÌcil achar, mas eu sou horrÌvel com direÁıes.";
+	mes "Eu sempre me perco, n„o importa como!";
 	next;
 	mes "[Sylvia]";
-	mes "Se isso n√£o fosse ruim o suficiente, eu ainda deixei minhas Lupas em Prontera.";
-	mes "Agora eu preciso achar algu√©m para me ajudar com essas armas que tenho que identificar!";
+	mes "Se isso n„o fosse ruim o suficiente, eu ainda deixei minhas Lupas em Prontera.";
+	mes "Agora eu preciso achar alguÈm para me ajudar com essas armas que tenho que identificar!";
 	next;
-	if (select("Identificar?","Isso √© bom.") == 1) {
+	if (select("Identificar?","Isso È bom.") == 1) {
 		mes "[Sylvia]";
-		mes "Equipamentos que s√£o soltos por monstros n√£o podem ser equipados imediatamente.";
+		mes "Equipamentos que s„o soltos por monstros n„o podem ser equipados imediatamente.";
 		next;
 		mes "[Sylvia]";
-		mes "Se voc√™ clicar com o bot√£o direito no item equip√°vel, voc√™ vai ver que √© necess√°rio identificar o item.";
+		mes "Se vocÍ clicar com o bot„o direito no item equip·vel, vocÍ vai ver que È necess·rio identificar o item.";
 		mes "O que fazer?";
 		next;
 		mes "[Sylvia]";
-		mes "Bom, nesse caso, voc√™ tem que usar uma ^3355FFLupa^000000!";
+		mes "Bom, nesse caso, vocÍ tem que usar uma ^3355FFLupa^000000!";
 		next;
 		mes "[Sylvia]";
-		mes "Mesmo sem um Ferreiro, Alquimista ou Mercador no seu grupo, voc√™ pode identificar seu equipamento!";
-		mes "Claro que uma Lupa √© consumida cada vez que voc√™ usa...";
+		mes "Mesmo sem um Ferreiro, Alquimista ou Mercador no seu grupo, vocÍ pode identificar seu equipamento!";
+		mes "Claro que uma Lupa È consumida cada vez que vocÍ usa...";
 		close;
 	}
 	mes "[Sylvia]";
 	mes "Hey...";
-	mes "Isso foi um tom de sarcasmo na sua voz quando voc√™ falou?";
+	mes "Isso foi um tom de sarcasmo na sua voz quando vocÍ falou?";
 	close;
 }
 
 // ------------------------------------------------------------------
 aldebaran,93,80,4	script	Issei#alde	1_M_02,{
 	mes "[Issei]";
-	mes "Al De Baran √© um lugar maravilhoso com seus canais rom√¢nticos e sua arquitetura cl√°ssica.";
+	mes "Al De Baran È um lugar maravilhoso com seus canais rom‚nticos e sua arquitetura cl·ssica.";
 	mes "Eu amo passear pela cidade com minha linda namorada.";
 	next;
-	if (select("Voc√™ tem uma Namorada?","Finalizar Conversa.") == 1) {
+	if (select("VocÍ tem uma Namorada?","Finalizar Conversa.") == 1) {
 		mes "[Issei]";
 		mes "Ei...";
-		mes "√â t√£o dif√≠cil de acreditar?!";
+		mes "… t„o difÌcil de acreditar?!";
 		mes "Pergunte pra qualquer um!";
 		mes "Ela existe!";
 		mes "Apesar de, algumas vezes, ela fica muita animada com armas e armaduras.";
 		next;
 		mes "[Issei]";
-		mes "Quero dizer, ao inv√©s de aproveitar um jantar rom√¢ntico, ela come√ßa a falar sobre como equipamentos soltos por monstros t√™m mais qualidade que aqueles vendidos em lojas...";
+		mes "Quero dizer, ao invÈs de aproveitar um jantar rom‚ntico, ela comeÁa a falar sobre como equipamentos soltos por monstros tÍm mais qualidade que aqueles vendidos em lojas...";
 		next;
 		mes "[Issei]";
 		mes "por que devo me preocupar se equipamentos soltos por monstros tendem a ter mais slots?!";
 		mes "Eu nem consigo matar um Poring!";
 		next;
 		mes "[Issei]";
-		mes "Como voc√™ poder ver...";
-		mes "Eu sou um amante, n√£o um lutador.";
+		mes "Como vocÍ poder ver...";
+		mes "Eu sou um amante, n„o um lutador.";
 		close;
 	}
 	mes "[Issei]";
-	mes "Ent√£o, n√£o me ache est√∫pido, ok?";
+	mes "Ent„o, n„o me ache est˙pido, ok?";
 	close;
 }
 
@@ -461,47 +461,47 @@ aldebaran,180,46,4	script	Joo Jahk#alde	4_M_ORIENT01,{
 	mes "A Cidade na Floresta.";
 	next;
 	mes "[Joo Jahk]";
-	mes "A temperatura aqui em Al De Baran √© bem fresca, provavelmente por causa dos canais.";
-	mes "Voc√™ acha que podemos beber?";
+	mes "A temperatura aqui em Al De Baran È bem fresca, provavelmente por causa dos canais.";
+	mes "VocÍ acha que podemos beber?";
 	next;
 	mes "[Joo Jahk]";
-	mes "Bem, j√° √© tarde para perguntar, eu j√° bebi um pouco.";
+	mes "Bem, j· È tarde para perguntar, eu j· bebi um pouco.";
 	mes "Ainda sim, Eu estou um pouco preocupado...";
 	next;
 	if (select("Continar.","Finalizar Conversa.") == 1) {
 		mes "[Joo Jahk]";
 		mes "Em uma das minhas viagens por Rune-Midgard.";
-		mes "Ouvi de um Mago muito poderoso que ataques f√≠sicos ou magias de propriedade neutra n√£o funcionam contra monstros da propriedade Fantasma.";
+		mes "Ouvi de um Mago muito poderoso que ataques fÌsicos ou magias de propriedade neutra n„o funcionam contra monstros da propriedade Fantasma.";
 		next;
 		mes "[Joo Jahk]";
-		mes "Talvez esse conselho seja √∫til agora que voc√™ sabe.";
-		mes "Sempre se lembre da import√¢ncia das propriedades de suas Habilidades ou Armas, quando estiver lutando contra monstros.";
+		mes "Talvez esse conselho seja ˙til agora que vocÍ sabe.";
+		mes "Sempre se lembre da import‚ncia das propriedades de suas Habilidades ou Armas, quando estiver lutando contra monstros.";
 		close;
 	}
 	mes "[Joo Jahk]";
-	mes "Por outro lado, a √°gua que tomei era muito boa.";
-	mes "Espero que n√£o tivesse nada muito estranho dentro...";
+	mes "Por outro lado, a ·gua que tomei era muito boa.";
+	mes "Espero que n„o tivesse nada muito estranho dentro...";
 	close;
 }
 
 // ------------------------------------------------------------------
-aldebaran,212,122,4	script	Cidad√£o#alde	4W_M_01,{
+aldebaran,212,122,4	script	Cidad„o#alde	4W_M_01,{
 	mes "[Gavin]";
 	mes "Bem-vindo!";
-	mes "A Cidade de Al De Baran d√° as boas vindas a voc√™!";
+	mes "A Cidade de Al De Baran d· as boas vindas a vocÍ!";
 	next;
 	mes "[Gavin]";
 	mes "Bem, pode ser exagero.";
-	mes "Afinal, sou apenas eu que estou dando as boas vindas a voc√™.";
+	mes "Afinal, sou apenas eu que estou dando as boas vindas a vocÍ.";
 	next;
 	if (select("Agora, me fale sobre monstros.","Finalizar Conversa.") == 1) {
 		mes "[Gavin]";
 		mes "Monstros...?";
-		mes "N√£o estamos saindo do tema um pouco?";
-		mes "Ah, voc√™ deve ser um daqueles aventureiros!";
+		mes "N„o estamos saindo do tema um pouco?";
+		mes "Ah, vocÍ deve ser um daqueles aventureiros!";
 		next;
 		mes "[Gavin]";
-		mes "N√£o consegue tirar a cabe√ßa do trabalho, √©?";
+		mes "N„o consegue tirar a cabeÁa do trabalho, È?";
 		mes "Certo, existe um monstro que eu vi recentemente...";
 		next;
 		mes "[Gavin]";
@@ -512,66 +512,66 @@ aldebaran,212,122,4	script	Cidad√£o#alde	4W_M_01,{
 		mes "[Gavin]";
 		mes "Eu juro!";
 		mes "Ele estava pulando em volta de algum lugar perto do Mt. Mjolnir com alguns Porings.";
-		mes "Eu acho que ele era o l√≠der deles, algo do tipo.";
+		mes "Eu acho que ele era o lÌder deles, algo do tipo.";
 		close;
 	}
 	mes "[Gavin]";
 	mes "Awww...";
-	mes "N√£o fique desapontado s√≥ porque eu sou a √∫nica pessoa a te receber!";
+	mes "N„o fique desapontado sÛ porque eu sou a ˙nica pessoa a te receber!";
 	close;
 }
 
 // ------------------------------------------------------------------
 aldebaran,146,124,4	script	Garota da Cidade#alde	4W_F_01,{
 	mes "[Nastasia]";
-	mes "Em algum lugar do mundo existe uma ^3355FFGuilda dos Mercen√°rios^000000, onde eles ensinam pessoas a sutil arte do assassinato.";
+	mes "Em algum lugar do mundo existe uma ^3355FFGuilda dos Mercen·rios^000000, onde eles ensinam pessoas a sutil arte do assassinato.";
 	next;
 	mes "[Nastasia]";
-	mes "Mas matar n√£o √© ilegal?";
-	mes "E eles ainda chamam aquilo de instutui√ß√£o de ensino?";
+	mes "Mas matar n„o È ilegal?";
+	mes "E eles ainda chamam aquilo de instutuiÁ„o de ensino?";
 	next;
 	if (select("Continuar conversa.","Finalizar Conversa.") == 1) {
 		mes "[Nastasia]";
-		mes "Apesar de Assassinos se beneficiarem por serem muito r√°pidos e ter muita AGI.";
+		mes "Apesar de Assassinos se beneficiarem por serem muito r·pidos e ter muita AGI.";
 		mes "Eles ainda devem ter muita DES.";
 		next;
 		mes "[Nastasia]";
-		mes "DES √© especialmente importante se voc√™ quiser atacar monstros voadores.";
-		mes "Aqueles monstros s√£o r√°pidos ao se mover e ao atacar.";
+		mes "DES È especialmente importante se vocÍ quiser atacar monstros voadores.";
+		mes "Aqueles monstros s„o r·pidos ao se mover e ao atacar.";
 		next;
 		mes "[Nastasia]";
-		mes "Em geral, se voc√™ quiser atacar monstros que s√£o mais r√°pidos, voc√™ vai precisar de DES.";
+		mes "Em geral, se vocÍ quiser atacar monstros que s„o mais r·pidos, vocÍ vai precisar de DES.";
 		close;
 	}
 	mes "[Nastasia]";
-	mes "Normalmente se diz que nesse mundo, nada √© de gra√ßa.";
-	mes "Ainda sim, se voc√™ n√£o tiver que pagar para aprender a se tornar um Mercen√°rio...";
+	mes "Normalmente se diz que nesse mundo, nada È de graÁa.";
+	mes "Ainda sim, se vocÍ n„o tiver que pagar para aprender a se tornar um Mercen·rio...";
 	close;
 }
 
 // ------------------------------------------------------------------
 aldebaran,143,136,4	script	Sineiro#A	4_M_ORIENT02,{
 	mes "[Sineiro]";
-	mes "Eu fui ordenado pelo Comit√™ do 'C√©u na Terra' a guardar esse entrada da Torre do Rel√≥gio.";
+	mes "Eu fui ordenado pelo ComitÍ do 'CÈu na Terra' a guardar esse entrada da Torre do RelÛgio.";
 	next;
-	if (select("Sobre Torre do Rel√≥gio.","Sair.") == 1) {
+	if (select("Sobre Torre do RelÛgio.","Sair.") == 1) {
 		mes "[Sineiro]";
-		mes "Cada andar dessa torre √© conectado ao outro por um dispositivo que chamamos de 'Engrenagem de Portais.'";
+		mes "Cada andar dessa torre È conectado ao outro por um dispositivo que chamamos de 'Engrenagem de Portais.'";
 		next;
 		mes "[Sineiro]";
-		mes "Apesar de exitir portais se conectando por todo o lugar na Torre do Rel√≥gio, cuidado com 'Portais Sem Rumo.'";
+		mes "Apesar de exitir portais se conectando por todo o lugar na Torre do RelÛgio, cuidado com 'Portais Sem Rumo.'";
 		next;
 		mes "[Sineiro]";
-		mes "Os 'Portais Sem Rumo' v√£o transportar voc√™ para um lugar desconhecido do mapa.";
-		mes "Esteja atento se n√£o quiser se separar do seu grupo..";
+		mes "Os 'Portais Sem Rumo' v„o transportar vocÍ para um lugar desconhecido do mapa.";
+		mes "Esteja atento se n„o quiser se separar do seu grupo..";
 		next;
 		mes "[Sineiro]";
-		mes "Lembre-se, 'Portais Sem Rumo' ser√£o mostrados em verde no mini-mapa.";
-		mes "Ent√£o fique com seus olhos abertos, bem como para aqueles perigosos Rel√≥gios.";
+		mes "Lembre-se, 'Portais Sem Rumo' ser„o mostrados em verde no mini-mapa.";
+		mes "Ent„o fique com seus olhos abertos, bem como para aqueles perigosos RelÛgios.";
 		close;
 	}
 	mes "[Sineiro]";
-	mes "Tome cuidado com essa Torre, ela est√° repleta de monstros perigosos.";
+	mes "Tome cuidado com essa Torre, ela est· repleta de monstros perigosos.";
 	close;
 }
 
@@ -580,102 +580,102 @@ aldebaran,143,136,4	script	Sineiro#A	4_M_ORIENT02,{
 // ------------------------------------------------------------------
 aldeba_in,232,241,4	script	RS125#alde	1_M_02,{
 	mes "[RS125]";
-	mes "Eu posso soar muito rob√≥tico.";
-	mes "Mas, eu espero que voc√™ n√£o tenha medo de mim.";
-	mes "Eu sou t√£o humano quanto voc√™.";
+	mes "Eu posso soar muito robÛtico.";
+	mes "Mas, eu espero que vocÍ n„o tenha medo de mim.";
+	mes "Eu sou t„o humano quanto vocÍ.";
 	next;
 	mes "[RS125]";
-	mes "Eu posso ter um cora√ß√£o mec√¢nico e posso incomodar voc√™ com barulhos vindos dele.";
+	mes "Eu posso ter um coraÁ„o mec‚nico e posso incomodar vocÍ com barulhos vindos dele.";
 	mes "Isso nunca vai me impedir de correr pelo Futuro de Al De Baran.";
 	next;
-	if (select("Ouvir a Hist√≥ria.","Finalizar Conversa") == 1) {
+	if (select("Ouvir a HistÛria.","Finalizar Conversa") == 1) {
 		mes "[RS125]";
-		mes "J√° faz 3 anos.";
-		mes "Meu irm√£o 996 costumava ser um atleta de metros rasos no time de Al De Baran.";
-		mes "Naquela √©poca, as pessoas deram um apelido a ele:";
-		mes "O Peco Peco de Al De Baran', por suas pernas incrivelmente r√°pidas...";
+		mes "J· faz 3 anos.";
+		mes "Meu irm„o 996 costumava ser um atleta de metros rasos no time de Al De Baran.";
+		mes "Naquela Època, as pessoas deram um apelido a ele:";
+		mes "O Peco Peco de Al De Baran', por suas pernas incrivelmente r·pidas...";
 		next;
 		mes "[RS125]";
-		mes "Ele se tornou t√£o popular por suas corridas.";
+		mes "Ele se tornou t„o popular por suas corridas.";
 		mes "Que toda vez que a 'Turbo Track' acontecia de 4 em 4 anos.";
-		mes "Muitas pessoas de todo o continente viam a essa cidade apenas para ver meu irm√£o.";
-		mes "Eu era o empres√°rio dele na √©poca, eu me estressava muito por causa dos F√£s.";
+		mes "Muitas pessoas de todo o continente viam a essa cidade apenas para ver meu irm„o.";
+		mes "Eu era o empres·rio dele na Època, eu me estressava muito por causa dos F„s.";
 		next;
 		mes "[RS125]";
-		mes "Mas, nada √© para sempre...";
-		mes "Um dia, uma garota de Payon ganhou do meu irm√£o numa corrida.";
+		mes "Mas, nada È para sempre...";
+		mes "Um dia, uma garota de Payon ganhou do meu irm„o numa corrida.";
 		next;
 		mes "[RS125]";
-		mes "Meu irm√£o n√£o aceitava o fato de que tinha perdido ent√£o ele treinou muito e teve uma s√©ria parada card√≠aca.";
-		mes "Ele ainda est√° de cama.";
+		mes "Meu irm„o n„o aceitava o fato de que tinha perdido ent„o ele treinou muito e teve uma sÈria parada cardÌaca.";
+		mes "Ele ainda est· de cama.";
 		next;
 		mes "[RS125]";
-		mes "Eu sou a √∫nica esperan√ßa do meu irm√£o e do Futuro de Al De Baran!";
+		mes "Eu sou a ˙nica esperanÁa do meu irm„o e do Futuro de Al De Baran!";
 		mes "Me deseje sorte, eu vou ganhar dela, 'Breezy Havana' de Payon!";
 		close;
 	}
 	mes "[RS125]";
 	mes "Eu quero viajar pelo mundo em um dia dessess.";
-	mes "Se eu puder ver o oceano do porto de Alberta, deve ser t√£o maravilhoso.";
-	mes "Depois da pr√≥xima competi√ß√£o, Eu vou com meu irm√£o em um tour ao redor do mundo.";
+	mes "Se eu puder ver o oceano do porto de Alberta, deve ser t„o maravilhoso.";
+	mes "Depois da prÛxima competiÁ„o, Eu vou com meu irm„o em um tour ao redor do mundo.";
 	close;
 }
 
 // ------------------------------------------------------------------
-aldeba_in,223,121,4	script	Homem Amea√ßador	1_M_SMITH,{
-	mes "[Homem Amea√ßador]";
-	mes "Ei, n√£o se deve entrar na casa de alguem sem permiss√£o.";
-	mes "Isso √© ridiculo!";
+aldeba_in,223,121,4	script	Homem AmeaÁador	1_M_SMITH,{
+	mes "[Homem AmeaÁador]";
+	mes "Ei, n„o se deve entrar na casa de alguem sem permiss„o.";
+	mes "Isso È ridiculo!";
 	mes "Como ousa entrar na minha casa e falar comigo como se fosse uma coisa normal?";
 	next;
-	mes "[Homem Amea√ßador]";
+	mes "[Homem AmeaÁador]";
 	mes "Hahahaha..., eu apenas estava brincando.";
 	next;
 	if (select("Continuar:Sair") == 1) {
-		mes "[Homem Amea√ßador]";
-		mes "Voc√™ j√° deve saber disso, mas n√≥s temos um sistema chamado 'O Sistema de Assistentes'.";
+		mes "[Homem AmeaÁador]";
+		mes "VocÍ j· deve saber disso, mas nÛs temos um sistema chamado 'O Sistema de Assistentes'.";
 		mes "Sim, Eu sou um Soldado Assistente.";
 		next;
-		mes "[Homem Amea√ßador]";
-		mes "√â simples, voc√™ paga para algu√©m o ajudar na batalha.";
-		mes "Se quiser Soldados Assistentes melhores voc√™ deve pagar mais, sabe?";
+		mes "[Homem AmeaÁador]";
+		mes "… simples, vocÍ paga para alguÈm o ajudar na batalha.";
+		mes "Se quiser Soldados Assistentes melhores vocÍ deve pagar mais, sabe?";
 		next;
-		mes "[Homem Amea√ßador]";
+		mes "[Homem AmeaÁador]";
 		mes "Vamos parar de falar coisas chatas.";
 		mes "Eu vou te ensinar como escolher um bom Assistente.";
 		next;
-		mes "[Homem Amea√ßador]";
-		mes "Cheque o nariz, veja se est√° limpo e √∫mido.";
-		mes "Um bom Assistente deve ter o nariz √∫mido.";
-		mes "Isso mostra que o Assistente est√° em suas melhores condi√ß√µes.";
-		mes "Se o nariz est√° seco, significa que ele pegou um resfriado.";
+		mes "[Homem AmeaÁador]";
+		mes "Cheque o nariz, veja se est· limpo e ˙mido.";
+		mes "Um bom Assistente deve ter o nariz ˙mido.";
+		mes "Isso mostra que o Assistente est· em suas melhores condiÁıes.";
+		mes "Se o nariz est· seco, significa que ele pegou um resfriado.";
 		next;
-		mes "[Homem Amea√ßador]";
-		mes "e n√£o esque√ßa de checar o tornozelo.";
-		mes "Os melhores assistentes t√™m o tornozelo magro e pesco√ßo branco!";
-		mes "Se ele tiver cabelo comprido, √© melhor!";
-		mes "Se ele tiver cabelo encaracolado, √© perfeito!";
+		mes "[Homem AmeaÁador]";
+		mes "e n„o esqueÁa de checar o tornozelo.";
+		mes "Os melhores assistentes tÍm o tornozelo magro e pescoÁo branco!";
+		mes "Se ele tiver cabelo comprido, È melhor!";
+		mes "Se ele tiver cabelo encaracolado, È perfeito!";
 		next;
-		mes "[Homem Amea√ßador]";
-		mes "Por √∫ltimo, voc√™ deve checar se ele est√° pronto para servir voc√™!";
-		mes "Quero dizer, ele deve fazer o melhor ao ajudar voc√™ numa luta!";
+		mes "[Homem AmeaÁador]";
+		mes "Por ˙ltimo, vocÍ deve checar se ele est· pronto para servir vocÍ!";
+		mes "Quero dizer, ele deve fazer o melhor ao ajudar vocÍ numa luta!";
 		close;
 	}
-	mes "[Homem Amea√ßador]";
+	mes "[Homem AmeaÁador]";
 	mes "Saia daqui, agora!";
-	mes "Se voc√™ √© um policial, me mostre um mandato,";
-	mes "se voc√™ √© da fam√≠lia, prove com sua marca de nascen√ßa!";
+	mes "Se vocÍ È um policial, me mostre um mandato,";
+	mes "se vocÍ È da famÌlia, prove com sua marca de nascenÁa!";
 	close;
 }
 
 // ------------------------------------------------------------------
-aldeba_in,219,61,4	script	Homem Amig√°vel#ald	4_M_MANAGER,{
-	mes "[Homem Amig√°vel]";
-	mes "Voc√™ n√£o precisa escutar o cara ao lado do meu quarto.";
-	mes "Dois anos atr√°s, ele estava num centro de treinamento de Assistentes quando ele caiu de uma √°rvore tentando pegar uma noz.";
+aldeba_in,219,61,4	script	Homem Amig·vel#ald	4_M_MANAGER,{
+	mes "[Homem Amig·vel]";
+	mes "VocÍ n„o precisa escutar o cara ao lado do meu quarto.";
+	mes "Dois anos atr·s, ele estava num centro de treinamento de Assistentes quando ele caiu de uma ·rvore tentando pegar uma noz.";
 	next;
-	mes "[Homem Amig√°vel]";
-	mes "Agora ele continua falanto alto para si. Isso me dar dor de cabe√ßa...";
+	mes "[Homem Amig·vel]";
+	mes "Agora ele continua falanto alto para si. Isso me dar dor de cabeÁa...";
 	mes "Meu Deus!";
 	close;
 }
@@ -685,31 +685,31 @@ aldeba_in,152,47,4	script	Homem Inquieto#alde	4W_M_01,{
 	mes "[Homem Inquieto]";
 	mes "Aaaaarrrggghhh...ESTOU COM PROBLEMAS!";
 	mes "Minha pequena galinha me deixou!";
-	mes "√ì Meu Deus!";
-	mes "√ì Meu Deus!";
+	mes "” Meu Deus!";
+	mes "” Meu Deus!";
 	next;
-	if (select("Como voc√™ chama ela?",". . . . .") == 1) {
+	if (select("Como vocÍ chama ela?",". . . . .") == 1) {
 		mes "[Homem Inquieto]";
-		mes "Eu costumava chamar de 'Incr√≠vel Picky'...";
-		mes "*Sob* O que eu fa√ßo!";
+		mes "Eu costumava chamar de 'IncrÌvel Picky'...";
+		mes "*Sob* O que eu faÁo!";
 		mes "Como isso aconteceu comigo!";
 		mes "Por favor, me ajude a encontrar miha pequena picky!";
 		next;
-		if (select("O qu√™? Que nome rid√≠culo!",". . . . .") == 1) {
+		if (select("O quÍ? Que nome ridÌculo!",". . . . .") == 1) {
 			mes "[Homem Inquieto]";
-			mes "N√£o seja rid√≠culo!";
-			mes "'Incr√≠vel Picky' √© o melhor e mais exclusivo nome nesse mundo, e minha galinha merece ele!";
+			mes "N„o seja ridÌculo!";
+			mes "'IncrÌvel Picky' È o melhor e mais exclusivo nome nesse mundo, e minha galinha merece ele!";
 			close;
 		}
 		mes "[Homem Inquieto]";
-		mes "Voc√™ n√£o se importa, n√£o √©?";
-		mes "Eu sou filho √∫nico, ent√£o eu sempre pensei nela como uma irm√£!";
+		mes "VocÍ n„o se importa, n„o È?";
+		mes "Eu sou filho ˙nico, ent„o eu sempre pensei nela como uma irm„!";
 		mes "Eu quero ela de volta...*Sob*";
 		close;
 	}
 	mes "[Homem Inquieto]";
-	mes "Voc√™ n√£o se importa, n√£o √©?";
-	mes "Eu sou filho √∫nico, ent√£o eu sempre pensei nela como uma irm√£!";
+	mes "VocÍ n„o se importa, n„o È?";
+	mes "Eu sou filho ˙nico, ent„o eu sempre pensei nela como uma irm„!";
 	mes "Eu quero ela de volta...*Sob*";
 	close;
 }
@@ -717,173 +717,175 @@ aldeba_in,152,47,4	script	Homem Inquieto#alde	4W_M_01,{
 // ------------------------------------------------------------------
 aldeba_in,156,179,4	script	Gerente do Bar#alde	1_M_PUBMASTER,{
 	mes "[Gerente do Bar]";
-	mes "A Sede da Corpora√ß√£o Kafra est√° localizada aqui em Al De Baran.";
+	mes "A Sede da CorporaÁ„o Kafra est· localizada aqui em Al De Baran.";
 	mes "Sabe o que isso significa?";
 	next;
 	mes "[Gerente do Bar]";
-	mes "Isso significa que aquelas lindas funcion√°rias v√™m aqui para almo√ßar, n√£o √© maravilhoso?!";
+	mes "Isso significa que aquelas lindas funcion·rias vÍm aqui para almoÁar, n„o È maravilhoso?!";
 	next;
 	mes "[Gerente do Bar]";
 	mes "Muito bem!";
-	mes "Est√° na hora das perguntas!";
+	mes "Est· na hora das perguntas!";
 	mes "Qual sua Kafra favorita?";
 	next;
 	if (Sex == 0) {
 		mes "[Gerente do Bar]";
-		mes "Ah, n√£o se preocupe.";
-		mes "Eu sei que as meninas t√™m alguma opini√£o sobre as outras meninas.";
-		mes "Mas quero saber a opini√£o dos garotos.";
+		mes "Ah, n„o se preocupe.";
+		mes "Eu sei que as meninas tÍm alguma opini„o sobre as outras meninas.";
+		mes "Mas quero saber a opini„o dos garotos.";
 		close;
 	}
-	if (select("Impressionante!","De jeito nenhum, eu n√£o sou pevertido.") == 1) {
+	if (select("Impressionante!","De jeito nenhum, eu n„o sou pevertido.") == 1) {
 		mes "[Gerente do Bar]";
-		mes "Muito bem, aqui vamos n√≥s!";
+		mes "Muito bem, aqui vamos nÛs!";
 		mes "Escolha a sua Fafra favorita!";
 		next;
 		mes "[Gerente do Bar]";
 		mes "A Kafra original, com seus lindos cabelos azuis!";
-		mes "Candidata n√∫mero um: ^3355FFDenise^000000!";
-		mes "Ela √© graciosa, usa o cabelo com rabo-de-cavalo, tira o f√¥lego dos homens.";
-		mes "E √© a favorita entre os adolescentes!";
+		mes "Candidata n˙mero um: ^3355FFDenise^000000!";
+		mes "Ela È graciosa, usa o cabelo com rabo-de-cavalo, tira o fÙlego dos homens.";
+		mes "E È a favorita entre os adolescentes!";
 		next;
 		mes "[Gerente do Bar]";
-		mes "Candidata n√∫mero dois: ^5533FFTatiana^000000!";
-		mes "Seus cabelos longos e lisos, √© o ponto do seu charme.";
+		mes "Candidata n˙mero dois: ^5533FFTatiana^000000!";
+		mes "Seus cabelos longos e lisos, È o ponto do seu charme.";
 		mes "Ela veio de Payon.";
 		next;
 		mes "[Gerente do Bar]";
-		mes "Candidata n√∫mero tr√™s: ^555555Marianne^000000!";
+		mes "Candidata n˙mero trÍs: ^555555Marianne^000000!";
 		mes "Ela tem um jeito sorridente, cabelo curto cor alaranjado.";
 		next;
 		mes "[Gerente do Bar]";
-		mes "Candidata n√∫mero quatro: ^1133DDBianca^000000!";
-		mes "Inteligente, sofisticada e nunca vista sem seus √≥culos luxuosos.";
+		mes "Candidata n˙mero quatro: ^1133DDBianca^000000!";
+		mes "Inteligente, sofisticada e nunca vista sem seus Ûculos luxuosos.";
 		next;
 		mes "[Gerente do Bar]";
-		mes "Candidata n√∫mero cinco: ^33FF55Sofia^000000!";
+		mes "Candidata n˙mero cinco: ^33FF55Sofia^000000!";
 		mes "Linda, fofa e novata.";
-		mes "Ela parece jovem e imatura, mas √© a melhor da equipe!";
-		mes "Candidata n√∫mero seis ^AAAA00Deborah^000000 !!";
+		mes "Ela parece jovem e imatura, mas È a melhor da equipe!";
+		mes "Candidata n˙mero seis ^AAAA00Deborah^000000 !!";
 		next;
 		switch(select("Denise","Tatiana","Marianne","Bianca","Sofia","Deborah")) {
 			case 1:
 			mes "[Gerente do Bar]";
 			mes "Oh!";
-			mes "Ent√£o voc√™ gosta das cl√°ssicas n√©!";
+			mes "Ent„o vocÍ gosta das cl·ssicas nÈ!";
 			mes "Eu respeito isso.";
 			next;
 			mes "[Gerente do Bar]";
-			mes "Eu suponho que voc√™ gosta de filmes originais.";
-			mes "N√£o gosta de se beneficiar com m√°s imita√ß√µes. Estou certo?";
+			mes "Eu suponho que vocÍ gosta de filmes originais.";
+			mes "N„o gosta de se beneficiar com m·s imitaÁıes. Estou certo?";
 			close;
 			case 2:
 			mes "[Gerente do Bar]";
 			mes "Humm...";
-			mes "Tatiana, Parece-me que esta garota est√° atraindo muitos por a√≠, hein?";
+			mes "Tatiana, Parece-me que esta garota est· atraindo muitos por aÌ, hein?";
 			close;
 			case 3:
 			mes "[Gerente do Bar]";
-			mes "Ent√£o...";
-			mes "Cabelos compridos e luxuosos √© importante para voc√™, hein?";
-			mes "Suponho que esse tipo de cabelo d√° as mulheres um olhar elegante.";
+			mes "Ent„o...";
+			mes "Cabelos compridos e luxuosos È importante para vocÍ, hein?";
+			mes "Suponho que esse tipo de cabelo d· as mulheres um olhar elegante.";
 			close;
 			case 4:
 			mes "[Gerente do Bar]";
-			mes "Ah, ent√£o voc√™ gosta das agitadas, e espont√¢neas.";
+			mes "Ah, ent„o vocÍ gosta das agitadas, e espont‚neas.";
 			mes "Eu entendo perfeitamente...";
 			next;
 			mes "[Gerente do Bar]";
-			mes "Bianca n√£o √© exatamente o tipo dona de casa.";
-			mes "Voc√™ provavelmente tem a mente aberta quando se trata de definir feminilidade, certo?";
+			mes "Bianca n„o È exatamente o tipo dona de casa.";
+			mes "VocÍ provavelmente tem a mente aberta quando se trata de definir feminilidade, certo?";
 			close;
 			case 5:
 			mes "[Gerente do Bar]";
-			mes "Ah, ent√£o voc√™ gosta do tipo intelectual.";
-			mes "Isso √© bom, isso √© bom.";
+			mes "Ah, ent„o vocÍ gosta do tipo intelectual.";
+			mes "Isso È bom, isso È bom.";
 			next;
 			mes "[Gerente do Bar]";
-			mes "Bem, Sofia pode ser fria como uma pedra √†s vezes.";
-			mes "Mas eu j√° vi ela balan√ßando o cora√ß√£o de muitos por ai!";
+			mes "Bem, Sofia pode ser fria como uma pedra ‡s vezes.";
+			mes "Mas eu j· vi ela balanÁando o coraÁ„o de muitos por ai!";
 			close;
 			case 6:
 			mes "[Gerente do Bar]";
 			mes "Massss o que?!";
-			mes "Ela √© jovem demais!";
+			mes "Ela È jovem demais!";
 			close;
 		}
 	}
 	mes "[Gerente do Bar]";
 	mes "Mas eu trabalhei duro nessas perguntas!";
 	mes "Leve na esportiva!";
-	mes "Admirar uma bela mulher √© como apreciar uma arte.";
+	mes "Admirar uma bela mulher È como apreciar uma arte.";
 	close;
 }
 
 // ------------------------------------------------------------------
+/* ** Usada para loteria
 aldeba_in,84,166,4	script	Denise#alde	4_F_KAFRA1,{
 	cutin ("kafra_01",2);
 	mes "[Kafra Denise]";
 	mes "Oi eu sou a Denise,";
-	mes "N√≥s, Funcion√°rias Kafra, estamos trabalhando para a Corpora√ß√£o Kafra, tentando satisfazer 100% nossos clientes.";
+	mes "NÛs, Funcion·rias Kafra, estamos trabalhando para a CorporaÁ„o Kafra, tentando satisfazer 100% nossos clientes.";
 	close2;
 	cutin ("",255);
 	end;
 }
+*/
 
 // ------------------------------------------------------------------
 aldeba_in,83,245,4	script	Tatiana#alde	4_F_KAFRA2,{
 	cutin ("kafra_02",2);
 	mes "[Kafra Tatiana]";
-	mes "Bem-vindo a Corpora√ß√£o Kafra.";
-	mes "As Funcion√°rias Kafras estar√£o sempre aqui para servir voc√™.";
+	mes "Bem-vindo a CorporaÁ„o Kafra.";
+	mes "As Funcion·rias Kafras estar„o sempre aqui para servir vocÍ.";
 	next;
 	mes "[Kafra Tatiana]";
-	mes "N√≥s apreciamos o seu cont√≠nuo uso do Servi√ßo Kafra.";
-	mes "Por favor se sinta livre para perguntar se tiver alguma d√∫vida.";
+	mes "NÛs apreciamos o seu contÌnuo uso do ServiÁo Kafra.";
+	mes "Por favor se sinta livre para perguntar se tiver alguma d˙vida.";
 	next;
-	switch(select("Como o Armaz√©m Kafra funciona?","Como voc√™ teletransporta as pessoas?")) {
+	switch(select("Como o ArmazÈm Kafra funciona?","Como vocÍ teletransporta as pessoas?")) {
 		case 1:
 		mes "[Kafra Tatiana]";
-		mes "Bom, Aventureiros como voc√™ pode colocar itens no Armaz√©m Kafra, assim voc√™ n√£o vai precisar ficar levando todas as suas coisas.";
+		mes "Bom, Aventureiros como vocÍ pode colocar itens no ArmazÈm Kafra, assim vocÍ n„o vai precisar ficar levando todas as suas coisas.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "A janela do Armaz√©m Kafra √© separada em 3 abas onde os itens s√£o separados automaticamente.";
+		mes "A janela do ArmazÈm Kafra È separada em 3 abas onde os itens s„o separados automaticamente.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "As ^3355FFItem^000000, ^3355FFEquip^000000, e ^3355FFEtc^000000 abas funcionam do mesmo jeito que as abas no invent√°rio dos itens.";
+		mes "As ^3355FFItem^000000, ^3355FFEquip^000000, e ^3355FFEtc^000000 abas funcionam do mesmo jeito que as abas no invent·rio dos itens.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "M√∫ltiplos itens do mesmo tipo v√£o apenas ocupar um Slot em Item ou em Etc.";
-		mes "Por exemplo, 324 Jellopies v√£o apenas ocupar um Slot, e 22 Po√ß√µes Vermelhas v√£o ocupar outro Slot.";
+		mes "M˙ltiplos itens do mesmo tipo v„o apenas ocupar um Slot em Item ou em Etc.";
+		mes "Por exemplo, 324 Jellopies v„o apenas ocupar um Slot, e 22 PoÁıes Vermelhas v„o ocupar outro Slot.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "Mas, na aba Equip, cada equipamento ocupa seu pr√≥prio Slot.";
-		mes "Eu acho que √© porque cada equipamento pode ser aprimorado com cartas ou refinamento.";
+		mes "Mas, na aba Equip, cada equipamento ocupa seu prÛprio Slot.";
+		mes "Eu acho que È porque cada equipamento pode ser aprimorado com cartas ou refinamento.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "Exite um total de 300 Slots para todas as categorias de itens no Armaz√©m Kafra, √© bom se lembrar disso.";
+		mes "Exite um total de 300 Slots para todas as categorias de itens no ArmazÈm Kafra, È bom se lembrar disso.";
 		close;
 		case 2:
 		mes "[Kafra Tatiana]";
 		mes "Oh, todos me fazem essa pergunta.";
-		mes "'^CC0066Oh Tatiana, como voc√™ faz isso?^000000'";
+		mes "'^CC0066Oh Tatiana, como vocÍ faz isso?^000000'";
 		mes "Bem...";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "Eu n√£o posso entrar em muito detalhes, claro.";
-		mes "Isso √© informa√ß√£o confidencial.";
-		mes "Mas eu posso dizer que nosso teletransporte funciona com uma mistura de m√°gica e tecnologia.";
+		mes "Eu n„o posso entrar em muito detalhes, claro.";
+		mes "Isso È informaÁ„o confidencial.";
+		mes "Mas eu posso dizer que nosso teletransporte funciona com uma mistura de m·gica e tecnologia.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "Tamb√©m, as Funcion√°rias Kafras sozinhas n√£o podem teletransportar os clientes.";
-		mes "N√≥s apenas recebemos e processamos seu pedido de Teletransporte.";
+		mes "TambÈm, as Funcion·rias Kafras sozinhas n„o podem teletransportar os clientes.";
+		mes "NÛs apenas recebemos e processamos seu pedido de Teletransporte.";
 		next;
 		mes "[Kafra Tatiana]";
-		mes "Atr√°s dos panos, profissionais habilidosos est√£o trabalhando 24 horas por dia para assegurar que voc√™ chegue r√°pido e seguro no seu destido.";
+		mes "Atr·s dos panos, profissionais habilidosos est„o trabalhando 24 horas por dia para assegurar que vocÍ chegue r·pido e seguro no seu destido.";
 		close;
 	}
 	mes "[Kafra Tatiana]";
-	mes "Em todo caso, espero que voc√™ goste da visita √† Sede da Corpora√ß√£o Kafra.";
+	mes "Em todo caso, espero que vocÍ goste da visita ‡ Sede da CorporaÁ„o Kafra.";
 	if (rand(1,11) == 9) {
 		next;
 		mes "[Kafra Tatiana]";
@@ -906,43 +908,43 @@ aldeba_in,24,245,4	script	Marianne#2alde	4_F_KAFRA3,{
 	cutin ("kafra_03",2);
 	mes "[Kafra Marianne]";
 	mes "Bem-vindo!";
-	mes "O Servi√ßo Kafra est√° sempre ao seu lado.";
+	mes "O ServiÁo Kafra est· sempre ao seu lado.";
 	next;
 	mes "[Kafra Marianne]";
-	mes "Obrigada por vir nos visitar na Sede da Corpora√ß√£o Kafra aqui em Al De Baran!";
+	mes "Obrigada por vir nos visitar na Sede da CorporaÁ„o Kafra aqui em Al De Baran!";
 	next;
 	mes "[Kafra Marianne]";
-	mes "O Servi√ßo Kafra tem uma reputa√ß√£o com os clientes que foi formada por mais de cinco mil e oitocentos anos...";
+	mes "O ServiÁo Kafra tem uma reputaÁ„o com os clientes que foi formada por mais de cinco mil e oitocentos anos...";
 	next;
-	switch(select("O qu√™?! N√£o acredito!","Ahh Cale a boca!","Seus Servi√ßos s√£o √≥timos!")) {
+	switch(select("O quÍ?! N„o acredito!","Ahh Cale a boca!","Seus ServiÁos s„o Ûtimos!")) {
 		case 1:
 		mes "["+ strcharinfo(0) +"]";
-		mes "O qu√™?!";
-		mes "N√£o acredito nisso!";
+		mes "O quÍ?!";
+		mes "N„o acredito nisso!";
 		next;
 		mes "["+ strcharinfo(0) +"]";
-		mes "CINCO MIL E OITOCENTOS ANOS?! VOC√ä EST√Å LOUCA?!";
+		mes "CINCO MIL E OITOCENTOS ANOS?! VOC  EST¡ LOUCA?!";
 		next;
 		mes "[Kafra Marianne]";
 		mes "Eu levei uma semana para memorizar tudo isso!";
-		mes "Minha mem√≥ria n√£o √© t√£o boa quanto a das outras Funcion√°rias Kafra...!";
+		mes "Minha memÛria n„o È t„o boa quanto a das outras Funcion·rias Kafra...!";
 		next;
 		mes "[Kafra Marianne]";
 		mes "Agora, err...";
-		mes "Como eu estava dizendo, a Corpora√ß√£o Kafra foi fundada h√° oito mil e quinhentos anos atr√°s por Emilio Alexander Kafra...";
+		mes "Como eu estava dizendo, a CorporaÁ„o Kafra foi fundada h· oito mil e quinhentos anos atr·s por Emilio Alexander Kafra...";
 		mes "Criador da Palavra 'Kafra?'";
 		next;
 		mes "[Kafra Marianne]";
 		mes "Ele...";
 		mes "Ele era um bom homem.";
 		mes "Ele...Grr!";
-		mes "N√£o consigo lembrar!";
+		mes "N„o consigo lembrar!";
 		next;
 		mes "[Kafra Marianne]";
-		mes "Ah n√£o...!";
-		mes "Essa n√£o pode ser a hist√≥ria certa!";
+		mes "Ah n„o...!";
+		mes "Essa n„o pode ser a histÛria certa!";
 		mes "Cinco mil e oitocentos...?!";
-		mes "√â impossivel!";
+		mes "… impossivel!";
 		close;
 		case 2:
 		mes "[Kafra Marianne]";
@@ -950,19 +952,19 @@ aldeba_in,24,245,4	script	Marianne#2alde	4_F_KAFRA3,{
 		mes "Cara.";
 		next;
 		mes "[Kafra Marianne]";
-		mes "Eu era uma membra das Tropas Kafra antes de entrar no Time do Servi√ßo Kafra.";
-		mes "Minha especialidade era ^990000Impacto Explosivo^000000, ent√£o se voc√™ sabe o que √© bom para voc√™.";
-		mes "N√£o mexa comigo.";
+		mes "Eu era uma membra das Tropas Kafra antes de entrar no Time do ServiÁo Kafra.";
+		mes "Minha especialidade era ^990000Impacto Explosivo^000000, ent„o se vocÍ sabe o que È bom para vocÍ.";
+		mes "N„o mexa comigo.";
 		next;
 		mes "[Kafra Marianne]";
-		mes "Eu tento ao m√°ximo viver t√£o feminina e quieta que eu puder.";
-		mes "Ent√£o n√£o me fa√ßa quebrar seus ossos! Entendeu?!";
+		mes "Eu tento ao m·ximo viver t„o feminina e quieta que eu puder.";
+		mes "Ent„o n„o me faÁa quebrar seus ossos! Entendeu?!";
 		close;
 		case 3:
 		mes "[Kafra Marianne]";
 		mes "Oraa!";
-		mes "Boas not√≠cias para ouvir.";
-		mes "N√≥s sempre estamos trabalhando duro para satisfazer nossos clientes com os servi√ßos que n√≥s oferecemos.";
+		mes "Boas notÌcias para ouvir.";
+		mes "NÛs sempre estamos trabalhando duro para satisfazer nossos clientes com os serviÁos que nÛs oferecemos.";
 		close;
 	}
 	close2;
@@ -971,66 +973,66 @@ aldeba_in,24,245,4	script	Marianne#2alde	4_F_KAFRA3,{
 }
 
 // ------------------------------------------------------------------
-aldeba_in,142,238,4	script	Bianca#3alde	4_F_KAFRA4,{
+aldeba_in,148,243,4	script	Bianca#3alde	4_F_KAFRA4,{
 	cutin ("kafra_04",2);
 	mes "[Kafra Bianca]";
 	mes "Bem-vind"+(Sex? "o":"a")+"!";
-	mes "A Corpora√ß√£o Kafra sempre ajudar√° os aventureiros de Rune-Midgard com os nossos excelentes servi√ßos.";
+	mes "A CorporaÁ„o Kafra sempre ajudar· os aventureiros de Rune-Midgard com os nossos excelentes serviÁos.";
 	next;
 	mes "[Kafra Bianca]";
-	mes "Meu nome √© Bianca!";
-	mes "Eu espero que voc√™ goste da sua visita a Sede da Corpora√ß√£o Kafra.";
+	mes "Meu nome È Bianca!";
+	mes "Eu espero que vocÍ goste da sua visita a Sede da CorporaÁ„o Kafra.";
 	next;
 	mes "[Kafra Bianca]";
-	mes "Estou aqui para responder qualquer uma das suas d√∫vidas em rela√ß√£o a Pol√≠tica da Corpora√ß√£o Kafra, assim como registrar qualquer opini√£o.";
+	mes "Estou aqui para responder qualquer uma das suas d˙vidas em relaÁ„o a PolÌtica da CorporaÁ„o Kafra, assim como registrar qualquer opini„o.";
 	next;
-	switch(select("Pol√≠tica Kafra","Eu amo a Kafra!")) {
+	switch(select("PolÌtica Kafra","Eu amo a Kafra!")) {
 		case 1:
 		mes "[Kafra Bianca]";
-		mes "Ent√£o, voc√™ gostaria de mais detalhes sobre nossa pol√≠tica e a elegibilidade dos nossos servi√ßos?";
-		mes "O que voc√™ gostaria de saber mais sobre?";
+		mes "Ent„o, vocÍ gostaria de mais detalhes sobre nossa polÌtica e a elegibilidade dos nossos serviÁos?";
+		mes "O que vocÍ gostaria de saber mais sobre?";
 		next;
-		switch(select("Armaz√©m Kafra","Aluguel de Carrinho","Na verdade, nem importa.")) {
+		switch(select("ArmazÈm Kafra","Aluguel de Carrinho","Na verdade, nem importa.")) {
 			case 1:
 			mes "[Kafra Bianca]";
-			mes "Como voc√™ j√° sabe, nossos clientes devem ter pelo menos n√≠vel 6 em Habilidades B√°sicas para poder usar o Armaz√©m Kafra.";
+			mes "Como vocÍ j· sabe, nossos clientes devem ter pelo menos nÌvel 6 em Habilidades B·sicas para poder usar o ArmazÈm Kafra.";
 			next;
 			mes "[Kafra Bianca]";
-			mes "A raz√£o para essa pol√≠tica √© que n√≥s tivemos problemas com jovens Aprendizes, que colocariam tudo o qu√™ tem dentro do Armaz√©m.";
+			mes "A raz„o para essa polÌtica È que nÛs tivemos problemas com jovens Aprendizes, que colocariam tudo o quÍ tem dentro do ArmazÈm.";
 			next;
 			mes "[Kafra Bianca]";
 			mes "Lembre-se dos dias de Aprendiz.";
 			mes "Tudo era novo e excitante, mas o zeny era escasso.";
-			mes "Bem, muitos Aprendizes colocariam at√© mesmo suas armas e armaduras no Armaz√©m.";
+			mes "Bem, muitos Aprendizes colocariam atÈ mesmo suas armas e armaduras no ArmazÈm.";
 			next;
 			mes "[Kafra Bianca]";
-			mes "Mas, nessa altura, eles j√° gastaram aquele pouco zeny que tinham para abrir o Armaz√©m.";
-			mes "E ent√£o eles n√£o v√£o ter dinheiro para acessar de novo!";
+			mes "Mas, nessa altura, eles j· gastaram aquele pouco zeny que tinham para abrir o ArmazÈm.";
+			mes "E ent„o eles n„o v„o ter dinheiro para acessar de novo!";
 			next;
 			mes "[Kafra Bianca]";
-			mes "Ent√£o, esse Aprendiz sem arma e sem armadura vai lutar contra monstros at√© conseguir zeny suficiente para abrir o Armaz√©m de novo!";
+			mes "Ent„o, esse Aprendiz sem arma e sem armadura vai lutar contra monstros atÈ conseguir zeny suficiente para abrir o ArmazÈm de novo!";
 			next;
 			mes "[Kafra Bianca]";
-			mes "√â um pequeno erro, na verdade, n√≥s aqui da Corpora√ß√£o Kafra valorizamos a vida humana.";
-			mes "Ent√£o decidimos que n√≠vel 6 em Habilidades B√°sicas √© um requerimento para prevenir esse tipo de problema.";
+			mes "… um pequeno erro, na verdade, nÛs aqui da CorporaÁ„o Kafra valorizamos a vida humana.";
+			mes "Ent„o decidimos que nÌvel 6 em Habilidades B·sicas È um requerimento para prevenir esse tipo de problema.";
 			close2; cutin ("",255); end;
 			case 2:
 			mes "[Kafra Bianca]";
-			mes "Como voc√™ sabe, a Corpora√ß√£o Kafra tem uma rela√ß√£o especial com a Guilda dos Mercadores.";
+			mes "Como vocÍ sabe, a CorporaÁ„o Kafra tem uma relaÁ„o especial com a Guilda dos Mercadores.";
 			mes "Assim como a Guilda dos Ferreiros e dos Alquimistas.";
 			next;
 			mes "[Kafra Bianca]";
-			mes "A Corpora√ß√£o Kafra apenas aluga Carrinhos para Mercadores, Ferreiros e Alquimistas.";
-			mes "J√° que essas classes t√™m um contrato especial conosco.";
+			mes "A CorporaÁ„o Kafra apenas aluga Carrinhos para Mercadores, Ferreiros e Alquimistas.";
+			mes "J· que essas classes tÍm um contrato especial conosco.";
 			next;
 			mes "[Kafra Bianca]";
-			mes "Mas tamb√©m, n√£o teria sentido vender carrinhos para pessoas que n√£o possam vender mercadorias.";
+			mes "Mas tambÈm, n„o teria sentido vender carrinhos para pessoas que n„o possam vender mercadorias.";
 			next;
 			mes "[Kafra Bianca]";
-			mes "Para os Super Aprendizes, bem, n√£o devemos alugar carrinhos para eles j√° que a Sociedade dos Super Aprendizes n√£o tem contrato conosco.";
+			mes "Para os Super Aprendizes, bem, n„o devemos alugar carrinhos para eles j· que a Sociedade dos Super Aprendizes n„o tem contrato conosco.";
 			next;
 			mes "[Kafra Bianca]";
-			mes "Se uma Funcion√°ria Kafra alugar um carro para um Super Aprendiz, ela provavelmente vai arrumar problemas com Leilah...";
+			mes "Se uma Funcion·ria Kafra alugar um carro para um Super Aprendiz, ela provavelmente vai arrumar problemas com Leilah...";
 			close2; cutin ("",255); end;
 			case 3:
 			mes "[Kafra Bianca]";
@@ -1041,8 +1043,8 @@ aldeba_in,142,238,4	script	Bianca#3alde	4_F_KAFRA4,{
 		case 2:
 		mes "[Kafra Bianca]";
 		mes "Obrigada!";
-		mes "√â sempre bom saber que somos apreciadas por nossos clientes!";
-		mes "Todas n√≥s trabalhamos duro para assegurar que o nosso servi√ßo esteja ao seus padr√µes de excel√™ncia~";
+		mes "… sempre bom saber que somos apreciadas por nossos clientes!";
+		mes "Todas nÛs trabalhamos duro para assegurar que o nosso serviÁo esteja ao seus padrıes de excelÍncia~";
 		close2; cutin ("",255); end;
 	}
 }
@@ -1051,20 +1053,20 @@ aldeba_in,142,238,4	script	Bianca#3alde	4_F_KAFRA4,{
 aldeba_in,91,244,4	script	Deborah#4alde	4_F_KAFRA6,{
 	cutin ("kafra_06",2);
 	mes "[Kafra Deborah]";
-	mes "Ol√°, Ol√°!!";
-	mes "Eu sou Deborah, a mais nova membra das Funcion√°rias Kafra!";
+	mes "Ol·, Ol·!!";
+	mes "Eu sou Deborah, a mais nova membra das Funcion·rias Kafra!";
 	next;
 	mes "[Kafra Deborah]";
 	mes "Eu posso ainda precisar aprender mais sobre como servir nossos clientes.";
-	mes "Mas eu estou sempre me esfor√ßando!";
+	mes "Mas eu estou sempre me esforÁando!";
 	next;
-	if (select("Cad√™ sua m√£e, crian√ßa?:Finalizar Conversa.") == 1) {
+	if (select("CadÍ sua m„e, crianÁa?:Finalizar Conversa.") == 1) {
 		mes "[Kafra Deborah]";
 		mes "Waaaaaaah!";
-		mes "Eu n√£o sou uma crian√ßa!";
+		mes "Eu n„o sou uma crianÁa!";
 		close2; cutin ("",255); end;
 	}
 	mes "[Kafra Deborah]";
-	mes "Aqui na Corpora√ß√£o Kafra, n√≥s estamos sempre fazendo o melhor para oferecer o excelente servi√ßo que voc√™ espera de n√≥s.";
+	mes "Aqui na CorporaÁ„o Kafra, nÛs estamos sempre fazendo o melhor para oferecer o excelente serviÁo que vocÍ espera de nÛs.";
 	close2; cutin ("",255); end;
 }

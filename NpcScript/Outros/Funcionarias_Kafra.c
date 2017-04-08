@@ -8,7 +8,6 @@
 |        /__/   |__|  [ Ragnarok Emulator ]                         |
 |                                                                   |
 +-------------------------------------------------------------------+
-| - Script: eAthena/ rAthena/ Hercules (Emuladores)                 |
 | - Desenvolvido por: Spell Master 27/03/2017                       |
 | - Nota: Funcionárias da Corporação Kafra                          |
 \*-----------------------------------------------------------------*/
@@ -47,7 +46,7 @@
 	if (strnpcinfo(NPC_MAP) == "lighthalzen")       { .@kaframenu = 2; }
 	if (strnpcinfo(NPC_MAP) == "moscovia")          { .@kaframenu = 2; }
 	// "Salvar","Usar Armazém","Alugar Carrinho"
-	if (strnpcinfo(NPC_NAME_UNIQUE) == "aldeba_in") { .@kaframenu = 3; }
+	if (strnpcinfo(NPC_MAP) == "aldeba_in")         { .@kaframenu = 3; }
 	// "Usar Armazém","Cancelar"
 	if (strnpcinfo(NPC_MAP) == "mjolnir_02")        { .@kaframenu = 4; }
 	if (strnpcinfo(NPC_MAP) == "niflheim")          { .@kaframenu = 4; }
