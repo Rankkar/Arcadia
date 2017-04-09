@@ -94,5 +94,5 @@
 }
 
 prontera,30,337,4	duplicate(MercPotion)	Poções de Acistentes#prt	8_F_GIRL
-izlude,55,170,4	duplicate(MercPotion)	Poções de Acistentes#izl	4_F_HUWOMAN
+izlude,56,139,4	duplicate(MercPotion)	Poções de Acistentes#izl	4_F_HUWOMAN
 pay_arche,102,167,5	duplicate(MercPotion)	Poções de Acistentes#pay	4_F_CAPEGIRL

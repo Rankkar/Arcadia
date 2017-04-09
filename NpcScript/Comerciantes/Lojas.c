@@ -1972,3 +1972,13 @@ tur_dun01,158,54,6	trader	Loja de Utilidades#tu	4W_M_03,{
 	sellitem Awakening_Potion;
 	sellitem Luxury_Sunglasses;
 }
+
+// ------------------------------------------------------------------
+// - [ Outros ] -
+// ------------------------------------------------------------------
+
+// Campo de Aprendizes ----------------------------------------------
+new_1-3,100,50,4	trader	Comerciante#newzone	4_F_04,{
+	OnInit:
+	sellitem Sweet_Potato;
+}

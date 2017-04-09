@@ -575,7 +575,7 @@ alberta,113,60,6	duplicate(KafraCorp)	Funcionária Kafra#kafra_06::albkaf2	4_F_KA
 alb2trea,59,69,5	duplicate(KafraCorp)	Funcionária Kafra#kafra_01::albkaf3	4_F_KAFRA1
 
 // ------------------------------------------------------------------
-izlude,128,148,6	duplicate(KafraCorp)	Funcionária Kafra#kafra_01::izlkaf1	4_F_KAFRA1
+izlude,134,87,3	duplicate(KafraCorp)	Funcionária Kafra#kafra_01::izlkaf1	4_F_KAFRA1
 izlu2dun,106,58,0	duplicate(KafraCorp)	Funcionária Kafra#kafra_03::izlkaf2	4_F_KAFRA3
 
 // ------------------------------------------------------------------

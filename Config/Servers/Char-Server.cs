@@ -53,9 +53,9 @@ char_configuration: {
 	player: {
 		new: {
 			start_point: {
-				map: "iz_int"
-				x: 97
-				y: 90
+				map: "new_1-1"
+				x: 55
+				y: 110
 			}
 			// Itens Iniciais
 			start_items: (

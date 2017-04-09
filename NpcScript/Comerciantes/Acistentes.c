@@ -161,5 +161,5 @@
 // - [ Duplificações ] -
 // ------------------------------------------------------------------
 prontera,41,337,5	duplicate(MercenaryRent)	Clã de Assis#Spear	8W_SOLDIER
-izlude,47,170,5	duplicate(MercenaryRent)	Clã de Assis#Sword	4_M_JOB_KNIGHT2
+izlude,47,139,5	duplicate(MercenaryRent)	Clã de Assis#Sword	4_M_JOB_KNIGHT2
 pay_arche,99,167,4	duplicate(MercenaryRent)	Clã de Assis#Bow	4_M_JOB_HUNTER

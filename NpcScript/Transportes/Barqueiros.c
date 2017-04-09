@@ -26,7 +26,7 @@ alberta,189,151,5	script	Marinheiro Fisk#AlbIz	4W_SAILOR,{
 			mes "Eu disse que preciso de 500 Zeny, e parece que você não tem.";
 			close;
 		}
-		close2; Zeny -= 500; warp ("izlude",195,212); end;
+		close2; Zeny -= 500; warp ("izlude",176,182); end;
 	}
 	mes "[Marinheiro Fisk]";
 	mes "Bem...";
@@ -79,7 +79,7 @@ alb2trea,39,50,6	script	Paul#2AlbTre	4W_SAILOR,{
 // ------------------------------------------------------------------
 // - [Alberta ~ Amatsu ] - 
 // ------------------------------------------------------------------
-alberta,246,74,3	script	Capitão#Walter	4_M_SEAMAN,{
+alberta,245,93,3	script	Capitão#Walter	4_M_SEAMAN,{
 	mes "[Walter Moers]";
 	mes "Ei, você aí...";
 	mes "Por acaso você sabia que existem países completamente diferentes do reino de Rune Midgard?";
@@ -187,7 +187,7 @@ amatsu,194,79,5	script	Capitão#Walter2	4_M_SEAMAN,{
 // ------------------------------------------------------------------
 // - [Alberta ~ Ayothaya ] - 
 // ------------------------------------------------------------------
-alberta,246,29,3	script	Aibakthing#ayo	4_M_THAIONGBAK,{
+alberta,247,42,3	script	Aibakthing#ayo	4_M_THAIONGBAK,{
 	mes "[Aibakthing]";
 	mes "Hmm! Hahh! Hmm! Hahh!";
 	mes "Deixe-me apresentar a você minha cidade, Ayothaya onde vive tudo o que é sagrado e misterioso!";
@@ -266,7 +266,7 @@ ayothaya,152,68,1	script	Barqueiro Aibakthing#ayo2	4_M_THAIONGBAK,{
 // ------------------------------------------------------------------
 // - [Alberta ~ Kunlun(Gon_Fild) ] - 
 // ------------------------------------------------------------------
-alberta,246,62,3	script	Wabakho#gon	4_M_TWMIDMAN,{
+alberta,245,69,3	script	Wabakho#gon	4_M_TWMIDMAN,{
 	mes "[Wabakho]";
 	mes "Saudações.";
 	mes "Eu gostaria de convidar todos vocês a Kunlun.";
@@ -441,7 +441,7 @@ lou_fild01,190,100,7	script	Garota de Louyang#lou2	4_F_CHNDRESS1,{
 // ------------------------------------------------------------------
 // - [Alberta ~ Moscovia] - 
 // ------------------------------------------------------------------
-alberta,246,51,4	script	Representante de Moscovia#mosknav	4_F_RUSWOMAN2,{
+alberta,245,66,4	script	Representante de Moscovia#mosknav	4_F_RUSWOMAN2,{
 	mes "[Relações Públicas]";
 	mes "Moscóvia! Você conhece Moscóvia?";
 	mes "O paraíso em meio ao mar sem fim!";
@@ -541,7 +541,7 @@ moscovia,166,53,4	script	Representante de Moscovia#mosknav2	4_F_RUSWOMAN2,{
 			close;
 		}
 		close2;
-		Zeny -= 800; warp ("izlude",195,212); end;
+		Zeny -= 800; warp ("izlude",176,182); end;
 		case 3:
 		mes "["+strnpcinfo(NPC_NAME_VISIBLE)+"]";
 		mes "Muito obrigado por escolher a";
@@ -555,7 +555,7 @@ cmd_fild07,94,134,4	duplicate(cmdboard)	Sarumane#cmd	4W_SAILOR
 // ------------------------------------------------------------------
 // - [ Izlude > Izlu2Dun / Izlude > Alberta ] - 
 // ------------------------------------------------------------------
-izlude,197,205,1	script	Marinheiro#izlude	4W_SAILOR,{
+izlude,199,178,1	script	Marinheiro#izlude	4W_SAILOR,{
 	mes "[Marinheiro]";
 	mes "Olá, todo mundo!";
 	mes "Atenção, atenção!";
@@ -589,7 +589,7 @@ izlu2dun,108,27,0	script	Marinheiro#2izlude	4W_SAILOR,{
 	mes "Quer voltar para Izlude?";
 	next;
 	if (select("Sim.","Não, quero ficar mais tempo!") == 1) {
-		close2; warp ("izlude",197,210); end;
+		close2; warp ("izlude",176,182); end;
 	}
 	close;
 }
@@ -656,7 +656,7 @@ jawaii,239,112,7	script	Marinheiro#jaw	4W_SAILOR,{
 	if (select("Voltar.","Cancelar.") == 1) {
 		mes "[Marinheiro]";
 		mes "Agora, deixe-me guiar você para Izlude.";
-		close2; warp ("izlude",195,212); end;
+		close2; warp ("izlude",176,182); end;
 	}
 	mes "[Marinheiro]";
 	mes "Aproveite o seu tempo e olhe tudo que gostar ao seu redor.";

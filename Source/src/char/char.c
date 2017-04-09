@@ -6211,7 +6211,7 @@ int do_init(int argc, char **argv) {
 
 	//Read map indexes
 	mapindex->init();
-	start_point.map = mapindex->name2id("iz_int");
+	start_point.map = mapindex->name2id("new_1-1");
 
 	safestrncpy(chr->userid, "s1", sizeof(chr->userid));
 	safestrncpy(chr->passwd, "p1", sizeof(chr->passwd));

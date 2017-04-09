@@ -16,7 +16,7 @@
 // ------------------------------------------------------------------
 // - [ Ruas ] -
 // ------------------------------------------------------------------
-izlude,71,92,2	script	Bonne#izl	4_F_01,{
+izlude,55,74,2	script	Bonne#izl	4_F_01,{
 	mes "[Bonne]";
 	mes "Saudações!";
 	mes "Izlude recebe vocês.";
@@ -41,7 +41,7 @@ izlude,71,92,2	script	Bonne#izl	4_F_01,{
 }
 
 // ------------------------------------------------------------------
-izlude,172,215,4	script	Charfri#izl	4_F_02,{
+izlude,135,78,2	script	Charfri#izl	4_F_02,{
 	mes "[Charfri]";
 	switch(rand(2)) {
 		case 1:
@@ -77,7 +77,7 @@ izlude,172,215,4	script	Charfri#izl	4_F_02,{
 }
 
 // ------------------------------------------------------------------
-izlude,174,164,4	script	Cuskoal#izl	4_F_TELEPORTER,{
+izlude,119,121,2	script	Cuskoal#izl	4_F_TELEPORTER,{
 	mes "[Cuskoal]";
 	switch(rand(2)) {
 		case 1:
@@ -104,7 +104,7 @@ izlude,174,164,4	script	Cuskoal#izl	4_F_TELEPORTER,{
 }
 
 // ------------------------------------------------------------------
-izlude,85,103,4	script	Dega#izl	4_M_02,{
+izlude,150,118,2	script	Dega#izl	4_M_02,{
 	mes "[Dega]";
 	switch(rand(3)) {
 		case 1:
@@ -191,7 +191,7 @@ izlude,85,103,4	script	Dega#izl	4_M_02,{
 }
 
 // ------------------------------------------------------------------
-izlude,140,186,4	script	Kylick#izl	4W_M_01,{
+izlude,150,143,2	script	Kylick#izl	4W_M_01,{
 	mes "[Kylick]";
 	mes "Eu estava pensando, apesar de o povo de Izlude viver tão perto do oceano...";
 	next;
@@ -206,7 +206,7 @@ izlude,140,186,4	script	Kylick#izl	4W_M_01,{
 }
 
 // ------------------------------------------------------------------
-izlude,57,159,2	script	Red#izl::RedCebalis	4_M_03,{
+izlude,56,126,2	script	Red#izl::RedCebalis	4_M_03,{
 	mes "[Red]";
 	mes "A única habilidade necessária a um Espadachim é o ^FF2400Golpe Fulminante^000000!";
 	mes "Golpe Fulminante, Golpe Fulminante e SÓ ^FF2400Golpe Fulminante^000000!";
@@ -269,7 +269,7 @@ izlude,57,159,2	script	Red#izl::RedCebalis	4_M_03,{
 	mes "Eu não sei porque você é tãoooo teimoso.";
 	close;
 }
-izlude,55,159,2	duplicate(RedCebalis)	Cebalis#izl	4W_M_02
+izlude,58,126,2	duplicate(RedCebalis)	Cebalis#izl	4W_M_02
 
 // ------------------------------------------------------------------
 // - [ Casas ] -

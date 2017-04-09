@@ -44,7 +44,7 @@ prontera,275,213,0	duplicate(MailBox)	Caixa Postal#prt2	2_POSTBOX
 prontera,34,212,0	duplicate(MailBox)	Caixa Postal#prt3	2_POSTBOX
 
 // ------------------------------------------------------------------
-izlude,136,94,0	duplicate(MailBox)	Caixa Postal#iz	2_POSTBOX
+//izlude,136,94,0	duplicate(MailBox)	Caixa Postal#iz	2_POSTBOX
 
 // ------------------------------------------------------------------
 moc_ruins,72,166,0	duplicate(MailBox)	Caixa Postal#mocr	2_POSTBOX

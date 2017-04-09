@@ -194,14 +194,13 @@ map_list: (
 	"sec_pri",
 
 	// ================================================================
-	// - Treinamento - (Izlude Academy)
-	"iz_int",
-	"iz_int01",
-	"iz_int02",
-	"iz_int03",
-	"iz_int04",
-	"iz_ac01",
-	"iz_ac02",
+	// - Treinamento
+	"new_1-1",
+	"new_1-2",
+	"new_1-3",
+	"new_zone01",
+	"new_zone02",
+	"new_zone03",
 
 	// ----------------------------------------------------------------
 	// - Lutie
