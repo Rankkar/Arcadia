@@ -36,7 +36,7 @@ map_log: {
 	// 0x10000 - (X) Log de todas as transações.
 	// Exemplo: Log de negociações+Log de vendas+Log de npcs (compra/venda)+Log de itens produzidos: 1+2+32+1024 = 1059
 	// Mover itens do inventário para o carrinho não é gravado propositalmente.
-	enable: 0x00000
+	enable: 0xFFFFF
 
 	// Logging files/tables
 	// As configurações a seguir indicam o local de registro.
@@ -106,20 +106,20 @@ map_log: {
 			// log_filter: 0x40 = logs only Cartões
 			// log_filter: 0x142 = registra apenas itens de Cura, Cartões e itens cujo preço é> = price_items_log
 			// log_filter: 0xff0 = registra todos os itens (incluindo todos raros, grande quantidade) exceto cura, etc, setas e usáveis
-			log_filter: 0
+			log_filter: 1
 
 			// Log de itens refinados 
-			refine_items_log: 0
+			refine_items_log: 7
 
 			// Registrar log de item
 			// Nota: 1 = 0.01%, 100 = 1%
-			rare_items_log: 0
+			rare_items_log: 100
 
 			// Redistrar log de preço em item
-			price_items_log: 0
+			price_items_log: 10000
 
 			// Registrar log na quantidade de item
-			amount_items_log: 0
+			amount_items_log: 100
 		} // item
 
 		chat: {
@@ -137,10 +137,10 @@ map_log: {
 			// log_chat: 0x8 = registra apenas as mensagens da Guild
 			// log_chat: 0x1f = registra tudo
 			// NOTA: Isso não é totalmente funcional, a partir de agora é só verificar se o log estiver ativo ou não
-			log_chat: 0x00
+			log_chat: 0x1f
 
 			// Desativar o log de bate-papo quando o WoE está sendo executado? (Nota 1)
-			log_chat_woe_disable: true
+			log_chat_woe_disable: false
 		}
 	}
 }

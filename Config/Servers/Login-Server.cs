@@ -18,7 +18,7 @@ login_configuration: {
 	log: {
 		// Para registrar o servidor de login?
 		// NOTA: O servidor de login-sql precisa dos logs de login para ativar as restrições de falha de passagem dinâmica.
-		log_login: false
+		log_login: true
 
 		// Indicar como exibir a data nos logs, nos jogadores, etc.
 		date_format: "%Y-%m-%d %H:%M:%S"

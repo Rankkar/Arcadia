@@ -16,7 +16,7 @@ inter_configuration: {
 	party_share_level: 10
 
 	log: {
-		log_inter: false
+		log_inter: true
 		inter_log_filename: "log/inter.log"
 		@include "Config/Connect/Connections.cs"
 	}
