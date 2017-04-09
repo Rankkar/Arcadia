@@ -24,7 +24,7 @@
 
 #define HPM_MAIN_CORE
 
-#include "config/core.h" // SV_VERSION, GP_BOUND_ITEMS, MAX_SPIRITBALL, RENEWAL, RENEWAL_ASPD, RENEWAL_CAST, RENEWAL_DROP, RENEWAL_EXP, SECURE_NPCTIMEOUT
+#include "config/core.h" // SV_VERSION, GP_BOUND_ITEMS, MAX_SPIRITBALL, RENEWAL, RENEWAL_CAST, RENEWAL_DROP, RENEWAL_EXP, SECURE_NPCTIMEOUT
 #include "pc.h"
 
 #include "map/atcommand.h" // get_atcommand_level()
@@ -2483,11 +2483,7 @@ int pc_bonus(struct map_session_data *sd,int type,int val) {
 			break;
 		case SP_ASPD_RATE: //Stackable increase - Made it linear as per rodatazone
 			if(sd->state.lr_flag != 2)
-	#ifndef RENEWAL_ASPD
 				bst->aspd_rate -= 10*val;
-	#else
-				bst->aspd_rate2 += val;
-	#endif
 			break;
 		case SP_HP_RECOV_RATE:
 			if(sd->state.lr_flag != 2)
@@ -8069,13 +8065,7 @@ int pc_readparam(const struct map_session_data *sd, int type)
 		case SP_SPRATE:          val = sd->dsprate; break;
 		case SP_SPEED_RATE:      val = sd->bonus.speed_rate; break;
 		case SP_SPEED_ADDRATE:   val = sd->bonus.speed_add_rate; break;
-		case SP_ASPD_RATE:
-#ifndef RENEWAL_ASPD
-			val = sd->battle_status.aspd_rate;
-#else
-			val = sd->battle_status.aspd_rate2;
-#endif
-			break;
+		case SP_ASPD_RATE:       val = sd->battle_status.aspd_rate; break;
 		case SP_HP_RECOV_RATE:   val = sd->hprecov_rate; break;
 		case SP_SP_RECOV_RATE:   val = sd->sprecov_rate; break;
 		case SP_CRITICAL_DEF:    val = sd->bonus.critical_def; break;

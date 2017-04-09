@@ -24,7 +24,7 @@
 
 #define HPM_MAIN_CORE
 
-#include "config/core.h" // ANTI_MAYAP_CHEAT, SV_VERSION, DEFTYPE_MAX, DEFTYPE_MIN, DEVOTION_REFLECT_DAMAGE, RENEWAL, RENEWAL_ASPD, RENEWAL_EDP
+#include "config/core.h" // ANTI_MAYAP_CHEAT, SV_VERSION, DEFTYPE_MAX, DEFTYPE_MIN, DEVOTION_REFLECT_DAMAGE, RENEWAL, RENEWAL_EDP
 #include "status.h"
 
 #include "map/battle.h"
@@ -2965,7 +2965,6 @@ int status_calc_pc_(struct map_session_data* sd, enum e_status_calc_opt opt)
 	bstatus->amotion = cap_value(i,((sd->class_&JOBL_THIRD) ? battle_config.max_third_aspd : battle_config.max_aspd),2000);
 
 	// Relative modifiers from passive skills
-#ifndef RENEWAL_ASPD
 	if((skill_lv=pc->checkskill(sd,SA_ADVANCEDBOOK))>0 && sd->status.weapon == W_BOOK)
 		bstatus->aspd_rate -= 5*skill_lv;
 	if((skill_lv = pc->checkskill(sd,SG_DEVIL)) > 0 && !pc->nextjobexp(sd))
@@ -2977,14 +2976,6 @@ int status_calc_pc_(struct map_session_data* sd, enum e_status_calc_opt opt)
 		bstatus->aspd_rate += 500-100*pc->checkskill(sd,KN_CAVALIERMASTERY);
 	else if (pc_isridingdragon(sd))
 		bstatus->aspd_rate += 250-50*pc->checkskill(sd,RK_DRAGONTRAINING);
-#else // needs more info
-	if ( (skill_lv = pc->checkskill(sd, SG_DEVIL)) > 0 && !pc->nextjobexp(sd) )
-		bstatus->aspd_rate += 30 * skill_lv;
-	if ( pc_isridingpeco(sd) )
-		bstatus->aspd_rate -= 500 - 100 * pc->checkskill(sd, KN_CAVALIERMASTERY);
-	else if ( pc_isridingdragon(sd) )
-		bstatus->aspd_rate -= 250 - 50 * pc->checkskill(sd, RK_DRAGONTRAINING);
-#endif
 	bstatus->adelay = 2*bstatus->amotion;
 
 	// ----- DMOTION -----
@@ -3988,9 +3979,7 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 			st->adelay = st->amotion;
 		} else if ( bl->type&BL_PC ) {
 			amotion = status->base_amotion_pc(sd, st);
-#ifndef RENEWAL_ASPD
 			st->aspd_rate = status->calc_aspd_rate(bl, sc, bst->aspd_rate);
-#endif
 			if ( st->aspd_rate != 1000 ) // absolute percentage modifier
 				amotion = amotion * st->aspd_rate / 1000;
 			if (sd && sd->ud.skilltimer != INVALID_TIMER) {
@@ -4003,13 +3992,11 @@ void status_calc_bl_main(struct block_list *bl, /*enum scb_flag*/int flag)
 					}
 				}
 			}
-#ifdef RENEWAL_ASPD
 			amotion += (max(0xc3 - amotion, 2) * (st->aspd_rate2 + status->calc_aspd(bl, sc, 2))) / 100;
 			amotion = 10 * (200 - amotion);
 			if (sd != NULL) {
 				amotion += sd->bonus.aspd_add;
 			}
-#endif
 			amotion = status->calc_fix_aspd(bl, sc, amotion);
 			if (sd != NULL) {
 				st->amotion = cap_value(amotion, ((sd->class_&JOBL_THIRD) ? battle_config.max_third_aspd : battle_config.max_aspd), 2000);
@@ -4284,7 +4271,6 @@ int status_check_visibility(struct block_list *src, struct block_list *target)
 int status_base_amotion_pc(struct map_session_data *sd, struct status_data *st)
 {
 	int amotion;
-#ifdef RENEWAL_ASPD /* [malufett] */
 	float temp;
 	int skill_lv, val = 0;
 
@@ -4316,23 +4302,6 @@ int status_base_amotion_pc(struct map_session_data *sd, struct status_data *st)
 	if ( (skill_lv = pc->checkskill(sd, GS_SINGLEACTION)) > 0 )
 		val += ((skill_lv + 1) / 2);
 	amotion = ((int)(temp + ((float)(status->calc_aspd(&sd->bl, &sd->sc, 1) + val) * st->agi / 200)) - min(amotion, 200));
-#else
-	// base weapon delay
-	amotion = (sd->status.weapon < MAX_SINGLE_WEAPON_TYPE)
-		? (status->dbs->aspd_base[pc->class2idx(sd->status.class_)][sd->status.weapon]) // single weapon
-		: (status->dbs->aspd_base[pc->class2idx(sd->status.class_)][sd->weapontype1] + status->dbs->aspd_base[pc->class2idx(sd->status.class_)][sd->weapontype2]) * 7 / 10; // dual-wield
-
-	// percentual delay reduction from stats
-	amotion -= amotion * (4 * st->agi + st->dex) / 1000;
-
-	// raw delay adjustment from bAspd bonus
-	amotion += sd->bonus.aspd_add;
-
-	/* angra manyu disregards aspd_base and similar */
-	if ( sd->equip_index[EQI_HAND_R] >= 0 && sd->status.inventory[sd->equip_index[EQI_HAND_R]].nameid == ITEMID_ANGRA_MANYU )
-		return 0;
-#endif
-
 	return amotion;
 }
 
@@ -5869,7 +5838,6 @@ unsigned short status_calc_speed(struct block_list *bl, struct status_change *sc
 // flag&2 - percentage value
 short status_calc_aspd(struct block_list *bl, struct status_change *sc, short flag)
 {
-#ifdef RENEWAL_ASPD
 	int pots = 0, bonus = 0;
 
 	nullpo_ret(bl);
@@ -5994,9 +5962,6 @@ short status_calc_aspd(struct block_list *bl, struct status_change *sc, short fl
 	}
 
 	return (bonus + pots);
-#else
-	return 0;
-#endif
 }
 
 short status_calc_fix_aspd(struct block_list *bl, struct status_change *sc, int aspd)
@@ -8424,11 +8389,9 @@ int status_change_start(struct block_list *src, struct block_list *bl, enum sc_t
 			case SC_MER_QUICKEN:
 				val2 = 300;
 				break;
-	#ifndef RENEWAL_ASPD
 			case SC_SPEARQUICKEN:
 				val2 = 200+10*val1;
 				break;
-	#endif
 			case SC_DANCING:
 				//val1 : Skill ID + LV
 				//val2 : Skill Group of the Dance.
@@ -12888,9 +12851,7 @@ void status_read_job_db_sub(int idx, const char *name, struct config_setting_t *
 		{ "GrenadeLauncher", W_GRENADE },
 		{ "FuumaShuriken", W_HUUMA },
 		{ "TwoHandRod", W_2HSTAFF },
-#ifdef RENEWAL_ASPD
 		{ "Shield", MAX_SINGLE_WEAPON_TYPE }
-#endif
 	};
 
 	if ((temp = libconfig->setting_get_member(jdb, "Inherit"))) {
@@ -13295,9 +13256,7 @@ int status_readdb(void)
 	for ( i = 0; i < CLASS_COUNT; i++ ) {
 		for ( j = 0; j < MAX_SINGLE_WEAPON_TYPE; j++ )
 			status->dbs->aspd_base[i][j] = 2000;
-#ifdef RENEWAL_ASPD
 		status->dbs->aspd_base[i][MAX_SINGLE_WEAPON_TYPE] = 0;
-#endif
 	}
 
 	// size_fix.txt

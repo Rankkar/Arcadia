@@ -39,7 +39,7 @@
 
 // Sql settings
 static char   log_db_hostname[32] = "127.0.0.1";
-int           log_db_port = 3306;
+static uint16 log_db_port = 0;
 static char   log_db_username[32] = "ragnarok";
 static char   log_db_password[100] = "ragnarok";
 static char   log_db_database[32] = "ragnarok";
@@ -183,9 +183,9 @@ bool loginlog_config_read_log(const char *filename, struct config_t *config, boo
 	libconfig->setting_lookup_mutable_string(setting, "log_db_username", log_db_username, sizeof(log_db_username));
 	libconfig->setting_lookup_mutable_string(setting, "log_db_password", log_db_password, sizeof(log_db_password));
 	libconfig->setting_lookup_mutable_string(setting, "log_login_db",    log_login_db,    sizeof(log_login_db));
-	libconfig->setting_lookup_int(setting, "log_db_port", &log_db_port);
+//	libconfig->setting_lookup_int(setting, "log_db_port", &log_db_port);
 
-//	libconfig->setting_lookup_uint16(setting, "db_port", &log_db_port);
+	libconfig->setting_lookup_uint16(setting, "log_db_port", &log_db_port);
 	libconfig->setting_lookup_mutable_string(setting, "codepage", log_codepage, sizeof(log_codepage));
 
 	return true;

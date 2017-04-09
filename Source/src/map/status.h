@@ -2012,9 +2012,7 @@ struct status_data {
 	short
 		hit, flee, cri, flee2,
 		def2, mdef2,
-#ifdef RENEWAL_ASPD
 		aspd_rate2,
-#endif
 		aspd_rate;
 	/**
 	 * defType is RENEWAL dependent and defined in src/map/config/data/const.h
@@ -2026,9 +2024,7 @@ struct status_data {
 		size, race;
 
 	struct weapon_atk rhw, lhw; //Right Hand/Left Hand Weapon.
-#ifdef RENEWAL
 	int equip_atk;
-#endif
 };
 
 //Additional regen data that only players have.

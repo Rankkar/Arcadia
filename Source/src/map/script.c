@@ -24,7 +24,7 @@
 
 #define HPM_MAIN_CORE
 
-#include "config/core.h" // RENEWAL, RENEWAL_ASPD, RENEWAL_CAST, RENEWAL_DROP, RENEWAL_EDP, RENEWAL_EXP, RENEWAL_LVDMG, SCRIPT_CALLFUNC_CHECK, SECURE_NPCTIMEOUT, SECURE_NPCTIMEOUT_INTERVAL
+#include "config/core.h" // RENEWAL, RENEWAL_CAST, RENEWAL_DROP, RENEWAL_EDP, RENEWAL_EXP, RENEWAL_LVDMG, SCRIPT_CALLFUNC_CHECK, SECURE_NPCTIMEOUT, SECURE_NPCTIMEOUT_INTERVAL
 #include "script.h"
 
 #include "map/atcommand.h"
@@ -21406,11 +21406,6 @@ void script_hardcoded_constants(void)
 	script->set_constant("RENEWAL_EDP", 1, false, false);
 #else
 	script->set_constant("RENEWAL_EDP", 0, false, false);
-#endif
-#ifdef RENEWAL_ASPD
-	script->set_constant("RENEWAL_ASPD", 1, false, false);
-#else
-	script->set_constant("RENEWAL_ASPD", 0, false, false);
 #endif
 	script->constdb_comment(NULL);
 }

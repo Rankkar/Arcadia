@@ -11,5 +11,4 @@
 #define RENEWAL_EXP
 #define RENEWAL_LVDMG
 #define RENEWAL_EDP
-#define RENEWAL_ASPD
 #endif
